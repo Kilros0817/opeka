@@ -1,0 +1,6 @@
+@use '../../styles/variables' as *;
+
+.divider-block {
+  flex: 1 1 auto;
+  min-height: $opeka-space-48;
+}

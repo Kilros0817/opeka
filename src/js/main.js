@@ -3,6 +3,7 @@ import '../styles/main.scss'
 
 import '../components/button/button.scss'
 import '../components/cta-excursion/cta-excursion.scss'
+import '../components/divider-block/divider-block.scss'
 import '../components/logo/logo.scss'
 import '../components/pager/pager.scss'
 import '../components/promo-card/promo-card.scss'
@@ -12,7 +13,6 @@ import '../components/text-link/text-link.scss'
 
 import '../sections/site-header/site-header.scss'
 import '../sections/hero/hero.scss'
-import '../sections/main-section/main-section.scss'
 import '../sections/site-footer/site-footer.scss'
 
 import { initHero } from './modules/scenes/hero.js'

@@ -68,7 +68,10 @@ export default defineConfig({
     outDir: path.join(projectRoot, 'dist'),
     emptyOutDir: true,
     rollupOptions: {
-      input: path.join(pagesRoot, 'index.html'),
+      input: {
+        index: path.join(pagesRoot, 'index.html'),
+        home: path.join(pagesRoot, 'home.html'),
+      },
     },
   },
 })
