@@ -3,10 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + SCSS</title>
+    <title>App</title>
   </head>
-  <body>
-    <h1>Hello, Vite + SCSS</h1>
+  <body class="site-shell">
+    <header class="site-shell__header">
+      <h1 class="site-shell__brand">App</h1>
+      <p class="site-shell__tagline">Vite · SCSS · BEM · components</p>
+    </header>
+    <main class="site-shell__main" id="main">
+      <p>
+        <a class="site-shell__link" href="/styleguide.html">Open component styleguide</a>
+      </p>
+      <div class="site-shell__demo-row">
+        <button type="button" class="button button--primary" data-button-async>
+          <span class="button__label">Demo async (loading)</span>
+          <span class="button__spinner" aria-hidden="true"></span>
+        </button>
+      </div>
+    </main>
+    <footer class="site-shell__footer">Client-facing pages start from this shell.</footer>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>

@@ -1,0 +1,133 @@
+@use '../abstracts/variables' as *;
+
+// Styleguide page layout (BEM: styleguide block).
+.styleguide {
+  min-height: 100vh;
+}
+
+.styleguide__header {
+  padding: $space-lg $space-xl;
+  background-color: $color-surface;
+  border-bottom: 1px solid $color-border;
+}
+
+.styleguide__title {
+  margin: 0 0 $space-sm;
+  font-size: $font-size-lg;
+  line-height: $line-height-tight;
+}
+
+.styleguide__lead {
+  margin: 0;
+  color: $color-text-muted;
+  font-size: $font-size-sm;
+}
+
+.styleguide__nav {
+  margin-top: $space-md;
+}
+
+.styleguide__nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-sm $space-md;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.styleguide__nav-link {
+  color: $color-primary;
+  font-size: $font-size-sm;
+  text-decoration: underline;
+  text-underline-offset: $space-xs;
+
+  &:hover {
+    color: $color-primary-hover;
+  }
+}
+
+.styleguide__main {
+  padding: $space-xl;
+  max-width: 56rem;
+  margin: 0 auto;
+}
+
+.styleguide__section {
+  margin-bottom: $space-2xl;
+  padding: $space-lg;
+  background-color: $color-surface;
+  border: 1px solid $color-border;
+  border-radius: $radius-md;
+}
+
+.styleguide__section-title {
+  margin: 0 0 $space-md;
+  padding-bottom: $space-sm;
+  border-bottom: 1px solid $color-border;
+  font-size: $font-size-base;
+  line-height: $line-height-tight;
+}
+
+.styleguide__subsection-title {
+  margin: $space-lg 0 $space-sm;
+  font-size: $font-size-sm;
+  color: $color-text-muted;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+.styleguide__row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: $space-md;
+}
+
+.styleguide__demo-bg {
+  // Decorative background example (content images use <img> elsewhere).
+  min-height: 6rem;
+  padding: $space-md;
+  border-radius: $radius-md;
+  border: 1px dashed $color-border-strong;
+  background-color: $color-page-bg;
+  background-image: url('/images/decoration.svg');
+  background-repeat: no-repeat;
+  background-position: right $space-md center;
+  background-size: auto 70%;
+}
+
+.styleguide__alpine-demo {
+  margin-top: $space-md;
+  padding: $space-md;
+  background-color: $color-page-bg;
+  border-radius: $radius-md;
+}
+
+.styleguide__code {
+  margin: $space-sm 0 0;
+  padding: $space-sm $space-md;
+  font-size: $font-size-sm;
+  font-family: ui-monospace, monospace;
+  background-color: $color-page-bg;
+  border-radius: $radius-sm;
+  overflow-x: auto;
+}
+
+.styleguide__note {
+  margin: 0;
+  font-size: $font-size-sm;
+  color: $color-text-muted;
+  line-height: $line-height-normal;
+}
+
+.styleguide__caption {
+  margin: $space-xs 0 0;
+  font-size: $font-size-sm;
+  color: $color-text-muted;
+}

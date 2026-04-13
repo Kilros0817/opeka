@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Styleguide</title>
+  </head>
+  <body class="styleguide">
+    <header class="styleguide__header">
+      <h1 class="styleguide__title">Component styleguide</h1>
+      <p class="styleguide__lead">
+        BEM blocks live under <code>src/components/</code>. Colors and spacing use SCSS variables only
+        (<code>src/styles/abstracts/_variables.scss</code>).
+      </p>
+      <nav class="styleguide__nav" aria-label="On this page">
+        <ul class="styleguide__nav-list">
+          <li><a class="styleguide__nav-link" href="#buttons">Buttons</a></li>
+          <li><a class="styleguide__nav-link" href="#text-fields">Text fields</a></li>
+          <li><a class="styleguide__nav-link" href="#images">Images</a></li>
+          <li><a class="styleguide__nav-link" href="#decorative">Decorative backgrounds</a></li>
+          <li><a class="styleguide__nav-link" href="#alpine">Alpine (optional)</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="styleguide__main">
+      <section class="styleguide__section" id="buttons" aria-labelledby="buttons-heading">
+        <h2 class="styleguide__section-title" id="buttons-heading">Buttons</h2>
+
+        <h3 class="styleguide__subsection-title">Primary / secondary</h3>
+        <div class="styleguide__row">
+          <button type="button" class="button button--primary">
+            <span class="button__label">Primary</span>
+          </button>
+          <button type="button" class="button button--secondary">
+            <span class="button__label">Secondary</span>
+          </button>
+        </div>
+
+        <h3 class="styleguide__subsection-title">Hover (use mouse)</h3>
+        <p class="styleguide__note">Hover styles are on <code>.button--primary</code> / <code>.button--secondary</code>.</p>
+
+        <h3 class="styleguide__subsection-title">Disabled</h3>
+        <div class="styleguide__row">
+          <button type="button" class="button button--primary" disabled>
+            <span class="button__label">Disabled primary</span>
+          </button>
+          <button type="button" class="button button--secondary" disabled>
+            <span class="button__label">Disabled secondary</span>
+          </button>
+          <span class="button button--primary button--disabled" role="img" aria-label="Non-interactive disabled look">
+            <span class="button__label">Modifier only</span>
+          </span>
+        </div>
+
+        <h3 class="styleguide__subsection-title">Loading</h3>
+        <div class="styleguide__row">
+          <button type="button" class="button button--primary button--loading" disabled aria-busy="true">
+            <span class="button__label">Saving…</span>
+            <span class="button__spinner" aria-hidden="true"></span>
+          </button>
+          <button type="button" class="button button--secondary button--loading" disabled aria-busy="true">
+            <span class="button__label">Working…</span>
+            <span class="button__spinner" aria-hidden="true"></span>
+          </button>
+        </div>
+
+        <h3 class="styleguide__subsection-title">JS demo (async)</h3>
+        <div class="styleguide__row">
+          <button type="button" class="button button--primary" data-button-async>
+            <span class="button__label">Click for loading</span>
+            <span class="button__spinner" aria-hidden="true"></span>
+          </button>
+        </div>
+      </section>
+
+      <section class="styleguide__section" id="text-fields" aria-labelledby="text-fields-heading">
+        <h2 class="styleguide__section-title" id="text-fields-heading">Text fields</h2>
+
+        <h3 class="styleguide__subsection-title">Default</h3>
+        <div class="text-field">
+          <label class="text-field__label" for="sg-name">Label</label>
+          <div class="text-field__control">
+            <input
+              class="text-field__input"
+              id="sg-name"
+              type="text"
+              name="name"
+              placeholder="Placeholder"
+              autocomplete="name"
+            />
+            <p class="text-field__hint">Supporting hint text.</p>
+          </div>
+        </div>
+
+        <h3 class="styleguide__subsection-title">Focus</h3>
+        <p class="styleguide__note">Tab into the control to see focus styles (<code>:focus-visible</code>).</p>
+        <div class="text-field">
+          <label class="text-field__label" for="sg-focus">Focus demo</label>
+          <div class="text-field__control">
+            <input class="text-field__input" id="sg-focus" type="text" />
+          </div>
+        </div>
+
+        <h3 class="styleguide__subsection-title">Error</h3>
+        <div class="text-field text-field--error">
+          <label class="text-field__label" for="sg-error">Email</label>
+          <div class="text-field__control">
+            <input
+              class="text-field__input"
+              id="sg-error"
+              type="email"
+              value="not-an-email"
+              aria-invalid="true"
+              aria-describedby="sg-error-msg"
+            />
+            <p id="sg-error-msg" class="text-field__error">Enter a valid email address.</p>
+          </div>
+        </div>
+
+        <h3 class="styleguide__subsection-title">Disabled</h3>
+        <div class="text-field text-field--disabled">
+          <label class="text-field__label" for="sg-disabled">Locked</label>
+          <div class="text-field__control">
+            <input class="text-field__input" id="sg-disabled" type="text" value="Read-only value" disabled />
+          </div>
+        </div>
+
+        <h3 class="styleguide__subsection-title">JS demo (blur validation)</h3>
+        <div class="text-field" data-text-field-validate>
+          <label class="text-field__label" for="sg-validate">Required on blur</label>
+          <div class="text-field__control">
+            <input
+              class="text-field__input"
+              id="sg-validate"
+              type="text"
+              placeholder="Leave empty and tab out"
+              aria-describedby="sg-validate-err"
+            />
+            <p class="text-field__error" id="sg-validate-err" hidden>This field is required.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="styleguide__section" id="images" aria-labelledby="images-heading">
+        <h2 class="styleguide__section-title" id="images-heading">Content images</h2>
+        <p class="styleguide__note">Use <code>&lt;img src="…"&gt;</code> for meaningful content (place files in <code>public/images/</code>).</p>
+        <div class="styleguide__row">
+          <figure>
+            <img src="/images/placeholder.svg" width="120" height="80" alt="Placeholder graphic" />
+            <figcaption class="styleguide__caption">Example <code>img</code></figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="styleguide__section" id="decorative" aria-labelledby="decorative-heading">
+        <h2 class="styleguide__section-title" id="decorative-heading">Decorative backgrounds</h2>
+        <p class="styleguide__note">Ornamental visuals belong in CSS <code>background-image</code>, not as lone <code>img</code> tags.</p>
+        <div class="styleguide__demo-bg" role="presentation">
+          <span class="styleguide__note">Panel with SVG background (see <code>.styleguide__demo-bg</code>)</span>
+        </div>
+      </section>
+
+      <section class="styleguide__section" id="alpine" aria-labelledby="alpine-heading">
+        <h2 class="styleguide__section-title" id="alpine-heading">Alpine.js (optional)</h2>
+        <p class="styleguide__note">Loaded only on this page via <code>src/styleguide.js</code>. Remove or reuse pattern on other entries as needed.</p>
+        <div class="styleguide__alpine-demo" x-data="{ open: false }">
+          <button type="button" class="button button--secondary" @click="open = !open">
+            <span class="button__label" x-text="open ? 'Hide' : 'Show'">Toggle</span>
+          </button>
+          <p class="styleguide__note" x-show="open" x-transition>Panel is visible.</p>
+        </div>
+        <pre class="styleguide__code">x-data / @click / x-show</pre>
+      </section>
+
+      <p class="styleguide__note"><a class="styleguide__nav-link" href="/index.html">← Back to app</a></p>
+    </main>
+
+    <script type="module" src="/src/styleguide.js"></script>
+  </body>
+</html>

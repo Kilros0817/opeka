@@ -1,8 +1,10 @@
-import './styles/main.scss'
+import './styles/styleguide.scss'
+import Alpine from 'alpinejs'
 import { initButtons } from './components/button/button.js'
 import { initTextFields } from './components/text-field/text-field.js'
-import { initSiteShell } from './components/site-shell/site-shell.js'
 
-initSiteShell()
+window.Alpine = Alpine
+Alpine.start()
+
 initButtons()
 initTextFields()

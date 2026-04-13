@@ -1,0 +1,51 @@
+@use '../../styles/abstracts/variables' as *;
+
+.site-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.site-shell__header {
+  padding: $space-md $space-xl;
+  background-color: $color-surface;
+  border-bottom: 1px solid $color-border;
+}
+
+.site-shell__brand {
+  margin: 0;
+  font-size: $font-size-lg;
+  line-height: $line-height-tight;
+}
+
+.site-shell__tagline {
+  margin: $space-xs 0 0;
+  color: $color-text-muted;
+  font-size: $font-size-sm;
+}
+
+.site-shell__main {
+  flex: 1;
+  padding: $space-xl;
+  max-width: 40rem;
+}
+
+.site-shell__demo-row {
+  margin-top: $space-lg;
+}
+
+.site-shell__footer {
+  padding: $space-md $space-xl;
+  color: $color-text-muted;
+  font-size: $font-size-sm;
+  border-top: 1px solid $color-border;
+  background-color: $color-surface;
+}
+
+.site-shell__link {
+  color: $color-primary;
+
+  &:hover {
+    color: $color-primary-hover;
+  }
+}

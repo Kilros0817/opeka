@@ -1,14 +1,5 @@
-$primary: #3b82f6;
-$font-stack: system-ui, sans-serif;
-
-body {
-  font-family: $font-stack;
-  margin: 0;
-  padding: 2rem;
-  background: #f8fafc;
-  color: #1e293b;
-}
-
-h1 {
-  color: $primary;
-}
+@use 'abstracts/variables' as *;
+@use 'base/reset';
+@use '../components/site-shell/site-shell';
+@use '../components/button/button';
+@use '../components/text-field/text-field';

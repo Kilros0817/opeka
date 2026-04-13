@@ -1,0 +1,102 @@
+@use '../../styles/abstracts/variables' as *;
+
+.button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: $space-sm;
+  margin: 0;
+  padding: $space-sm $space-md;
+  font-family: inherit;
+  font-size: $font-size-sm;
+  font-weight: 600;
+  line-height: $line-height-tight;
+  text-decoration: none;
+  border: 1px solid transparent;
+  border-radius: $radius-md;
+  cursor: pointer;
+  transition:
+    background-color $transition-fast,
+    border-color $transition-fast,
+    color $transition-fast,
+    box-shadow $transition-fast;
+
+  &:focus-visible {
+    outline: $focus-ring-width solid $color-primary;
+    outline-offset: $focus-ring-offset;
+  }
+
+  &:disabled,
+  &--disabled {
+    cursor: not-allowed;
+    color: $color-disabled-fg;
+    background-color: $color-disabled-bg;
+    border-color: $color-border;
+  }
+
+  &--primary {
+    color: $color-surface;
+    background-color: $color-primary;
+    border-color: $color-primary;
+
+    &:hover:not(:disabled):not(.button--disabled):not(.button--loading) {
+      background-color: $color-primary-hover;
+      border-color: $color-primary-hover;
+    }
+
+    &:active:not(:disabled):not(.button--disabled):not(.button--loading) {
+      background-color: $color-primary-active;
+      border-color: $color-primary-active;
+    }
+  }
+
+  &--secondary {
+    color: $color-text;
+    background-color: $color-surface;
+    border-color: $color-border-strong;
+
+    &:hover:not(:disabled):not(.button--disabled):not(.button--loading) {
+      border-color: $color-primary;
+      color: $color-primary;
+    }
+  }
+
+  &--loading {
+    pointer-events: none;
+    color: transparent;
+
+    .button__label {
+      visibility: hidden;
+    }
+  }
+}
+
+.button__label {
+  position: relative;
+  z-index: 1;
+}
+
+// Decorative spinner (not content imagery — OK as CSS background).
+.button__spinner {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: $space-lg;
+  height: $space-lg;
+  border-radius: 50%;
+  border: 2px solid $color-border;
+  border-top-color: $color-primary;
+  animation: button-spin 0.7s linear infinite;
+  pointer-events: none;
+}
+
+.button--secondary .button__spinner {
+  border-top-color: $color-text-muted;
+}
+
+@keyframes button-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
