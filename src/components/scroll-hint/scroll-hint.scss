@@ -13,7 +13,7 @@
   text-decoration: none;
   cursor: pointer;
   font: inherit;
-  backdrop-filter: blur($opeka-blur-header);
+  // backdrop-filter: blur($opeka-blur-header);
 
   &:focus-visible {
     outline: $focus-ring-width solid $color-surface;
