@@ -58,6 +58,7 @@ $opeka-fs-12: 0.75rem;
 $opeka-fs-14: 0.875rem;
 $opeka-fs-16: 1rem;
 $opeka-fs-20: 1.25rem;
+$opeka-fs-24: 1.5rem;
 $opeka-fs-44: 2.75rem;
 $opeka-fs-82: clamp(2.75rem, 6vw, 5.125rem);
 $opeka-fs-102: clamp(2.75rem, 6vw, 6.375rem);
@@ -94,6 +95,7 @@ $opeka-opacity-blob: 0.85;
 // Border radius
 $radius-sm: 4px;
 $radius-md: 8px;
+$radius-12: 12px;
 $radius-lg: 16px;
 $radius-xl: 24px;
 
@@ -103,3 +105,22 @@ $z-sticky:   200;
 $z-modal:    300;
 $z-toast:    400;
 $z-tooltip:  500;
+
+// Font-w
+$font-w-100: 100;
+$font-w-200: 200;
+$font-w-300: 300;
+$font-w-400: 400;
+$font-w-500: 500;
+$font-w-600: 600;
+$font-w-700: 700;
+// margin-t
+$margin-t-4:0.25rem;
+$margin-t-8:0.5rem;
+$margin-t-12:0.75rem;
+$margin-t-16:1rem;
+//margin-r
+$margin-r-4:0.25rem;
+$margin-r-8:0.5rem;
+$margin-r-12:0.75rem;
+$margin-r-16:1rem;
