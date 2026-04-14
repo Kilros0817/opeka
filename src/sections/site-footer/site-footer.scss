@@ -7,6 +7,13 @@
   overflow: hidden;
   background-color: $color-surface;
   border-top: 1px solid $opeka-border-10;
+  background: linear-gradient(
+    to top right,
+    #ffcea6 0%,
+    #f8e7d8 30%,
+    #eef5ff 70%,
+    #bddaff 100%
+  );
 }
 
 .site-footer::before {
@@ -19,6 +26,12 @@
   border-radius: 50%;
   background: radial-gradient(circle, rgba(255, 133, 62, 0.26) 0%, rgba(255, 133, 62, 0) 70%);
   pointer-events: none;
+}
+
+.site-footer__mark{
+   display: flex;
+    align-items: center; /* 🔥 aligns them vertically */
+    gap: $opeka-space-8; 
 }
 
 .site-footer::after {
@@ -49,12 +62,27 @@
 }
 
 .site-footer__hero-text {
-  margin: 0;
-  max-width: 35.5rem;
-  font-family: $opeka-font;
-  font-size: $opeka-fs-16;
-  line-height: $opeka-lh-16;
-  color: $opeka-text-muted;
+
+  color: #22294F99;
+  font-size: 16px;
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: justify;       
+  text-align-last: center;  
+  line-height: 20px;
+  letter-spacing: -1px;
+
+  
+  // font-family: Arial, sans-serif;
+}
+.site-footer__hero-btn__plus{
+  width: 40px;
+  height: 34px;
+  background: #FFFFFF33;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .site-footer__hero-actions {
@@ -125,8 +153,15 @@
   padding: $opeka-space-24;
   border: 1px solid $opeka-border-10;
   border-radius: 1.875rem;
-  background-color: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur($opeka-blur-frost);
+}
+
+.icon-white   {width:20px; height:20px; fill: #ffffff; color: #ffffff; }
+
+.icon-blue {width:14px; height:14px; fill: #2674D9; color: #2674D9;}
+
+.site-footer__socials-left{
+  margin-right: auto;
 }
 
 .site-footer__rating-qr {

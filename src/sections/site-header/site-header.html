@@ -1,15 +1,12 @@
 <header class="site-header">
   <div class="site-header__top">
-    <nav class="site-header__nav" aria-label="Служебная навигация">
+    <nav class="site-header__nav-top" aria-label="Служебная навигация">
       <ul class="site-header__list">
         <li class="site-header__item">
           <a class="site-header__link" href="#">
-            <svg class="site-header__link-icon" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true">
-              <path
-                fill="currentColor"
-                d="M8 4.2c2.9 0 5.4 1.6 6.6 3.8-1.2 2.2-3.7 3.8-6.6 3.8S2.6 10.2 1.4 8C2.6 5.8 5.1 4.2 8 4.2Zm0-1.2C4.5 3 1.5 5 0 8c1.5 3 4.5 5 8 5s6.5-2 8-5c-1.5-3-4.5-5-8-5Zm0 2.1a2.9 2.9 0 1 0 0 5.8 2.9 2.9 0 0 0 0-5.8Zm0 1.2a1.7 1.7 0 1 1 0 3.4 1.7 1.7 0 0 1 0-3.4Z"
-              />
-            </svg>
+           <img src="../assets/icons/eye.svg" alt="Опека" width="16" height="16" />
+          </a>
+          <a class="site-header__link" href="#">
             Версия для слабовидящих
           </a>
         </li>
@@ -44,9 +41,12 @@
 
   <div class="site-header__main">
     <div class="site-header__start">
-      <a class="logo site-header__logo" href="/" aria-label="Опека — на главную">
-        <img class="logo__img" src="../assets/images/logo-mark.png" alt="" width="48" height="34" />
-        <img class="logo__img" src="../assets/images/logo-type.png" alt="" width="74" height="34" />
+
+      <a class="site-header__logo" href="/" aria-label="Опека — на главную">
+        <img src="../assets/icons/logo.svg" alt="Опека" width="54" height="32.36" />
+      </a>
+      <a class="site-header__logo-letter" href="/" aria-label="Опека — на главную">
+        <span class="site-header__logo-text">Опека</span>
       </a>
       <nav class="site-header__nav site-header__nav--main" aria-label="Основные разделы">
         <button type="button" class="btn btn--menu">
@@ -75,25 +75,13 @@
       </nav>
     </div>
     <div class="site-header__tools">
-      <button type="button" class="btn btn--icon-ghost" aria-label="Поиск">
-        <span class="btn__icon" aria-hidden="true">
-          <svg width="16" height="16" viewBox="0 0 16 16">
-            <path
-              fill="currentColor"
-              d="M11 6.5a4.5 4.5 0 1 0-9 0 4.5 4.5 0 0 0 9 0Zm.75 4.69 3.56 3.56-1.06 1.06-3.56-3.56a5.5 5.5 0 1 1 1.06-1.06Z"
-            />
-          </svg>
-        </span>
+      <button class="site-header__tools__icon-btn" type="button" aria-label="Поиск">
+        <!-- <svg class="icon icon--md" aria-hidden="true"><use href="#icon-search"></use></svg> -->
+        <img src="../assets/icons/search.svg" alt="Опека" width="16" height="16" />
       </button>
-      <button type="button" class="btn btn--icon-ghost" aria-label="Личный кабинет">
-        <span class="btn__icon" aria-hidden="true">
-          <svg width="16" height="16" viewBox="0 0 16 16">
-            <path
-              fill="currentColor"
-              d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm0 1c-2.67 0-8 1.34-8 4v1h16v-1c0-2.66-5.33-4-8-4Z"
-            />
-          </svg>
-        </span>
+      <button class="site-header__tools__icon-btn" type="button" aria-label="Личный кабинет">
+        <!-- <svg class="icon icon--md" aria-hidden="true"><use href="#icon-user"></use></svg> -->
+        <img src="../assets/icons/user.svg" alt="Опека" width="16" height="16" />
       </button>
       <a class="btn btn--primary" href="#"><span class="btn__label">Оставить заявку</span></a>
     </div>

@@ -1,6 +1,10 @@
 // Transition tokens (use in components via @use '.../animations' as *)
 $transition-fast: 0.15s ease;
 $transition-medium: 0.25s ease;
+// Global transition variables
+$transition-default: 0.3s ease;
+$transition-slow:    0.6s ease;
+$transition-fast:    0.15s ease;
 
 @keyframes opeka-fade-in {
   from {

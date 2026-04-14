@@ -16,7 +16,6 @@
   min-height: 0;
   overflow: hidden;
   color: $color-surface;
-  background-color: $opeka-navy;
 }
 
 .hero__media {
@@ -25,48 +24,22 @@
   pointer-events: none;
 }
 
-.hero__image {
-  position: absolute;
-  inset: 0;
+.hero__bg {
+  
+}
+
+.hero__video {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center top;
-}
-
-.hero__shade {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    90deg,
-    $opeka-gradient-hero-edge 0%,
-    $opeka-gradient-hero-clear 45%
-  );
-}
-
-.hero__blob {
-  position: absolute;
-  left: -20%;
-  top: 50%;
-  width: 120%;
-  max-width: 110rem;
-  aspect-ratio: 2158 / 1696;
-  transform: translateY(-50%) rotate(-37deg);
-  background-image: var(--opeka-img-hero-blob);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  opacity: $opeka-opacity-blob;
 }
 
 .hero__body {
   position: relative;
   z-index: $z-hero-body;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  align-items: center;
   flex: 1 1 auto;
   min-height: 0;
-  max-width: $opeka-container;
   width: 100%;
   margin: 0 auto;
   padding: 0 $opeka-space-36;
@@ -75,36 +48,30 @@
 
 .hero__grid {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: $opeka-space-32;
-  align-items: end;
-  margin-top: $opeka-space-32;
-  flex: 1 1 auto;
-
-  @include respond-to(xl) {
-    grid-template-columns: minmax(0, 53rem) minmax(0, 24.25rem);
-    align-items: center;
-  }
 }
 
 .hero__intro {
   max-width: 53rem;
+  gap: $opeka-space-32;
 }
+
 
 .hero__title {
   margin: 0 0 $opeka-space-32;
-  font-family: $opeka-font;
+  max-width: 53re;
+  font-family: $opeka-font-hoves;
   font-size: $opeka-fs-82;
   font-weight: 500;
   line-height: $opeka-lh-hero;
   letter-spacing: $opeka-ls-h1;
   color: $color-surface;
+  font-style: medium;
 }
 
 .hero__lead {
   margin: 0;
   max-width: 30rem;
-  font-family: $opeka-font;
+  font-family: $opeka-font-hoves;
   font-size: $opeka-fs-16;
   font-weight: 400;
   line-height: $opeka-lh-16;
@@ -113,20 +80,22 @@
 
 .hero__aside {
   justify-self: end;
+  padding-right: 2.25rem;
   width: 100%;
+  display: flex;
+  justify-content: end;
 }
 
 .hero__bar {
   position: relative;
+  bottom: $opeka-space-36;
   z-index: $z-hero-body;
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   align-items: end;
-  gap: $opeka-space-24;
   width: 100%;
-  max-width: $opeka-container;
   margin: 0 auto;
-  padding: 0 $opeka-space-36 $opeka-space-36;
+  padding: 0 $opeka-space-36;
   box-sizing: border-box;
   flex-shrink: 0;
   margin-top: auto;
@@ -135,6 +104,8 @@
 .hero__bar-start {
   grid-column: 1;
   justify-self: start;
+  position: relative;
+  bottom: -$opeka-space-4;
 }
 
 .hero__bar-center {

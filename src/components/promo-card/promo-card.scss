@@ -17,15 +17,15 @@
   pointer-events: none;
 
   &--back {
-    inset: (-$opeka-space-8);
+    inset: ($opeka-space-8) (-$opeka-space-24) (-$opeka-space-8) ($opeka-space-8);
     background-color: $opeka-white-30;
-    transform: rotate(-4deg);
+    transform: rotate(4deg);
   }
 
   &--mid {
-    inset: (-$opeka-space-12) (-$opeka-space-8) (-$opeka-space-20) (-$opeka-space-4);
+    inset: (-$opeka-space-20) (-$opeka-space-12) ($opeka-space-12) ($opeka-space-20);
     background-color: $opeka-white-44;
-    transform: rotate(-2.5deg);
+    transform: rotate(2.5deg);
   }
 }
 
@@ -37,7 +37,8 @@
   min-height: 19.125rem;
   padding: $opeka-space-24;
   border-radius: $opeka-radius-32;
-  background-color: $color-surface;
+  
+  background: linear-gradient(30deg, #ffffff 0%, #e1fce9 100%);
   overflow: hidden;
   box-shadow: 0 $opeka-space-24 $opeka-space-48 $opeka-black-5;
 }

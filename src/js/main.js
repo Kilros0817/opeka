@@ -18,4 +18,14 @@ import '../sections/site-footer/site-footer.scss'
 
 import { initHero } from './modules/scenes/hero.js'
 
+
+// Init on DOM ready
+document.addEventListener('DOMContentLoaded', () => {
+  // Autoplay hero video
+  const video = document.querySelector('.hero__video')
+  if (video) video.play().catch(() => {})
+
+})
+
 initHero()
+
