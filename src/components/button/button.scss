@@ -6,29 +6,29 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: $opeka-space-8;
+  gap: $space-8;
   margin: 0;
-  padding: 0 $opeka-space-12;
+  padding: 0 $space-12;
   height: 2.125rem;
   border: none;
-  border-radius: $opeka-radius-12;
-  font-family: $opeka-font;
-  font-size: $opeka-fs-14;
+  border-radius: $radius-12;
+  font-family: $font;
+  font-size: $fs-14;
   font-weight: 500;
-  line-height: $opeka-lh-16;
-  letter-spacing: $opeka-ls-14;
+  line-height: $lh-16;
+  letter-spacing: $ls-14;
   text-decoration: none;
   white-space: nowrap;
   cursor: pointer;
   transition: background-color $transition-fast, color $transition-fast;
 
   &:focus-visible {
-    outline: $focus-ring-width solid $opeka-blue;
+    outline: $focus-ring-width solid $blue;
     outline-offset: $focus-ring-offset;
   }
 
   &:disabled {
-    opacity: $opeka-opacity-disabled;
+    opacity: $opacity-disabled;
     cursor: not-allowed;
   }
 }
@@ -55,47 +55,47 @@
 .btn__burger-line {
   display: block;
   height: 0.125rem;
-  border-radius: $opeka-radius-pill;
+  border-radius: $radius-pill;
   background-color: currentColor;
 }
 
 .btn--primary {
-  background-color: $opeka-blue;
+  background-color: $blue;
   color: $color-surface;
 
   &:hover:not(:disabled) {
-    background-color: $opeka-blue-hover;
+    background-color: $blue-hover;
   }
 }
 
 .btn--chip {
-  background-color: $opeka-black-5;
-  color: $opeka-navy;
-  backdrop-filter: blur($opeka-blur-frost);
+  background-color: $black-5;
+  color: $navy;
+  backdrop-filter: blur($blur-frost);
 
   &:hover:not(:disabled) {
-    background-color: $opeka-black-8;
+    background-color: $black-8;
   }
 }
 
 .btn--menu {
-  background-color: $opeka-blue;
+  background-color: $blue;
   color: $color-surface;
 
   &:hover:not(:disabled) {
-    background-color: $opeka-blue-hover;
+    background-color: $blue-hover;
   }
 }
 
 .btn--icon-ghost {
   width: 2.125rem;
   padding: 0;
-  background-color: $opeka-black-5;
-  color: $opeka-navy;
-  backdrop-filter: blur($opeka-blur-frost);
+  background-color: $black-5;
+  color: $navy;
+  backdrop-filter: blur($blur-frost);
 
   &:hover:not(:disabled) {
-    background-color: $opeka-black-8;
+    background-color: $black-8;
   }
 }
 
@@ -103,13 +103,13 @@
   width: 2.5rem;
   height: 2.125rem;
   padding: 0;
-  border-radius: $opeka-radius-pill;
-  background-color: $opeka-black-5;
-  color: $opeka-navy;
-  backdrop-filter: blur($opeka-blur-frost);
+  border-radius: $radius-pill;
+  background-color: $black-5;
+  color: $navy;
+  backdrop-filter: blur($blur-frost);
 
   &:hover:not(:disabled) {
-    background-color: $opeka-black-8;
+    background-color: $black-8;
   }
 }
 
@@ -117,12 +117,12 @@
   width: 2.5rem;
   height: 2.125rem;
   padding: 0;
-  border-radius: $opeka-radius-pill;
-  background-color: $opeka-white-20;
+  border-radius: $radius-pill;
+  background-color: $white-20;
   color: $color-surface;
-  backdrop-filter: blur($opeka-blur-frost);
+  backdrop-filter: blur($blur-frost);
 
   &:hover:not(:disabled) {
-    background-color: $opeka-white-30;
+    background-color: $white-30;
   }
 }

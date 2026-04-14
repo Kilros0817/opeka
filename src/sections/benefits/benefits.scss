@@ -9,7 +9,7 @@
   position: relative;
   overflow: hidden;
   min-height: 54rem;
-  padding: $opeka-space-48 $opeka-space-36;
+  padding: $space-48 $space-36;
   box-sizing: border-box;
 }
 
@@ -101,15 +101,15 @@
 .benefits__watermark {
   position: relative;
   z-index: 0;
-  margin: 0 auto $opeka-space-48;
-  max-width: $opeka-container;
-  font-family: $opeka-font;
-  font-size: $opeka-fs-102;
+  margin: 0 auto $space-48;
+  max-width: $container;
+  font-family: $font;
+  font-size: $fs-102;
   font-weight: 500;
   line-height: 0.9;
   letter-spacing: -0.03em;
   text-align: center;
-  color: $opeka-navy;
+  color: $navy;
   opacity: 0.15;
   pointer-events: none;
 }
@@ -119,13 +119,13 @@
   top: 0;
   left: 0;
   z-index: 2;
-  max-width: $opeka-container;
+  max-width: $container;
   margin: 0 auto;
 }
 
 .benefits__list {
   display: grid;
-  gap: $opeka-space-32;
+  gap: $space-32;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -133,30 +133,35 @@
   @include respond-to(lg) {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     align-items: start;
-    gap: $opeka-space-24;
+    gap: $space-24;
   }
 }
 
 .benefits-card {
   display: flex;
   flex-direction: column;
+<<<<<<< HEAD
   gap: $opeka-space-24;
   position: relative;
+=======
+  gap: $space-24;
+  position: absolute;
+>>>>>>> e00767e27af8cbb3853944e640a340443dab6e70
   z-index: 2;
 }
 
 .benefits-card__panel {
   background-color: $color-surface;
-  border-radius: $opeka-radius-32;
-  padding: $opeka-space-48 $opeka-space-96 $opeka-space-48 $opeka-space-48;
+  border-radius: $radius-32;
+  padding: $space-48 $space-96 $space-48 $space-48;
   padding-bottom: 6rem;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  gap: $opeka-space-24;
+  gap: $space-24;
   width: 480px;
   height: 340px;
-  box-shadow: 0 $opeka-space-24 $opeka-space-48 rgba(34, 41, 79, 0.08);
+  box-shadow: 0 $space-24 $space-48 rgba(34, 41, 79, 0.08);
 }
 
 .benefit-card-01 {
@@ -169,45 +174,45 @@
 
 .benefits-card__title {
   margin: 0;
-  font-family: $opeka-font;
-  font-size: $opeka-fs-44;
+  font-family: $font;
+  font-size: $fs-44;
   font-weight: 500;
   line-height: 0.86;
   letter-spacing: -0.02em;
-  color: $opeka-navy;
+  color: $navy;
 }
 
 .benefits-card__text {
   margin: 0;
   max-width: 18.25rem;
-  font-family: $opeka-font;
-  font-size: $opeka-fs-16;
+  font-family: $font;
+  font-size: $fs-16;
   font-weight: 400;
-  line-height: $opeka-lh-16;
-  color: $opeka-text-muted;
+  line-height: $lh-16;
+  color: $text-muted;
 }
 
 .benefits-card__link {
   display: inline-flex;
   align-items: center;
-  gap: $opeka-space-4;
+  gap: $space-4;
   margin-top: auto;
-  font-family: $opeka-font;
-  font-size: $opeka-fs-16;
+  font-family: $font;
+  font-size: $fs-16;
   font-weight: 500;
-  line-height: $opeka-lh-16;
-  letter-spacing: $opeka-ls-tight;
-  color: $opeka-blue;
+  line-height: $lh-16;
+  letter-spacing: $ls-tight;
+  color: $blue;
   text-decoration: none;
 
   &:hover {
-    color: $opeka-blue-hover;
+    color: $blue-hover;
   }
 
   &:focus-visible {
-    outline: $focus-ring-width solid $opeka-blue;
+    outline: $focus-ring-width solid $blue;
     outline-offset: $focus-ring-offset;
-    border-radius: $opeka-radius-12;
+    border-radius: $radius-12;
   }
 }
 
@@ -220,11 +225,15 @@
   position: absolute;
   margin-top: -4.5rem;
   margin-inline: auto;
-  border-radius: $opeka-radius-20;
+  border-radius: $radius-20;
   overflow: hidden;
   aspect-ratio: 4 / 3;
+<<<<<<< HEAD
   box-shadow: 0 $opeka-space-16 $opeka-space-32 rgba(34, 41, 79, 0.12);
   max-width: 1356px;
+=======
+  box-shadow: 0 $space-16 $space-32 rgba(34, 41, 79, 0.12);
+>>>>>>> e00767e27af8cbb3853944e640a340443dab6e70
 }
 
 .benefits-card--tall .benefits-card__media {
@@ -252,17 +261,17 @@
   height: 2.875rem;
   padding: 0;
   border: none;
-  border-radius: $opeka-radius-pill;
-  background-color: $opeka-white-20;
+  border-radius: $radius-pill;
+  background-color: $white-20;
   color: $color-surface;
-  backdrop-filter: blur($opeka-blur-frost);
+  backdrop-filter: blur($blur-frost);
   cursor: pointer;
   display: inline-flex;
   align-items: center;
   justify-content: center;
 
   &:hover {
-    background-color: $opeka-white-30;
+    background-color: $white-30;
   }
 
   &:focus-visible {
@@ -279,35 +288,35 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: $opeka-space-16;
-  margin: $opeka-space-48 auto 0;
+  gap: $space-16;
+  margin: $space-48 auto 0;
   max-width: 12rem;
   padding: 0;
   border: none;
   background: none;
   font: inherit;
-  color: $opeka-navy;
+  color: $navy;
   text-decoration: none;
   text-align: center;
   cursor: pointer;
 
   &:hover .benefits__cta-icon {
-    background-color: $opeka-black-8;
+    background-color: $black-8;
   }
 
   &:focus-visible {
-    outline: $focus-ring-width solid $opeka-navy;
+    outline: $focus-ring-width solid $navy;
     outline-offset: $focus-ring-offset;
-    border-radius: $opeka-radius-12;
+    border-radius: $radius-12;
   }
 }
 
 .benefits__cta-text {
-  font-family: $opeka-font;
-  font-size: $opeka-fs-16;
+  font-family: $font;
+  font-size: $fs-16;
   font-weight: 500;
-  line-height: $opeka-lh-32;
-  letter-spacing: $opeka-ls-tight;
+  line-height: $lh-32;
+  letter-spacing: $ls-tight;
 }
 
 .benefits__cta-icon {
@@ -316,8 +325,8 @@
   justify-content: center;
   width: 2.125rem;
   height: 2.125rem;
-  border-radius: $opeka-radius-pill;
-  background-color: $opeka-black-5;
-  color: $opeka-navy;
-  backdrop-filter: blur($opeka-blur-frost);
+  border-radius: $radius-pill;
+  background-color: $black-5;
+  color: $navy;
+  backdrop-filter: blur($blur-frost);
 }

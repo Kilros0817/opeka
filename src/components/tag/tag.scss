@@ -4,26 +4,26 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: $opeka-space-4;
+  gap: $space-4;
   height: 1.75rem;
-  padding: 0 $opeka-space-12;
-  border-radius: $opeka-radius-pill;
-  background-color: $opeka-tag-bg;
+  padding: 0 $space-12;
+  border-radius: $radius-pill;
+  background-color: $tag-bg;
   backdrop-filter: blur(0.3125rem);
 }
 
 .tag__icon {
   display: inline-flex;
   flex-shrink: 0;
-  color: $opeka-red;
+  color: $red;
 }
 
 .tag__text {
-  font-family: $opeka-font;
-  font-size: $opeka-fs-12;
+  font-family: $font;
+  font-size: $fs-12;
   font-weight: 500;
-  line-height: $opeka-lh-16;
-  letter-spacing: $opeka-ls-14;
+  line-height: $lh-16;
+  letter-spacing: $ls-14;
   text-transform: uppercase;
-  color: $opeka-navy;
+  color: $navy;
 }

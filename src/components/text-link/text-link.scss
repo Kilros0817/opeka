@@ -3,28 +3,28 @@
 .text-link {
   display: inline-flex;
   align-items: center;
-  gap: $opeka-space-4;
+  gap: $space-4;
   margin: 0;
   padding: 0;
   border: none;
   background: none;
-  font-family: $opeka-font;
-  font-size: $opeka-fs-16;
+  font-family: $font;
+  font-size: $fs-16;
   font-weight: 500;
-  line-height: $opeka-lh-16;
-  letter-spacing: $opeka-ls-tight;
-  color: $opeka-blue;
+  line-height: $lh-16;
+  letter-spacing: $ls-tight;
+  color: $blue;
   text-decoration: none;
   cursor: pointer;
 
   &:hover {
-    color: $opeka-blue-hover;
+    color: $blue-hover;
   }
 
   &:focus-visible {
-    outline: $focus-ring-width solid $opeka-blue;
+    outline: $focus-ring-width solid $blue;
     outline-offset: $focus-ring-offset;
-    border-radius: $opeka-radius-12;
+    border-radius: $radius-12;
   }
 }
 

@@ -28,7 +28,7 @@ body {
   font-family: $font-stack;
   font-size: $font-size-base;
   line-height: $line-height-normal;
-  color: $opeka-navy;
+  color: $navy;
   background-color: $color-page-bg;
 }
 
@@ -36,8 +36,8 @@ body.page-home {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  font-family: $opeka-font;
-  color: $opeka-navy;
+  font-family: $font;
+  color: $navy;
   background-color: $color-surface;
 }
 
@@ -56,16 +56,16 @@ body.page-home {
 .visually-hidden:focus-visible {
   position: fixed;
   z-index: $z-skip-link;
-  top: $opeka-space-8;
-  left: $opeka-space-8;
+  top: $space-8;
+  left: $space-8;
   width: auto;
   height: auto;
   margin: 0;
-  padding: $opeka-space-8 $opeka-space-16;
+  padding: $space-8 $space-16;
   overflow: visible;
   clip: auto;
   white-space: normal;
-  background-color: $opeka-blue;
+  background-color: $blue;
   color: $color-surface;
-  border-radius: $opeka-radius-12;
+  border-radius: $radius-12;
 }

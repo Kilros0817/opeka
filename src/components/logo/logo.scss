@@ -3,15 +3,15 @@
 .logo {
   display: inline-flex;
   align-items: center;
-  gap: $opeka-space-4;
+  gap: $space-4;
   height: 2.125rem;
   text-decoration: none;
   color: inherit;
 
   &:focus-visible {
-    outline: $focus-ring-width solid $opeka-blue;
+    outline: $focus-ring-width solid $blue;
     outline-offset: $focus-ring-offset;
-    border-radius: $opeka-radius-12;
+    border-radius: $radius-12;
   }
 }
 

@@ -6,7 +6,7 @@
   margin-top: auto;
   overflow: hidden;
   background-color: $color-surface;
-  border-top: 1px solid $opeka-border-10;
+  border-top: 1px solid $border-10;
   background: linear-gradient(
     to top right,
     #ffcea6 0%,
@@ -31,7 +31,7 @@
 .site-footer__mark{
    display: flex;
     align-items: center; /* 🔥 aligns them vertically */
-    gap: $opeka-space-8; 
+    gap: $space-8; 
 }
 
 .site-footer::after {
@@ -52,8 +52,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: $opeka-space-24;
-  padding: 7.5rem $opeka-space-36 6rem;
+  gap: $space-24;
+  padding: 7.5rem $space-36 6rem;
   text-align: center;
 }
 
@@ -88,7 +88,7 @@
 .site-footer__hero-actions {
   display: flex;
   flex-wrap: wrap;
-  gap: $opeka-space-4;
+  gap: $space-4;
   justify-content: center;
 }
 
@@ -102,9 +102,9 @@
 .site-footer__inner {
   position: relative;
   z-index: 1;
-  max-width: $opeka-container;
+  max-width: $container;
   margin: 0 auto;
-  padding: $opeka-space-36;
+  padding: $space-36;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -113,16 +113,16 @@
 
 .site-footer__nav-grid {
   display: grid;
-  gap: $opeka-space-24;
+  gap: $space-24;
 }
 
 .site-footer__col-title {
-  margin: 0 0 $opeka-space-16;
-  font-family: $opeka-font;
-  font-size: $opeka-fs-14;
+  margin: 0 0 $space-16;
+  font-family: $font;
+  font-size: $fs-14;
   line-height: 1.125rem;
   letter-spacing: -0.01em;
-  color: $opeka-text-muted;
+  color: $text-muted;
   font-weight: 400;
 }
 
@@ -132,28 +132,28 @@
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: $opeka-space-8;
+  gap: $space-8;
 }
 
 .site-footer__links a {
-  font-family: $opeka-font;
-  font-size: $opeka-fs-14;
+  font-family: $font;
+  font-size: $fs-14;
   line-height: 1rem;
   letter-spacing: -0.01em;
-  color: $opeka-navy;
+  color: $navy;
   text-decoration: none;
   font-weight: 500;
 }
 
 .site-footer__links a:hover {
-  color: $opeka-blue;
+  color: $blue;
 }
 
 .site-footer__rating {
-  padding: $opeka-space-24;
-  border: 1px solid $opeka-border-10;
+  padding: $space-24;
+  border: 1px solid $border-10;
   border-radius: 1.875rem;
-  backdrop-filter: blur($opeka-blur-frost);
+  backdrop-filter: blur($blur-frost);
 }
 
 .icon-white   {width:20px; height:20px; fill: #ffffff; color: #ffffff; }
@@ -168,74 +168,74 @@
   display: block;
   width: 100%;
   height: auto;
-  border-radius: $opeka-space-12;
-  margin-bottom: $opeka-space-12;
+  border-radius: $space-12;
+  margin-bottom: $space-12;
 }
 
 .site-footer__rating-text {
-  margin: 0 0 $opeka-space-12;
-  font-family: $opeka-font;
-  font-size: $opeka-fs-14;
+  margin: 0 0 $space-12;
+  font-family: $font;
+  font-size: $fs-14;
   line-height: 1.125rem;
   letter-spacing: -0.01em;
-  color: $opeka-text-muted;
+  color: $text-muted;
 }
 
 .site-footer__rating-link {
-  font-size: $opeka-fs-14;
+  font-size: $fs-14;
   line-height: 1rem;
 }
 
 .site-footer__contacts-row {
   display: grid;
-  gap: $opeka-space-24;
+  gap: $space-24;
 }
 
 .site-footer__contact {
   display: flex;
   flex-direction: column;
-  gap: $opeka-space-8;
+  gap: $space-8;
 }
 
 .site-footer__contact-title {
   margin: 0;
-  font-family: $opeka-font;
-  font-size: $opeka-fs-14;
+  font-family: $font;
+  font-size: $fs-14;
   font-weight: 400;
   line-height: 1.125rem;
   letter-spacing: -0.01em;
-  color: $opeka-text-muted;
+  color: $text-muted;
 }
 
 .site-footer__contact a {
-  font-family: $opeka-font;
-  font-size: $opeka-fs-16;
+  font-family: $font;
+  font-size: $fs-16;
   font-weight: 500;
   line-height: 1.25rem;
   letter-spacing: -0.02em;
-  color: $opeka-navy;
+  color: $navy;
   text-decoration: none;
 }
 
 .site-footer__contact a:hover {
-  color: $opeka-blue;
+  color: $blue;
 }
 
 .site-footer__socials {
   flex-wrap: wrap;
   align-items: center;
-  gap: $opeka-space-4;
+  gap: $space-4;
 }
 
 .site-footer__social {
   width: 4rem;
   height: 4rem;
   border-radius: 1.25rem;
-  background-color: $opeka-black-5;
-  color: $opeka-navy;
+  background-color: $black-5;
+  color: $navy;
   text-decoration: none;
-  font-family: $opeka-font;
-  font-size: $opeka-fs-14;
+  font-family: $font;
+  font-size: $fs-14;
   font-weight: 600;
   display: inline-flex;
   align-items: center;
@@ -243,15 +243,15 @@
 }
 
 .site-footer__social:hover {
-  background-color: $opeka-black-8;
+  background-color: $black-8;
 }
 
 .site-footer__copy {
   margin: 0;
-  font-family: $opeka-font;
-  font-size: $opeka-fs-14;
-  line-height: $opeka-lh-16;
-  color: $opeka-text-muted;
+  font-family: $font;
+  font-size: $fs-14;
+  line-height: $lh-16;
+  color: $text-muted;
 }
 
 .site-footer__meta {
@@ -259,55 +259,55 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  gap: $opeka-space-20;
+  gap: $space-20;
 }
 
 .site-footer__link {
-  font-family: $opeka-font;
-  font-size: $opeka-fs-14;
+  font-family: $font;
+  font-size: $fs-14;
   font-weight: 500;
-  line-height: $opeka-lh-16;
-  letter-spacing: $opeka-ls-14;
-  color: $opeka-blue;
+  line-height: $lh-16;
+  letter-spacing: $ls-14;
+  color: $blue;
   text-decoration: none;
 
   &:hover {
-    color: $opeka-blue-hover;
+    color: $blue-hover;
     text-decoration: underline;
   }
 
   &:focus-visible {
-    outline: $focus-ring-width solid $opeka-blue;
+    outline: $focus-ring-width solid $blue;
     outline-offset: $focus-ring-offset;
-    border-radius: $opeka-radius-12;
+    border-radius: $radius-12;
   }
 }
 
 .site-footer__made-by {
   margin: 0;
-  font-family: $opeka-font;
-  font-size: $opeka-fs-14;
+  font-family: $font;
+  font-size: $fs-14;
   line-height: 1.125rem;
   letter-spacing: -0.01em;
-  color: $opeka-text-muted;
+  color: $text-muted;
 }
 
 .site-footer__made-by a {
-  color: $opeka-navy;
+  color: $navy;
   text-decoration: none;
-  margin-left: $opeka-space-6;
+  margin-left: $space-6;
 }
 
 .site-footer__to-top {
   position: absolute;
-  top: $opeka-space-24;
-  right: $opeka-space-24;
+  top: $space-24;
+  right: $space-24;
   width: 4rem;
   height: 4rem;
   border-radius: 1.25rem;
   background-color: $color-surface;
   box-shadow: 0 1.5rem 3rem rgba(57, 38, 72, 0.08);
-  color: $opeka-navy;
+  color: $navy;
   text-decoration: none;
   font-size: 1.5rem;
   line-height: 1;
