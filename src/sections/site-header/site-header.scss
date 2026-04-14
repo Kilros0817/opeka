@@ -13,11 +13,14 @@
 }
 
 body.page-home > .site-header {
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: min(calc(100% - ($opeka-space-20 * 2)), 93.5rem);
+  transform: translateX(-50%);
   z-index: $z-site-header;
   flex-shrink: 0;
-  margin: $opeka-space-12 $opeka-space-20 0;
-  margin-inline: auto;
+  margin-top: $opeka-space-16;
 }
 
 .site-header__logo{
