@@ -31,6 +31,7 @@ $opeka-space-32: 2rem;
 $opeka-space-36: 2.25rem;
 $opeka-space-40: 2.5rem;
 $opeka-space-48: 3rem;
+$opeka-space-96: 6rem;
 
 // ——— Layout ———
 $opeka-container: 96rem;
@@ -54,12 +55,16 @@ $opeka-fs-12: 0.75rem;
 $opeka-fs-14: 0.875rem;
 $opeka-fs-16: 1rem;
 $opeka-fs-20: 1.25rem;
+$opeka-fs-44: 2.75rem;
 $opeka-fs-82: clamp(2.75rem, 6vw, 5.125rem);
+$opeka-fs-102: clamp(2.75rem, 6vw, 6.375rem);
 $opeka-lh-hero: 0.8;
 $opeka-lh-16: 1.25rem;
+$opeka-lh-32: 2.5rem;
 $opeka-ls-h1: -0.04em;
 $opeka-ls-tight: -0.02em;
 $opeka-ls-14: -0.01em;
+
 
 // ——— Z-index ———
 $z-hero-body: 2;
