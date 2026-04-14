@@ -25,7 +25,7 @@
 .benefits_step-sticky {
   display: grid;
   place-items: center;
-  position: fixed;
+  position: absolute;
   top: 0%;
   height: 100%;
   z-index: 1;
@@ -265,7 +265,7 @@
 }
 
 .benefits__cta {
-  position: absolute;
+  position: fixed;
   bottom: 64px;
   z-index: 0;
   display: flex;
