@@ -16,7 +16,7 @@
     <div class="site-footer__hero-actions">
       <a class="btn btn--primary site-footer__hero-btn " href="#">
         <div class="site-footer__hero-btn__plus">
-        
+
           <svg class="icon-white">
             <use href="../assets/icons/plus.svg"></use>
           </svg>
@@ -31,24 +31,32 @@
 
   <div class="site-footer__inner">
     <div class="site-footer__nav-grid">
-      <section class="site-footer__col">
-        <h2 class="site-footer__col-title">Пансионаты</h2>
-        <ul class="site-footer__links">
-          <li><a href="#">Всеволожский</a></li>
-          <li><a href="#">Выборгский</a></li>
-          <li><a href="#">Городской</a></li>
-          <li><a href="#">Источник</a></li>
-          <li><a href="#">Леснозаводской</a></li>
-          <li><a href="#">Отрадное</a></li>
-          <li><a href="#">Приморский</a></li>
-          <li><a href="#">Рижский</a></li>
-          <li><a href="#">Южный</a></li>
-        </ul>
+      <section class="site-footer__col accordionItem">
+        <div class="site-footer__bwn">
+          <span class="site-footer__col-title">Пансионаты</span>
+            <button class="site-footer__circlebutton-hid accordionTitle plus-button">+</button>
+        </div>
+        <div class="accordionContent ">
+          <ul class="site-footer__links ">
+            <li><a href="#">Всеволожский</a></li>
+            <li><a href="#">Выборгский</a></li>
+            <li><a href="#">Городской</a></li>
+            <li><a href="#">Источник</a></li>
+            <li><a href="#">Леснозаводской</a></li>
+            <li><a href="#">Отрадное</a></li>
+            <li><a href="#">Приморский</a></li>
+            <li><a href="#">Рижский</a></li>
+            <li><a href="#">Южный</a></li>
+          </ul>
+        </div>
       </section>
 
-      <section class="site-footer__col">
-        <h2 class="site-footer__col-title">Направления</h2>
-        <ul class="site-footer__links">
+      <section class="site-footer__col accordionItem">
+        <div class="site-footer__bwn">
+          <span class="site-footer__col-title">Направления</span>
+            <button class="site-footer__circlebutton-hid accordionTitle plus-button">+</button>
+        </div>
+        <ul class="site-footer__links accordionContent">
           <li><a href="#">Услуги сиделок</a></li>
           <li><a href="#">Опека Еда</a></li>
           <li><a href="#">Опека Документы</a></li>
@@ -63,9 +71,12 @@
         </ul>
       </section>
 
-      <section class="site-footer__col">
-        <h2 class="site-footer__col-title">О компании</h2>
-        <ul class="site-footer__links">
+      <section class="site-footer__col accordionItem">
+        <div class="site-footer__bwn">
+          <span class="site-footer__col-title">компании</span>
+            <button class="site-footer__circlebutton-hid accordionTitle plus-button">+</button>
+        </div>
+        <ul class="site-footer__links accordionContent">
           <li><a href="#">Партнеры</a></li>
           <li><a href="#">Вакансии</a></li>
           <li><a href="#">Документы и сертификаты</a></li>
@@ -75,9 +86,12 @@
         </ul>
       </section>
 
-      <section class="site-footer__col">
-        <h2 class="site-footer__col-title">Клиентам</h2>
-        <ul class="site-footer__links">
+      <section class="site-footer__col accordionItem">
+        <div class="site-footer__bwn">
+          <span class="site-footer__col-title">Клиентам</span>
+            <button class="site-footer__circlebutton-hid accordionTitle plus-button">+</button>
+        </div>
+        <ul class="site-footer__links accordionContent">
           <li><a href="#">Цены</a></li>
           <li><a href="#">Персонал</a></li>
           <li><a href="#">Истории подопечных</a></li>
@@ -94,16 +108,19 @@
         </ul>
       </section>
 
-      <section class="site-footer__col">
-        <h2 class="site-footer__col-title">Правовая информация</h2>
-        <ul class="site-footer__links">
+      <section class="site-footer__col accordionItem">
+        <div class="site-footer__bwn">
+          <span class="site-footer__col-title">Правовая информация</span>
+            <button class="site-footer__circlebutton-hid accordionTitle plus-button">+</button>
+        </div>
+        <ul class="site-footer__links accordionContent">
           <li><a href="#">Политика конфиденциальности</a></li>
           <li><a href="#">Согласие на обработку персональных данных</a></li>
         </ul>
       </section>
 
-      <aside class="site-footer__rating">
-        <img class="" src="../assets/icons/Vector.svg" alt="QR-код для оценки условий предоставления услуг" width="86"
+      <aside class="site-footer__rating site-footer__rating-desktop">
+        <img class="" src="../assets/icons/vector.svg" alt="QR-код для оценки условий предоставления услуг" width="86"
           height="86" />
         <p class="site-footer__rating-text">
           Для оценки условий предоставления услуг используйте QR-код или перейдите по ссылке ниже
@@ -136,20 +153,36 @@
         <h3 class="site-footer__contact-title">Пресс-служба</h3>
         <a href="mailto:media@sgc-opeca.ru">media@sgc-opeca.ru</a>
       </div>
+      <div class="site-footer__contact"></div>
+      
       <div class="site-footer__socials" aria-label="Социальные сети">
         <div class="site-footer__socials-left">
-          <a class="site-footer__social" href="#" aria-label="VK"><img class="" src="../assets/icons/Vk.svg" alt=""
+          <a class="site-footer__social" href="#" aria-label="VK"><img class="" src="../assets/icons/vk.svg" alt=""
               width="20" height="20" /></a>
-          <a class="site-footer__social" href="#" aria-label="MAX"><img class="" src="../assets/icons/Max.svg" alt=""
+          <a class="site-footer__social" href="#" aria-label="MAX"><img class="" src="../assets/icons/max.svg" alt=""
               width="20" height="20" /></a>
-          <a class="site-footer__social" href="#" aria-label="Telegram"><img class="" src="../assets/icons/Telegram.svg"
+          <a class="site-footer__social" href="#" aria-label="Telegram"><img class="" src="../assets/icons/telegram.svg"
               alt="" width="20" height="20" /></a>
-          <a class="site-footer__social" href="#" aria-label="RuTube"><img class="" src="../assets/icons/RuTube.svg"
+          <a class="site-footer__social" href="#" aria-label="RuTube"><img class="" src="../assets/icons/ruTube.svg"
               alt="" width="20" height="20" /></a>
-          <a class="site-footer__social" href="#" aria-label="Одноклассники"><img class="" src="../assets/icons/OK.svg"
+          <a class="site-footer__social" href="#" aria-label="Одноклассники"><img class="" src="../assets/icons/ok.svg"
               alt="" width="20" height="20" /></a>
         </div>
       </div>
+
+      <aside class="site-footer__rating site-footer__rating-mobile">
+        <img class="" src="../assets/icons/Vector.svg" alt="QR-код для оценки условий предоставления услуг" width="86"
+          height="86" />
+        <p class="site-footer__rating-text">
+          Для оценки условий предоставления услуг используйте QR-код или перейдите по ссылке ниже
+        </p>
+        <a class="text-link site-footer__rating-link" href="#">
+          <svg class="icon-blue">
+            <use href="../assets/icons/plus.svg"></use>
+          </svg>
+          <span class="text-link__label">Оценить</span>
+        </a>
+      </aside>
     </div>
 
     <div class="site-footer__meta">
@@ -157,7 +190,9 @@
       <a class="site-footer__link" href="#">Версия для слабовидящих</a>
       <p class="site-footer__made-by">
         Сайт сделан в
-        <a href="#" aria-label="Affarts">affarts</a>
+        <!-- <a href="#" aria-label="Affarts">affarts</a> -->
+        <img class="" src="../assets/icons/affarts_logo.svg" alt="QR-код для оценки условий предоставления услуг"
+          width="60" height="18" />
       </p>
     </div>
   </div>

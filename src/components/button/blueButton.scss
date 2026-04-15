@@ -1,18 +1,20 @@
 @use '../../styles/variables' as *;
 @use '../../styles/animations' as *;
 
-.cta-excursion {
+.blueButton {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: $space-16;
-  max-width: 17.5rem;
-  padding: $space-24;
+  padding: 0 $space-16;
+  height: 4rem;
   border-radius: $radius-20;
   background-color: $blue;
   color: $color-surface;
-  text-align: right;
+  text-align: center;
   text-decoration: none;
   transition: background-color $transition-fast;
+  width: 100%;
 
   &:hover {
     background-color: $blue-hover;
@@ -24,18 +26,18 @@
   }
 }
 
-.cta-excursion__text {
-  width: 100%;
-  text-align: left;
+.blueButton__text {
   margin: 0;
-  padding-right: $space-40;
   font-family: $font;
   font-size: $fs-16;
   font-weight: 500;
   line-height: $lh-16;
   letter-spacing: $ls-tight;
+  text-align: center;
 }
 
-.cta-excursion__action {
+.blueButton__action {
   display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }

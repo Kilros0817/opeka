@@ -23,16 +23,16 @@
       <li class="site-header__item">
         <span class="site-header__meta">
           8 (499) 370-49-78
-          <svg class="site-header__chevron" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true">
-            <path fill="currentColor" d="M3.2 4.6 6 7.4l2.8-2.8.7.7L6 8.9 2.5 5.3z" />
+          <svg class="icon-chevron">
+            <use href="../assets/icons/chevron-down.svg"></use>
           </svg>
         </span>
       </li>
       <li class="site-header__item">
         <span class="site-header__meta">
           Санкт-Петербург
-          <svg class="site-header__chevron" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true">
-            <path fill="currentColor" d="M3.2 4.6 6 7.4l2.8-2.8.7.7L6 8.9 2.5 5.3z" />
+          <svg class="icon-chevron">
+            <use href="../assets/icons/chevron-down.svg"></use>
           </svg>
         </span>
       </li>
@@ -77,13 +77,24 @@
       </nav>
     </div>
     <div class="site-header__tools">
-      <button class="site-header__tools__icon-btn" type="button" aria-label="Поиск">
+      <button class="site-header__tools__icon-btn " type="button" aria-label="Поиск">
         <img src="../assets/icons/search.svg" alt="Опека" width="16" height="16" />
       </button>
-      <button class="site-header__tools__icon-btn" type="button" aria-label="Личный кабинет">
+      <button class="site-header__tools__icon-btn site-header__tools__icon-btn-mobile" type="button"
+        aria-label="Личный кабинет">
         <img src="../assets/icons/user.svg" alt="Опека" width="16" height="16" />
       </button>
-      <a class="btn btn--primary" href="#"><span class="btn__label">Оставить заявку</span></a>
+      <a class="btn btn--primary btn__label-desktop" href="#"><span class="btn__label ">Оставить заявку</span></a>
+      <a class="btn btn--primary btn__label-mobile" href="#"><span class="btn__label">Записаться</span></a>
+      <button type="button" class="btn btn--menu btn--menu-mobile">
+        <span class="btn__icon" aria-hidden="true">
+          <span class="btn__burger">
+            <span class="btn__burger-line"></span>
+            <span class="btn__burger-line"></span>
+          </span>
+        </span>
+        <!-- <span class="btn__label">Меню</span> -->
+      </button>
     </div>
   </div>
 </header>

@@ -7,13 +7,11 @@
   overflow: hidden;
   background-color: $color-surface;
   border-top: 1px solid $border-10;
-  background: linear-gradient(
-    to top right,
-    #ffcea6 0%,
-    #f8e7d8 30%,
-    #eef5ff 70%,
-    #bddaff 100%
-  );
+  background: linear-gradient(to top right,
+      #ffcea6 0%,
+      #f8e7d8 30%,
+      #eef5ff 70%,
+      #bddaff 100%);
 }
 
 .site-footer::before {
@@ -28,10 +26,10 @@
   pointer-events: none;
 }
 
-.site-footer__mark{
-   display: flex;
-    align-items: center; /* 🔥 aligns them vertically */
-    gap: $space-8; 
+.site-footer__mark {
+  display: flex;
+  align-items: center;
+  gap: $space-8;
 }
 
 .site-footer::after {
@@ -63,19 +61,29 @@
 
 .site-footer__hero-text {
 
-  color: #22294F99;
+  color: $text-color-current;
   font-size: 16px;
   max-width: 400px;
   margin: 0 auto;
-  text-align: justify;       
-  text-align-last: center;  
+  text-align: justify;
+  text-align-last: center;
   line-height: 20px;
   letter-spacing: -1px;
 
-  
-  // font-family: Arial, sans-serif;
+  @include mobile {
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: $font-w-400;
+    font-size: 18px;
+    color: $text-color-current;
+    line-height: 1.6;
+    text-align: center;
+    letter-spacing: 0.5px;
+    max-width: 100%;
+    
+  }
 }
-.site-footer__hero-btn__plus{
+
+.site-footer__hero-btn__plus {
   width: 40px;
   height: 34px;
   background: #FFFFFF33;
@@ -97,6 +105,10 @@
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   border-radius: 1.25rem;
+
+  @include mobile {
+    width: $persent-100;
+  }
 }
 
 .site-footer__inner {
@@ -108,7 +120,11 @@
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  gap: 6rem;
+  gap: 4rem;
+
+  @include mobile {
+    padding: $space-24;
+  }
 }
 
 .site-footer__nav-grid {
@@ -123,7 +139,41 @@
   line-height: 1.125rem;
   letter-spacing: -0.01em;
   color: $text-muted;
-  font-weight: 400;
+  font-weight: $font-w-400;
+
+  @include mobile {
+    color: $color-text;
+    font-size: $fs-20;
+    font-weight: $font-w-500;
+  }
+}
+
+.site-footer__bwn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 0;
+  cursor: pointer;
+
+}
+
+.accordion__toggle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: none;
+
+  background: #eef2f7;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.site-footer__circlebutton-hid {
+  display: none;
+
+  @include mobile() {
+    display: flex;
+  }
 }
 
 .site-footer__links {
@@ -156,11 +206,28 @@
   backdrop-filter: blur($blur-frost);
 }
 
-.icon-white   {width:20px; height:20px; fill: #ffffff; color: #ffffff; }
+.icon-white {
+  width: 20px;
+  height: 20px;
+  fill: #ffffff;
+  color: #ffffff;
+}
 
-.icon-blue {width:14px; height:14px; fill: #2674D9; color: #2674D9;}
+.icon-blue {
+  width: 14px;
+  height: 14px;
+  fill: #2674D9;
+  color: #2674D9;
+}
 
-.site-footer__socials-left{
+.icon-chevron{
+  width: 16px;
+  height: 16px;
+  fill: #22294F99;
+  color: #22294F99;
+}
+
+.site-footer__socials-left {
   margin-right: auto;
 }
 
@@ -268,7 +335,7 @@
   font-weight: 500;
   line-height: $lh-16;
   letter-spacing: $ls-14;
-  color: $blue;
+  color: $text-muted;
   text-decoration: none;
 
   &:hover {
@@ -314,16 +381,85 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
+
+  @include mobile {
+    display: none;
+  }
 }
 
-@include respond-to(lg) {
+.site-footer__rating-mobile {
+  display: none;
+
+  @include mobile {
+    display: block;
+  }
+}
+
+.site-footer__rating-desktop {
+  display: block;
+
+  @include mobile {
+    display: none;
+  }
+}
+
+// .accordionTitle {
+// 	cursor: pointer;
+// 	-moz-user-select: none;
+// 	-webkit-user-select: none;
+// 	-ms-user-select: none;
+// 	user-select: none;
+// }
+
+@include mobile {
+  .accordionItem .accordionContent {
+    display: none;
+  }
+
+  .accordionItem.is-open .accordionContent {
+    display: block;
+  }
+
+  .plus-button {
+  width: 40px;
+  /* Width of the button */
+  height: 34px;
+  /* Height of the button */
+  border-radius: 50%;
+  /* Makes it circular */
+  background-color: #22294F0D;
+  /* Light blue background */
+  color: $navy;
+  /* Dark blue color for the plus sign */
+  border: none;
+  /* Removes the default border */
+  display: flex;
+  /* Use flex to center the text */
+  justify-content: center;
+  /* Centers the plus sign horizontally */
+  align-items: center;
+  /* Centers the plus sign vertically */
+  font-size: 24px;
+  /* Size of the plus sign */
+  cursor: pointer;
+  /* Changes cursor to pointer on hover */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+}
+
+.site-footer__bot{
+  display: flex;
+}
+
+
+@include desktop {
   .site-footer__nav-grid {
     grid-template-columns: repeat(5, minmax(0, 1fr)) minmax(18rem, 22.3125rem);
     align-items: start;
   }
 
   .site-footer__contacts-row {
-    grid-template-columns: repeat(4, minmax(0, 12.5rem)) minmax(18rem, 22.3125rem);
+    grid-template-columns: repeat(5, minmax(0, 12.5rem)) minmax(18rem, 22.3125rem);
     align-items: start;
   }
 }
