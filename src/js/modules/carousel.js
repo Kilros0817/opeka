@@ -85,17 +85,9 @@ export function initMobileCarousel() {
       dot.addEventListener('click', () => {
         currentSlide = parseInt(dot.dataset.slide)
         renderCarousel()
-        resetAutoPlay()
+    
       })
     })
-  }
-
-  function resetAutoPlay() {
-    clearInterval(autoPlayInterval)
-    autoPlayInterval = setInterval(() => {
-      currentSlide = (currentSlide + 1) % slides.length
-      renderCarousel()
-    }, 4500)
   }
 
   function handleSwipe() {
@@ -109,7 +101,7 @@ export function initMobileCarousel() {
         currentSlide = (currentSlide - 1 + slides.length) % slides.length
       }
       renderCarousel()
-      resetAutoPlay()
+  
     }
   }
 
@@ -125,5 +117,4 @@ export function initMobileCarousel() {
 
   // Initialize
   renderCarousel()
-  resetAutoPlay()
 }
