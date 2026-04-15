@@ -1,7 +1,9 @@
 @use '../../styles/variables' as *;
 @use '../../styles/mixins' as *;
 
-.benefits {}
+.benefits {
+  position: relative;
+}
 
 .benefits_step {
   position: relative;
@@ -9,6 +11,9 @@
   min-height: 54rem;
   padding: $space-48 $space-36;
   box-sizing: border-box;
+  will-change: transform;
+  display: flex;
+  justify-content: center;
 }
 
 .benefit-sticky {
@@ -18,47 +23,34 @@
   top: 0%;
 }
 
-.benefits-title {
-  // position: sticky;
-}
-
-.benefits_step-sticky {
+.benefits__sticky {
   display: grid;
   place-items: center;
   position: absolute;
-  top: 0%;
-  height: 100%;
-  z-index: 1;
+  min-height: 54rem;
+  z-index: 0;
   width: 100%;
 }
 
 .benefits__bg {
-  position: absolute;
   inset: 0;
   pointer-events: none;
-  overflow: hidden;
-  background: linear-gradient(to bottom left, #3e85e1, white 70%, #f2cca4);
-
+  width: 1365px;
+  z-index: 100;
 }
-
-.benefits__bg-blob {
-  position: absolute;
-  border-radius: 50%;
-  opacity: 0.35;
-  filter: blur(2.5rem);
+.benefits_step * {
+  will-change: transform;
 }
-
-.benefits__bg-blob--1 {
+.benefits_step-blob--1 {
   background: linear-gradient(to bottom left, #3e85e1, white 70%, #f2cca4);
 }
-
-.benefits__bg-blob--2 {
-  background: linear-gradient(to bottom left, #3e85e1, white 70%, #f2cca4);
+.benefits_step-blob--2{
+   background: linear-gradient(to bottom left, #3e85e1, white 70%, #f2cca4);
+}
+.benefits_step-blob--3{
+   background: linear-gradient(to bottom left, #3e85e1, white 70%, #f2cca4);
 }
 
-.benefits__bg-blob--3 {
-  background: linear-gradient(to bottom left, #3e85e1, white 70%, #f2cca4);
-}
 
 .benefits-card-blob--1 {
   top: 349px;
@@ -67,11 +59,11 @@
 
 .benefits-card-blob--2 {
   top: 308px;
-  left: 984px
+  left: 904px
 }
 
 .benefits-card-blob--3 {
-  top: 132px;
+  top: 109px;
   left: 341px;
 }
 
@@ -98,7 +90,7 @@
 
 .benefits__watermark {
   position: relative;
-  z-index: 0;
+  z-index: -1;
   margin: 0 auto $space-48;
   max-width: $container;
   font-family: $font;
@@ -140,7 +132,7 @@
   flex-direction: column;
   gap: $space-24;
   position: absolute;
-  z-index: 2;
+  // z-index: 2;
 }
 
 .benefits-card__panel {
@@ -155,6 +147,10 @@
   width: 480px;
   height: 340px;
   box-shadow: 0 $space-24 $space-48 rgba(34, 41, 79, 0.08);
+}
+
+.benefit-card-01 {
+  max-width: 1365px;
 }
 
 .benefits-card--tall .benefits-card__panel {
@@ -218,6 +214,7 @@
   overflow: hidden;
   aspect-ratio: 4 / 3;
   box-shadow: 0 $space-16 $space-32 rgba(34, 41, 79, 0.12);
+  max-width: 1356px;
 }
 
 .benefits-card--tall .benefits-card__media {
@@ -265,7 +262,7 @@
 }
 
 .benefits__cta {
-  position: fixed;
+  position: absolute;
   bottom: 64px;
   z-index: 0;
   display: flex;

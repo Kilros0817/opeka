@@ -1,6 +1,22 @@
 <section class="benefits">
-  <div class="benefits_step " aria-label="Опека — это">
-    <div class="benefits__bg benefits__bg-blob--1">
+  <div class="benefit-sticky">
+    <div class="benefits__sticky">
+      <p class="benefits__watermark">Опека — это</p>
+      <a class="benefits__cta" href="#">
+        <span class="benefits__cta-text">
+          Смотреть<br />
+          наши пансионаты
+        </span>
+        <span class="benefits__cta-icon" aria-hidden="true">
+          <svg width="16" height="16" viewBox="0 0 12 12">
+            <path fill="currentColor" d="M3.2 4.6 6 7.4l2.8-2.8.7.7L6 8.9 2.5 5.3z" />
+          </svg>
+        </span>
+      </a>
+    </div>
+  </div>
+  <div class="benefits_step benefits_step-blob--1" aria-label="Опека — это">
+    <div class="benefits__bg">
       <article class="benefits-card benefits-card-blob--1">
         <div class="benefits-card__panel">
           <h3 class="benefits-card__title">
@@ -30,23 +46,9 @@
         </div>
       </article>
     </div>
-    <div class="benefits_step-sticky">
-      <p class="benefits__watermark">Опека — это</p>
-      <div class="benefits__cta">
-        <span class="benefits__cta-text">
-          Смотреть<br />
-          наши пансионаты
-        </span>
-        <span class="benefits__cta-icon" aria-hidden="true">
-          <svg width="16" height="16" viewBox="0 0 12 12">
-            <path fill="currentColor" d="M3.2 4.6 6 7.4l2.8-2.8.7.7L6 8.9 2.5 5.3z" />
-          </svg>
-        </span>
-      </div>
-    </div>
   </div>
-  <div class="benefits_step" aria-label="Опека — это">
-    <div class="benefits__bg benefits__bg-blob--2">
+  <div class="benefits_step benefits_step-blob--2" aria-label="Опека — это">
+    <div class="benefits__bg">
       <article class="benefits-card benefits-card-blob--2">
         <div class="benefits-card__panel">
           <h3 class="benefits-card__title">&gt;3000 счастливых семей</h3>
@@ -75,8 +77,8 @@
       </article>
     </div>
   </div>
-  <div class="benefits_step" aria-label="Опека — это">
-    <div class="benefits__bg benefits__bg-blob--3">
+  <div class="benefits_step benefits_step-blob--3" aria-label="Опека — это">
+    <div class="benefits__bg">
       <article class="benefits-card benefits-card-blob--3">
         <div class="benefits-card__panel">
           <h3 class="benefits-card__title">
@@ -109,45 +111,3 @@
     </div>
   </div>
 </section>
-
-<!-- GSAP -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-
-<!-- ScrollTrigger Plugin -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-<script>
-  // Register GSAP plugin ScrollTrigger
-  gsap.registerPlugin(ScrollTrigger);
-
-  // Pin the element within a certain scroll range
-  gsap.to(".benefits_step-sticky", {
-    scrollTrigger: {
-      trigger: ".benefits_step-sticky",
-      start: "top top+50",  // Pin when the top of the element reaches the top of the viewport
-      end: "bottom+=1000 top",  // Stop pinning after scrolling 300px past the element
-      scrub: true,  // Smooth scrolling effect
-      pin: true,  // Pin the element in place
-      pinSpacing: false,  // Don't add extra space after the element
-    }
-  });
-</script>
-
-<!-- GSAP ScrollTo Plugin -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
-<script>
-  // Register GSAP plugin
-  gsap.registerPlugin(ScrollToPlugin);
-
-  // Scroll up function for buttons with class 'scroll-up-button'
-  document.querySelectorAll('.benefits__cta-icon').forEach(button => {
-    button.addEventListener("click", function () {
-      gsap.to(window, {
-        scrollTo: {
-          y: window.pageYOffset + 750, // Ensures scrolling up by 50px
-          autoKill: false, // Ensures the scroll action doesn't stop unexpectedly
-          duration: 1 // Duration of the scroll animation in seconds
-        }
-      });
-    });
-  });
-</script>
