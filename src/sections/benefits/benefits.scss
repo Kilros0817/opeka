@@ -1,6 +1,10 @@
 @use '../../styles/variables' as *;
 @use '../../styles/mixins' as *;
 
+$benefit-bg1-image: url('/src/assets/images/benefit-bg1.png'); // Path to the image
+$benefit-bg2-image: url('/src/assets/images/benefit-bg2.png'); // Path to the image
+$benefit-bg3-image: url('/src/assets/images/benefit-bg3.png'); // Path to the image
+
 .benefits {
   position: relative;
 }
@@ -14,6 +18,8 @@
   will-change: transform;
   display: flex;
   justify-content: center;
+  width: 100%;
+  height: 100%;
 }
 
 .benefit-sticky {
@@ -28,7 +34,6 @@
   place-items: center;
   position: absolute;
   min-height: 54rem;
-  z-index: 0;
   width: 100%;
 }
 
@@ -36,19 +41,28 @@
   inset: 0;
   pointer-events: none;
   width: 1365px;
-  z-index: 100;
 }
+
 .benefits_step * {
   will-change: transform;
 }
+
 .benefits_step-blob--1 {
-  background: linear-gradient(to bottom left, #3e85e1, white 70%, #f2cca4);
+  background-image: $benefit-bg1-image;
+  background-size: cover; // Ensures the image covers the entire screen
+  background-position: center center; // Center the image
 }
-.benefits_step-blob--2{
-   background: linear-gradient(to bottom left, #3e85e1, white 70%, #f2cca4);
+
+.benefits_step-blob--2 {
+  background-image: $benefit-bg2-image;
+  background-size: cover; // Ensures the image covers the entire screen
+  background-position: center center; // Center the image
 }
-.benefits_step-blob--3{
-   background: linear-gradient(to bottom left, #3e85e1, white 70%, #f2cca4);
+
+.benefits_step-blob--3 {
+  background-image: $benefit-bg3-image;
+  background-size: cover; // Ensures the image covers the entire screen
+  background-position: center center; // Center the image
 }
 
 
@@ -90,7 +104,6 @@
 
 .benefits__watermark {
   position: relative;
-  z-index: -1;
   margin: 0 auto $space-48;
   max-width: $container;
   font-family: $font;
@@ -108,7 +121,6 @@
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 2;
   max-width: $container;
   margin: 0 auto;
 }
@@ -132,7 +144,7 @@
   flex-direction: column;
   gap: $space-24;
   position: absolute;
-  // z-index: 2;
+  z-index: 100;
 }
 
 .benefits-card__panel {
@@ -263,7 +275,6 @@
 .benefits__cta {
   position: absolute;
   bottom: 64px;
-  z-index: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -308,4 +319,41 @@
   background-color: $black-5;
   color: $navy;
   backdrop-filter: blur($blur-frost);
+}
+
+.main {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+}
+
+
+.slides-container {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex: 1;
+}
+
+.slides-inner {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow: visible;
+}
+
+.slide {
+  font-size: 90px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  height: 100%;
+  width: 100%;
 }
