@@ -3,13 +3,18 @@
  * trigger is clicked; CSS shows `.accordionContent` only when open.
  */
 export function initFooterAccordion() {
-  document.querySelectorAll('.accordionItem').forEach((item) => {
-    const trigger = item.querySelector('.site-footer__bwn')
-    if (!trigger) return
-
-    trigger.addEventListener('click', (event) => {
-      event.preventDefault()
-      item.classList.toggle('is-open')
+    document.querySelectorAll('.accordionItem').forEach((item) => {
+        const trigger = item.querySelector('.site-footer__bwn')
+        const button = item.querySelector('.plus-button')
+        if (!trigger) {
+            return
+        } else {
+            trigger.addEventListener('click', (event) => {
+                event.preventDefault()
+                item.classList.toggle('is-open');
+                console.log("===========",item.classList[2]);
+                button.textContent = item.classList[2] ? '−' : '+';
+            })
+        }
     })
-  })
 }
