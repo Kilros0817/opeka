@@ -11,6 +11,9 @@
   min-height: 54rem;
   padding: $space-48 $space-36;
   box-sizing: border-box;
+  will-change: transform;
+  display: flex;
+  justify-content: center;
 }
 
 .benefit-sticky {
@@ -20,47 +23,34 @@
   top: 0%;
 }
 
-.benefits_step-sticky {
+.benefits__sticky {
   display: grid;
   place-items: center;
   position: absolute;
-  // position: sticky;
-  top: 30%;
-  height: 70%;
-  z-index: 1;
+  min-height: 54rem;
+  z-index: 0;
   width: 100%;
 }
 
 .benefits__bg {
-  position: absolute;
   inset: 0;
   pointer-events: none;
-  overflow: hidden;
+  width: 1365px;
+  z-index: 100;
 }
-
+.benefits_step * {
+  will-change: transform;
+}
 .benefits_step-blob--1 {
   background: linear-gradient(to bottom left, #3e85e1, white 70%, #f2cca4);
 }
-
-.benefits__bg-blob {
-  position: absolute;
-  border-radius: 50%;
-  opacity: 0.35;
-  filter: blur(2.5rem);
+.benefits_step-blob--2{
+   background: linear-gradient(to bottom left, #3e85e1, white 70%, #f2cca4);
+}
+.benefits_step-blob--3{
+   background: linear-gradient(to bottom left, #3e85e1, white 70%, #f2cca4);
 }
 
-.benefits__bg-blob--1 {
-
-  max-width: 1365px;
-}
-
-.benefits__bg-blob--2 {
-  background: linear-gradient(to bottom left, #3e85e1, white 70%, #f2cca4);
-}
-
-.benefits__bg-blob--3 {
-  background: linear-gradient(to bottom left, #3e85e1, white 70%, #f2cca4);
-}
 
 .benefits-card-blob--1 {
   top: 349px;
@@ -69,11 +59,11 @@
 
 .benefits-card-blob--2 {
   top: 308px;
-  left: 984px
+  left: 904px
 }
 
 .benefits-card-blob--3 {
-  top: 132px;
+  top: 109px;
   left: 341px;
 }
 
@@ -100,7 +90,7 @@
 
 .benefits__watermark {
   position: relative;
-  z-index: 0;
+  z-index: -1;
   margin: 0 auto $space-48;
   max-width: $container;
   font-family: $font;
@@ -140,14 +130,9 @@
 .benefits-card {
   display: flex;
   flex-direction: column;
-<<<<<<< HEAD
-  gap: $opeka-space-24;
-  position: relative;
-=======
   gap: $space-24;
   position: absolute;
->>>>>>> e00767e27af8cbb3853944e640a340443dab6e70
-  z-index: 2;
+  // z-index: 2;
 }
 
 .benefits-card__panel {
@@ -228,12 +213,8 @@
   border-radius: $radius-20;
   overflow: hidden;
   aspect-ratio: 4 / 3;
-<<<<<<< HEAD
-  box-shadow: 0 $opeka-space-16 $opeka-space-32 rgba(34, 41, 79, 0.12);
-  max-width: 1356px;
-=======
   box-shadow: 0 $space-16 $space-32 rgba(34, 41, 79, 0.12);
->>>>>>> e00767e27af8cbb3853944e640a340443dab6e70
+  max-width: 1356px;
 }
 
 .benefits-card--tall .benefits-card__media {
@@ -281,8 +262,7 @@
 }
 
 .benefits__cta {
-  // position: fixed;
-  position: relative;
+  position: fixed;
   bottom: 64px;
   z-index: 0;
   display: flex;

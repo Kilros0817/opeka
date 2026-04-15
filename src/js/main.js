@@ -19,13 +19,76 @@ import '../sections/site-footer/site-footer.scss'
 import { initHero } from './modules/scenes/hero.js'
 
 
-// Init on DOM ready
+// // Init on DOM ready
 document.addEventListener('DOMContentLoaded', () => {
   // Autoplay hero video
   const video = document.querySelector('.hero__video')
-  if (video) video.play().catch(() => {})
+  if (video) video.play().catch(() => { })
 
 })
 
 initHero()
+
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
+// Register plugin — required
+gsap.registerPlugin(ScrollTrigger);
+
+// panels (❌ removed clone)
+let panels = gsap.utils.toArray(".benefits_step");
+
+// 🔹 PIN (keep)
+panels.forEach((panel, idx) => {
+  console.log(idx);
+  if (idx + 1 < panels.length)
+    ScrollTrigger.create({
+      trigger: panel,
+      start: "top top",
+      pin: true,
+      pinSpacing: false
+    });
+})
+
+// 🔹 SNAP (keep)
+let maxScroll;
+
+let pageScrollTrigger = ScrollTrigger.create({
+  snap(value) {
+    let snappedValue = gsap.utils.snap(.1 / panels.length, value);
+
+    if (snappedValue <= 0) {
+      return 1.05 / maxScroll;
+    } else if (snappedValue >= 1) {
+      return maxScroll / (maxScroll + 1.05);
+    }
+
+    return snappedValue;
+  }
+});
+
+// 🔹 LOOP SCROLL (keep — this handles looping)
+window.addEventListener("scroll", (e) => {
+  let scroll = pageScrollTrigger.scroll();
+
+  if (scroll > maxScroll) {
+    pageScrollTrigger.scroll(1);
+    e.preventDefault();
+  } else if (scroll < 1) {
+    pageScrollTrigger.scroll(maxScroll - 1);
+    e.preventDefault();
+  }
+}, { passive: false });
+
+// gsap.to(".benefits_step-sticky", {
+//   scrollTrigger: {
+//     trigger: ".benefits_step-sticky",
+//     start: "top, top",  // Pin when the top of the element reaches the top of the viewport
+//     end: () => "+=" + (container.offsetHeight - 500),  // Stop pinning after scrolling 300px past the element
+//     scrub: true,  // Smooth scrolling effect
+//     pin: true,  // Pin the element in place
+//     pinSpacing: false,  // Don't add extra space after the element
+//   }
+// });
+
 
