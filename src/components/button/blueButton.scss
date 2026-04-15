@@ -1,11 +1,12 @@
 @use '../../styles/variables' as *;
 @use '../../styles/animations' as *;
 
-.cta-excursion {
+.blueButton {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: $space-16;
-  max-width: 17.5rem;
+  // max-width: 17.5rem;
   padding: $space-24;
   border-radius: $radius-20;
   background-color: $blue;
@@ -24,11 +25,11 @@
   }
 }
 
-.cta-excursion__text {
+.blueButton__text {
   width: 100%;
   text-align: left;
   margin: 0;
-  padding-right: $space-40;
+  // padding-right: $space-40;
   font-family: $font;
   font-size: $fs-16;
   font-weight: 500;
@@ -36,6 +37,6 @@
   letter-spacing: $ls-tight;
 }
 
-.cta-excursion__action {
+.blueButton__action {
   display: inline-flex;
 }

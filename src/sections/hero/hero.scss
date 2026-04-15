@@ -40,6 +40,8 @@
     flex-direction: column;
     justify-content: center;
     justify-items: center;
+
+    padding: 0 $space-16 $space-24;
   }
 }
 
@@ -100,11 +102,21 @@
     }
 }
 
+.hero__register-icon {
+  justify-content: flex-end;
+}
+
 .hero__right {
     width: 47%;
     display: flex;
     justify-content: flex-end;
     align-items: end;
+
+    @include mobile {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
 }
 
 .hero__scroll-hint {
@@ -114,3 +126,25 @@
         display: none;
     }
 }
+
+.hero__promo-icon {
+  fill: #FF5E61;
+  color: #FF5E61;
+}
+
+.hero__promo-card {
+  display: block;
+  
+  @include mobile {
+    display: none;
+  }
+}
+
+.hero__promo-card-mobile {
+  display: none;
+
+  @include mobile {
+    display: block;
+    width: 100%;
+  }
+} 

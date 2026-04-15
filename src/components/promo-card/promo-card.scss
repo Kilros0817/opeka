@@ -1,4 +1,5 @@
 @use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
 
 .promo-card {
   position: relative;
@@ -33,7 +34,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: $space-32;
+  // gap: $space-32;
   min-height: 19.125rem;
   padding: $space-24;
   border-radius: $radius-32;
@@ -41,6 +42,14 @@
   background: linear-gradient(30deg, #ffffff 0%, #e1fce9 100%);
   overflow: hidden;
   box-shadow: 0 $space-24 $space-48 $black-5;
+
+  @include mobile {
+    min-height: 15rem;
+    max-width: 21rem;
+    padding: $space-24 $space-16;
+    min-height: 15rem;
+    height: 15rem;
+  }
 }
 
 .promo-card__glow {
@@ -62,6 +71,7 @@
 }
 
 .promo-card__body {
+  margin-top: $space-16;
   position: relative;
   z-index: 1;
   display: flex;
