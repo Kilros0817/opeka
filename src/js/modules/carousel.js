@@ -66,10 +66,8 @@ export function initMobileCarousel() {
   }
 
   function renderCarousel() {
-    // Render cards
     track.innerHTML = slides.map(slide => createCard(slide)).join('')
 
-    // Render dots
     dotsContainer.innerHTML = slides.map((_, i) => `
       <button
         type="button"
@@ -79,26 +77,17 @@ export function initMobileCarousel() {
       ></button>
     `).join('')
 
-    // Update track position
-    const cardWidth = track.querySelector('.carousel-card').offsetWidth + 16 // 16px gap
+
+    const cardWidth = track.querySelector('.carousel-card').offsetWidth + 16
     track.style.transform = `translateX(-${currentSlide * cardWidth}px)`
 
-    // Attach dot listeners
     dotsContainer.querySelectorAll('.carousel-dot').forEach(dot => {
       dot.addEventListener('click', () => {
         currentSlide = parseInt(dot.dataset.slide)
         renderCarousel()
-        resetAutoPlay()
+    
       })
     })
-  }
-
-  function resetAutoPlay() {
-    clearInterval(autoPlayInterval)
-    autoPlayInterval = setInterval(() => {
-      currentSlide = (currentSlide + 1) % slides.length
-      renderCarousel()
-    }, 4500)
   }
 
   function handleSwipe() {
@@ -112,7 +101,7 @@ export function initMobileCarousel() {
         currentSlide = (currentSlide - 1 + slides.length) % slides.length
       }
       renderCarousel()
-      resetAutoPlay()
+  
     }
   }
 
@@ -128,5 +117,4 @@ export function initMobileCarousel() {
 
   // Initialize
   renderCarousel()
-  resetAutoPlay()
 }
