@@ -29,7 +29,6 @@
 .site-footer__mark {
   display: flex;
   align-items: center;
-  /* 🔥 aligns them vertically */
   gap: $space-8;
 }
 
@@ -62,7 +61,7 @@
 
 .site-footer__hero-text {
 
-  color: #22294F99;
+  color: $text-color-current;
   font-size: 16px;
   max-width: 400px;
   margin: 0 auto;
@@ -73,26 +72,15 @@
 
   @include mobile {
     font-family: 'Helvetica Neue', sans-serif;
-    /* Choose a light, modern font */
-    font-weight: 400;
-    /* Regular weight for smoothness */
+    font-weight: $font-w-400;
     font-size: 18px;
-    /* Make the text size consistent */
-    color: #a0aec0;
-    /* Light grayish color for the text */
+    color: $text-color-current;
     line-height: 1.6;
-    /* Increased line spacing for readability */
     text-align: center;
-    /* Center text alignment */
     letter-spacing: 0.5px;
-    /* Slight space between the letters for better appearance */
     max-width: 100%;
-    /* To prevent text from stretching across the entire width */
     
   }
-
-
-  // font-family: Arial, sans-serif;
 }
 
 .site-footer__hero-btn__plus {
@@ -230,6 +218,13 @@
   height: 14px;
   fill: #2674D9;
   color: #2674D9;
+}
+
+.icon-chevron{
+  width: 16px;
+  height: 16px;
+  fill: #22294F99;
+  color: #22294F99;
 }
 
 .site-footer__socials-left {
@@ -396,12 +391,12 @@
   display: none;
 
   @include mobile {
-    display: flex;
+    display: block;
   }
 }
 
 .site-footer__rating-desktop {
-  display: flex;
+  display: block;
 
   @include mobile {
     display: none;
@@ -452,6 +447,9 @@
 }
 }
 
+.site-footer__bot{
+  display: flex;
+}
 
 
 @include desktop {
@@ -461,7 +459,7 @@
   }
 
   .site-footer__contacts-row {
-    grid-template-columns: repeat(4, minmax(0, 12.5rem)) minmax(18rem, 22.3125rem);
+    grid-template-columns: repeat(5, minmax(0, 12.5rem)) minmax(18rem, 22.3125rem);
     align-items: start;
   }
 }

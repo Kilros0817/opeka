@@ -12,7 +12,6 @@ export function initFooterAccordion() {
             trigger.addEventListener('click', (event) => {
                 event.preventDefault()
                 item.classList.toggle('is-open');
-                console.log("===========",item.classList[2]);
                 button.textContent = item.classList[2] ? '−' : '+';
             })
         }
