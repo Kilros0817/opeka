@@ -5,23 +5,28 @@ export function initMobileCarousel() {
   const slides = [
     {
       tag: 'Скидка 20%',
-      title: 'Зимний чек-ап в «Опеке» по сниженной цене 119 990 ₽',
-      desc: '14 дней восстановления здоровья за 119 990 ₽. Анализы, терапевт и проживание включены!'
+      title: 'Забота без переплат',
+      desc: 'Дарим особые условия на проживание в наших пансионатах Санкт-Петербурга на 30 дней.'
     },
     {
       tag: 'Скидка 15%',
-      title: 'Весенний оздоровительный курс',
-      desc: '10 дней полного восстановления организма с включением всех процедур.'
+      title: 'Зимний чек-ап в «Опеке» по сниженной цене 119 990 ₽',
+      desc: '14 дней восстановления здоровья за 119 990 ₽. Анализы, терапевт и проживание включены!'
     },
     {
-      tag: 'Скидка 25%',
-      title: 'Летний релакс-пакет',
-      desc: '7 дней отдыха и восстановления в комфортных условиях нашего пансионата.'
+      tag: 'рассрочка',
+      title: 'Заезжайте сегодня, платите потом!',
+      desc: 'Разделим стоимость программы на платежи от 31 531 ₽ / месяц'
     },
     {
-      tag: 'Скидка 10%',
-      title: 'Осенний wellness-тур',
-      desc: '14 дней комплексного оздоровления с персональным медицинским сопровождением.'
+      tag: 'Скидка 40%',
+      title: 'Скидки при единовременной оплате',
+      desc: 'Не пропустите эту возможность!'
+    },
+    {
+      tag: 'Скидка',
+      title: 'Круглосуточный профессиональный уход',
+      desc: 'Акция на проживание в пансионатах от 3 300 ₽ / сутки'
     }
   ]
 
@@ -30,7 +35,6 @@ export function initMobileCarousel() {
   let currentSlide = 0
   let touchStartX = 0
   let touchEndX = 0
-  let autoPlayInterval
 
   function createCard(slide) {
     return `
@@ -78,7 +82,7 @@ export function initMobileCarousel() {
     `).join('')
 
 
-    const cardWidth = track.querySelector('.carousel-card').offsetWidth + 16
+    const cardWidth = track.querySelector('.carousel-card').offsetWidth + 8
     track.style.transform = `translateX(-${currentSlide * cardWidth}px)`
 
     dotsContainer.querySelectorAll('.carousel-dot').forEach(dot => {

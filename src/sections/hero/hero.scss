@@ -39,8 +39,6 @@
   @include mobile {
     flex-direction: column;
     justify-content: center;
-    justify-items: center;
-
     padding: 0 0 $space-24;
   }
 }
