@@ -87,13 +87,9 @@ $z-hero-body: 2;
 $z-site-header: 3;
 $z-skip-link: 1000;
 
-// ——— Breakpoints (min-width, for respond-to) ———
-$breakpoints: (
-  sm: 36rem,
-  md: 48rem,
-  lg: 64rem,
-  xl: 75rem,
-);
+// ——— Breakpoints (mobile / desktop mixins in _mixins.scss) ———
+$bp-mobile-max: 767px; // 767px at 16px root
+$bp-desktop-min: 768px; // 768px
 
 // ——— Focus ———
 $focus-ring-width: 2px;

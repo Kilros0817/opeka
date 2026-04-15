@@ -120,7 +120,7 @@
   padding: 0;
   list-style: none;
 
-  @include respond-to(lg) {
+  @include desktop {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     align-items: start;
     gap: $space-24;

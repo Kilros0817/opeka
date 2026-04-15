@@ -1,20 +1,6 @@
 @use '../../styles/variables' as *;
 @use '../../styles/mixins' as *;
 
-
-
-@mixin mobile {
-  @media (max-width: 767px) {
-    @content;
-  }
-}
-
-@mixin desktop {
-  @media (min-width: 768px) {
-    @content;
-  }
-}
-
 .site-footer {
   position: relative;
   margin-top: auto;
@@ -354,7 +340,7 @@
   justify-content: center;
 }
 
-@include respond-to(lg) {
+@include desktop {
   .site-footer__nav-grid {
     grid-template-columns: repeat(5, minmax(0, 1fr)) minmax(18rem, 22.3125rem);
     align-items: start;
