@@ -17,10 +17,6 @@
   flex: 0 0 auto;
   width: 100%;
   max-width: 21rem;
-
-  @include mobile {
-    max-width: calc(100% - 3rem);
-  }
 }
 
 .carousel-dots {
