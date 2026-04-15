@@ -19,7 +19,7 @@
   max-width: 21rem;
 
   @include mobile {
-    max-width: 100%;
+    max-width: calc(100% - 3rem);
   }
 }
 
