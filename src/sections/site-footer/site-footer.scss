@@ -424,9 +424,8 @@
   .accordionItem.is-open .accordionContent {
     display: block;
   }
-}
 
-.plus-button {
+  .plus-button {
   width: 40px;
   /* Width of the button */
   height: 34px;
@@ -451,6 +450,9 @@
   /* Changes cursor to pointer on hover */
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
+}
+
+
 
 @include desktop {
   .site-footer__nav-grid {
