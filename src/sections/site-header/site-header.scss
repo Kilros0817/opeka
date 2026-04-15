@@ -2,20 +2,6 @@
 @use '../../styles/animations' as *;
 @use '../../styles/mixins' as *;
 
-
-
-@mixin mobile {
-  @media (max-width: 767px) {
-    @content;
-  }
-}
-
-@mixin desktop {
-  @media (min-width: 768px) {
-    @content;
-  }
-}
-
 .site-header {
   width: 100%;
   max-width: 93.5rem;
@@ -191,8 +177,6 @@ body.page-home>.site-header {
   &:hover {
     background: $color-topbar-bg;
   }
-
-
 }
 
 .site-header__tools__icon-btn-mobile {

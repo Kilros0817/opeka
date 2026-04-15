@@ -1,16 +1,13 @@
 @use 'variables' as *;
 
 @mixin mobile {
-  @media (max-width: $bp-mobile-max) {
+  @media (max-width: 767px) {
     @content;
   }
 }
 
 @mixin desktop {
-  @media (min-width: $bp-desktop-min) {
+  @media (min-width: 768px) {
     @content;
   }
 }
-
-@mixin mobile  { @media (max-width: 767px) { @content; } }
-@mixin desktop { @media (min-width: 768px) { @content; } }
