@@ -1,0 +1,15 @@
+@use '../../../styles/tokens' as *;
+
+// RENAME: .template → BEM block name (= folder name).
+
+.template {
+  // base
+}
+
+.template__element {
+  // ...
+}
+
+.template--modifier {
+  // ...
+}

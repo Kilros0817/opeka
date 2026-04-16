@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Components — Styleguide</title>
+  </head>
+  <body>
+    <component src="assets/icons/sprite.svg"></component>
+
+    <div class="sg-layout">
+      <component src="pages/styleguide/_nav.html"></component>
+
+      <main class="sg-main">
+        <header class="sg-header">
+          <h1 class="sg-header__title">Components</h1>
+          <p class="sg-header__lead">
+            Каталог UI-компонентов. Каждая ячейка — самостоятельная разметка,
+            готовая к копированию (см. сниппет под матрицей).
+          </p>
+        </header>
+
+        <!-- Atoms -->
+        <component src="components/atoms/button/button.styleguide.html"></component>
+        <component src="components/atoms/text-link/text-link.styleguide.html"></component>
+        <component src="components/atoms/tag/tag.styleguide.html"></component>
+        <component src="components/atoms/pagination/pagination.styleguide.html"></component>
+
+        <!-- Molecules -->
+        <component src="components/molecules/promo-mini-card/promo-mini-card.styleguide.html"></component>
+        <component src="components/molecules/promo-mini-slider/promo-mini-slider.styleguide.html"></component>
+
+        <!-- Подключать витрины новых компонентов сюда:
+             Atoms:     <component src="components/atoms/<name>/<name>.styleguide.html"></component>
+             Molecules: <component src="components/molecules/<name>/<name>.styleguide.html"></component> -->
+      </main>
+    </div>
+
+    <script type="module" src="../../scripts/styleguide.js"></script>
+  </body>
+</html>

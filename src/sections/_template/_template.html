@@ -1,0 +1,21 @@
+<!--
+  RENAME: template-section → section name in all files.
+  BEM block name = folder name.
+
+  Checklist before merge:
+  [ ] Folder renamed from _template
+  [ ] BEM block renamed in all files (.html, .scss, .styleguide.html)
+  [ ] data-section matches folder name
+  [ ] data-anim — pick a preset from the animation catalog
+  [ ] Section added to page via <component>
+  [ ] Showcase connected in styleguide/sections.html
+  [ ] No TODO/FIXME in code (lint:contracts will catch them)
+-->
+<section class="template-section" data-section="template" data-anim="reveal-up">
+  <div class="container">
+    <h2 class="template-section__title">Section title</h2>
+    <div class="template-section__body">
+      <!-- section content -->
+    </div>
+  </div>
+</section>

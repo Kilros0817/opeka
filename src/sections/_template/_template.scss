@@ -1,0 +1,18 @@
+@use '../../styles/tokens' as *;
+
+// RENAME: template-section → BEM block name (= folder name).
+
+.template-section {
+  padding-block: clamp(40px, 6vw, 120px);
+
+  &__title {
+    @include type-h2-desktop;
+    margin-bottom: $space-xl;
+
+    @include mobile { @include type-h2-mobile; }
+  }
+
+  &__body {
+    // элементы секции
+  }
+}

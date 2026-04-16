@@ -1,0 +1,50 @@
+<!-- x-text-link showcase. Include in styleguide/components.html -->
+<section class="sg-section" id="comp-text-link" data-nav-target>
+  <h2 class="sg-section__title">Text Link</h2>
+  <p class="sg-section__desc">
+    Текстовая ссылка с иконкой 16px слева. Рендерится как <code>&lt;a&gt;</code>
+    если задан <code>href</code>, иначе <code>&lt;button&gt;</code>.
+    Цвета: <code>blue</code> (светлые подложки), <code>white</code> (тёмные), <code>grey</code>.
+    Размер <code>sm</code> — для топ-бара.
+  </p>
+
+  <div class="sg-matrix">
+    <div class="sg-matrix__head">
+      <span></span>
+      <span class="sg-state-label">Default</span>
+      <span class="sg-state-label">Hover</span>
+      <span class="sg-state-label">Disabled</span>
+    </div>
+
+    <div class="sg-matrix__row">
+      <span class="sg-variant-label">Blue</span>
+      <div class="sg-cell"><x-text-link href="#" color="blue" icon="plus">Смотреть пансионаты</x-text-link></div>
+      <div class="sg-cell"><x-text-link href="#" color="blue" icon="plus" class="is-hover">Смотреть пансионаты</x-text-link></div>
+      <div class="sg-cell"><x-text-link color="blue" icon="plus" disabled>Смотреть пансионаты</x-text-link></div>
+    </div>
+
+    <div class="sg-matrix__row">
+      <span class="sg-variant-label">White</span>
+      <div class="sg-cell sg-cell--on-dark"><x-text-link href="#" color="white" icon="plus">Смотреть пансионаты</x-text-link></div>
+      <div class="sg-cell sg-cell--on-dark"><x-text-link href="#" color="white" icon="plus" class="is-hover">Смотреть пансионаты</x-text-link></div>
+      <div class="sg-cell sg-cell--on-dark"><x-text-link color="white" icon="plus" disabled>Смотреть пансионаты</x-text-link></div>
+    </div>
+
+    <div class="sg-matrix__row">
+      <span class="sg-variant-label">Grey</span>
+      <div class="sg-cell"><x-text-link href="#" color="grey" icon="plus">Смотреть пансионаты</x-text-link></div>
+      <div class="sg-cell"><x-text-link href="#" color="grey" icon="plus" class="is-hover">Смотреть пансионаты</x-text-link></div>
+      <div class="sg-cell"><x-text-link color="grey" icon="plus" disabled>Смотреть пансионаты</x-text-link></div>
+    </div>
+  </div>
+
+  <sg-snippet title="x-text-link">
+    <x-text-link href="/catalog/" color="blue" icon="plus">Смотреть пансионаты</x-text-link>
+
+    <!-- without icon -->
+    <x-text-link href="#" color="grey">Подробнее</x-text-link>
+
+    <!-- small variant (top bar) -->
+    <x-text-link href="#" color="blue" size="sm">Каталог</x-text-link>
+  </sg-snippet>
+</section>

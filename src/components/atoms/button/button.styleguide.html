@@ -1,0 +1,227 @@
+<!-- x-button showcase. Include in styleguide/components.html -->
+
+<section class="sg-section" id="comp-button-mini" data-nav-target>
+  <h2 class="sg-section__title">Button · Mini (34px)</h2>
+  <p class="sg-section__desc">
+    Default size. Variants: <code>blue</code>, <code>white</code>,
+    <code>tr-white</code>, <code>tr-grey</code>, <code>black</code>.
+  </p>
+
+  <div class="sg-matrix">
+    <div class="sg-matrix__head">
+      <span></span>
+      <span class="sg-state-label">Default</span>
+      <span class="sg-state-label">Hover</span>
+      <span class="sg-state-label">Disabled</span>
+    </div>
+
+    <div class="sg-matrix__row">
+      <span class="sg-variant-label">Blue</span>
+      <div class="sg-cell"><x-button variant="blue">Оставить заявку</x-button></div>
+      <div class="sg-cell"><x-button variant="blue" class="is-hover">Оставить заявку</x-button></div>
+      <div class="sg-cell"><button type="button" class="btn btn--mini btn--blue" disabled><span class="btn__label">Оставить заявку</span></button></div>
+    </div>
+
+    <div class="sg-matrix__row">
+      <span class="sg-variant-label">White</span>
+      <div class="sg-cell"><x-button variant="white">Оставить заявку</x-button></div>
+      <div class="sg-cell"><x-button variant="white" class="is-hover">Оставить заявку</x-button></div>
+      <div class="sg-cell"><button type="button" class="btn btn--mini btn--white" disabled><span class="btn__label">Оставить заявку</span></button></div>
+    </div>
+
+    <div class="sg-matrix__row">
+      <span class="sg-variant-label">Tr White</span>
+      <div class="sg-cell"><x-button variant="tr-white">8 (499) 370-49-78</x-button></div>
+      <div class="sg-cell"><x-button variant="tr-white" class="is-hover">8 (499) 370-49-78</x-button></div>
+      <div class="sg-cell"><button type="button" class="btn btn--mini btn--tr-white" disabled><span class="btn__label">8 (499) 370-49-78</span></button></div>
+    </div>
+
+    <div class="sg-matrix__row">
+      <span class="sg-variant-label">Tr Grey</span>
+      <div class="sg-cell"><x-button variant="tr-grey">8 (499) 370-49-78</x-button></div>
+      <div class="sg-cell"><x-button variant="tr-grey" class="is-hover">8 (499) 370-49-78</x-button></div>
+      <div class="sg-cell"><button type="button" class="btn btn--mini btn--tr-grey" disabled><span class="btn__label">8 (499) 370-49-78</span></button></div>
+    </div>
+
+    <div class="sg-matrix__row">
+      <span class="sg-variant-label">Black</span>
+      <div class="sg-cell"><x-button variant="black">Оставить заявку</x-button></div>
+      <div class="sg-cell"><x-button variant="black" class="is-hover">Оставить заявку</x-button></div>
+      <div class="sg-cell"><button type="button" class="btn btn--mini btn--black" disabled><span class="btn__label">Оставить заявку</span></button></div>
+    </div>
+  </div>
+
+  <sg-snippet title="x-button">
+    <x-button variant="blue">Оставить заявку</x-button>
+
+    <!-- as link -->
+    <x-button href="/catalog/" variant="tr-grey">Каталог</x-button>
+
+    <!-- with icon -->
+    <x-button variant="tr-grey" icon="chevron-down">Пансионаты</x-button>
+  </sg-snippet>
+</section>
+
+
+<section class="sg-section" id="comp-button-medium" data-nav-target>
+  <h2 class="sg-section__title">Button · Medium (64px)</h2>
+  <p class="sg-section__desc">
+    With <code>icon-circle</code> capsule. Variants: <code>blue</code>, <code>white</code>,
+    <code>tr-white</code>, <code>tr-grey</code>, <code>tr-grey-white</code>.
+  </p>
+
+  <div class="sg-matrix">
+    <div class="sg-matrix__head">
+      <span></span>
+      <span class="sg-state-label">Default</span>
+      <span class="sg-state-label">Hover</span>
+      <span class="sg-state-label">Disabled</span>
+    </div>
+
+    <div class="sg-matrix__row">
+      <span class="sg-variant-label">Blue</span>
+      <div class="sg-cell"><x-button size="medium" variant="blue" icon="plus">Все пансионаты</x-button></div>
+      <div class="sg-cell"><x-button size="medium" variant="blue" icon="plus" class="is-hover">Все пансионаты</x-button></div>
+      <div class="sg-cell"><button type="button" class="btn btn--medium btn--blue" disabled><span class="btn__icon-circle" aria-hidden="true"><svg class="btn__icon"><use href="#icon-plus" /></svg></span><span class="btn__label">Все пансионаты</span></button></div>
+    </div>
+
+    <div class="sg-matrix__row">
+      <span class="sg-variant-label">White</span>
+      <div class="sg-cell"><x-button size="medium" variant="white" icon="plus">Все пансионаты</x-button></div>
+      <div class="sg-cell"><x-button size="medium" variant="white" icon="plus" class="is-hover">Все пансионаты</x-button></div>
+      <div class="sg-cell"><button type="button" class="btn btn--medium btn--white" disabled><span class="btn__icon-circle" aria-hidden="true"><svg class="btn__icon"><use href="#icon-plus" /></svg></span><span class="btn__label">Все пансионаты</span></button></div>
+    </div>
+
+    <div class="sg-matrix__row">
+      <span class="sg-variant-label">Tr Grey-White</span>
+      <div class="sg-cell"><x-button size="medium" variant="tr-grey-white" icon="plus">Все пансионаты</x-button></div>
+      <div class="sg-cell"><x-button size="medium" variant="tr-grey-white" icon="plus" class="is-hover">Все пансионаты</x-button></div>
+      <div class="sg-cell"><button type="button" class="btn btn--medium btn--tr-grey-white" disabled><span class="btn__icon-circle" aria-hidden="true"><svg class="btn__icon"><use href="#icon-plus" /></svg></span><span class="btn__label">Все пансионаты</span></button></div>
+    </div>
+  </div>
+
+  <sg-snippet title="x-button">
+    <x-button size="medium" variant="blue" icon="plus">
+      Все пансионаты
+    </x-button>
+
+    <!-- as link -->
+    <x-button href="/catalog/" size="medium" variant="blue" icon="plus">
+      Все пансионаты
+    </x-button>
+  </sg-snippet>
+</section>
+
+
+<section class="sg-section" id="comp-button-big" data-nav-target>
+  <h2 class="sg-section__title">Button · Big (274×138)</h2>
+  <p class="sg-section__desc">
+    Label top-left, icon-circle bottom-right. Only <code>blue</code> and <code>white</code>.
+  </p>
+
+  <div class="sg-matrix">
+    <div class="sg-matrix__head">
+      <span></span>
+      <span class="sg-state-label">Default</span>
+      <span class="sg-state-label">Hover</span>
+      <span class="sg-state-label">Disabled</span>
+    </div>
+
+    <div class="sg-matrix__row">
+      <span class="sg-variant-label">Blue</span>
+      <div class="sg-cell"><x-button size="big" variant="blue" icon="plus">Записаться на экскурсию по нашим пансионатам</x-button></div>
+      <div class="sg-cell"><x-button size="big" variant="blue" icon="plus" class="is-hover">Записаться на экскурсию по нашим пансионатам</x-button></div>
+      <div class="sg-cell"><button type="button" class="btn btn--big btn--blue" disabled><span class="btn__label">Записаться на экскурсию по нашим пансионатам</span><span class="btn__icon-circle" aria-hidden="true"><svg class="btn__icon"><use href="#icon-plus" /></svg></span></button></div>
+    </div>
+
+    <div class="sg-matrix__row">
+      <span class="sg-variant-label">White</span>
+      <div class="sg-cell"><x-button size="big" variant="white" icon="plus">Записаться на экскурсию по нашим пансионатам</x-button></div>
+      <div class="sg-cell"><x-button size="big" variant="white" icon="plus" class="is-hover">Записаться на экскурсию по нашим пансионатам</x-button></div>
+      <div class="sg-cell"><button type="button" class="btn btn--big btn--white" disabled><span class="btn__label">Записаться на экскурсию по нашим пансионатам</span><span class="btn__icon-circle" aria-hidden="true"><svg class="btn__icon"><use href="#icon-plus" /></svg></span></button></div>
+    </div>
+  </div>
+
+  <sg-snippet title="x-button">
+    <x-button href="/excursion/" size="big" variant="blue" icon="plus">
+      Записаться на экскурсию по нашим пансионатам
+    </x-button>
+  </sg-snippet>
+</section>
+
+
+<section class="sg-section" id="comp-button-menu" data-nav-target>
+  <h2 class="sg-section__title">Button · Menu</h2>
+  <p class="sg-section__desc">
+    Mini blue + burger icon. Requires <code>aria-expanded</code> and <code>aria-controls</code>.
+  </p>
+
+  <div class="sg-matrix">
+    <div class="sg-matrix__head">
+      <span></span>
+      <span class="sg-state-label">Default</span>
+      <span class="sg-state-label">Hover</span>
+      <span class="sg-state-label">Disabled</span>
+    </div>
+
+    <div class="sg-matrix__row">
+      <span class="sg-variant-label">Blue</span>
+      <div class="sg-cell"><x-button variant="blue" icon="burger" aria-expanded="false" aria-controls="main-menu">Меню</x-button></div>
+      <div class="sg-cell"><x-button variant="blue" icon="burger" class="is-hover" aria-expanded="false" aria-controls="main-menu">Меню</x-button></div>
+      <div class="sg-cell"><button type="button" class="btn btn--mini btn--blue" disabled aria-expanded="false" aria-controls="main-menu"><svg class="btn__icon" aria-hidden="true"><use href="#icon-burger" /></svg><span class="btn__label">Меню</span></button></div>
+    </div>
+  </div>
+
+  <sg-snippet title="x-button">
+    <x-button variant="blue" icon="burger"
+              aria-expanded="false" aria-controls="main-menu">
+      Меню
+    </x-button>
+  </sg-snippet>
+</section>
+
+
+<section class="sg-section" id="comp-button-icon" data-nav-target>
+  <h2 class="sg-section__title">Button · Icon Only (40×34)</h2>
+  <p class="sg-section__desc">
+    No label, icon only. Requires <code>aria-label</code>.
+    Variants: <code>tr-white</code>, <code>tr-grey</code>.
+  </p>
+
+  <div class="sg-matrix">
+    <div class="sg-matrix__head">
+      <span></span>
+      <span class="sg-state-label">Default</span>
+      <span class="sg-state-label">Hover</span>
+      <span class="sg-state-label">Disabled</span>
+    </div>
+
+    <div class="sg-matrix__row">
+      <span class="sg-variant-label">Tr White</span>
+      <div class="sg-cell"><x-button variant="tr-white" icon="search" icon-only aria-label="Поиск"></x-button></div>
+      <div class="sg-cell"><x-button variant="tr-white" icon="search" icon-only class="is-hover" aria-label="Поиск"></x-button></div>
+      <div class="sg-cell"><button type="button" class="btn btn--mini btn--tr-white btn--icon-only" disabled aria-label="Поиск"><svg class="btn__icon" aria-hidden="true"><use href="#icon-search" /></svg></button></div>
+    </div>
+
+    <div class="sg-matrix__row">
+      <span class="sg-variant-label">Tr Grey</span>
+      <div class="sg-cell"><x-button variant="tr-grey" icon="search" icon-only aria-label="Поиск"></x-button></div>
+      <div class="sg-cell"><x-button variant="tr-grey" icon="search" icon-only class="is-hover" aria-label="Поиск"></x-button></div>
+      <div class="sg-cell"><button type="button" class="btn btn--mini btn--tr-grey btn--icon-only" disabled aria-label="Поиск"><svg class="btn__icon" aria-hidden="true"><use href="#icon-search" /></svg></button></div>
+    </div>
+
+    <div class="sg-matrix__row">
+      <span class="sg-variant-label">Tr Grey · Pill</span>
+      <div class="sg-cell"><x-button variant="tr-grey" icon="chevron-left" icon-only pill aria-label="Назад"></x-button></div>
+      <div class="sg-cell"><x-button variant="tr-grey" icon="chevron-left" icon-only pill class="is-hover" aria-label="Назад"></x-button></div>
+      <div class="sg-cell"><button type="button" class="btn btn--mini btn--tr-grey btn--icon-only btn--pill" disabled aria-label="Назад"><svg class="btn__icon" aria-hidden="true"><use href="#icon-chevron-left" /></svg></button></div>
+    </div>
+  </div>
+
+  <sg-snippet title="x-button">
+    <x-button variant="tr-grey" icon="search" icon-only aria-label="Поиск"></x-button>
+
+    <!-- pill (slider prev/next) -->
+    <x-button variant="tr-grey" icon="chevron-left" icon-only pill aria-label="Назад"></x-button>
+  </sg-snippet>
+</section>

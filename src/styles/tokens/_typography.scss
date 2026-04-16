@@ -1,0 +1,173 @@
+/** Typography tokens and type presets. */
+
+$font-primary: 'TT Hoves Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+$fw-regular:   400;
+$fw-medium:    500;
+$fw-bold:      700;
+
+// Base size and line-height applied to <body>.
+$fs-base:      16px;
+$lh-base:      1.5;
+
+// Standalone sizes for non-design-system contexts (logo, styleguide headings).
+$fs-14: 14px;
+$fs-24: 24px;
+$fs-32: 32px;
+$ls-tight: -0.02em;
+
+
+/* Type presets — mixins for components */
+
+/* SEO Headings — Desktop */
+
+@mixin type-h1-desktop { // 82/0.8 -0.04em
+  font-family: $font-primary;
+  font-weight: $fw-medium;
+  font-size: 82px;
+  line-height: 0.8;
+  letter-spacing: -0.04em;
+}
+
+@mixin type-h2-desktop { // 58/0.8 -0.04em
+  font-family: $font-primary;
+  font-weight: $fw-medium;
+  font-size: 58px;
+  line-height: 0.8;
+  letter-spacing: -0.04em;
+}
+
+@mixin type-h3-desktop { // 44/0.86 -0.02em
+  font-family: $font-primary;
+  font-weight: $fw-medium;
+  font-size: 44px;
+  line-height: 0.86;
+  letter-spacing: -0.02em;
+}
+
+/* SEO Headings — Mobile */
+
+@mixin type-h1-mobile { // 40/0.86 -0.04em
+  font-family: $font-primary;
+  font-weight: $fw-medium;
+  font-size: 40px;
+  line-height: 0.86;
+  letter-spacing: -0.04em;
+}
+
+@mixin type-h2-mobile { // 34/0.86 -0.04em
+  font-family: $font-primary;
+  font-weight: $fw-medium;
+  font-size: 34px;
+  line-height: 0.86;
+  letter-spacing: -0.04em;
+}
+
+@mixin type-h3-mobile { // 24/0.9 -0.03em
+  font-family: $font-primary;
+  font-weight: $fw-medium;
+  font-size: 24px;
+  line-height: 0.9;
+  letter-spacing: -0.03em;
+}
+
+/* Medium family — labels, buttons, captions, card titles */
+
+@mixin type-m-58 { // 58/0.8 -0.04em
+  font-family: $font-primary;
+  font-weight: $fw-medium;
+  font-size: 58px;
+  line-height: 0.8;
+  letter-spacing: -0.04em;
+}
+
+@mixin type-m-48 { // 48/0.9 -0.03em
+  font-family: $font-primary;
+  font-weight: $fw-medium;
+  font-size: 48px;
+  line-height: 0.9;
+  letter-spacing: -0.03em;
+}
+
+@mixin type-m-32 { // 32/28px -0.03em
+  font-family: $font-primary;
+  font-weight: $fw-medium;
+  font-size: 32px;
+  line-height: 28px;
+  letter-spacing: -0.03em;
+}
+
+@mixin type-m-24 { // 24/26px -0.02em
+  font-family: $font-primary;
+  font-weight: $fw-medium;
+  font-size: 24px;
+  line-height: 26px;
+  letter-spacing: -0.02em;
+}
+
+@mixin type-m-20 { // 20/1 -0.02em
+  font-family: $font-primary;
+  font-weight: $fw-medium;
+  font-size: 20px;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+@mixin type-m-18 { // 18/22px -0.02em
+  font-family: $font-primary;
+  font-weight: $fw-medium;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: -0.02em;
+}
+
+@mixin type-m-16 { // 16/20px -0.02em
+  font-family: $font-primary;
+  font-weight: $fw-medium;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: -0.02em;
+}
+
+@mixin type-m-14 { // 14/16px -0.01em
+  font-family: $font-primary;
+  font-weight: $fw-medium;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: -0.01em;
+}
+
+@mixin type-m-12 { // 12/16px -0.01em UPPERCASE
+  font-family: $font-primary;
+  font-weight: $fw-medium;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+}
+
+/* Regular family — body, descriptions, sub-text */
+
+@mixin type-r-18 { // 18/22px -0.02em
+  font-family: $font-primary;
+  font-weight: $fw-regular;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: -0.02em;
+}
+
+@mixin type-r-16 { // 16/20px 0
+  font-family: $font-primary;
+  font-weight: $fw-regular;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0;
+}
+
+@mixin type-r-14 { // 14/18px -0.01em
+  font-family: $font-primary;
+  font-weight: $fw-regular;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: -0.01em;
+}

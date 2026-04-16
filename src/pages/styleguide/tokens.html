@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tokens — Styleguide</title>
+  </head>
+  <body>
+    <component src="assets/icons/sprite.svg"></component>
+
+    <div class="sg-layout">
+      <component src="pages/styleguide/_nav.html"></component>
+
+      <main class="sg-main">
+        <header class="sg-header">
+          <h1 class="sg-header__title">Tokens</h1>
+          <p class="sg-header__lead">
+            Дизайн-токены проекта. В компонентах используются <strong>только эти значения</strong>,
+            хардкод цветов / магических px / произвольных брейкпоинтов запрещён.
+            Источник правды: <code>src/styles/tokens/</code>.
+          </p>
+        </header>
+
+        <section class="sg-section">
+          <h2 class="sg-section__title">Palette · Main</h2>
+          <ul class="sg-tokens">
+            <li class="sg-token"><div class="sg-token__swatch" style="background:#2674d9"></div><span class="sg-token__name">$blue-500</span><span class="sg-token__value">#2674D9 — Main/Blue</span></li>
+            <li class="sg-token"><div class="sg-token__swatch" style="background:#2061b6"></div><span class="sg-token__name">$blue-600</span><span class="sg-token__value">#2061B6 — Main/Blue (Hover)</span></li>
+            <li class="sg-token"><div class="sg-token__swatch" style="background:#ff5e61"></div><span class="sg-token__name">$red-500</span><span class="sg-token__value">#FF5E61 — Main/Red</span></li>
+            <li class="sg-token"><div class="sg-token__swatch" style="background:#75c75c"></div><span class="sg-token__name">$green-500</span><span class="sg-token__value">#75C75C — Main/Green</span></li>
+            <li class="sg-token"><div class="sg-token__swatch" style="background:#ffa346"></div><span class="sg-token__name">$orange-500</span><span class="sg-token__value">#FFA346 — Main/Orange</span></li>
+            <li class="sg-token"><div class="sg-token__swatch" style="background:#ffc927"></div><span class="sg-token__name">$yellow-500</span><span class="sg-token__value">#FFC927 — Special/Yellow</span></li>
+            <li class="sg-token"><div class="sg-token__swatch" style="background:#c83353"></div><span class="sg-token__name">$system-red</span><span class="sg-token__value">#C83353 — System/Red</span></li>
+          </ul>
+        </section>
+
+        <section class="sg-section">
+          <h2 class="sg-section__title">Palette · Neutrals</h2>
+          <ul class="sg-tokens">
+            <li class="sg-token"><div class="sg-token__swatch" style="background:#22294f"></div><span class="sg-token__name">$navy-900</span><span class="sg-token__value">#22294F — Black</span></li>
+            <li class="sg-token"><div class="sg-token__swatch" style="background:#ffffff;box-shadow:inset 0 0 0 1px rgba(34,41,79,0.1)"></div><span class="sg-token__name">$white</span><span class="sg-token__value">#FFFFFF — White</span></li>
+            <li class="sg-token"><div class="sg-token__swatch" style="background:#f8f9fa"></div><span class="sg-token__name">$grey-50</span><span class="sg-token__value">#F8F9FA — Grey (Hover)</span></li>
+            <li class="sg-token"><div class="sg-token__swatch" style="background:#eff7ff"></div><span class="sg-token__name">$card-blue</span><span class="sg-token__value">#EFF7FF — Card Blue</span></li>
+            <li class="sg-token"><div class="sg-token__swatch" style="background:#ffe3e4"></div><span class="sg-token__name">$red-50</span><span class="sg-token__value">#FFE3E4 — Bg tags Red</span></li>
+            <li class="sg-token"><div class="sg-token__swatch" style="background:#baf9ce"></div><span class="sg-token__name">$green-50</span><span class="sg-token__value">#BAF9CE — Bg tags Green</span></li>
+          </ul>
+        </section>
+
+        <section class="sg-section">
+          <h2 class="sg-section__title">Palette · Transparent Black</h2>
+          <ul class="sg-tokens">
+            <li class="sg-token"><div class="sg-token__swatch" style="background:rgba(34,41,79,0.6)"></div><span class="sg-token__name">$navy-60</span><span class="sg-token__value">60% — Text secondary</span></li>
+            <li class="sg-token"><div class="sg-token__swatch" style="background:rgba(34,41,79,0.4)"></div><span class="sg-token__name">$navy-40</span><span class="sg-token__value">40% — Button Black 40</span></li>
+            <li class="sg-token"><div class="sg-token__swatch" style="background:rgba(34,41,79,0.3)"></div><span class="sg-token__name">$navy-30</span><span class="sg-token__value">30% — Disabled</span></li>
+            <li class="sg-token"><div class="sg-token__swatch" style="background:rgba(34,41,79,0.2)"></div><span class="sg-token__name">$navy-20</span><span class="sg-token__value">20% — Button Black 20</span></li>
+            <li class="sg-token"><div class="sg-token__swatch" style="background:rgba(34,41,79,0.1)"></div><span class="sg-token__name">$navy-10</span><span class="sg-token__value">10% — Border, Button Black 10</span></li>
+            <li class="sg-token"><div class="sg-token__swatch" style="background:rgba(34,41,79,0.05)"></div><span class="sg-token__name">$navy-05</span><span class="sg-token__value">5% — Button Black 5</span></li>
+            <li class="sg-token"><div class="sg-token__swatch" style="background:rgba(34,41,79,0.03)"></div><span class="sg-token__name">$navy-03</span><span class="sg-token__value">3% — Bg Black 3</span></li>
+          </ul>
+        </section>
+
+        <section class="sg-section">
+          <h2 class="sg-section__title">Palette · Transparent White</h2>
+          <ul class="sg-tokens">
+            <li class="sg-token"><div class="sg-token__swatch sg-token__swatch--on-dark" style="background:rgba(255,255,255,0.7)"></div><span class="sg-token__name">$white-70</span><span class="sg-token__value">70% — Text White 60 (Figma name)</span></li>
+            <li class="sg-token"><div class="sg-token__swatch sg-token__swatch--on-dark" style="background:rgba(255,255,255,0.6)"></div><span class="sg-token__name">$white-60</span><span class="sg-token__value">60% — Border White 60</span></li>
+            <li class="sg-token"><div class="sg-token__swatch sg-token__swatch--on-dark" style="background:rgba(255,255,255,0.5)"></div><span class="sg-token__name">$white-50</span><span class="sg-token__value">50% — Button White 50</span></li>
+            <li class="sg-token"><div class="sg-token__swatch sg-token__swatch--on-dark" style="background:rgba(255,255,255,0.3)"></div><span class="sg-token__name">$white-30</span><span class="sg-token__value">30% — Button White 30 (Hover)</span></li>
+            <li class="sg-token"><div class="sg-token__swatch sg-token__swatch--on-dark" style="background:rgba(255,255,255,0.2)"></div><span class="sg-token__name">$white-20</span><span class="sg-token__value">20% — Button White 20</span></li>
+            <li class="sg-token"><div class="sg-token__swatch sg-token__swatch--on-dark" style="background:rgba(255,255,255,0.1)"></div><span class="sg-token__name">$white-10</span><span class="sg-token__value">10% — Button White 10</span></li>
+          </ul>
+        </section>
+
+        <section class="sg-section">
+          <h2 class="sg-section__title">Palette · Transparent Blue</h2>
+          <ul class="sg-tokens">
+            <li class="sg-token"><div class="sg-token__swatch" style="background:rgba(38,116,217,0.5)"></div><span class="sg-token__name">$blue-50p</span><span class="sg-token__value">50% — Blue disabled</span></li>
+            <li class="sg-token"><div class="sg-token__swatch" style="background:rgba(38,116,217,0.3)"></div><span class="sg-token__name">$blue-30p</span><span class="sg-token__value">30%</span></li>
+            <li class="sg-token"><div class="sg-token__swatch" style="background:rgba(38,116,217,0.18)"></div><span class="sg-token__name">$blue-18p</span><span class="sg-token__value">18% — Blue Button (Hover)</span></li>
+            <li class="sg-token"><div class="sg-token__swatch" style="background:rgba(38,116,217,0.1)"></div><span class="sg-token__name">$blue-10p</span><span class="sg-token__value">10% — Blue Button</span></li>
+            <li class="sg-token"><div class="sg-token__swatch" style="background:rgba(38,116,217,0.06)"></div><span class="sg-token__name">$blue-06p</span><span class="sg-token__value">6%</span></li>
+          </ul>
+        </section>
+
+        <section class="sg-section">
+          <h2 class="sg-section__title">Spacing</h2>
+          <ul class="sg-tokens">
+            <li class="sg-token"><div class="sg-token__swatch" style="background:#2674d9;width:4px"></div><span class="sg-token__name">$space-xs</span><span class="sg-token__value">4px</span></li>
+            <li class="sg-token"><div class="sg-token__swatch" style="background:#2674d9;width:8px"></div><span class="sg-token__name">$space-sm</span><span class="sg-token__value">8px</span></li>
+            <li class="sg-token"><div class="sg-token__swatch" style="background:#2674d9;width:16px"></div><span class="sg-token__name">$space-md</span><span class="sg-token__value">16px</span></li>
+            <li class="sg-token"><div class="sg-token__swatch" style="background:#2674d9;width:24px"></div><span class="sg-token__name">$space-lg</span><span class="sg-token__value">24px</span></li>
+            <li class="sg-token"><div class="sg-token__swatch" style="background:#2674d9;width:40px"></div><span class="sg-token__name">$space-xl</span><span class="sg-token__value">40px</span></li>
+            <li class="sg-token"><div class="sg-token__swatch" style="background:#2674d9;width:64px"></div><span class="sg-token__name">$space-2xl</span><span class="sg-token__value">64px</span></li>
+          </ul>
+        </section>
+
+        <section class="sg-section">
+          <h2 class="sg-section__title">Radius</h2>
+          <ul class="sg-tokens">
+            <li class="sg-token"><div class="sg-token__swatch" style="background:#2674d9;border-radius:4px"></div><span class="sg-token__name">$radius-xs</span><span class="sg-token__value">4px</span></li>
+            <li class="sg-token"><div class="sg-token__swatch" style="background:#2674d9;border-radius:8px"></div><span class="sg-token__name">$radius-sm</span><span class="sg-token__value">8px</span></li>
+            <li class="sg-token"><div class="sg-token__swatch" style="background:#2674d9;border-radius:12px"></div><span class="sg-token__name">$radius-md</span><span class="sg-token__value">12px — mini-buttons</span></li>
+            <li class="sg-token"><div class="sg-token__swatch" style="background:#2674d9;border-radius:16px"></div><span class="sg-token__name">$radius-lg</span><span class="sg-token__value">16px — tabs</span></li>
+            <li class="sg-token"><div class="sg-token__swatch" style="background:#2674d9;border-radius:20px"></div><span class="sg-token__name">$radius-xl</span><span class="sg-token__value">20px — buttons, mini cards</span></li>
+            <li class="sg-token"><div class="sg-token__swatch" style="background:#2674d9;border-radius:32px"></div><span class="sg-token__name">$radius-2xl</span><span class="sg-token__value">32px — cards</span></li>
+            <li class="sg-token"><div class="sg-token__swatch" style="background:#2674d9;border-radius:40px"></div><span class="sg-token__name">$radius-3xl</span><span class="sg-token__value">40px — big cards, blocks</span></li>
+            <li class="sg-token"><div class="sg-token__swatch" style="background:#2674d9;border-radius:60px"></div><span class="sg-token__name">$radius-tag</span><span class="sg-token__value">60px — tags</span></li>
+            <li class="sg-token"><div class="sg-token__swatch" style="background:#2674d9;border-radius:9999px"></div><span class="sg-token__name">$radius-pill</span><span class="sg-token__value">9999px — pill</span></li>
+          </ul>
+        </section>
+
+        <section class="sg-section">
+          <h2 class="sg-section__title">Typography</h2>
+          <p class="sg-section__desc">
+            Текстовые пресеты живут в <code>src/styles/tokens/_typography.scss</code>.
+            Применять через <code>@include type-&lt;name&gt;</code> в SCSS компонента —
+            никаких хардкод-размеров.
+          </p>
+
+          <h3 class="sg-section__subtitle">SEO Headings — Desktop</h3>
+          <ul class="sg-type-list">
+            <li>
+              <p class="sg-type-preview--h1-desktop">Забота без переплат</p>
+              <div class="sg-type-list__meta">
+                <span class="sg-type-list__mixin">@include type-h1-desktop</span>
+                <span class="sg-type-list__spec">Medium 500 · 82px · lh 0.8 · ls -0.04em</span>
+              </div>
+            </li>
+            <li>
+              <p class="sg-type-preview--h2-desktop">Наши пансионаты</p>
+              <div class="sg-type-list__meta">
+                <span class="sg-type-list__mixin">@include type-h2-desktop</span>
+                <span class="sg-type-list__spec">Medium 500 · 58px · lh 0.8 · ls -0.04em</span>
+              </div>
+            </li>
+            <li>
+              <p class="sg-type-preview--h3-desktop">15 пансионатов в стране</p>
+              <div class="sg-type-list__meta">
+                <span class="sg-type-list__mixin">@include type-h3-desktop</span>
+                <span class="sg-type-list__spec">Medium 500 · 44px · lh 0.86 · ls -0.02em</span>
+              </div>
+            </li>
+          </ul>
+
+          <h3 class="sg-section__subtitle">SEO Headings — Mobile</h3>
+          <ul class="sg-type-list">
+            <li>
+              <p class="sg-type-preview--h1-mobile">Забота без переплат</p>
+              <div class="sg-type-list__meta">
+                <span class="sg-type-list__mixin">@include type-h1-mobile</span>
+                <span class="sg-type-list__spec">Medium 500 · 40px · lh 0.86 · ls -0.04em</span>
+              </div>
+            </li>
+            <li>
+              <p class="sg-type-preview--h2-mobile">Наши пансионаты</p>
+              <div class="sg-type-list__meta">
+                <span class="sg-type-list__mixin">@include type-h2-mobile</span>
+                <span class="sg-type-list__spec">Medium 500 · 34px · lh 0.86 · ls -0.04em</span>
+              </div>
+            </li>
+            <li>
+              <p class="sg-type-preview--h3-mobile">15 пансионатов в стране</p>
+              <div class="sg-type-list__meta">
+                <span class="sg-type-list__mixin">@include type-h3-mobile</span>
+                <span class="sg-type-list__spec">Medium 500 · 24px · lh 0.9 · ls -0.03em</span>
+              </div>
+            </li>
+          </ul>
+
+          <h3 class="sg-section__subtitle">Medium — лейблы, кнопки, подписи</h3>
+          <ul class="sg-type-list">
+            <li>
+              <p class="sg-type-preview--m-58">Крупный акцент</p>
+              <div class="sg-type-list__meta">
+                <span class="sg-type-list__mixin">@include type-m-58</span>
+                <span class="sg-type-list__spec">Medium 500 · 58px · lh 0.8 · ls -0.04em</span>
+              </div>
+            </li>
+            <li>
+              <p class="sg-type-preview--m-48">Опека — это</p>
+              <div class="sg-type-list__meta">
+                <span class="sg-type-list__mixin">@include type-m-48</span>
+                <span class="sg-type-list__spec">Medium 500 · 48px · lh 0.9 · ls -0.03em</span>
+              </div>
+            </li>
+            <li>
+              <p class="sg-type-preview--m-32">Заголовок блока</p>
+              <div class="sg-type-list__meta">
+                <span class="sg-type-list__mixin">@include type-m-32</span>
+                <span class="sg-type-list__spec">Medium 500 · 32px · lh 28px · ls -0.03em</span>
+              </div>
+            </li>
+            <li>
+              <p class="sg-type-preview--m-24">Подзаголовок секции</p>
+              <div class="sg-type-list__meta">
+                <span class="sg-type-list__mixin">@include type-m-24</span>
+                <span class="sg-type-list__spec">Medium 500 · 24px · lh 26px · ls -0.02em</span>
+              </div>
+            </li>
+            <li>
+              <p class="sg-type-preview--m-20">Заголовок карточки</p>
+              <div class="sg-type-list__meta">
+                <span class="sg-type-list__mixin">@include type-m-20</span>
+                <span class="sg-type-list__spec">Medium 500 · 20px · lh 1 · ls -0.02em</span>
+              </div>
+            </li>
+            <li>
+              <p class="sg-type-preview--m-18">Подпись акцентная</p>
+              <div class="sg-type-list__meta">
+                <span class="sg-type-list__mixin">@include type-m-18</span>
+                <span class="sg-type-list__spec">Medium 500 · 18px · lh 22px · ls -0.02em</span>
+              </div>
+            </li>
+            <li>
+              <p class="sg-type-preview--m-16">Кнопка / text-link</p>
+              <div class="sg-type-list__meta">
+                <span class="sg-type-list__mixin">@include type-m-16</span>
+                <span class="sg-type-list__spec">Medium 500 · 16px · lh 20px · ls -0.02em</span>
+              </div>
+            </li>
+            <li>
+              <p class="sg-type-preview--m-14">Кнопка mini / top-bar</p>
+              <div class="sg-type-list__meta">
+                <span class="sg-type-list__mixin">@include type-m-14</span>
+                <span class="sg-type-list__spec">Medium 500 · 14px · lh 16px · ls -0.01em</span>
+              </div>
+            </li>
+            <li>
+              <p class="sg-type-preview--m-12">СКИДКА 20%</p>
+              <div class="sg-type-list__meta">
+                <span class="sg-type-list__mixin">@include type-m-12</span>
+                <span class="sg-type-list__spec">Medium 500 · 12px · lh 16px · ls -0.01em · uppercase</span>
+              </div>
+            </li>
+          </ul>
+
+          <h3 class="sg-section__subtitle">Regular — body, описания</h3>
+          <ul class="sg-type-list">
+            <li>
+              <p class="sg-type-preview--r-18">Мы понимаем, что каждый человек заслуживает достойной старости, поэтому создали идеальное место для полноценной жизни.</p>
+              <div class="sg-type-list__meta">
+                <span class="sg-type-list__mixin">@include type-r-18</span>
+                <span class="sg-type-list__spec">Regular 400 · 18px · lh 22px · ls -0.02em</span>
+              </div>
+            </li>
+            <li>
+              <p class="sg-type-preview--r-16">Мы понимаем, что каждый человек заслуживает достойной старости, поэтому создали идеальное место для полноценной жизни.</p>
+              <div class="sg-type-list__meta">
+                <span class="sg-type-list__mixin">@include type-r-16</span>
+                <span class="sg-type-list__spec">Regular 400 · 16px · lh 20px · ls 0</span>
+              </div>
+            </li>
+            <li>
+              <p class="sg-type-preview--r-14">Мы понимаем, что каждый человек заслуживает достойной старости.</p>
+              <div class="sg-type-list__meta">
+                <span class="sg-type-list__mixin">@include type-r-14</span>
+                <span class="sg-type-list__spec">Regular 400 · 14px · lh 18px · ls -0.01em</span>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <section class="sg-section">
+          <h2 class="sg-section__title">Animation</h2>
+          <ul class="sg-tokens">
+            <li class="sg-token"><span class="sg-token__name">$anim-fast</span><span class="sg-token__value">0.3s — текст, кнопки, карточки</span></li>
+            <li class="sg-token"><span class="sg-token__name">$anim-medium</span><span class="sg-token__value">0.5s — секции</span></li>
+            <li class="sg-token"><span class="sg-token__name">$anim-slow</span><span class="sg-token__value">0.8s</span></li>
+            <li class="sg-token"><span class="sg-token__name">$easing-out</span><span class="sg-token__value">cubic-bezier(0.16, 1, 0.3, 1)</span></li>
+            <li class="sg-token"><span class="sg-token__name">$blur-button</span><span class="sg-token__value">15px</span></li>
+          </ul>
+        </section>
+
+        <section class="sg-section">
+          <h2 class="sg-section__title">Z-index</h2>
+          <ul class="sg-tokens">
+            <li class="sg-token"><span class="sg-token__name">$z-dropdown</span><span class="sg-token__value">100</span></li>
+            <li class="sg-token"><span class="sg-token__name">$z-sticky</span><span class="sg-token__value">200</span></li>
+            <li class="sg-token"><span class="sg-token__name">$z-modal</span><span class="sg-token__value">300</span></li>
+            <li class="sg-token"><span class="sg-token__name">$z-toast</span><span class="sg-token__value">400</span></li>
+            <li class="sg-token"><span class="sg-token__name">$z-tooltip</span><span class="sg-token__value">500</span></li>
+          </ul>
+        </section>
+
+        <section class="sg-section">
+          <h2 class="sg-section__title">Breakpoints</h2>
+          <p class="sg-section__desc">
+            Только <strong>две точки</strong>: mobile (≤767px) и desktop (≥768px).
+            Используются исключительно через миксины <code>@include mobile</code> /
+            <code>@include desktop</code>. Произвольные <code>@media</code> запрещены.
+            Между точками — fluid layout (<code>%</code>, <code>fr</code>, <code>clamp()</code>).
+          </p>
+        </section>
+      </main>
+    </div>
+
+    <script type="module" src="../../scripts/styleguide.js"></script>
+  </body>
+</html>

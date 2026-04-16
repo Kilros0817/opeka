@@ -1,0 +1,75 @@
+<!-- x-promo-mini-slider showcase. Include in styleguide/components.html -->
+<section class="sg-section" id="comp-promo-mini-slider" data-nav-target>
+  <h2 class="sg-section__title">Promo Mini Slider</h2>
+  <p class="sg-section__desc">
+    Слайдер <code>x-promo-mini-card</code> со stack-анимацией. Активная карточка
+    (pos 0) показывает контент, сзади — два frost-слоя (pos 1, 2) с лёгким
+    поворотом, имитируют стопку стекла. Auto-rotate каждые <code>rotate</code>
+    мс (default 5000). На hover/focus auto-rotate ставится на паузу.
+    При <code>prefers-reduced-motion</code> — отключается.
+  </p>
+  <p class="sg-state-label">
+    Карточки должны иметь класс <code>promo-mini-card--in-slider</code>.
+    Пагинация достраивается JS по количеству карточек.
+  </p>
+
+  <div class="sg-frame sg-frame--padded">
+    <div class="sg-frame__stage">
+      <x-promo-mini-slider rotate="5000" aria-label="Акции">
+
+        <x-promo-mini-card class="promo-mini-card--in-slider" aria-label="Слайд 1 из 5" tag-color="red" tag-icon="fire">
+          <fill-tag>Скидка 20%</fill-tag>
+          <fill-title>Зимний чек-ап в «Опеке» по сниженной цене 119 990 ₽</fill-title>
+          <fill-desc>14 дней восстановления здоровья за 119 990 ₽. Анализы, терапевт и проживание включены!</fill-desc>
+          <fill-link>Узнать больше</fill-link>
+        </x-promo-mini-card>
+
+        <x-promo-mini-card class="promo-mini-card--in-slider" aria-label="Слайд 2 из 5" tag-color="red" tag-icon="fire">
+          <fill-tag>Рассрочка</fill-tag>
+          <fill-title>Заезжайте сегодня, платите потом!</fill-title>
+          <fill-desc>Разделим стоимость программы на платежи от 31 531 ₽ / месяц</fill-desc>
+          <fill-link>Узнать больше</fill-link>
+        </x-promo-mini-card>
+
+        <x-promo-mini-card class="promo-mini-card--in-slider" aria-label="Слайд 3 из 5" tag-color="red" tag-icon="fire">
+          <fill-tag>Скидка 40%</fill-tag>
+          <fill-title>Скидки при единовременной оплате</fill-title>
+          <fill-desc>Не пропустите эту возможность!</fill-desc>
+          <fill-link>Узнать больше</fill-link>
+        </x-promo-mini-card>
+
+        <x-promo-mini-card class="promo-mini-card--in-slider" aria-label="Слайд 4 из 5" tag-color="red" tag-icon="fire">
+          <fill-tag>Скидка</fill-tag>
+          <fill-title>Круглосуточный профессиональный уход</fill-title>
+          <fill-desc>Акция на проживание в пансионатах от 3 300 ₽ / сутки</fill-desc>
+          <fill-link>Узнать больше</fill-link>
+        </x-promo-mini-card>
+
+        <x-promo-mini-card class="promo-mini-card--in-slider" aria-label="Слайд 5 из 5" tag-color="red" tag-icon="fire">
+          <fill-tag>Новое</fill-tag>
+          <fill-title>Забота без переплат</fill-title>
+          <fill-desc>Дарим особые условия на проживание в наших пансионатах Санкт-Петербурга на 30 дней.</fill-desc>
+          <fill-link>Узнать больше</fill-link>
+        </x-promo-mini-card>
+
+      </x-promo-mini-slider>
+    </div>
+  </div>
+
+  <sg-snippet title="x-promo-mini-slider">
+    <x-promo-mini-slider rotate="5000" aria-label="Акции">
+      <x-promo-mini-card class="promo-mini-card--in-slider" aria-label="Слайд 1 из 2" tag-color="red" tag-icon="fire">
+        <fill-tag>Скидка 20%</fill-tag>
+        <fill-title>Заголовок акции</fill-title>
+        <fill-desc>Описание акции.</fill-desc>
+        <fill-link>Узнать больше</fill-link>
+      </x-promo-mini-card>
+      <x-promo-mini-card class="promo-mini-card--in-slider" aria-label="Слайд 2 из 2" tag-color="red" tag-icon="fire">
+        <fill-tag>Новое</fill-tag>
+        <fill-title>Вторая акция</fill-title>
+        <fill-desc>Описание второй акции.</fill-desc>
+        <fill-link>Подробнее</fill-link>
+      </x-promo-mini-card>
+    </x-promo-mini-slider>
+  </sg-snippet>
+</section>

@@ -1,0 +1,60 @@
+<!-- x-tag showcase. Include in styleguide/components.html -->
+<section class="sg-section" id="comp-tag" data-nav-target>
+  <h2 class="sg-section__title">Tag</h2>
+  <p class="sg-section__desc">
+    Небольшой UPPERCASE-лейбл. Размеры: <code>sm</code> (28), <code>md</code> (34).
+    Цвета: <code>red</code>, <code>green</code>, <code>tr-grey</code>,
+    <code>tr-white</code>, <code>white</code>. Иконка опциональна.
+  </p>
+
+  <div class="sg-matrix sg-matrix--narrow">
+    <div class="sg-matrix__head">
+      <span></span>
+      <span class="sg-state-label">Size S</span>
+      <span class="sg-state-label">Size M</span>
+      <span></span>
+    </div>
+
+    <div class="sg-matrix__row">
+      <span class="sg-variant-label">Red</span>
+      <div class="sg-cell"><x-tag size="sm" color="red" icon="fire">Скидка 20%</x-tag></div>
+      <div class="sg-cell"><x-tag size="md" color="red" icon="fire">Скидка 20%</x-tag></div>
+      <div class="sg-cell"></div>
+    </div>
+
+    <div class="sg-matrix__row">
+      <span class="sg-variant-label">Green</span>
+      <div class="sg-cell"><x-tag size="sm" color="green">Новое</x-tag></div>
+      <div class="sg-cell"><x-tag size="md" color="green">Новое</x-tag></div>
+      <div class="sg-cell"></div>
+    </div>
+
+    <div class="sg-matrix__row">
+      <span class="sg-variant-label">Tr Grey</span>
+      <div class="sg-cell"><x-tag size="sm" color="tr-grey" icon="fire">Деменция</x-tag></div>
+      <div class="sg-cell"><x-tag size="md" color="tr-grey" icon="fire">Деменция</x-tag></div>
+      <div class="sg-cell"></div>
+    </div>
+
+    <div class="sg-matrix__row">
+      <span class="sg-variant-label">Tr White <small>(на тёмном)</small></span>
+      <div class="sg-cell sg-cell--on-dark"><x-tag size="sm" color="tr-white" icon="fire">Деменция</x-tag></div>
+      <div class="sg-cell sg-cell--on-dark"><x-tag size="md" color="tr-white" icon="fire">Деменция</x-tag></div>
+      <div class="sg-cell"></div>
+    </div>
+
+    <div class="sg-matrix__row">
+      <span class="sg-variant-label">White</span>
+      <div class="sg-cell sg-cell--on-dark"><x-tag size="sm" color="white" icon="fire">Деменция</x-tag></div>
+      <div class="sg-cell sg-cell--on-dark"><x-tag size="md" color="white" icon="fire">Деменция</x-tag></div>
+      <div class="sg-cell"></div>
+    </div>
+  </div>
+
+  <sg-snippet title="x-tag">
+    <x-tag size="sm" color="red" icon="fire">Скидка 20%</x-tag>
+
+    <!-- without icon -->
+    <x-tag size="md" color="red">Хит</x-tag>
+  </sg-snippet>
+</section>

@@ -1,0 +1,55 @@
+@use '../../../styles/tokens' as *;
+
+/**
+ * .tag — small uppercase label.
+ *
+ * Colors: --red | --white | --tr-grey | --tr-white | --green
+ * Sizes:  --sm (28px) | --md (34px)
+ */
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  border-radius: $radius-pill;
+  color: $color-text-primary;
+  font-family: $font-primary;
+  font-weight: $fw-medium;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.tag__label { display: inline-block; }
+
+.tag__icon {
+  display: block;
+  flex-shrink: 0;
+  width: 14px;
+  height: 14px;
+  fill: currentColor;
+}
+
+/* Sizes */
+.tag--sm {
+  height: 28px;
+  padding: 0 10px;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: -0.01em;
+}
+
+.tag--md {
+  height: 34px;
+  padding: 0 12px;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: -0.01em;
+}
+
+/* Colors */
+.tag--red      { background-color: $red-50; }
+.tag--green    { background-color: $green-50; }
+.tag--tr-grey  { background-color: $navy-03; }
+.tag--tr-white { background-color: $white-20; color: $white; }
+.tag--white    { background-color: $white; }

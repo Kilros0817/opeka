@@ -1,0 +1,33 @@
+<script props>
+  /*
+   * x-tag
+   *
+   * Small uppercase label. Renders a <span> with optional 14px icon on the left.
+   *
+   * Props:
+   *   size — sm | md (default: sm)
+   *   color — red | white | tr-grey | tr-white | green (default: red)
+   *   icon — sprite id without "icon-" prefix
+   *
+   * <yield> becomes the label. Extra attrs (class, aria-*, data-*) pass through.
+   */
+  const size = props.size || 'sm'
+  const color = props.color || 'red'
+  const icon = props.icon || ''
+
+  module.exports = {
+    icon,
+    cls: [
+      'tag',
+      'tag--' + size,
+      'tag--' + color,
+    ].join(' '),
+  }
+</script>
+
+<span class="{{ cls }}">
+  <if condition="icon">
+      <svg class="tag__icon" aria-hidden="true"><use href="#icon-{{ icon }}"/></svg>
+  </if>
+  <span class="tag__label"><yield></yield></span>
+</span>

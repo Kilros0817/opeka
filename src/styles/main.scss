@@ -1,5 +1,4 @@
-@use 'variables';
-@use 'mixins';
-@use 'reset';
-@use 'typography';
-@use 'animations';
+/* Base layer. Component/section SCSS is auto-imported via import.meta.glob. */
+@use 'base/reset';
+@use 'base/typography';
+@use 'base/utilities';

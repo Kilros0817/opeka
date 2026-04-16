@@ -1,0 +1,49 @@
+<!-- .site-header showcase. Include in styleguide/sections.html -->
+<section class="sg-section" id="sec-site-header" data-nav-target>
+  <h2 class="sg-section__title">Site Header</h2>
+  <p class="sg-section__desc">
+    Шапка с белым фоном, скругления 12px. Один HTML, адаптив через BEM-модификаторы
+    <code>--desktop</code> / <code>--mobile</code> + медиа-запросы (mobile ≤767px).
+  </p>
+
+  <h3 class="sg-group__title">Адаптивные модификаторы</h3>
+  <p class="sg-section__desc">
+    Эти классы живут в исходной разметке всегда. Что они делают —
+    <strong>не зависит от вёрстки страницы</strong>; CSS сам скрывает/показывает на нужной ширине:
+  </p>
+  <div class="sg-snippet">
+    <div class="sg-snippet__bar">
+      <span class="sg-snippet__title">Cheat sheet</span>
+    </div>
+    <pre class="sg-snippet__code"><code>--desktop  показывается на ≥768px, скрыт на mobile:
+      .site-header__top-list--desktop  служебные ссылки в top-баре
+      .site-header__nav--desktop       основная навигация (Меню + chips)
+      .site-header__tool--desktop      кнопка «Личный кабинет»
+      .site-header__cta--desktop       CTA с полным текстом «Оставить заявку»
+
+    --mobile   показывается на ≤767px, скрыт на desktop:
+      .site-header__cta--mobile        CTA с сокращённым текстом «Записаться»
+      .site-header__tool--mobile       бургер-кнопка (триггер mobile-меню)
+    </code></pre>
+  </div>
+
+  <p class="sg-section__desc">
+    <strong>Mobile-превью:</strong> уменьши окно браузера до &lt;768px или открой DevTools
+    Device toolbar (Cmd+Shift+M). Витрина рендерит шапку в её дизайнерской ширине 1496px
+    с горизонтальным скроллом во frame.
+  </p>
+
+  <div class="sg-frame sg-frame--padded">
+    <div class="sg-frame__viewport">
+      <component src="sections/site-header/site-header.html"></component>
+    </div>
+  </div>
+
+  <div class="sg-snippet">
+    <div class="sg-snippet__bar">
+      <span class="sg-snippet__title">HTML</span>
+      <button type="button" class="sg-snippet__copy" data-copy>Copy</button>
+    </div>
+<pre class="sg-snippet__code"><code>&lt;component src="sections/site-header/site-header.html"&gt;&lt;/component&gt;</code></pre>
+  </div>
+</section>

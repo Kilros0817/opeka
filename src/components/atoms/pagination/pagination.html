@@ -1,0 +1,58 @@
+<script props>
+  /*
+   * x-pagination
+   *
+   * Slide control for carousels. Active step is a progress bar (0-100% fill),
+   * inactive steps are dots. Each step is a <button>.
+   *
+   * Props:
+   *   count — total number of steps (default: 5)
+   *   active — 1-based index of the active step (default: 1)
+   *   progress — fill percentage of the active bar, 0-100 in 10% steps (default: 0)
+   *   color — black | white (default: black)
+   *   aria-label — accessible name for the control group (default: Выбор слайда)
+   *
+   * Extra attrs (class, data-*) pass through to the root element.
+   */
+  const count = Number(props.count) || 5
+  const active = Number(props.active) || 1
+  const progress = Number(props.progress) || 0
+  const color = props.color || 'black'
+  const ariaLabel = props['aria-label'] || 'Выбор слайда'
+
+  if (!Number.isInteger(count) || count < 1)
+    throw new Error('x-pagination: count must be a positive integer')
+
+  if (!Number.isInteger(active) || active < 1 || active > count)
+    throw new Error('x-pagination: active must be between 1 and count')
+
+  if (!Number.isInteger(progress) || progress < 0 || progress > 100 || progress % 10 !== 0)
+    throw new Error('x-pagination: progress must be 0-100 in 10% steps')
+
+  if (!['black', 'white'].includes(color))
+    throw new Error('x-pagination: color must be black or white')
+
+  module.exports = {
+    steps: Array.from({ length: count }, (_, i) => i + 1),
+    active,
+    progressClass: 'pagination__bar-fill--p' + progress,
+    ariaLabel,
+    cls: [
+      'pagination',
+      color === 'white' ? 'pagination--white' : '',
+    ].filter(Boolean).join(' '),
+  }
+</script>
+
+<div class="{{ cls }}" aria-label="{{ ariaLabel }}">
+  <each loop="i in steps">
+    <if condition="i === active">
+      <button class="pagination__bar" type="button" aria-current="true" aria-label="Слайд {{ i }}">
+        <span class="pagination__bar-fill {{ progressClass }}"></span>
+      </button>
+    </if>
+    <if condition="i !== active">
+      <button class="pagination__dot" type="button" aria-current="false" aria-label="Слайд {{ i }}"></button>
+    </if>
+  </each>
+</div>

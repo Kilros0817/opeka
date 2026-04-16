@@ -1,0 +1,37 @@
+<!--
+  RENAME: template → component name (id, title, markup, snippet).
+  Include in src/pages/styleguide/components.html.
+
+  Checklist before merge:
+  [ ] Folder renamed from _template (and .html/.scss/.styleguide.html inside)
+  [ ] BEM block renamed in all files
+  [ ] <script props> JSDoc updated (first line = x-tag-name, Props: block)
+  [ ] Folder added to vite.config.mjs → posthtml-component folders
+  [ ] Variant × state matrix filled
+  [ ] Snippet example in <sg-snippet>
+-->
+<section class="sg-section" id="comp-template" data-nav-target>
+  <h2 class="sg-section__title">Component · Template</h2>
+  <p class="sg-section__desc">Description: variants, sizes, usage rules.</p>
+
+  <div class="sg-matrix">
+    <div class="sg-matrix__head">
+      <span></span>
+      <span class="sg-state-label">Default</span>
+      <span class="sg-state-label">Hover</span>
+      <span class="sg-state-label">Disabled</span>
+    </div>
+
+    <!-- Uncomment and fill:
+    <div class="sg-matrix__row">
+      <span class="sg-variant-label">Variant</span>
+      <div class="sg-cell"> ... </div>
+      <div class="sg-cell"> ... </div>
+      <div class="sg-cell"> ... </div>
+    </div> -->
+  </div>
+
+  <sg-snippet title="component name">
+    <!-- component markup here -->
+  </sg-snippet>
+</section>

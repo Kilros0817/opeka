@@ -1,0 +1,9 @@
+/* Token aggregator. Usage: @use 'styles/tokens' as *; */
+@forward 'tokens/palette';
+@forward 'tokens/semantic';
+@forward 'tokens/spacing';
+@forward 'tokens/radius';
+@forward 'tokens/z-index';
+@forward 'tokens/typography';
+@forward 'tokens/breakpoints';
+@forward 'tokens/animation';

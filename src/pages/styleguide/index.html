@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Styleguide — Опека</title>
+  </head>
+  <body>
+    <component src="assets/icons/sprite.svg"></component>
+
+    <div class="sg-layout">
+      <component src="pages/styleguide/_nav.html"></component>
+
+      <main class="sg-main">
+        <header class="sg-header">
+          <h1 class="sg-header__title">Styleguide · Опека</h1>
+          <p class="sg-header__lead">
+            Витрина дизайн-системы. Здесь находится всё, что разрешено использовать
+            в проекте: токены, анимации, компоненты, секции. Всё, чего нет здесь —
+            не считается готовым.
+          </p>
+        </header>
+
+        <section class="sg-section">
+          <h2 class="sg-section__title">Разделы</h2>
+          <ul class="sg-tokens">
+            <li class="sg-token">
+              <span class="sg-token__name"><a href="./tokens.html">Tokens</a></span>
+              <span class="sg-token__value">Палитра, отступы, типографика, z-index, easing</span>
+            </li>
+            <li class="sg-token">
+              <span class="sg-token__name"><a href="./animations.html">Animations</a></span>
+              <span class="sg-token__value">Каталог data-anim пресетов</span>
+            </li>
+            <li class="sg-token">
+              <span class="sg-token__name"><a href="./components.html">Components</a></span>
+              <span class="sg-token__value">Атомы и переиспользуемые элементы UI</span>
+            </li>
+            <li class="sg-token">
+              <span class="sg-token__name"><a href="./sections.html">Sections</a></span>
+              <span class="sg-token__value">Готовые секции страниц</span>
+            </li>
+          </ul>
+        </section>
+
+        <section class="sg-section">
+          <h2 class="sg-section__title">Документация</h2>
+          <p class="sg-section__desc">
+            Руководство разработчика: <code>docs/ru/guide.md</code>.<br />
+            Сборка и ассеты: <code>docs/ru/build-output.md</code>.<br />
+            Интеграция с Bitrix: <code>docs/ru/bitrix-integration.md</code>.
+          </p>
+        </section>
+      </main>
+    </div>
+
+    <script type="module" src="../../scripts/styleguide.js"></script>
+  </body>
+</html>

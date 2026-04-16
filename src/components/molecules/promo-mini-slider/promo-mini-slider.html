@@ -1,0 +1,37 @@
+<script props>
+  /*
+   * x-promo-mini-slider
+   *
+   * Wrapper around <x-promo-mini-card>s with stack animation + auto-rotate.
+   * Controls (pagination dots + prev/next buttons) are built automatically.
+   * The runtime JS fills pagination to match the card count.
+   *
+   * Props:
+   *   rotate — auto-rotate interval in ms (default: 5000)
+   *   aria-label — accessible name for the carousel (default: Акции)
+   *
+   * Children (yield):
+   *   One <x-promo-mini-card class="promo-mini-card--in-slider"> per slide.
+   *   Don't forget the --in-slider modifier and aria-label="Слайд N из M".
+   */
+  const rotate = Number(props.rotate) || 5000
+  const ariaLabel = props['aria-label'] || 'Акции'
+
+  module.exports = { rotate, ariaLabel }
+</script>
+
+<div class="promo-mini-slider"
+     data-promo-mini-slider
+     data-rotate="{{ rotate }}"
+     aria-roledescription="carousel"
+     aria-label="{{ ariaLabel }}">
+  <yield></yield>
+
+  <div class="promo-mini-slider__controls">
+    <div class="pagination" aria-label="Пагинация слайдов"></div>
+    <div class="promo-mini-slider__nav">
+      <x-button variant="tr-grey" icon="chevron-left" icon-only pill aria-label="Предыдущий слайд" data-slider-prev></x-button>
+      <x-button variant="tr-grey" icon="chevron-right" icon-only pill aria-label="Следующий слайд" data-slider-next></x-button>
+    </div>
+  </div>
+</div>

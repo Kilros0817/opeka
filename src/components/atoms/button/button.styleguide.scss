@@ -1,0 +1,18 @@
+@use '../../../styles/tokens' as *;
+
+/**
+ * .btn — styleguide-only state previews (not included in production).
+ * .is-hover forces the visual hover state on a static button.
+ */
+
+.btn--blue.is-hover         { background-color: $color-blue-hover; }
+.btn--white.is-hover        { background-color: $color-white-hover; }
+.btn--tr-white.is-hover     { background-color: $color-tr-white-30; }
+
+.btn--tr-grey.is-hover,
+.btn--tr-grey-white.is-hover { background-color: $color-tr-black-10; }
+
+.btn--black.is-hover {
+  background-color: $color-navy-60;
+  color: $color-tr-white-50;
+}

@@ -1,0 +1,8 @@
+/** Breakpoints — use only via @include mobile / @include desktop. */
+
+$bp-mobile-max:   767px;
+$bp-desktop-min:  768px;
+
+@mixin mobile  { @media (max-width: #{$bp-mobile-max}) { @content; } }
+
+@mixin desktop { @media (min-width: #{$bp-desktop-min}) { @content; } }

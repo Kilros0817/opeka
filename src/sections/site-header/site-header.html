@@ -1,100 +1,53 @@
+<!-- .site-header -->
 <header class="site-header">
+  <!-- Top bar -->
   <div class="site-header__top">
-    <nav class="site-header__nav-top" aria-label="Служебная навигация">
-      <ul class="site-header__list">
-        <li class="site-header__item">
-          <a class="site-header__link" href="#">
-            <img src="../assets/icons/eye.svg" alt="Опека" width="16" height="16" />
-          </a>
-          <a class="site-header__link" href="#">
-            Версия для слабовидящих
-          </a>
-        </li>
-        <li class="site-header__item"><a class="site-header__link" href="#">Госпрограмма</a></li>
-        <li class="site-header__item"><a class="site-header__link" href="#">Доступная среда</a></li>
-        <li class="site-header__item"><a class="site-header__link" href="#">О компании</a></li>
-        <li class="site-header__item"><a class="site-header__link" href="#">Реквизиты</a></li>
-        <li class="site-header__item">
-          <a class="site-header__link" href="#">Информация о поставщике услуг</a>
-        </li>
-      </ul>
+    <nav class="site-header__top-list site-header__top-list--desktop" aria-label="Служебная навигация">
+      <x-text-link href="#" size="sm" color="grey" icon="eye">Версия для слабовидящих</x-text-link>
+      <x-text-link href="#" size="sm" color="grey">Госпрограмма</x-text-link>
+      <x-text-link href="#" size="sm" color="grey">Доступная среда</x-text-link>
+      <x-text-link href="#" size="sm" color="grey">О компании</x-text-link>
+      <x-text-link href="#" size="sm" color="grey">Реквизиты</x-text-link>
+      <x-text-link href="#" size="sm" color="grey">Информация о поставщике услуг</x-text-link>
     </nav>
-    <ul class="site-header__list site-header__list--meta">
-      <li class="site-header__item">
-        <span class="site-header__meta">
-          8 (499) 370-49-78
-          <svg class="icon-chevron">
-            <use href="../assets/icons/chevron-down.svg"></use>
-          </svg>
-        </span>
-      </li>
-      <li class="site-header__item">
-        <span class="site-header__meta">
-          Санкт-Петербург
-          <svg class="icon-chevron">
-            <use href="../assets/icons/chevron-down.svg"></use>
-          </svg>
-        </span>
-      </li>
-    </ul>
+
+    <div class="site-header__top-meta">
+      <x-text-link size="sm" color="grey" icon="chevron-down" icon-pos="right" aria-haspopup="true" aria-expanded="false">8 (499) 370-49-78</x-text-link>
+      <x-text-link size="sm" color="grey" icon="chevron-down" icon-pos="right" aria-haspopup="true" aria-expanded="false">Санкт-Петербург</x-text-link>
+    </div>
   </div>
 
+  <!-- Main bar -->
   <div class="site-header__main">
-    <div class="site-header__start">
+    <div class="site-header__brand">
+      <a href="/" class="site-header__logo" aria-label="Опека — на главную">
+        <svg class="site-header__logo-mark" width="54" height="33" viewBox="0 0 54 33" aria-hidden="true">
+          <use href="#icon-logo-bird" />
+        </svg>
+        <span class="site-header__logo-text">Опека</span>
+      </a>
 
-      <div class="site-header__mark">
-        <a class="site-header__logo" href="/" aria-label="Опека — на главную">
-          <img src="../assets/icons/logo.svg" alt="Опека" width="54" height="32.36" />
-        </a>
-        <a class="site-header__logo-letter" href="/" aria-label="Опека — на главную">
-          <span class="site-header__logo-text">Опека</span>
-        </a>
-      </div>
-      <nav class="site-header__nav site-header__nav--main" aria-label="Основные разделы">
-        <button type="button" class="btn btn--menu">
-          <span class="btn__icon" aria-hidden="true">
-            <span class="btn__burger">
-              <span class="btn__burger-line"></span>
-              <span class="btn__burger-line"></span>
-            </span>
-          </span>
-          <span class="btn__label">Меню</span>
-        </button>
-        <ul class="site-header__chips">
-          <li class="site-header__chip-item">
-            <a class="btn btn--chip" href="#">Пансионаты</a>
-          </li>
-          <li class="site-header__chip-item">
-            <a class="btn btn--chip" href="#">Направления</a>
-          </li>
-          <li class="site-header__chip-item">
-            <a class="btn btn--chip" href="#">Цены</a>
-          </li>
-          <li class="site-header__chip-item">
-            <a class="btn btn--chip" href="#">Контакты</a>
-          </li>
-        </ul>
+      <nav class="site-header__nav site-header__nav--desktop" aria-label="Основная навигация">
+        <x-button variant="blue" aria-controls="main-menu" aria-expanded="false">Меню</x-button>
+        <x-button href="#" variant="tr-grey" icon="chevron-down" aria-haspopup="true" aria-expanded="false">Пансионаты</x-button>
+        <x-button href="#" variant="tr-grey" icon="chevron-down" aria-haspopup="true" aria-expanded="false">Направления</x-button>
+        <x-button href="#" variant="tr-grey">Цены</x-button>
+        <x-button href="#" variant="tr-grey">Контакты</x-button>
       </nav>
     </div>
+
     <div class="site-header__tools">
-      <button class="site-header__tools__icon-btn " type="button" aria-label="Поиск">
-        <img src="../assets/icons/search.svg" alt="Опека" width="16" height="16" />
-      </button>
-      <button class="site-header__tools__icon-btn site-header__tools__icon-btn-mobile" type="button"
-        aria-label="Личный кабинет">
-        <img src="../assets/icons/user.svg" alt="Опека" width="16" height="16" />
-      </button>
-      <a class="btn btn--primary btn__label-desktop" href="#"><span class="btn__label ">Оставить заявку</span></a>
-      <a class="btn btn--primary btn__label-mobile" href="#"><span class="btn__label">Записаться</span></a>
-      <button type="button" class="btn btn--menu btn--menu-mobile">
-        <span class="btn__icon" aria-hidden="true">
-          <span class="btn__burger">
-            <span class="btn__burger-line"></span>
-            <span class="btn__burger-line"></span>
-          </span>
-        </span>
-        <!-- <span class="btn__label">Меню</span> -->
-      </button>
+      <x-button variant="tr-grey" icon="search" icon-only aria-label="Поиск"></x-button>
+      <x-button href="#" variant="tr-grey" icon="user" icon-only class="site-header__tool--desktop" aria-label="Личный кабинет"></x-button>
+
+      <!-- cta: full label on desktop, short on mobile -->
+      <x-button href="#" variant="blue" class="site-header__cta--desktop">Оставить заявку</x-button>
+      <x-button href="#" variant="blue" class="site-header__cta--mobile">Записаться</x-button>
+
+      <!-- burger — mobile only -->
+      <x-button variant="blue" icon="burger" icon-only
+                class="site-header__tool--mobile"
+                aria-label="Меню" aria-controls="main-menu" aria-expanded="false"></x-button>
     </div>
   </div>
 </header>

@@ -1,0 +1,20 @@
+@use '../../styles/tokens' as *;
+
+/** home.scss — page-specific styles, included only on home.html. */
+
+.home-shell {
+  position: relative;
+  isolation: isolate;
+}
+
+
+.home-shell > .site-header {
+  position: absolute;
+  top: $page-padding-x;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: $z-sticky;
+
+  width: calc(100% - #{$page-padding-x} * 2);
+  max-width: $content-max-width - $page-padding-x * 2; // = 1496px
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sections — Styleguide</title>
+  </head>
+  <body>
+    <component src="assets/icons/sprite.svg"></component>
+
+    <div class="sg-layout">
+      <component src="pages/styleguide/_nav.html"></component>
+
+      <main class="sg-main">
+        <header class="sg-header">
+          <h1 class="sg-header__title">Sections</h1>
+          <p class="sg-header__lead">
+            Готовые секции страниц. Подключаются на странице через
+            <code>&lt;component src="sections/&lt;name&gt;/&lt;name&gt;.html"&gt;&lt;/component&gt;</code>.
+          </p>
+        </header>
+
+        <component src="sections/site-header/site-header.styleguide.html"></component>
+
+        <!-- new section showcases go here -->
+      </main>
+    </div>
+
+    <script type="module" src="../../scripts/styleguide.js"></script>
+  </body>
+</html>

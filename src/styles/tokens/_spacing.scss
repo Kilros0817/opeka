@@ -1,0 +1,22 @@
+/** Spacing scale (4px grid). */
+$space-xs:  4px;
+$space-sm:  8px;
+$space-md:  16px;
+$space-lg:  24px;
+$space-xl:  40px;
+$space-2xl: 64px;
+$space-3xl: 96px;
+
+/** Layout tokens. */
+
+// Outer page padding (viewport edge to card component edge).
+$page-padding-x: 20px;
+
+// Inner content padding (section edge to heading/CTA inside).
+$content-padding-x: 36px;
+
+$content-max-width: 1536px;
+
+// Actual rendered site-header heights; used to offset sections under the floating header.
+$site-header-height-mobile:  90px;
+$site-header-height-desktop: 98px;

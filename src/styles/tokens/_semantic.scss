@@ -1,0 +1,69 @@
+@use 'palette' as *;
+
+/** Semantic tokens — what colors mean in UI. */
+
+// Backgrounds
+$color-bg-page:          $surface-page;
+$color-bg-surface:       $white;
+$color-bg-card-blue:     $card-blue;
+
+// Text
+$color-text-primary:     $navy-900;
+$color-text-secondary:   $navy-60;
+$color-text-disabled:    $navy-30;
+$color-text-on-dark:     $white;
+$color-text-on-dark-60:  $white-70;    // Figma: Text/Text White 60 = 70% opacity
+$color-text-on-dark-50:  $white-50;
+
+// Borders
+$color-border:           $navy-10;
+$color-border-60:        $navy-60;
+$color-border-white-30:  $white-30;
+$color-border-white-60:  $white-60;
+$color-stroke:           $navy-10;
+$color-stroke-white:     $white-30;
+
+// Action
+$color-action:           $blue-500;
+$color-action-hover:     $blue-600;
+$color-action-disabled:  $blue-50p;
+
+// Focus
+$color-focus-ring:       $blue-500;
+
+// Brand re-exports
+$color-blue:             $blue-500;
+$color-blue-hover:       $blue-600;
+$color-blue-disabled:    $blue-50p;
+$color-orange:           $orange-500;
+$color-red:              $red-500;
+$color-green:            $green-500;
+$color-yellow:           $yellow-500;
+$color-system-red:       $system-red;
+
+$color-white:            $white;
+$color-white-hover:      $grey-50;
+$color-white-disabled:   $white-50;
+$color-navy:             $navy-900;
+$color-navy-60:          $navy-60;
+
+// Transparent white (buttons, overlays)
+$color-tr-white-10:      $white-10;
+$color-tr-white-20:      $white-20;
+$color-tr-white-30:      $white-30;
+$color-tr-white-44:      $white-44;
+$color-tr-white-50:      $white-50;
+
+// Transparent black (buttons, overlays)
+$color-tr-black-03:      $navy-03;
+$color-tr-black-05:      $navy-05;
+$color-tr-black-10:      $navy-10;
+$color-tr-black-20:      $navy-20;
+$color-tr-black-40:      $navy-40;
+$color-tr-black-50:      $navy-50;
+
+// Transparent blue (buttons)
+$color-tr-blue-06:       $blue-06p;
+$color-tr-blue-10:       $blue-10p;
+$color-tr-blue-18:       $blue-18p;
+$color-tr-blue-30:       $blue-30p;

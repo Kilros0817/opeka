@@ -1,0 +1,36 @@
+@use '../tokens' as *;
+
+/** TT Hoves Pro — primary project font. */
+
+@font-face {
+  font-family: 'TT Hoves Pro';
+  src: url('/src/assets/fonts/tt-hoves-pro-regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TT Hoves Pro';
+  src: url('/src/assets/fonts/tt-hoves-pro-medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TT Hoves Pro';
+  src: url('/src/assets/fonts/tt-hoves-pro-bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: $font-primary;
+  font-weight: $fw-regular;
+  font-size: $fs-base;
+  line-height: $lh-base;
+  color: $color-text-primary;
+  background-color: $color-bg-page;
+}

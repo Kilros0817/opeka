@@ -1,0 +1,28 @@
+<script props>
+  /*
+   * x-template
+   *
+   * Short description of what this component does.
+   *
+   * Props:
+   *   variant  — primary | secondary (default: primary)
+   *   disabled — disables interaction (no value needed)
+   *
+   * Any extra attrs (class, aria-*, data-*) pass through to the root element.
+   * Content goes into <yield>.
+   */
+  const variant  = props.variant || 'primary'
+  const disabled = props.disabled !== undefined
+
+  module.exports = {
+    cls: [
+      'template',
+      'template--' + variant,
+      disabled ? 'is-disabled' : '',
+    ].filter(Boolean).join(' '),
+  }
+</script>
+
+<div class="{{ cls }}">
+  <yield></yield>
+</div>

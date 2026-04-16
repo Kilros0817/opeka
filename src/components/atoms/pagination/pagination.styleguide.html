@@ -1,0 +1,40 @@
+<!-- x-pagination showcase. Include in styleguide/components.html -->
+<section class="sg-section" id="comp-pagination" data-nav-target>
+  <h2 class="sg-section__title">Pagination · Slide Control</h2>
+  <p class="sg-section__desc">
+    Контроли для каруселей. Активный шаг — полоска с заполняющимся
+    <code>pagination__bar-fill</code> (для auto-rotate).
+    Остальные шаги — точки. Цвета: <code>black</code> (default) и <code>white</code>
+    для тёмных подложек.
+  </p>
+
+  <div class="sg-matrix sg-matrix--narrow">
+    <div class="sg-matrix__head">
+      <span></span>
+      <span class="sg-state-label">Step 1 (60% fill)</span>
+      <span class="sg-state-label">Step 3 (30% fill)</span>
+      <span></span>
+    </div>
+
+    <div class="sg-matrix__row">
+      <span class="sg-variant-label">Black</span>
+      <div class="sg-cell"><x-pagination count="5" active="1" progress="60"></x-pagination></div>
+      <div class="sg-cell"><x-pagination count="5" active="3" progress="30"></x-pagination></div>
+      <div class="sg-cell"></div>
+    </div>
+
+    <div class="sg-matrix__row">
+      <span class="sg-variant-label">White</span>
+      <div class="sg-cell sg-cell--on-blue"><x-pagination color="white" count="5" active="1" progress="60"></x-pagination></div>
+      <div class="sg-cell sg-cell--on-blue"><x-pagination color="white" count="5" active="3" progress="30"></x-pagination></div>
+      <div class="sg-cell sg-cell--on-blue"></div>
+    </div>
+  </div>
+
+  <sg-snippet title="x-pagination">
+    <x-pagination count="5" active="1" progress="0"></x-pagination>
+
+    <!-- on dark -->
+    <x-pagination color="white" count="5" active="2" progress="60"></x-pagination>
+  </sg-snippet>
+</section>

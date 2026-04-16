@@ -1,0 +1,183 @@
+@use '../../styles/tokens' as *;
+
+/** .its-opeka — "Opeka is" section with scroll-driven gradient backgrounds. */
+
+.its-opeka {
+  position: relative;
+  width: 100%;
+  height: 500vh;
+  background-color: $color-bg-surface;
+
+  @media (prefers-reduced-motion: reduce) {
+    height: 100vh;
+    height: 100dvh;
+  }
+}
+
+.its-opeka__sticky {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+  padding: calc(#{$content-padding-x} * (1 - var(--expand, 0)));
+
+  @media (prefers-reduced-motion: reduce) {
+    position: relative;
+  }
+
+  @include mobile {
+    padding: calc(#{$page-padding-x} * (1 - var(--expand, 0)));
+  }
+}
+
+.its-opeka__frame {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: calc(40px * (1 - var(--expand, 0)));
+  overflow: hidden;
+
+  @include mobile {
+    border-radius: calc(28px * (1 - var(--expand, 0)));
+  }
+}
+
+/* Background gradient layers (opacity driven by --bg) */
+// Figma-effect colors, unique to this section — not extracted to tokens.
+// stylelint-disable color-no-hex
+.its-opeka__bg {
+  position: absolute;
+  inset: 0;
+}
+
+.its-opeka__bg-layer {
+  position: absolute;
+  inset: 0;
+  transition: none;
+}
+
+.its-opeka__bg-layer--1 {
+  background: linear-gradient(72.3deg, #98c5ff 45%, #2674d9 112%);
+  opacity: clamp(0, (0.4 - var(--bg, 0)) * 3.33, 1);
+}
+
+.its-opeka__bg-layer--2 {
+  background: linear-gradient(129deg, #ffc990 4%, #ffd9b2 39%);
+  opacity: calc(
+    clamp(0, (var(--bg, 0) - 0.15) * 5, 1) *
+    clamp(0, (0.85 - var(--bg, 0)) * 5, 1)
+  );
+}
+
+.its-opeka__bg-layer--3 {
+  background: #cafaba;
+  opacity: clamp(0, (var(--bg, 0) - 0.6) * 3.33, 1);
+}
+// stylelint-enable color-no-hex
+
+/* Blobs — colors must stay in sync with its-opeka.js */
+// stylelint-disable color-no-hex
+.its-opeka__blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(250px);
+  transition: none;
+}
+
+.its-opeka__blob--a {
+  width: 1200px;
+  height: 1000px;
+  background: #ffc990;
+}
+
+.its-opeka__blob--b {
+  width: 1000px;
+  height: 800px;
+  background: #fff;
+}
+
+.its-opeka__blob--c {
+  width: 1400px;
+  height: 1100px;
+  background: #4691f4;
+}
+
+.its-opeka__blob--d {
+  width: 1400px;
+  height: 1200px;
+  background: #cafaba;
+  opacity: 0;
+}
+
+.its-opeka__blob--e {
+  width: 1000px;
+  height: 1400px;
+  background: #ff5e61;
+  opacity: 0;
+}
+// stylelint-enable color-no-hex
+
+.its-opeka__watermark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+
+  font-family: $font-primary;
+  font-weight: $fw-medium;
+  font-size: 102.465px;
+  line-height: 0.9;
+  letter-spacing: -3.074px;
+  text-align: center;
+  white-space: nowrap;
+  color: $color-navy;
+  opacity: 0.15;
+
+  @include mobile {
+    font-size: 48px;
+    letter-spacing: -1.44px;
+  }
+}
+
+.its-opeka__scroll-btn {
+  position: absolute;
+  bottom: 68px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-decoration: none;
+  color: $color-navy;
+
+  @include mobile {
+    bottom: 32px;
+  }
+}
+
+.its-opeka__scroll-label {
+  @include type-m-16;
+  text-align: center;
+}
+
+.its-opeka__scroll-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: $radius-pill;
+  background-color: $color-tr-black-05;
+  backdrop-filter: blur(15px);
+}
+
+.its-opeka__scroll-chevron {
+  width: 16px;
+  height: 16px;
+  color: $color-navy;
+}

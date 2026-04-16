@@ -1,0 +1,18 @@
+/** Animation tokens. */
+
+/* Durations */
+$anim-fast:    0.3s;
+$anim-medium:  0.5s;
+$anim-slow:    0.8s;
+
+/* Easing */
+$easing-out:        cubic-bezier(0.16, 1, 0.3, 1);
+$easing-in-out:     cubic-bezier(0.65, 0, 0.35, 1);
+$easing-default:    ease-out;
+
+/* Transition shorthands */
+$transition-fast:    $anim-fast $easing-default;
+$transition-medium:  $anim-medium $easing-default;
+
+/* Effects */
+$blur-button: 15px;

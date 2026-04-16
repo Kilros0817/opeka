@@ -1,0 +1,42 @@
+<!--
+  RENAME: template → component name (id, title, markup, snippet).
+  Include in src/pages/styleguide/components.html.
+
+  Checklist before merge:
+  [ ] Folder renamed from _template
+  [ ] BEM block renamed in all files (.js, .scss, .styleguide.html)
+  [ ] JS registered in src/scripts/main.js (import + call in init)
+  [ ] Variant × state matrix filled
+  [ ] HTML snippet for backend ready
+  [ ] No TODO/FIXME in code (lint:contracts will catch them)
+-->
+<section class="sg-section" id="comp-template" data-nav-target>
+  <h2 class="sg-section__title">Component · Template</h2>
+  <p class="sg-section__desc">Description: variants, sizes, data-attributes, usage rules.</p>
+
+  <div class="sg-matrix">
+    <div class="sg-matrix__head">
+      <span></span>
+      <span class="sg-state-label">Default</span>
+      <span class="sg-state-label">Hover</span>
+      <span class="sg-state-label">Disabled</span>
+    </div>
+
+    <!-- Uncomment and fill:
+    <div class="sg-matrix__row">
+      <span class="sg-variant-label">Variant</span>
+      <div class="sg-cell"> ... </div>
+      <div class="sg-cell"> ... </div>
+      <div class="sg-cell"> ... </div>
+    </div> -->
+  </div>
+
+  <!-- HTML snippet for backend. Required. -->
+  <div class="sg-snippet">
+    <div class="sg-snippet__bar">
+      <span class="sg-snippet__title">HTML</span>
+      <button type="button" class="sg-snippet__copy" data-copy>Copy</button>
+    </div>
+<pre class="sg-snippet__code"><code>&lt;!-- component markup here --&gt;</code></pre>
+  </div>
+</section>

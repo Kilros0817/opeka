@@ -1,0 +1,66 @@
+<!-- x-promo-mini-card showcase. Include in styleguide/components.html -->
+<section class="sg-section" id="comp-promo-mini-card" data-nav-target>
+  <h2 class="sg-section__title">Promo Mini Card</h2>
+  <p class="sg-section__desc">
+    Карточка акции. Композиция: <code>x-tag</code> + заголовок (M-20) +
+    описание (R-16, muted) + <code>x-text-link</code>. Декоративное blob-пятно
+    переопределяется CSS-переменной <code>--promo-mini-card-blob</code>.
+  </p>
+  <p class="sg-state-label">
+    Карточка — visual primitive. Ротация и pagination/prev/next живут в
+    <code>x-promo-mini-slider</code>.
+  </p>
+
+  <div class="sg-matrix sg-matrix--narrow">
+    <div class="sg-matrix__head">
+      <span></span>
+      <span class="sg-state-label">Sale · Red</span>
+      <span class="sg-state-label">Sale · Red (alt)</span>
+      <span></span>
+    </div>
+
+    <div class="sg-matrix__row">
+      <span class="sg-variant-label">Default</span>
+
+      <div class="sg-cell">
+        <x-promo-mini-card tag-color="red" tag-icon="fire">
+          <fill-tag>Скидка 20%</fill-tag>
+          <fill-title>Зимний чек-ап в «Опеке» по сниженной цене 119 990 ₽</fill-title>
+          <fill-desc>14 дней восстановления здоровья за 119 990 ₽. Анализы, терапевт и проживание включены!</fill-desc>
+          <fill-link>Узнать больше</fill-link>
+        </x-promo-mini-card>
+      </div>
+
+      <div class="sg-cell">
+        <x-promo-mini-card tag-color="red" tag-icon="fire">
+          <fill-tag>Скидка 40%</fill-tag>
+          <fill-title>Заезжайте сегодня, платите потом!</fill-title>
+          <fill-desc>Разделим стоимость программы на платежи от 31 531 ₽ / месяц</fill-desc>
+          <fill-link>Узнать больше</fill-link>
+        </x-promo-mini-card>
+      </div>
+
+      <div class="sg-cell"></div>
+    </div>
+  </div>
+
+  <div class="sg-note">
+    <h3 class="sg-note__title">Контракт контента (для backend / CMS)</h3>
+    <ul class="sg-note__list">
+      <li><strong>Заголовок</strong> — обязательный. Обрезается до 2 строк (≈ 60 символов на desktop).</li>
+      <li><strong>Описание</strong> — обязательное. Обрезается до 3 строк (≈ 150 символов на desktop, ≈ 110 на mobile).</li>
+      <li><strong>Тег</strong> — обязательный, один. Текст ≤ 14 символов.</li>
+      <li><strong>Ссылка «Узнать больше»</strong> — обязательная.</li>
+      <li><strong>Blob</strong> — цвет через CSS-переменную <code>--promo-mini-card-blob</code>.</li>
+    </ul>
+  </div>
+
+  <sg-snippet title="x-promo-mini-card">
+    <x-promo-mini-card tag-color="red" tag-icon="fire" link-href="/promo/winter/">
+      <fill-tag>Скидка 20%</fill-tag>
+      <fill-title>Заголовок акции</fill-title>
+      <fill-desc>Описание акции.</fill-desc>
+      <fill-link>Узнать больше</fill-link>
+    </x-promo-mini-card>
+  </sg-snippet>
+</section>

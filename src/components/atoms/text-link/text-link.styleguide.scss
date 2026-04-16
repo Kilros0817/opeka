@@ -1,0 +1,6 @@
+@use '../../../styles/tokens' as *;
+
+// hover preview for showcase (not included in production)
+
+.text-link--blue.is-hover  { color: $color-blue-hover; }
+.text-link--white.is-hover { color: $color-tr-white-50; }

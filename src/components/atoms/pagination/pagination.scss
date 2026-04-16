@@ -1,0 +1,80 @@
+@use '../../../styles/tokens' as *;
+
+/**
+ * .pagination — slide control for carousels.
+ *
+ * Active step: progress-bar 40x4 with filling bar (auto-rotate).
+ * Inactive steps: dots 4x4.
+ *
+ * Colors:
+ *   .pagination         — light backgrounds (default navy)
+ *   .pagination--white  — dark backgrounds (white)
+ */
+
+.pagination {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+// Base button resets (pagination has its own, separate from .btn-reset).
+.pagination__dot,
+.pagination__bar {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  flex-shrink: 0;
+
+  &:focus-visible {
+    outline: 2px solid $color-focus-ring;
+    outline-offset: 4px;
+    border-radius: $radius-pill;
+  }
+}
+
+// Inactive dot
+.pagination__dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: $color-tr-black-10;
+}
+
+// Active progress bar
+.pagination__bar {
+  position: relative;
+  width: 40px;
+  height: 4px;
+  border-radius: 10px;
+  background-color: $color-tr-black-10;
+  overflow: hidden;
+}
+
+.pagination__bar-fill {
+  display: block;
+  width: 0;
+  height: 100%;
+  border-radius: 10px;
+  background-color: $color-navy;
+  transform-origin: left center;
+
+  @for $i from 0 through 10 {
+    &--p#{$i * 10} {
+      width: #{$i * 10%};
+    }
+  }
+}
+
+/* Color: White (dark backgrounds) */
+.pagination--white {
+  .pagination__dot,
+  .pagination__bar {
+    background-color: $color-tr-white-50;
+  }
+
+  .pagination__bar-fill {
+    background-color: $color-white;
+  }
+}
