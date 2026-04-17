@@ -120,6 +120,10 @@
           "description": "Small uppercase label. Renders a <span> with optional 14px icon on the left."
         },
         {
+          "name": "x-tag-advantages",
+          "description": "Small uppercase label. Renders a <span> with icon on the left."
+        },
+        {
           "name": "x-text-link",
           "description": "Text link with optional 16px icon. Renders <a> when href is set, otherwise <button>."
         },
