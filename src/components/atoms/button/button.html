@@ -68,15 +68,19 @@
   <button type="{{ type }}" class="{{ cls }}" data-tab-status="{{ tabStatus }}">
     <if condition="icon && size === 'mini'"><svg class="btn__icon" aria-hidden="true">
         <use href="#icon-{{ icon }}" />
-      </svg></if>
+      </svg>
+    </if>
     <if condition="icon && size === 'medium'"><span class="btn__icon-circle" aria-hidden="true"><svg class="btn__icon">
           <use href="#icon-{{ icon }}" />
-        </svg></span></if>
+        </svg></span>
+      </if>
     <if condition="!iconOnly"><span class="btn__label">
         <yield></yield>
-      </span></if>
+      </span>
+    </if>
     <if condition="icon && size === 'big'"><span class="btn__icon-circle" aria-hidden="true"><svg class="btn__icon">
           <use href="#icon-{{ icon }}" />
-        </svg></span></if>
+        </svg></span>
+    </if>
   </button>
 </if>
