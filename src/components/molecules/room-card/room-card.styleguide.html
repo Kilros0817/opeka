@@ -1,26 +1,17 @@
-<!-- x-promo-mini-card showcase. Include in styleguide/components.html -->
+<!-- x-room-card showcase. Include in styleguide/components.html -->
 <section class="sg-section" id="comp-promo-mini-card" data-nav-target>
     <h2 class="sg-section__title">Room Card</h2>
     <p class="sg-section__desc">
-        Карточка акции. Композиция: <code>x-tag</code> + заголовок (M-20) +
-        описание (R-16, muted) + <code>x-text-link</code>. Декоративное blob-пятно
-        переопределяется CSS-переменной <code>--promo-mini-card-blob</code>.
+        На этой карточке стиль меняется между версией для настольных компьютеров и версией для мобильных устройств.
+        props: title ,desc , image1 ,image2,  image3 ,price , unit
     </p>
-    <!-- <p class="sg-state-label">
-        Карточка — visual primitive. Ротация и pagination/prev/next живут в
-        <code>x-promo-mini-slider</code>.
-    </p> -->
 
     <div class="sg-matrix sg-matrix--narrow">
         <div class="sg-matrix__head">
-            <span></span>
-            <span class="sg-state-label">SM</span>
-            <span class="sg-state-label">MD</span>
-            <span></span>
         </div>
 
         <div class="sg-matrix__row">
-            <x-room-card size="sm" seat="1">
+            <x-room-card seat="1" src_main_back="../../assets/images/room_card_3_3.png" alt_back="image-back" src_main_middle="../../assets/images/room_card_3_2.png" alt_middle="image-middle" src_main_front="../../assets/images/room_card_3_1.png" alt_front="image-front">
                 <fill-title>1-местная комната</fill-title>
                 <fill-desc>Уютное личное пространство, включающее удобную кровать,
                     прикроватную тумбу, шкаф для хранения вещей,
@@ -33,7 +24,7 @@
     </div>
 
     <sg-snippet title="x-promo-mini-card">
-        <x-room-card link-href="/promo/winter/">
+        <x-room-card seat="1" src_main_back="../../assets/images/room_card_3_3.png" alt_back="image-back" src_main_middle="../../assets/images/room_card_3_2.png" alt_middle="image-middle" src_main_front="../../assets/images/room_card_3_1.png" alt_front="image-front">
             <fill-title>1-местная комната</fill-title>
             <fill-desc>Уютное личное пространство, включающее удобную кровать,
                 прикроватную тумбу, шкаф для хранения вещей,
