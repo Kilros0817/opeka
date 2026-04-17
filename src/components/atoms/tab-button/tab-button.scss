@@ -29,37 +29,37 @@
 
 /* Status */
 .tab-button--black--default {
-  border-color: $navy-10;
-  color: $navy-60;
+  border-color: $color-border;
+  color: $color-navy-60;
   border-width: 1.2px;
 
 }
 
 .tab-button--black--active {
-  border-color: $blue-100p;
-  color: $blue-100p;
+  border-color: $color-tr-blue-100;
+  color: $color-tr-blue-100;
   border-width: 2px;
 
 }
 
 .tab-button--white--default {
-  border-color: $white-30;
-  color: $white-100;
+  border-color: $color-border-white-30;
+  color: $color-text-on-dark-100;
   border-width: 1.2px;
 }
 
 .tab-button--white--active {
-  border-color: $white-30;
-  color: $white-100;
+  border-color: $color-border-white-30;
+  color: $color-text-on-dark-100;
   border-width: 2px;
 }
 
 .tab-button--non-border--default {
   border: none;
-  background-color: $navy-05;
+  background-color: $color-tr-black-05;
 }
 
 .tab-button--non-border--active {
   border: none;
-  background-color: $navy-10;
+  background-color: $color-tr-black-10;
 }
