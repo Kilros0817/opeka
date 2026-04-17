@@ -1,0 +1,33 @@
+<script props>
+  /*
+   * x-tag-advantages
+   *
+   * Small uppercase label. Renders a <span> with icon on the left.
+   *
+   * Props:
+   *   size — sm | md | lg (default: sm)
+   *   color — blue | white (default: blue)
+   *   icon — sprite id without "icon-" prefix
+   *
+   * <yield> becomes the label. Extra attrs (class, aria-*, data-*) pass through.
+   */
+  const size = props.size || 'sm'
+  const color = props.color || 'blue'
+  const icon = props.icon || ''
+
+  module.exports = {
+    icon,
+    cls: [
+      'tag-advantages',
+      'tag-advantages--' + size,
+      'tag-advantages--' + color,
+    ].join(' '),
+  }
+</script>
+
+<span class="{{ cls }}">
+  <if condition="icon">
+      <svg class="tag-advantages__icon" aria-hidden="true"><use href="#icon-{{ icon }}"/></svg>
+  </if>
+  <span class="tag-advantages__label"><yield></yield></span>
+</span>

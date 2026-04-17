@@ -1,0 +1,28 @@
+<script props>
+  /*
+   * x-circle-number
+   *
+   *
+   * Props:
+   *   size — sm | md (default: sm)
+   *   color — tr-blue | tr-orange | tr-green | tr-pink (default: blue)
+   *   num — 1
+   *
+   */
+  const size = props.size || 'sm'
+  const color = props.color || 'tr-blue'
+  const num = props.num || 0
+
+  module.exports = {
+    number: Number.isInteger(num * 1) ?  num.toString().padStart(2, '0') : '00',
+    cls: [
+      'circle-number',
+      'circle-number--' + size,
+      'circle-number--' + color,
+    ].join(' '),
+  }
+</script>
+
+<span class="{{ cls }}">
+  {{ number }}
+</span>

@@ -1,0 +1,32 @@
+<script props>
+  /*
+   * x-circle-icon
+   *
+   * Renders a <span> with optional 16px icon.
+   *
+   * Props:
+   *   size — sm | md (default: sm)
+   *   color — tr-blue | tr-orange | tr-green | tr-red (default: tr-blue)
+   *   icon — sprite id without "icon-" prefix
+   *
+   */
+  const size = props.size || 'sm'
+  const color = props.color || 'tr-blue'
+  const icon = props.icon || ''
+
+  module.exports = {
+    icon,
+    cls: [
+      'circle-icon',
+      'circle-icon--' + size,
+      'circle-icon--' + color,
+    ].join(' '),
+    cls__icon: 
+      'circle-icon__icon--' + size
+
+  }
+</script>
+
+<span class="{{ cls }}">
+  <svg class="{{ cls__icon }}" aria-hidden="true" aria-label="{{ icon }}"><use href="#icon-{{ icon }}"/></svg>
+</span>
