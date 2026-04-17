@@ -1,0 +1,252 @@
+@use '../../../styles/tokens' as *;
+
+/**
+ * .pansionat-big-card — Promotion Mini Card (Figma).
+ *
+ * Composition: .tag + title + description + .text-link.
+ * Decorative blob color via --pansionat-big-card-blob.
+ * Modifier --in-slider: absolute positioning + data-pos stack layers.
+ *
+ * Desktop: 360x306, padding 24, radius 32
+ * Mobile:  334x222, padding 24/16, radius 26
+ */
+
+.pansionat-big-card {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  border-radius: $radius-2xl;
+  gap: 10px;
+  overflow: hidden;
+
+  width: 100%;
+  max-height: 360px;
+  // max-width: 100%;
+  @include mobile {
+    flex-direction: column;
+    padding: 0 $space-md;
+    width: 100%;
+    min-height: fit-content;
+    border-radius: $radius-xl;
+  }
+}
+
+.pansionat-big-card__bottom {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  min-width: 480px;
+  height: 360px;
+  background-color: rgb(255, 236, 218, 1);
+  border-radius: $radius-2xl;
+  
+
+  @include mobile {
+    min-width: 320px;
+    min-height: 320px;
+    width: 100%;
+    border-radius: $radius-xl;
+  }
+}
+
+.pansionat-big-card__stat {
+  @include type-m-12;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  padding: 5px;
+
+  @include mobile {
+    // @include type-m-10;
+    font-weight: 500;
+    font-size: 10px;
+    padding: 2px;
+  }
+}
+
+.pansionat-big-card__slider {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-image: var(--bg-image);
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  gap: 10px;
+  border-radius: $radius-2xl;
+  padding: 32px;
+  overflow: hidden;
+  
+  @include mobile {
+    width: 100%;
+    height: 100%;
+    padding: 24px 16px;
+    gap: 10px;
+    opacity: 1;
+    border-radius: $radius-xl;
+  }  
+}
+
+.pansionat-big-card__image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  
+  object-fit: cover;       // = background-size: cover
+  object-position: center; // = background-position: center
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  & ::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+      to top,
+      rgb(10, 17, 17, 0.3) 1%,
+      rgb(10, 17, 17, 0) 150%
+    );
+
+    pointer-events: none;
+  }
+}
+
+.pansionat-big-card__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  width: 100%;
+  padding: 32px;
+  border-radius: $radius-2xl;
+  
+  background-color: $grey-50;
+
+  @include mobile {
+    gap: 20px;
+    padding: 24px 16px;
+    border-radius: $radius-xl;
+  }
+}
+
+.pansionat-big-card__pan4reverse {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+
+  @include mobile {
+    flex-direction: column;
+    gap: $space-lg;
+  }
+}
+
+.pansionat-big-card__tags {
+  display: flex;
+  
+  gap: 10px;
+}
+
+.pansionat-big-card__text {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.pansionat-big-card__title {
+  @include type-h2-mobile;
+  
+  @include mobile {
+    @include type-h3-mobile
+  }
+}
+
+.pansionat-big-card__desc {
+  @include type-m-16;
+  
+
+  @include mobile {
+    @include type-m-14;
+  }
+}
+
+.pansionat-big-card__categories {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: $space-lg;
+  gap: 5px;
+}
+
+.pansionat-big-card__info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  
+
+  width: 100%;
+
+  @include mobile {
+    flex-direction: column;
+  }
+}
+
+.pansionat-big-card__pricepad {
+  display:flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  gap: 5px;
+  
+
+  @include mobile {
+    margin: $space-lg 0 $space-lg 0;
+  }
+}
+
+.pansionat-big-card__price {
+  @include type-h3-mobile;
+  margin: 0;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+
+  @include mobile {
+    @include type-m-20;
+  }
+}
+
+.pansionat-big-card__unit {
+  @include type-r-16;
+  margin: 0;
+  
+
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+
+  @include mobile {
+    @include type-m-14;
+  }
+}
+
+.pansionat-big-card__btngroup {
+  display: flex;
+  flex-direction: 'row';
+  gap: 5px;
+  
+  @include mobile {
+    flex-direction: column;
+    width: 100%;
+    
+    .x-button {
+      width: 100%;
+    }
+  }
+}

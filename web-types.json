@@ -35,12 +35,24 @@
           "description": "Fills the \"link\" slot of the parent component."
         },
         {
+          "name": "fill-price",
+          "description": "Fills the \"price\" slot of the parent component."
+        },
+        {
+          "name": "fill-stat",
+          "description": "Fills the \"stat\" slot of the parent component."
+        },
+        {
           "name": "fill-tag",
           "description": "Fills the \"tag\" slot of the parent component."
         },
         {
           "name": "fill-title",
           "description": "Fills the \"title\" slot of the parent component."
+        },
+        {
+          "name": "fill-unit",
+          "description": "Fills the \"unit\" slot of the parent component."
         },
         {
           "name": "if",
@@ -72,6 +84,14 @@
           "description": "Named slot \"link\" — provides default content."
         },
         {
+          "name": "slot-price",
+          "description": "Named slot \"price\" — provides default content."
+        },
+        {
+          "name": "slot-stat",
+          "description": "Named slot \"stat\" — provides default content."
+        },
+        {
           "name": "slot-tag",
           "description": "Named slot \"tag\" — provides default content."
         },
@@ -80,12 +100,16 @@
           "description": "Named slot \"title\" — provides default content."
         },
         {
+          "name": "slot-unit",
+          "description": "Named slot \"unit\" — provides default content."
+        },
+        {
           "name": "x-avatar-button",
           "description": "x-avatar-button — see src\\components\\atoms\\avatar-button\\avatar-button.html",
           "attributes": [
             {
-              "name": "active",
-              "description": "active button(default: '')",
+              "name": "alt",
+              "description": "alt for img (default: '')",
               "default": "''"
             }
           ]
@@ -121,6 +145,14 @@
         {
           "name": "x-pagination",
           "description": "Slide control for carousels. Active step is a progress bar (0-100% fill),\r inactive steps are dots. Each step is a <button>."
+        },
+        {
+          "name": "x-pansionat-big-card",
+          "description": "Promotion card: tag + title + description + text-link, with a decorative blob.\r Composes <x-tag> and <x-text-link> internally."
+        },
+        {
+          "name": "x-pansionat-card",
+          "description": "Promotion card: tag + title + description + text-link, with a decorative blob.\r Composes <x-tag> and <x-text-link> internally."
         },
         {
           "name": "x-promo-mini-card",

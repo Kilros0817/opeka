@@ -1,0 +1,60 @@
+<script props>
+  /*
+   * x-pansionat-card
+   *
+   * Promotion card: tag + title + description + text-link, with a decorative blob.
+   * Composes <x-tag> and <x-text-link> internally.
+   *
+   * Props (shell):
+   *   tag-color — color for the <x-tag> (default: red)
+   *   tag-icon — sprite id for the <x-tag> (default: fire)
+   *   link-href — href for the CTA link (default: #)
+   *   link-icon — sprite id for the link icon (default: plus)
+   *
+   * Slots:
+   *   <fill-tag>   — tag label
+   *   <fill-title> — card title (rendered in <h3>)
+   *   <fill-desc>  — card description (rendered in <p>)
+   *   <fill-link>  — CTA link label
+   *
+   * Blob color — override CSS var `--pansionat-card-blob` from the outside.
+   */
+  const tagColor = props['tag-color'] || 'green'
+  const tagIcon = props['tag-icon'] || 'star' 
+  const linkHref = props['link-href'] || '#'
+  const linkIcon = props['link-icon'] || 'plus'
+  const linkImage = props['link-image'] || '../../assets/images/pansion-placeholder.webp'
+
+  module.exports = { 
+    tagColor, 
+    tagIcon, 
+    linkHref, 
+    linkIcon, 
+    linkImage
+  }    
+</script>
+ 
+<article class="pansionat-card ">
+  <img 
+    src="{{linkImage}}"
+    alt="Pansionat image" 
+    class="pansionat-card__image"
+  >
+  
+  <div class="pansionat-card__content">
+    <x-tag size="md" color="{{ tagColor }}" icon="{{ tagIcon }}"><slot-tag></slot-tag></x-tag>
+    <div class="pansionat-card__body">
+      <div class="pansionat-card__text">
+        <h2 class="pansionat-card__title"><slot-title></slot-title></h2>
+        <p class="pansionat-card__desc"><slot-desc></slot-desc></p>
+      </div>
+      <div class="pansionat-card__info">
+        <div class="pansionat-card__pricepad">
+          <div class="pansionat-card__price"><slot-price></slot-price></div>
+          <div class="pansionat-card__unit"><slot-unit></slot-unit></div>
+        </div>
+        <x-button variant="tr-white" icon="plus" pill="" icon-only="" aria-label="plus"></x-button>
+      </div>
+    </div>
+  </div>
+</article>
