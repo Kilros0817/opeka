@@ -16,6 +16,9 @@
    *   <fill-title> — card title (rendered in <h3>)
    *   <fill-desc>  — card description (rendered in <p>)
    *   <fill-link>  — CTA link label
+   *   <fill-stat>  — Warning statement upon slider
+   *   <fill-price> — Price label
+   *   <fill-unit>  — Currency
    *
    * Blob color — override CSS var `--pansionat-big-card-blob` from the outside.
    */
@@ -57,10 +60,8 @@
     tagInfo,
     tagCategory,
     visibleCategories,
-    remainingCount,
-    imageUrl: `linear-gradient(to top, \
-      rgba(10, 17, 17, 0.3) 1%, \
-      rgba(10, 17, 17, 0) 150%)` }
+    remainingCount
+  }
 </script>
  
 <article class="pansionat-big-card">
@@ -85,8 +86,8 @@
           </each>
         </div>
         <div class="pansionat-big-card__text">
-          <div class="pansionat-big-card__title"><slot-title></slot-title></div>
-          <div class="pansionat-big-card__desc"><slot-desc></slot-desc></div>
+          <h3 class="pansionat-big-card__title"><slot-title></slot-title></h3>
+          <p class="pansionat-big-card__desc"><slot-desc></slot-desc></p>
         </div>
       </div>
       <div class="pansionat-big-card__categories">
@@ -104,8 +105,8 @@
 
     <div class="pansionat-big-card__info">
       <div class="pansionat-big-card__pricepad">
-        <div class="pansionat-big-card__price"><slot-price></slot-price></div>
-        <div class="pansionat-big-card__unit"><slot-unit></slot-unit></div>
+        <p class="pansionat-big-card__price"><slot-price></slot-price></p>
+        <p class="pansionat-big-card__unit"><slot-unit></slot-unit></p>
       </div>
       <div class="pansionat-big-card__btngroup">
         <x-button size="medium" variant="blue" icon="plus">

@@ -146,6 +146,14 @@ $ls-tight: -0.02em;
   text-transform: uppercase;
 }
 
+@mixin type-m-10 {
+  font-family: $font-primary;
+  font-weight: $fw-medium;
+  font-size: 10px;
+  line-height: 14px;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+}
 /* Regular family — body, descriptions, sub-text */
 
 @mixin type-r-18 { // 18/22px -0.02em

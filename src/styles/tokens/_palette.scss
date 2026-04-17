@@ -83,3 +83,9 @@ $red-10p:         rgb(255, 94, 97, 0.1);
 /* Green transparent */
 $green-10p:       rgb(117, 199, 92, 0.1);
 
+/* warning transparent */
+$warn-bg:         rgb(255, 236, 218, 1);
+
+/* pansionat-card gradient */
+$gr-grey:         linear-gradient(to top, rgb(10, 17, 17, 0.3) 1%, rgb(10, 17, 17, 0) 150%);
+$gr-grey-big:     linear-gradient(to top, rgb(10, 17, 17, 0.3) 1%, rgb(10, 17, 17, 0) 150%);
