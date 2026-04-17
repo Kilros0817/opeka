@@ -1,0 +1,9 @@
+@use '../../../styles/tokens' as *;
+
+.sg-bigbox {
+  display: flex;
+  padding: 20px;
+  min-height: max-content;
+  border-radius: $radius-md;
+  background-color: $navy-05;
+}

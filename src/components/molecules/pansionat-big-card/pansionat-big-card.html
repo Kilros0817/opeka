@@ -1,0 +1,120 @@
+<script props>
+  /*
+   * x-pansionat-big-card
+   *
+   * Promotion card: tag + title + description + text-link, with a decorative blob.
+   * Composes <x-tag> and <x-text-link> internally.
+   *
+   * Props (shell):
+   *   tag-color — color for the <x-tag> (default: red)
+   *   tag-icon — sprite id for the <x-tag> (default: fire)
+   *   link-href — href for the CTA link (default: #)
+   *   link-icon — sprite id for the link icon (default: plus)
+   *
+   * Slots:
+   *   <fill-tag>   — tag label
+   *   <fill-title> — card title (rendered in <h3>)
+   *   <fill-desc>  — card description (rendered in <p>)
+   *   <fill-link>  — CTA link label
+   *
+   * Blob color — override CSS var `--pansionat-big-card-blob` from the outside.
+   */
+  const tagInfo = props['tag-info'] || [{
+    'tag-color': 'green',
+    'tag-icon': 'fire',
+    'tag-content': 'Скидка 20%'
+  }, {
+    'tag-color': 'red',
+    'tag-icon': 'fire',
+    'tag-content': 'Новое'
+  }]
+  const tagCategory = props['tag-category'] || [
+    'Мест в номере 2-4',
+    'Контроль за приемом лекарств',
+    '5-разовое питание',
+    'Функциональные кровати для лежачих',
+    'Прогулки по территории',
+    'Мест в номере 2-4',
+    'Контроль за приемом лекарств',
+    '5-разовое питание',
+    'Функциональные кровати для лежачих',
+    'Прогулки по территории'
+  ]
+  const visibleCategories = tagCategory.slice(0, 4)
+  const remainingCount = tagCategory.length - 4
+  const tagColor = props['tag-color'] || 'green'
+  const tagIcon = props['tag-icon'] || 'star' 
+  const linkHref = props['link-href'] || '#'
+  const linkIcon = props['link-icon'] || 'plus'
+  const linkImage = props['link-image'] || '../../assets/images/pansion-placeholder.webp'
+
+  module.exports = { 
+    tagColor, 
+    tagIcon, 
+    linkHref, 
+    linkIcon, 
+    linkImage,
+    tagInfo,
+    tagCategory,
+    visibleCategories,
+    remainingCount,
+    imageUrl: `linear-gradient(to top, \
+      rgba(10, 17, 17, 0.3) 1%, \
+      rgba(10, 17, 17, 0) 150%)` }
+</script>
+ 
+<article class="pansionat-big-card">
+  <div class="pansionat-big-card__bottom">
+    <div class="pansionat-big-card__stat">
+      <slot-stat></slot-stat>      
+    </div>
+    <div class="pansionat-big-card__slider">
+      <img 
+        src="{{linkImage}}"
+        alt="Pansionat image" 
+        class="pansionat-big-card__image"
+      >
+    </div>
+  </div>
+  <div class="pansionat-big-card__content">
+    <div>
+      <div class="pansionat-big-card__pan4reverse">
+        <div class="pansionat-big-card__tags">
+          <each loop="item in tagInfo">
+            <x-tag size="sm" color="{{ item['tag-color'] }}" icon="{{ item['tag-icon'] }}"><slot-tag>{{item['tag-content']}}</slot-tag></x-tag>
+          </each>
+        </div>
+        <div class="pansionat-big-card__text">
+          <div class="pansionat-big-card__title"><slot-title></slot-title></div>
+          <div class="pansionat-big-card__desc"><slot-desc></slot-desc></div>
+        </div>
+      </div>
+      <div class="pansionat-big-card__categories">
+          
+        <each loop="item in visibleCategories">
+          <x-tag-advantages size="sm" color="blue" icon="done">{{ item }}</x-tag-advantages>
+        </each>
+        <if condition="remainingCount > 0">
+          <x-tag-advantages size="sm" color="blue" icon="plus">
+            {{ remainingCount }}
+          </x-tag-advantages>
+        </if>
+      </div>
+    </div>
+
+    <div class="pansionat-big-card__info">
+      <div class="pansionat-big-card__pricepad">
+        <div class="pansionat-big-card__price"><slot-price></slot-price></div>
+        <div class="pansionat-big-card__unit"><slot-unit></slot-unit></div>
+      </div>
+      <div class="pansionat-big-card__btngroup">
+        <x-button size="medium" variant="blue" icon="plus">
+          Оставить заявку
+        </x-button>
+        <x-button size="medium" variant="tr-grey" icon="">
+          Подробнее
+        </x-button>
+      </div>
+    </div>
+  </div>
+</article>

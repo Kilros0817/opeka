@@ -1,0 +1,43 @@
+<!-- x-benefit-card showcase. Include in styleguide/components.html -->
+<section class="sg-section" id="comp-benefit-card" data-nav-target>
+  <h2 class="sg-section__title">Benefit Card</h2>
+  <p class="sg-section__desc">
+    Карточка акции. Композиция
+  </p>
+  <p class="sg-state-label">
+    Карточка — visual primitive.
+    <code>x-benefit-card</code>.
+  </p>
+
+  <div class="sg-frame ">
+    <div class="sg-frame__stage">
+      <div class="sg-cell">
+        <x-benefit-card link-image="../../assets/images/benefit-card-1.webp" image-pos="right">
+          <fill-title>14 пансионатов в стране</fill-title>
+          <fill-desc>Открыли 14 пансионатов в Москве, Санкт-Петербурге, Ленинградской области и Челябинске.</fill-desc>
+          <fill-link>Смотреть пансионаты</fill-link>
+        </x-benefit-card>
+      </div>
+    </div>
+  </div>
+
+  <div class="sg-note">
+    <h3 class="sg-note__title">Контракт контента (для backend / CMS)</h3>
+    <ul class="sg-note__list">
+      <li><strong>Заголовок</strong> — обязательный. Обрезается до 2 строк (≈ 60 символов на desktop).</li>
+      <li><strong>Описание</strong> — обязательное. Обрезается до 3 строк (≈ 150 символов на desktop, ≈ 110 на mobile).
+      </li>
+      <li><strong>Ссылка «УСмотреть пансионаты»</strong> — обязательная.</li>
+      <li><strong>Blob</strong> — цвет через CSS-переменную <code>--benefit-card-blob</code>.</li>
+    </ul>
+  </div>
+
+  <sg-snippet title="x-benefit-card">
+    <x-benefit-card image-pos="right" image-shape="landscape" link-href="/pansionates/">
+      <fill-title>15 пансионатов<br />в стране</fill-title>
+      <fill-desc>…</fill-desc>
+      <fill-link>Смотреть пансионаты</fill-link>
+      <fill-image><img src="/upload/card-1.webp" alt="" loading="lazy" width="240" height="160"></fill-image>
+    </x-benefit-card>
+  </sg-snippet>
+</section>

@@ -1,0 +1,145 @@
+@use '../../../styles/tokens' as *;
+
+/**
+ * .benefit-card — Promotion Mini Card (Figma).
+ *
+ * Composition: .tag + title + description + .text-link.
+ * Decorative blob color via --benefit-card-blob.
+ * Modifier --in-slider: absolute positioning + data-pos stack layers.
+ *
+ * Desktop: 360x306, padding 24, radius 32
+ * Mobile:  334x222, padding 24/16, radius 26
+ */
+
+.benefit-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 480px;
+  height: 340px;
+  padding: 48px 48px 96px;
+  border-radius: 32px;
+
+  background-color: $color-bg-surface;
+  // overflow: hidden;
+  flex-shrink: 0;
+
+  @include mobile {
+    width: 269px;
+    height: 220px;
+    padding: 24px 16px 48px;
+    border-radius: 26px;
+    gap: 14px;
+  }
+}
+
+/* Decorative background blob */
+
+.benefit-card__link {
+  position: absolute;
+  top: 225px;
+  left: 330px;
+  width: 285px;
+  height: 214px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: $z-sticky;
+  pointer-events: none;
+
+  @include mobile {
+    top: 183px;
+    left: 165px;
+    width: 176px;
+    height: 132px;
+  }
+}
+
+.image-pos {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+}
+
+.image-pos-left {
+  top: 225px;
+  left: 330px;
+}
+
+.image-pos-right {
+  top: 225px;
+  right: 330px;
+}
+
+/* Content */
+.benefit-card__content {
+  position: relative;
+  z-index: 1;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  flex: 1 1 auto;
+  min-height: 0;
+  width: 100%;
+}
+
+.benefit-card__body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  flex: 1 1 auto;
+  min-height: 0;
+  width: 100%;
+
+  @include mobile {
+    gap: 20px;
+    justify-content: space-between;
+  }
+}
+
+.benefit-card__text {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 0;
+  width: 100%;
+
+  @include mobile {
+    gap: 10px;
+  }
+}
+
+.benefit-card__title {
+  @include type-h3-desktop;
+  margin: 0;
+  color: $color-text-primary;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+
+  @include mobile {
+    @include type-h3-mobile;
+  }
+}
+
+.benefit-card__desc {
+  @include type-r-16;
+  width: 80%;
+  margin: 0;
+  color: $color-text-secondary;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+
+  @include mobile {
+    @include type-r-14;
+  }
+}

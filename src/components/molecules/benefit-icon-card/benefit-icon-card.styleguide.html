@@ -1,0 +1,54 @@
+<!-- x-benefit-icon-card showcase. Include in styleguide/components.html -->
+<section class="sg-section" id="comp-benefit-icon-card" data-nav-target>
+  <h2 class="sg-section__title">Benefit Icon Card</h2>
+  <p class="sg-section__desc">
+  </p>
+  <p class="sg-state-label">
+    Карточка — visual primitive.
+    <code>x-benefit-icon-card</code>.
+  </p>
+
+  <div class="sg-frame ">
+    <div class="sg-cell benefit-icon-card__sg-pair">
+      <x-benefit-icon-card size="md">
+        <fill-title>Комфортные условиях</fill-title>
+        <fill-desc>Открыли 14 пансионатов в Москве, Санкт-Петербурге, Ленинградской области и Челябинске.</fill-desc>
+      </x-benefit-icon-card>
+
+      <x-benefit-icon-card size="sm">
+        <fill-title>Комфортные условиях</fill-title>
+        <fill-desc>Открыли 14 пансионатов в Москве, Санкт-Петербурге, Ленинградской области и Челябинске.</fill-desc>
+      </x-benefit-icon-card>
+
+    </div>
+    <div class="sg-cell benefit-icon-card__sg-pair">
+
+      <x-benefit-icon-card size="md" color="grey">
+        <fill-title>Комфортные условиях</fill-title>
+        <fill-desc>Открыли 14 пансионатов в Москве, Санкт-Петербурге, Ленинградской области и Челябинске.</fill-desc>
+      </x-benefit-icon-card>
+
+      <x-benefit-icon-card size="sm" color="grey">
+        <fill-title>Комфортные условиях</fill-title>
+        <fill-desc>Открыли 14 пансионатов в Москве, Санкт-Петербурге, Ленинградской области и Челябинске.</fill-desc>
+      </x-benefit-icon-card>
+    </div>
+  </div>
+
+  <div class="sg-note">
+    <h3 class="sg-note__title">Контракт контента (для backend / CMS)</h3>
+    <ul class="sg-note__list">
+      <li><strong>Заголовок</strong> — обязательный. </li>
+      <li><strong>Описание</strong> — обязательное. </li>
+      <li><strong>Ссылка «УСмотреть пансионаты»</strong> — обязательная.</li>
+    </ul>
+  </div>
+
+  <sg-snippet title="x-benefit-icon-card">
+    <x-benefit-icon-card link-href="/promo/winter/">
+      <fill-title>14 пансионатов в стране</fill-title>
+      <fill-desc>Описание акции.</fill-desc>
+      <fill-link>Смотреть пансионаты</fill-link>
+    </x-benefit-icon-card>
+  </sg-snippet>
+</section>

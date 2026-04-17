@@ -1,0 +1,50 @@
+<!-- x-promo-mini-card showcase. Include in styleguide/components.html -->
+<section class="sg-section" id="comp-promo-mini-card" data-nav-target>
+  <h2 class="sg-section__title">Pansionat Card</h2>
+  <p class="sg-section__desc">
+    Карточка акции. Композиция: <code>x-tag</code> + заголовок (M-20) +
+    описание (R-16, muted) + <code>x-text-link</code>. Декоративное blob-пятно
+    переопределяется CSS-переменной <code>--promo-mini-card-blob</code>.
+  </p>
+  <p class="sg-state-label">
+    Карточка — visual primitive. Ротация и pagination/prev/next живут в
+    <code>x-promo-mini-slider</code>.
+  </p>  
+
+  <div class="sg-matrix sg-matrix--narrow">
+    <div class="sg-matrix__head">
+      
+    </div>
+
+    <div class="sg-matrix__row">
+      <x-pansionat-card tag-color="green" tag-icon="fire">
+        <fill-tag>Скидка 20%</fill-tag>
+        <fill-title>Всеволожский</fill-title>
+        <fill-desc>Ленинградская область, Всеволожск, пр. <br/> Достоевского, д.56</fill-desc>
+        <fill-price>от 3 300 ₽</fill-price>
+        <fill-unit>/сутки</fill-unit>
+      </x-pansionat-card>
+    </div>
+  </div>
+
+  <div class="sg-note">
+    <h3 class="sg-note__title">Контракт контента (для backend / CMS)</h3>
+    <ul class="sg-note__list">
+      <li><strong>Заголовок</strong> — обязательный. Обрезается до 2 строк (≈ 60 символов на desktop).</li>
+      <li><strong>Описание</strong> — обязательное. Обрезается до 3 строк (≈ 150 символов на desktop, ≈ 110 на mobile).</li>
+      <li><strong>Тег</strong> — обязательный, один. Текст ≤ 14 символов.</li>
+      <li><strong>Ссылка «Узнать больше»</strong> — обязательная.</li>
+      <li><strong>Blob</strong> — цвет через CSS-переменную <code>--promo-mini-card-blob</code>.</li>
+    </ul>
+  </div>
+
+  <sg-snippet title="x-pansionat-card">
+    <x-pansionat-card tag-color="green" tag-icon="fire">
+      <fill-tag>Скидка 20%</fill-tag>
+      <fill-title>Всеволожский</fill-title>
+      <fill-desc>Ленинградская область, Всеволожск, пр. <br/> Достоевского, д.56</fill-desc>
+      <fill-price>от 3 300 ₽</fill-price>
+      <fill-unit>/сутки</fill-unit>
+    </x-pansionat-card>
+  </sg-snippet>
+</section>
