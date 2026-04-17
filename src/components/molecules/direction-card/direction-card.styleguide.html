@@ -1,0 +1,30 @@
+<!-- x-direction-card showcase. Include in styleguide/components.html -->
+<section class="sg-section" id="comp-direction-card" data-nav-target>
+  <h2 class="sg-section__title">Direction Card</h2>
+  <p class="sg-section__desc">
+    Карточка направления. Композиция: фоновое изображение + заголовок (M-32) +
+    описание (R-16) + цена/ссылка + <code>x-button</code> (pill, tr-white).
+    Градиентный оверлей задаётся в CSS компонента.
+  </p>
+  <p class="sg-state-label">
+    Карточка — visual primitive. Слайдер и навигация живут в родительском контейнере.
+  </p>
+
+  <div class="sg-matrix sg-matrix--narrow">
+    <div class="sg-matrix__row">
+      <x-direction-card image-src="../../assets/images/direction-card-md.jpg" alt="direction-card">
+        <fill-title>Услуги сиделки</fill-title>
+        <fill-desc>В пансионатах &laquo;Опека&raquo; в СПб мы организуем профессиональный медицинский уход для пожилых динамический мониторинг, индивидуальные реабилитационные программы и поддержку.</fill-desc>
+        <fill-link>от 600 &#8381;</fill-link>
+      </x-direction-card>
+    </div>
+  </div>
+
+  <sg-snippet title="x-direction-card">
+      <x-direction-card image-src="../../assets/images/direction-card-md.jpg" alt="direction-card">
+        <fill-title>Услуги сиделки</fill-title>
+        <fill-desc>В пансионатах &laquo;Опека&raquo; в СПб мы организуем профессиональный медицинский уход для пожилых динамический мониторинг, индивидуальные реабилитационные программы и поддержку.</fill-desc>
+        <fill-link>от 600 ₽</fill-link>
+      </x-direction-card>
+  </sg-snippet>
+</section>

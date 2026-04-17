@@ -14,7 +14,8 @@ $color-text-disabled:    $navy-30;
 $color-text-on-dark:     $white;
 $color-text-on-dark-60:  $white-70;    // Figma: Text/Text White 60 = 70% opacity
 $color-text-on-dark-50:  $white-50;
-$color-text-on-dark-100:  $white-100;
+$color-text-on-dark-100: $white-100;
+$color-text-on-dark-0:   $white-0;
 
 // Borders
 $color-border:           $navy-10;
@@ -119,6 +120,7 @@ $color-bg-blue-20:       $blue-20p;
 $color-bg-white-100:     $white;
 $color-tc-block-50:      $text-common;
 
+$hezy-100p:              $hezy-100p;
 $color-bg-card:          $navy-03;
 $color-bg-white:         $white;
 $color-primary:         $navy-900;

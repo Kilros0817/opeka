@@ -1,0 +1,137 @@
+@use '../../../styles/tokens' as *;
+
+/**
+ * .direction-card — Promotion Mini Card (Figma).
+ *
+ * Composition: .tag + title + description + .text-link.
+ * Decorative blob color via --direction-card-blob.
+ * Modifier --in-slider: absolute positioning + data-pos stack layers.
+ *
+ * Desktop: 360x306, padding 24, radius 32
+ * Mobile:  334x222, padding 24/16, radius 26
+ */
+
+.direction-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 726px;
+  height: 436px;
+  border-radius: 32px;
+  overflow: hidden;
+  flex-shrink: 0;
+
+  @include mobile {
+    width: 361px;
+    height: 361px;
+    border-radius: 26px;
+  }
+}
+
+/* Decorative background blob */
+
+.direction-card__bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.direction-card__bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.direction-card__bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, $color-text-on-dark-0 0%, $hezy-100p 100%);
+  pointer-events: none;
+  /* Ensures the image remains clickable */
+}
+
+/* Content */
+.direction-card__content {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  flex: 1 1 auto;
+  width: 100%;
+  height: 100%;
+}
+
+.direction-card__body {
+  position: absolute;
+  bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  flex: 1 1 auto;
+  width: 70%;
+
+  @include mobile {
+    gap: 20px;
+    justify-content: space-between;
+    width: 80%;
+  }
+}
+
+.direction-card__text {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  color: $color-text-on-dark-100;
+
+  @include mobile {
+    gap: 10px;
+  }
+}
+
+.direction-card__title {
+  margin: 0;
+  display: -webkit-box;
+  text-align: center;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-weight: $fw-medium;
+  font-size: 32px;
+  letter-spacing: -3%;
+
+  @include mobile {
+    font-size: 24px;
+    letter-spacing: -2%;
+  }
+
+}
+
+.direction-card__desc {
+  @include type-r-16;
+  margin: 0;
+  display: -webkit-box;
+  text-align: center;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+
+  @include mobile {
+    font-size: 14px;
+    -webkit-line-clamp: none;
+  }
+
+}
+
+.direction-card__footer {
+  display: flex;
+  font-size: 24px;
+  font-weight: $fw-medium;
+  letter-spacing: -2%;
+  color: $color-text-on-dark-100;
+  gap: 24px;
+}
