@@ -3,7 +3,8 @@
  *
  * Fade-in + slide up on viewport enter. Pure CSS transition, no GSAP.
  *   data-anim-delay="0.1"    — start delay (s)
- *   data-anim-duration="0.3" — transition length (s, default 0.3)
+ *   data-anim-duration="0.6" — transition length (s, default 0.5)
+ *   data-anim-y="40"         — slide distance in px (default 24)
  */
 
 const READY_CLASS = 'is-revealed'
@@ -11,9 +12,9 @@ const READY_CLASS = 'is-revealed'
 const css = `
   [data-anim="reveal-up"] {
     opacity: 0;
-    transform: translateY(16px);
-    transition: opacity var(--reveal-duration, 0.3s) ease-out var(--reveal-delay, 0s),
-                transform var(--reveal-duration, 0.3s) ease-out var(--reveal-delay, 0s);
+    transform: translateY(var(--reveal-y, 24px));
+    transition: opacity var(--reveal-duration, 0.5s) ease-out var(--reveal-delay, 0s),
+                transform var(--reveal-duration, 0.5s) ease-out var(--reveal-delay, 0s);
     will-change: opacity, transform;
   }
   [data-anim="reveal-up"].${READY_CLASS} {
@@ -52,8 +53,10 @@ export function initRevealUp(root = document) {
         const el = entry.target
         const delay = el.dataset.animDelay
         const duration = el.dataset.animDuration
+        const y = el.dataset.animY
         if (delay) el.style.setProperty('--reveal-delay', `${delay}s`)
         if (duration) el.style.setProperty('--reveal-duration', `${duration}s`)
+        if (y) el.style.setProperty('--reveal-y', `${y}px`)
         el.classList.add(READY_CLASS)
         obs.unobserve(el)
       })

@@ -1,11 +1,10 @@
 /**
- * its-opeka.js — scroll-driven background gradients and blob animation.
+ * its-opeka.js — scroll-driven background + blob choreography.
+ * Uses GSAP ScrollTrigger (scrub). This is the bespoke-animation pattern
+ * for full-scene sequences; simple element reveals live in
+ * src/animations/presets/.
  * Colors here must stay in sync with its-opeka.scss.
  */
-
-import { onScrollFrame } from '../../scripts/modules/on-scroll-frame.js'
-
-const REDUCED_MOTION = window.matchMedia('(prefers-reduced-motion: reduce)').matches
 
 const BLOB_STATES = {
   a: [
@@ -35,95 +34,64 @@ const BLOB_STATES = {
   ],
 }
 
-function lerp(a, b, t) {
-  return a + (b - a) * t
-}
+const REDUCED_MOTION = window.matchMedia('(prefers-reduced-motion: reduce)').matches
 
-function interpolateBlob(states, bg) {
-  const segment = bg * (states.length - 1)
-  const i = Math.min(Math.floor(segment), states.length - 2)
-  const t = segment - i
-  const a = states[i]
-  const b = states[i + 1]
-  return {
-    x: lerp(a.x, b.x, t),
-    y: lerp(a.y, b.y, t),
-    rotate: lerp(a.rotate, b.rotate, t),
-    opacity: lerp(a.opacity, b.opacity, t),
-  }
-}
-
-function applyBlobState(el, state) {
-  el.style.transform = `translate(${state.x}px, ${state.y}px) rotate(${state.rotate}deg)`
-  el.style.opacity = String(state.opacity)
-}
-
-function setStaticState(sticky, blobs) {
-  sticky.style.setProperty('--expand', '1')
-  sticky.style.setProperty('--bg', '1')
-
-  Object.keys(BLOB_STATES).forEach((key) => {
-    const el = blobs[key]
-    if (!el) return
-
-    applyBlobState(el, BLOB_STATES[key].at(-1))
+function applyFinalState(gsap, section, sticky) {
+  gsap.set(sticky, { '--expand': 1, '--bg': 1 })
+  Object.entries(BLOB_STATES).forEach(([key, states]) => {
+    const el = section.querySelector(`.its-opeka__blob--${key}`)
+    if (el) gsap.set(el, states.at(-1))
   })
 }
 
-export function initItsOpeka(root = document) {
-  root.querySelectorAll('[data-its-opeka]').forEach((section) => {
+function buildTimeline(gsap, section, sticky) {
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: section,
+      start: 'top top',
+      end: 'bottom bottom',
+      scrub: true,
+    },
+  })
+
+  // Phase 1: expand the frame (0–25% of scroll)
+  tl.fromTo(sticky, { '--expand': 0 }, { '--expand': 1, duration: 0.25, ease: 'none' }, 0)
+
+  // Phase 2: gradient background fades in (25–100%)
+  tl.fromTo(sticky, { '--bg': 0 }, { '--bg': 1, duration: 0.75, ease: 'none' }, 0.25)
+
+  // Blobs: 3 keyframes per blob, interpolated across the bg phase
+  Object.entries(BLOB_STATES).forEach(([key, states]) => {
+    const el = section.querySelector(`.its-opeka__blob--${key}`)
+    if (!el) return
+    tl.fromTo(el, states[0], { ...states[1], duration: 0.375, ease: 'none' }, 0.25)
+      .to(el, { ...states[2], duration: 0.375, ease: 'none' }, 0.625)
+  })
+}
+
+export async function initItsOpeka(root = document) {
+  const sections = root.querySelectorAll('[data-its-opeka]')
+  if (!sections.length) return
+
+  // Lazy-load GSAP only when this section is on the page.
+  const [{ default: gsap }, { ScrollTrigger }] = await Promise.all([
+    import('gsap'),
+    import('gsap/ScrollTrigger'),
+  ])
+  gsap.registerPlugin(ScrollTrigger)
+
+  sections.forEach((section) => {
     if (section.dataset.itsOpekaReady === 'true') return
+    section.dataset.itsOpekaReady = 'true'
 
     const sticky = section.querySelector('.its-opeka__sticky')
     if (!sticky) return
 
-    section.dataset.itsOpekaReady = 'true'
-
-    const blobs = {}
-    Object.keys(BLOB_STATES).forEach((key) => {
-      blobs[key] = section.querySelector(`.its-opeka__blob--${key}`)
-    })
-
     if (REDUCED_MOTION) {
-      setStaticState(sticky, blobs)
+      applyFinalState(gsap, section, sticky)
       return
     }
 
-    let stopScroll = null
-
-    function onScroll() {
-      if (!section.isConnected) {
-        stopScroll?.()
-        return
-      }
-
-      const rect = section.getBoundingClientRect()
-      const sectionHeight = section.offsetHeight
-      const viewportHeight = window.innerHeight
-      const scrollRange = sectionHeight - viewportHeight
-      if (scrollRange <= 0) return
-
-      const scrolled = Math.max(0, -rect.top)
-      const totalProgress = Math.min(1, scrolled / scrollRange)
-
-      // Phase 1: expand (0→25% of scroll range)
-      const expand = Math.min(1, totalProgress / 0.25)
-      sticky.style.setProperty('--expand', String(expand))
-
-      // Phase 2: bg (25→100% of scroll range)
-      const bg = Math.max(0, Math.min(1, (totalProgress - 0.25) / 0.75))
-      sticky.style.setProperty('--bg', String(bg))
-
-      // Update blob transforms
-      Object.keys(BLOB_STATES).forEach((key) => {
-        const el = blobs[key]
-        if (!el) return
-        const s = interpolateBlob(BLOB_STATES[key], bg)
-        applyBlobState(el, s)
-      })
-    }
-
-    stopScroll = onScrollFrame(onScroll)
-    onScroll()
+    buildTimeline(gsap, section, sticky)
   })
 }
