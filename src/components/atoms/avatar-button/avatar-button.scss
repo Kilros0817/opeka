@@ -29,30 +29,12 @@
 /* Colors */
 .avatar-btn--tr-white { 
   background-color: $color-tr-white-10; 
-  
-  // &:active { 
-  //   outline: 2px solid $color-border-white; 
-  //   outline-offset: -2px;
-  // }
 }
 
 .avatar-btn--tr-gray { 
   background-color: $color-tr-black-05; 
-
-  // &:active { 
-  //   outline: 2px solid $color-border-blue; 
-  //   outline-offset: -2px;
-  // }
 }
 
 .avatar-img {
   border-radius: $radius-xl;
 }
-
-
-// .avatar-btn--tr-gray_active {
-//   outline: 2px solid $color-border-blue; outline-offset: -2px;
-//   // margin-right: 20px;
-// }
-
-

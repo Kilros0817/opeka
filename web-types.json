@@ -84,8 +84,8 @@
           "description": "x-avatar-button — see src\\components\\atoms\\avatar-button\\avatar-button.html",
           "attributes": [
             {
-              "name": "alt",
-              "description": "alt for img (default: '')",
+              "name": "active",
+              "description": "active button(default: '')",
               "default": "''"
             }
           ]

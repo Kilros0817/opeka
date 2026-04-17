@@ -7,17 +7,9 @@
   </p>
   <p class="sg-section__desc">
     Размеры: <code>sm</code> (74×101px), <code>md</code> (106×144px).
-    Цвета: <code>tr-white</code>, <code>tr-gray</code>.
-  </p>
-  <p class="sg-section__desc">
-    Props:
-    <code>size</code> — размер (sm, md),
-    <code>bg_color</code> — цвет фона (tr-white, tr-gray),
-    <code>src_mobile</code> — URL изображения для мобильных устройств,
-    <code>src_desktop</code> — URL изображения для десктопа,
-    <code>src_main</code> — основной URL изображения (PNG fallback),
-    <code>alt</code> — альтернативный текст для изображения,
-    <code>active</code> — класс для активного состояния (avatar-btn--active).
+    Цвет фона: <code>tr-white</code>, <code>tr-gray</code>.
+    Альт: <code>альтернативный текст для изображения</code>.
+    Активный: <code>active="active"</code>.
   </p>
 
   <div class="sg-matrix sg-matrix--narrow">
@@ -65,7 +57,9 @@
   </div>
 
   <sg-snippet title="x-avatar-button">
-    <x-avatar-button class="avatar-btn--space" size="sm" bg_color="tr-white" active="active" src_main="../../assets/images/avatar-01.png" alt="avatar-01"></x-avatar-button>
-    <x-avatar-button class="avatar-btn--space" size="sm" bg_color="tr-white" src_main="../../assets/images/avatar-01.png" alt="avatar-01"></x-avatar-button>
+    <x-avatar-button size="sm" bg_color="tr-white" src_main="../../assets/images/avatar-01.png" alt="avatar-01"></x-avatar-button>
+    
+    <!-- active -->
+    <x-avatar-button size="sm" bg_color="tr-white" active="active" src_main="../../assets/images/avatar-01.png" alt="avatar-01"></x-avatar-button>
   </sg-snippet>
 </section>
