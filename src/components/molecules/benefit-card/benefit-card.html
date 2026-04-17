@@ -1,0 +1,52 @@
+<script props>
+  /*
+   * x-benefit-card
+   *
+   * Props (shell):
+   *   link-href — href for the CTA link (default: #)
+   *   link-icon — sprite id for the link icon (default: plus)
+   *   image-src — image source (default: ../../assets/images/benefit-card-blob-1.webp)
+   *   image-pos — left | right (default: right)
+   *   image-shape — square | landscape | portrait (default: square)
+   *
+   * Slots:
+   *   <fill-title> — card title (rendered in <h5>)
+   *   <fill-desc>  — card description (rendered in <p>)
+   *   <fill-link>  — CTA link label
+   *
+   * Blob color — override CSS var `--benefit-card-blob` from the outside.
+   */
+  const linkHref = props['link-href'] || '#'
+  const linkIcon = props['link-icon'] || 'plus'
+  const linkImage = props['link-image'] || '../../assets/images/benefit-card-1.webp'
+  const imagePos = props['image-pos'] || 'right'
+  const imageShape = props['image-shape'] || 'square'
+  module.exports = { linkHref, linkIcon, linkImage }
+
+  module.exports = {
+    linkHref,
+    linkIcon,
+    linkImage,
+    cls: [
+      'image-pos',
+      'image-pos--' + imagePos,
+      'image-shape--' + imageShape,
+    ].join(' '),
+  }
+</script>
+
+<article class="benefit-card">
+  <div class="benefit-card__link">
+    <img class="{{cls}}" src="{{linkImage}}" alt="blob" loading="lazy" decoding="async">
+    <x-button variant="tr-white" icon="plus" pill="" icon-only="" aria-label="puls"></x-button>
+  </div>
+  <div class="benefit-card__content">
+    <div class="benefit-card__body">
+      <div class="benefit-card__text">
+        <h3 class="benefit-card__title"><slot-title></slot-title></h3>
+        <p class="benefit-card__desc"><slot-desc></slot-desc></p>
+      </div>
+      <x-text-link href="{{ linkHref }}" color="blue" icon="{{ linkIcon }}"><slot-link></slot-link></x-text-link>
+    </div>
+  </div>
+</article>

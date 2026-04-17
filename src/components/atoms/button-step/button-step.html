@@ -1,0 +1,21 @@
+<script props>
+  /*
+   * x-button-step
+   *
+   * Button step.
+   *
+   * Props:
+   *   active — boolean (default: off). Use <code>active</code> or <code>active="true"</code>.
+   *
+   * <yield> becomes the label. Extra attrs (class, aria-*, data-*) pass through.
+   */
+  const isActive = isEnabled(props.active)
+
+  module.exports = {
+    cls: ['btn-step', isActive ? 'btn-step--active' : ''].filter(Boolean).join(' '),
+  }
+</script>
+
+<span class="{{ cls }}">
+  <yield></yield>
+</span>

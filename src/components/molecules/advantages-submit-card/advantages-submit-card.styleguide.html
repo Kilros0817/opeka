@@ -1,0 +1,33 @@
+<!-- x-advantages-mini-card showcase. Include in styleguide/components.html -->
+<section class="sg-section" id="comp-advantages-mini-card" data-nav-target>
+  <h2 class="sg-section__title">Advantages Mini Card</h2>
+  <p class="sg-section__desc">
+    Заголовок + опциональный столбец из <code>x-tag-advantages</code>.
+    Слот <code>fill-tags</code> — один контейнер: внутрь можно положить любое число тегов
+    или не передавать слот вовсе.
+  </p>
+
+  <div class="sg-frame sg-frame--padded">
+    <div class="sg-frame__stage">
+      <x-advantages-mini-card layer="1">
+        <fill-title>Квалифицированный персонал</fill-title>
+        <fill-tags>
+          <x-tag-advantages color="white" icon="done">Внимательные сиделки</x-tag-advantages>
+          <x-tag-advantages color="white" icon="done">Профессиональные медсестры</x-tag-advantages>
+          <x-tag-advantages color="white" icon="done">Специалисты по организации досуга</x-tag-advantages>
+        </fill-tags>
+      </x-advantages-mini-card>
+    </div>
+  </div>
+
+  <sg-snippet title="x-advantages-mini-card">
+    <x-advantages-mini-card layer="1">
+      <fill-title>Квалифицированный персонал</fill-title>
+      <fill-tags>
+        <x-tag-advantages size="md" color="white" icon="done">Внимательные сиделки</x-tag-advantages>
+        <x-tag-advantages size="md" color="white" icon="done">Профессиональные медсестры</x-tag-advantages>
+        <x-tag-advantages size="md" color="white" icon="done">Специалисты по организации досуга</x-tag-advantages>
+      </fill-tags>
+    </x-advantages-mini-card>
+  </sg-snippet>
+</section>

@@ -1,0 +1,30 @@
+<script props>
+  /*
+   * x-advantages-mini-card
+   *
+   * Advantages mini card: title + optional stack of tag pills.
+   *
+   * Slots:
+   *   <fill-title> — card title (rendered in <h3>)
+   *   <fill-tags>  — optional: any number of <x-tag-advantages> (or other markup)
+   *
+   */
+  const rawLayer = String(props.layer || '1')
+  const layer = rawLayer.startsWith('layer') ? rawLayer : ('layer' + rawLayer)
+
+  module.exports = {
+    cls: [
+      'advantages-mini-card',
+      'advantages-mini-card--' + layer,
+    ].join(' '),
+  }
+</script>
+
+<article class="{{ cls }}">
+  <div class="advantages-mini-card__content">
+    <h3 class="advantages-mini-card__title"><slot-title></slot-title></h3>
+    <div class="advantages-mini-card__tags">
+      <slot-tags></slot-tags>
+    </div>
+  </div>
+</article>

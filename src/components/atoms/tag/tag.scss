@@ -48,8 +48,8 @@
 }
 
 /* Colors */
-.tag--red      { background-color: $red-50; }
-.tag--green    { background-color: $green-50; }
-.tag--tr-grey  { background-color: $navy-03; }
-.tag--tr-white { background-color: $white-20; color: $white; }
-.tag--white    { background-color: $white; }
+.tag--red      { background-color: $color-tag-bg-red; }
+.tag--green    { background-color: $color-tag-bg-green; }
+.tag--tr-grey  { background-color: $color-tr-black-03; }
+.tag--tr-white { background-color: $color-tr-white-20; color: $color-white; }
+.tag--white    { background-color: $color-white; }

@@ -1,0 +1,35 @@
+<script props>
+  /*
+   * x-benefit-icon-card
+   *
+   * Props:
+   *   size              — sm | s (default: sm)
+   *   color             — white | grey (default: white)
+   *   icon              — action icon name (default: done)
+   */
+  const size = props.size || 'sm'
+  const color = props.color || 'white'
+  const icon = props.icon || 'done'
+
+  module.exports = {
+    icon,
+    cls: [
+      'benefit-icon-card',
+      'benefit-icon-card--' + size,
+      'benefit-icon-card--' + color,
+    ].join(' '),
+  }
+</script>
+
+<article class="{{ cls }}">
+
+  <div class="benefit-icon-card__content">
+    <div class="benefit-icon-card__body">
+      <x-circle-icon size="sm" color="tr-green" icon="{{ icon }}"></x-circle-icon>
+      <div class="benefit-icon-card__text">
+        <p class="benefit-icon-card__title"><slot-title></slot-title></p>
+        <p class="benefit-icon-card__desc"><slot-desc></slot-desc></p>
+      </div>
+    </div>
+  </div>
+</article>
