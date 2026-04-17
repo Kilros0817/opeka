@@ -1,49 +1,39 @@
+
 <script props>
   /*
    * x-avatar-btn
    *
    * Props (shell):
-   *   size — avatar button size (default: red)
-   *   color — avatar button background (default: tr-white)
-   *   src_mobile — img url for mobile(default: '')
-   *   src_desktop — img url for desktop(default: '')\
+   *   size — avatar button size (default: sm)
+   *   bg_color — avatar button background (default: tr-white)
    *   src_main — main img url(default: '')
    *   alt — alt for img (default: '')
+   *   active - active button(default: '')
    */
   
   const size = props.size || 'sm'
   const bg_color = props.bg_color || 'tr-white'
-  const src_mobile = props.src_mobile || ''
-  const src_desktop = props.src_desktop || ''
   const src_main = props.src_main || ''
   const alt = props.alt || 'no image'
+  const active = props.active || ''
 
   module.exports = {
-    size, bg_color, src_mobile, src_desktop, src_main, alt,
+    size, bg_color, src_main, alt,
     cls: [
       'avatar-btn',
       'avatar-btn--' + size,
       'avatar-btn--' + bg_color,
     ].join(' '), 
+    cls_avatar: [
+      'avatar-img',
+      'avatar-img--' + active, 
+    ].join(' '),
   }
 
 </script>
 
-<div class="{{ cls }}" aria-label="{{ alt }}" role="button" tabindex="0" aria-pressed="false" data-avatar-btn>
-  <picture>
-    <if condition="src_mobile">
-      <source
-      media="(max-width: 767px)"
-      srcset="{{ src_mobile }}"
-      type="image/webp">
+<div class="{{ cls }}" aria-label="{{ alt }}" role="button" data-avatar-btn>
+    <if condition="src_main">
+      <img src="{{ src_main }}" alt="{{ alt }}" loading="lazy" class="{{ cls_avatar }}" aria-pressed="false"  data-avatar-img>
     </if>
-    
-    <if condition="src_desktop">
-      <source
-      srcset="{{ src_desktop }}"
-      type="image/webp">
-    </if>
-    
-    <img src="{{ src_main }}" alt="{{ alt }}" loading="lazy">
-  </picture>
 </div>
