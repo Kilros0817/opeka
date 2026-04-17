@@ -1,28 +1,195 @@
 @use '../../../styles/tokens' as *;
 
 /**
- * .btn — Classic Button (Figma: Buttons / Classic Button)
+ * .room-card — Room Card (Figma).
  *
- * Sizes:  --mini | --medium | --big (big only for blue/white)
- * Colors: --blue | --white | --tr-white | --tr-grey | --tr-grey-white | --black
+ * Composition: .title + description + price + unit.
+ * Decorative blob color via --promo-mini-card-blob.
+ * Modifier --in-slider: absolute positioning + data-pos stack layers.
+ *
+ * Desktop: 360x306, padding 24, radius 32
+ * Mobile:  334x222, padding 24/16, radius 26
  */
-.room-card__sm{
-    background-color: $color-bg-blue-20;
-    border-radius: 26px;
-    width: 320px;
-    height: 454px;
-}
 
-.room-card__md{
-    background-color: $color-bg-blue-20;
+.card-md {
+    padding: 32px;
     border-radius: 32px;
+    background: $color-bg-card;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
     width: 480px;
-    height: 594px;
+    height: 614px;
+
+    @include mobile {
+        padding: 32px;
+        border-radius: 32px;
+        background: $color-bg-card;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        width: 320px;
+        height: 454px;
+    }
 }
 
-.room-card_content{
-    padding: 16px;
+.card__content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
-// .room-card_top{
-    
-// }
+
+.card__seats {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 16px;
+    border-radius: 999px;
+    background: $color-bg-white;
+    width: fit-content;
+}
+
+.card__text {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.card__title {
+    font-size: 24px;
+    font-weight: 500;
+    color: $color-primary;
+    line-height: 26px;
+}
+
+.card__description {
+    font-size: 16px;
+    color: $color-secondary;
+    line-height: 20px;
+}
+
+/* IMAGE STACK */
+
+.card__images-md {
+    position: relative;
+    height: 240px;
+
+    @include mobile {
+        position: relative;
+        height: 180px;
+    }
+}
+
+.card__image {
+    position: absolute;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.card__image--front-md {
+    width: 240px;
+    height: 240px;
+    z-index: 3;
+
+    @include mobile {
+        width: 182px;
+        height: 182px;
+        z-index: 3;
+    }
+}
+
+.card__image--middle-md {
+    width: 220px;
+    height: 220px;
+    left: 47.508px;
+    top: 10px;
+    // opacity: 0.7;
+    z-index: 2;
+    filter: blur(1px);
+
+    @include mobile {
+        width: 162px;
+        height: 162px;
+        left: 37.508px;
+        top: 10px;
+        // opacity: 0.7;
+        z-index: 2;
+        filter: blur(1px);
+    }
+}
+
+.card__image--back-md {
+    width: 200px;
+    height: 200px;
+    left: 90px;
+    top: 20px;
+    // opacity: 0.4;
+    z-index: 1;
+    filter: blur(2px);
+
+    @include mobile {
+        width: 142px;
+        height: 142px;
+        left: 73px;
+        top: 20px;
+        // opacity: 0.4;
+        z-index: 1;
+        filter: blur(2px);
+    }
+}
+
+.card__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card__price {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+}
+
+.card__price-value {
+    font-size: 28px;
+    font-weight: 500;
+    color: $color-primary;
+}
+
+.card__price-unit {
+    font-size: 14px;
+    color: $color-secondary;
+}
+
+.card__button {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: $color-button-bg;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.card__button-icon {
+    width: 12px;
+    height: 12px;
+    border: 2px solid $color-border-icon;
+    border-left: none;
+    border-bottom: none;
+    transform: rotate(45deg);
+}
+
+.truncate-2-lines {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    /* número de líneas */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.icon-plus__size {
+    width: 16px;
+    height: 16px;
+}

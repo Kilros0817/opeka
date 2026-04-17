@@ -8,7 +8,12 @@
    * Props (shell):
    *   seat-icon - use <x-number-of-seats>
    *   size - uaw sm(480,594),md(320,524)
-   *
+   *   src_main_back - imgae src
+   *   src_main_middle - imgae src
+       src_main_front - imgae src
+       alt_back - imgae alt
+       alt_middle - imgae alt
+       alt_front - imgae alt
    * Slots:
    *   <fill-tag>   — tag label
    *   <fill-title> — card title (rendered in <h3>)
@@ -19,18 +24,51 @@
    *
    * Blob color — override CSS var `--promo-mini-card-blob` from the outside.
    */
-  const size = props.size || 'sm'
+  const size = props.size || 'md'
   const seat = props.seat || '1'
+  const src_main_back = props.src_main_back || ""
+  const src_main_middle = props.src_main_middle || ""
+  const src_main_front = props.src_main_front || ""
+  const alt_back = props.alt_back || ""
+  const alt_middle = props.alt_middle || ""
+  const alt_front = props.alt_front || ""
 
-  module.exports = { size,seat}
+
+  module.exports = { size, seat, src_main_back, alt_back, src_main_middle, alt_middle, src_main_front,alt_front }
 
 </script>
 <section class="room-card">
-  <div class="room-card__{{size}}">
-    <div class="room-card_content">
-      <div class="room-card_top">
-        <x-number-of-seats size="sm" count="1"></x-number-of-seats>
+  <div class="card card-{{size}}">
+    <div class="card__content">
+      <!-- Seats -->
+      <x-number-of-seats count="{{seat}}" size="{{size}}"></x-number-of-seats>
+      <!-- Text -->
+      <div class="card__text">
+        <h3 class="card__title"><slot-title></slot-title></h3>
+        <p class="card__description truncate-2-lines">
+          <slot-desc></slot-desc>
+        </p>
       </div>
+    </div>
+    <!-- Image stack -->
+    <div class="card__images-{{size}}">
+      <img class="card__image card__image--back-{{size}}" alt="alt_back" src="{{src_main_back}}"/>
+      <img class="card__image card__image--middle-{{size}}" alt="alt_middle" src="{{src_main_middle}}"/>
+      <img class="card__image card__image--front-{{size}}" alt="alt_front" src="{{src_main_front}}"/>
+    </div>
+    <!-- Footer -->
+    <div class="card__footer">
+      <div class="card__price">
+        <span class="card__price-value"><slot-price></slot-price></span>
+        <span class="card__price-unit"><slot-unit></slot-unit></span>
+      </div>
+      <button class="card__button">
+        <!-- <span class="card__button-icon"> -->
+        <svg class="icon-plus__size" aria-hidden="true">
+          <use href="#icon-plus" />
+        </svg>
+        <!-- </span> -->
+      </button>
     </div>
   </div>
 </section>

@@ -1,0 +1,231 @@
+{
+  "$schema": "https://json.schemastore.org/web-types",
+  "name": "opeka-front",
+  "version": "1.0.0",
+  "description-markup": "markdown",
+  "contributions": {
+    "html": {
+      "elements": [
+        {
+          "name": "component",
+          "description": "posthtml-component include.",
+          "attributes": [
+            {
+              "name": "src",
+              "description": "Path to a partial, relative to src/."
+            }
+          ]
+        },
+        {
+          "name": "each",
+          "description": "posthtml-expressions loop. Renders its children for each item.",
+          "attributes": [
+            {
+              "name": "loop",
+              "description": "Loop expression: `item in array` or `item, index in array`."
+            }
+          ]
+        },
+        {
+          "name": "fill-desc",
+          "description": "Fills the \"desc\" slot of the parent component."
+        },
+        {
+          "name": "fill-link",
+          "description": "Fills the \"link\" slot of the parent component."
+        },
+        {
+          "name": "fill-price",
+          "description": "Fills the \"price\" slot of the parent component."
+        },
+        {
+          "name": "fill-stat",
+          "description": "Fills the \"stat\" slot of the parent component."
+        },
+        {
+          "name": "fill-tag",
+          "description": "Fills the \"tag\" slot of the parent component."
+        },
+        {
+          "name": "fill-tags",
+          "description": "Fills the \"tags\" slot of the parent component."
+        },
+        {
+          "name": "fill-title",
+          "description": "Fills the \"title\" slot of the parent component."
+        },
+        {
+          "name": "fill-unit",
+          "description": "Fills the \"unit\" slot of the parent component."
+        },
+        {
+          "name": "if",
+          "description": "posthtml-component conditional block.",
+          "attributes": [
+            {
+              "name": "condition",
+              "description": "JS expression."
+            }
+          ]
+        },
+        {
+          "name": "sg-snippet",
+          "description": "Styleguide code snippet. Serializes its content to escaped HTML with a title bar and a Copy button.",
+          "attributes": [
+            {
+              "name": "title",
+              "description": "Snippet title.",
+              "default": "HTML"
+            }
+          ]
+        },
+        {
+          "name": "slot-desc",
+          "description": "Named slot \"desc\" — provides default content."
+        },
+        {
+          "name": "slot-link",
+          "description": "Named slot \"link\" — provides default content."
+        },
+        {
+          "name": "slot-price",
+          "description": "Named slot \"price\" — provides default content."
+        },
+        {
+          "name": "slot-stat",
+          "description": "Named slot \"stat\" — provides default content."
+        },
+        {
+          "name": "slot-tag",
+          "description": "Named slot \"tag\" — provides default content."
+        },
+        {
+          "name": "slot-tags",
+          "description": "Named slot \"tags\" — provides default content."
+        },
+        {
+          "name": "slot-title",
+          "description": "Named slot \"title\" — provides default content."
+        },
+        {
+          "name": "slot-unit",
+          "description": "Named slot \"unit\" — provides default content."
+        },
+        {
+          "name": "x-advantages-mini-card",
+          "description": "Advantages mini card: title + optional stack of tag pills.\r Slots:\r   <fill-title> — card title (rendered in <h3>)\r   <fill-tags>  — optional: any number of <x-tag-advantages> (or other markup)"
+        },
+        {
+          "name": "x-advantages-submit-card",
+          "description": "Advantages mini card: title + optional stack of tag pills.\r Slots:\r   <fill-title> — card title (rendered in <h3>)\r   <fill-tags>  — optional: any number of <x-tag-advantages> (or other markup)"
+        },
+        {
+          "name": "x-avatar-button",
+          "description": "x-avatar-button — see src\\components\\atoms\\avatar-button\\avatar-button.html",
+          "attributes": [
+            {
+              "name": "active",
+              "description": "active button(default: '')",
+              "default": "''"
+            }
+          ]
+        },
+        {
+          "name": "x-benefit-card",
+          "description": "x-benefit-card — see src\\components\\molecules\\benefit-card\\benefit-card.html"
+        },
+        {
+          "name": "x-benefit-icon-card",
+          "description": "x-benefit-icon-card — see src\\components\\molecules\\benefit-icon-card\\benefit-icon-card.html",
+          "attributes": [
+            {
+              "name": "icon",
+              "description": "action icon name (default: done)",
+              "default": "done"
+            }
+          ]
+        },
+        {
+          "name": "x-button",
+          "description": "Renders <a> when href is set, otherwise <button>."
+        },
+        {
+          "name": "x-button-step",
+          "description": "Button step."
+        },
+        {
+          "name": "x-circle-icon",
+          "description": "Renders a <span> with optional 16px icon.",
+          "attributes": [
+            {
+              "name": "icon",
+              "description": "sprite id without \"icon-\" prefix"
+            }
+          ]
+        },
+        {
+          "name": "x-circle-number",
+          "description": "x-circle-number — see src\\components\\atoms\\circle-number\\circle-number.html",
+          "attributes": [
+            {
+              "name": "num",
+              "description": "1"
+            }
+          ]
+        },
+        {
+          "name": "x-number-of-seats",
+          "description": "x-number-of-seats — see src\\components\\atoms\\number-of-seats\\number-of-seats.html"
+        },
+        {
+          "name": "x-pagination",
+          "description": "Slide control for carousels. Active step is a progress bar (0-100% fill),\r inactive steps are dots. Each step is a <button>."
+        },
+        {
+          "name": "x-pansionat-big-card",
+          "description": "Promotion card: tag + title + description + text-link, with a decorative blob.\r Composes <x-tag> and <x-text-link> internally."
+        },
+        {
+          "name": "x-pansionat-card",
+          "description": "Promotion card: tag + title + description + text-link, with a decorative blob.\r Composes <x-tag> and <x-text-link> internally."
+        },
+        {
+          "name": "x-promo-mini-card",
+          "description": "Promotion card: tag + title + description + text-link, with a decorative blob.\r Composes <x-tag> and <x-text-link> internally."
+        },
+        {
+          "name": "x-promo-mini-slider",
+          "description": "Wrapper around <x-promo-mini-card>s with stack animation + auto-rotate.\r Controls (pagination dots + prev/next buttons) are built automatically.\r The runtime JS fills pagination to match the card count."
+        },
+        {
+          "name": "x-rate",
+          "description": "x-rate — see src\\components\\atoms\\rate\\rate.html"
+        },
+        {
+          "name": "x-room-card",
+          "description": "Room card: tag + title + description + image\r Composes <x-number-of-seats>."
+        },
+        {
+          "name": "x-tabs",
+          "description": "x-tabs — see src\\components\\atoms\\tabs\\tabs.html"
+        },
+        {
+          "name": "x-tag",
+          "description": "Small uppercase label. Renders a <span> with optional 14px icon on the left."
+        },
+        {
+          "name": "x-tag-advantages",
+          "description": "Small uppercase label. Renders a <span> with icon on the left."
+        },
+        {
+          "name": "x-text-link",
+          "description": "Text link with optional 16px icon. Renders <a> when href is set, otherwise <button>."
+        },
+        {
+          "name": "yield",
+          "description": "posthtml-component slot for tag content."
+        }
+      ]
+    }
+  }
+}
