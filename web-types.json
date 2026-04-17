@@ -95,6 +95,16 @@
           "description": "Renders <a> when href is set, otherwise <button>."
         },
         {
+          "name": "x-circle-number",
+          "description": "x-circle-number — see src\\components\\atoms\\circle-number\\circle-number.html",
+          "attributes": [
+            {
+              "name": "num",
+              "description": "01"
+            }
+          ]
+        },
+        {
           "name": "x-circle-icon",
           "description": "Renders a <span> with optional 16px icon.",
           "attributes": [
@@ -129,10 +139,6 @@
               "description": "1 - 5 (default : 1)s"
             }
           ]
-        },
-        {
-          "name": "x-room-card",
-          "description": "Room card: tag + title + description + image\r Composes <x-number-of-seats>."
         },
         {
           "name": "x-tag",

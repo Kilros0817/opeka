@@ -14,6 +14,7 @@ $color-text-disabled:    $navy-30;
 $color-text-on-dark:     $white;
 $color-text-on-dark-60:  $white-70;    // Figma: Text/Text White 60 = 70% opacity
 $color-text-on-dark-50:  $white-50;
+$color-text-on-dark-100:  $white-100;
 
 // Borders
 $color-border:           $navy-10;
@@ -48,6 +49,7 @@ $color-white-hover:      $grey-50;
 $color-white-disabled:   $white-50;
 $color-navy:             $navy-900;
 $color-navy-60:          $navy-60;
+$color-navy-100:         $navy-100;
 
 // Transparent white (buttons, overlays)
 $color-tr-white-10:      $white-10;
@@ -69,6 +71,25 @@ $color-tr-blue-06:       $blue-06p;
 $color-tr-blue-10:       $blue-10p;
 $color-tr-blue-18:       $blue-18p;
 $color-tr-blue-30:       $blue-30p;
+$color-tr-blue-100:      $blue-100p;
+
+// Transparent grey(background)
+$color-tr-grey-100:      $grey-100p;
+
+// Transparent orange(buttons)
+$color-tr-orange-10:      $orange-10p;
+$color-tr-orange-100:      $orange-100p;
+
+
+// Transparent green(buttons)
+$color-tr-green-10:      $green-10p;
+$color-tr-green-100:      $green-100p;
+
+
+// Transparent pink(buttons)
+$color-tr-pink-10:      $pink-10p;
+$color-tr-pink-100:      $pink-100p;
+
 
 //
 $color-tr-orange-10:     $orange-10p;

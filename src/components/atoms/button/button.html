@@ -16,43 +16,71 @@
    * <yield> becomes the label. Extra attrs (class, aria-*, data-*) pass through.
    */
   const size = props.size || 'mini'
-  const variant = props.variant || 'blue'
+  const variant = props.variant || ''
   const type = props.type || 'button'
   const href = props.href || ''
+  const color = props.color || ''
+  const padding = props.padding || 0
+  const border = props.borderline || ''
   const icon = props.icon || ''
   const iconOnly = props['icon-only'] !== undefined
   const pill = props.pill !== undefined
+  const status = props.status || 'default'
+  const tabStatus = status
 
   // icon-only buttons must have aria-label
   if (iconOnly && !props['aria-label'])
     throw new Error('x-button: icon-only requires aria-label')
 
   module.exports = {
-    href, type, icon, size, iconOnly,
+    href, type, icon, size, iconOnly, tabStatus,
     cls: [
       'btn',
       'btn--' + size,
       'btn--' + variant,
       iconOnly ? 'btn--icon-only' : '',
       pill ? 'btn--pill' : '',
+      border ? 'btn--border-' + border.replace(/_/g, '-') : '',
+      color ? 'btn--color-' + color : '',
+      padding ? 'btn--pad-' + padding : '',
     ].filter(Boolean).join(' '),
   }
 </script>
 
 <if condition="href">
-  <a href="{{ href }}" class="{{ cls }}">
-    <if condition="icon && size === 'mini'"><svg class="btn__icon" aria-hidden="true"><use href="#icon-{{ icon }}"/></svg></if>
-    <if condition="icon && size === 'medium'"><span class="btn__icon-circle" aria-hidden="true"><svg class="btn__icon"><use href="#icon-{{ icon }}"/></svg></span></if>
-    <if condition="!iconOnly"><span class="btn__label"><yield></yield></span></if>
-    <if condition="icon && size === 'big'"><span class="btn__icon-circle" aria-hidden="true"><svg class="btn__icon"><use href="#icon-{{ icon }}"/></svg></span></if>
+  <a href="{{ href }}" class="{{ cls }}" data-tab-status="{{ tabStatus }}">
+    <if condition="icon && size === 'mini'"><svg class="btn__icon" aria-hidden="true">
+        <use href="#icon-{{ icon }}" />
+      </svg></if>
+    <if condition="icon && size === 'medium'"><span class="btn__icon-circle" aria-hidden="true"><svg class="btn__icon">
+          <use href="#icon-{{ icon }}" />
+        </svg></span></if>
+    <if condition="!iconOnly"><span class="btn__label">
+        <yield></yield>
+      </span></if>
+    <if condition="icon && size === 'big'"><span class="btn__icon-circle" aria-hidden="true"><svg class="btn__icon">
+          <use href="#icon-{{ icon }}" />
+        </svg></span></if>
   </a>
 </if>
 
 <if condition="!href">
-  <button type="{{ type }}" class="{{ cls }}">
-    <if condition="icon && size === 'mini'"><svg class="btn__icon" aria-hidden="true"><use href="#icon-{{ icon }}"/></svg></if>
-    <if condition="icon && size === 'medium'"><span class="btn__icon-circle" aria-hidden="true"><svg class="btn__icon"><use href="#icon-{{ icon }}"/></svg></span></if>
-    <if condition="!iconOnly"><span class="btn__label"><yield></yield></span></if>
-    <if condition="icon && size === 'big'"><span class="btn__icon-circle" aria-hidden="true"><svg class="btn__icon"><use href="#icon-{{ icon }}"/></svg></span></if>
+  <button type="{{ type }}" class="{{ cls }}" data-tab-status="{{ tabStatus }}">
+    <if condition="icon && size === 'mini'"><svg class="btn__icon" aria-hidden="true">
+        <use href="#icon-{{ icon }}" />
+      </svg>
+    </if>
+    <if condition="icon && size === 'medium'"><span class="btn__icon-circle" aria-hidden="true"><svg class="btn__icon">
+          <use href="#icon-{{ icon }}" />
+        </svg></span>
+      </if>
+    <if condition="!iconOnly"><span class="btn__label">
+        <yield></yield>
+      </span>
+    </if>
+    <if condition="icon && size === 'big'"><span class="btn__icon-circle" aria-hidden="true"><svg class="btn__icon">
+          <use href="#icon-{{ icon }}" />
+        </svg></span>
+    </if>
   </button>
 </if>
