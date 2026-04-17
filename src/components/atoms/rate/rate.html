@@ -1,0 +1,38 @@
+<script props>
+    /*
+     * x-rate
+     *
+     * Props:
+     *   count — 1 - 5 (default : 1)s
+     */
+    const count = props.count > 5 ? 5 : props.count || '5'
+    const count0 = props.count == 0 ? 0 : props.count || '5'
+
+    module.exports = {
+        steps: Array.from({ length: count }, (_, i) => i + 1),
+        steps_other: Array.from({ length: 5 - count }, (_, i) => i + 1),
+        steps0: Array.from({ length: 5 }, (_, i) => i + 1),
+    }
+</script>
+
+<div class="rate">
+    <if condition="count === 0">
+        <each loop="i in steps0">
+            <svg class="rating__color" aria-hidden="true">
+                <use href="#icon-rate" class="rating__color-empty" />
+            </svg>
+        </each>
+    </if>
+    <if condition="count !== 0">
+        <each loop="i in steps">
+            <svg class="rating__color" aria-hidden="true">
+                <use href="#icon-rate" class="rating__color" />
+            </svg>
+        </each>
+        <each loop="i in steps_other">
+            <svg class="rating__color" aria-hidden="true">
+                <use href="#icon-rate" class="rating__color-empty" />
+            </svg>
+        </each>
+    </if>
+</div>

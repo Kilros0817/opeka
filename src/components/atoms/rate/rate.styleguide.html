@@ -1,0 +1,56 @@
+<!-- x-rate showcase. Include in styleguide/components.html -->
+<section class="rate_body">
+    <h2 class="sg-section__title">Rate</h2>
+    <p class="sg-section__desc">
+        Этот термин используется для обозначения различных преимуществ, включая популярность.
+        <code>count</code> стандарт : count : (1~5)
+    </p>
+
+    <div class="sg-matrix sg-matrix--narrow">
+        <div class="sg-matrix__head">
+            <span></span>
+            <span class="sg-state-label"></span>
+            <span class="sg-state-label"></span>
+            <span class="sg-state-label"></span>
+        </div>
+
+        <div class="sg-matrix__row">
+            <span class="sg-variant-label">5</span>
+            <div class="sg-cell"><x-rate count="5" ></x-rate></div>
+            <div class="sg-cell"></div>
+            <div class="sg-cell"></div>
+        </div>
+
+        <div class="sg-matrix__row">
+            <span class="sg-variant-label">4</span>
+            <div class="sg-cell"><x-rate count="4" ></x-rate></div>
+            <div class="sg-cell"></div>
+            <div class="sg-cell"></div>
+        </div>
+
+        <div class="sg-matrix__row">
+            <span class="sg-variant-label">3</span>
+            <div class="sg-cell"><x-rate count="3" ></x-rate></div>
+            <div class="sg-cell"></div>
+            <div class="sg-cell"></div>
+        </div>
+
+        <div class="sg-matrix__row">
+            <span class="sg-variant-label">2</span>
+            <div class="sg-cell"><x-rate count="2"></x-rate></div>
+            <div class="sg-cell"></div>
+            <div class="sg-cell"></div>
+        </div>
+
+        <div class="sg-matrix__row">
+            <span class="sg-variant-label">1</span>
+            <div class="sg-cell"><x-rate count="1"></x-rate></div>
+            <div class="sg-cell"></div>
+            <div class="sg-cell"></div>
+        </div>
+    </div>
+
+    <sg-snippet title="x-rate">
+        <x-rate count="5"></x-rate>
+    </sg-snippet>
+</section>

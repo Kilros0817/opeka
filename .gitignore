@@ -2,6 +2,6 @@
 node_modules
 dist
 .DS_Store
-
+.vscode
 # В проект скопированы только нужные 3 файла в src/assets/fonts/.
 tt_hoves_pro/

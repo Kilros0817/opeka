@@ -1,0 +1,49 @@
+<!-- x-number-of-seats showcase. Include in styleguide/components.html -->
+<section class="sg-section" id="comp-tag" data-nav-target>
+  <h2 class="sg-section__title">Number of seats</h2>
+  <p class="sg-section__desc">
+    Изменяет количество значков в зависимости от количества магнитов.
+    <code>Также изменяется в зависимости от размера.</code> size : sm(14), md(18) ,count : (1~5)
+  </p>
+  <div class="sg-matrix sg-matrix--narrow">
+    <div class="sg-matrix__head">
+      <span class="sg-state-label"></span>
+      <span class="sg-state-label">SM</span>
+      <span class="sg-state-label">MD</span>
+      <span></span>
+    </div>
+    <div class="sg-matrix__row">
+      <span class="sg-variant-label">1</span>
+      <div class="sg-cell"><x-number-of-seats count="1" size="sm"></x-number-of-seats></div>
+      <div class="sg-cell"><x-number-of-seats count="1" size="md"></x-number-of-seats></div>
+      <div class="sg-cell"></div>
+    </div>
+    <div class="sg-matrix__row">
+      <span class="sg-variant-label">2</span>
+      <div class="sg-cell"><x-number-of-seats count="2" size="sm"></x-number-of-seats></div>
+      <div class="sg-cell"><x-number-of-seats count="2" size="md"></x-number-of-seats></div>
+      <div class="sg-cell"></div>
+    </div>
+    <div class="sg-matrix__row">
+      <span class="sg-variant-label">3</span>
+      <div class="sg-cell"><x-number-of-seats count="3" size="sm"></x-number-of-seats></div>
+      <div class="sg-cell"><x-number-of-seats count="3" size="md"></x-number-of-seats></div>
+      <div class="sg-cell"></div>
+    </div>
+    <div class="sg-matrix__row">
+      <span class="sg-variant-label">4</span>
+      <div class="sg-cell"><x-number-of-seats count="4" size="sm"></x-number-of-seats></div>
+      <div class="sg-cell"><x-number-of-seats count="4" size="md"></x-number-of-seats></div>
+      <div class="sg-cell"></div>
+    </div>
+    <div class="sg-matrix__row">
+      <span class="sg-variant-label">5</span>
+      <div class="sg-cell"><x-number-of-seats count="5" size="sm"></x-number-of-seats></div>
+      <div class="sg-cell"><x-number-of-seats count="5" size="md"></x-number-of-seats></div>
+      <div class="sg-cell"></div>
+    </div>
+  </div>
+  <sg-snippet title="x-number-of-seats">
+    <x-number-of-seats count="1" size="sm"></x-number-of-seats>
+  </sg-snippet>
+</section>

@@ -1,0 +1,50 @@
+<!-- x-circle-number showcase. Include in styleguide/components.html -->
+<section class="sg-section" id="comp-circle-button" data-nav-target>
+  <h2 class="sg-section__title">Circle Number</h2>
+  <p class="sg-section__desc">
+    Небольшой UPPERCASE-лейбл. Размеры: <code>sm</code> (40), <code>md</code> (58).
+    Цвета: <code>blue</code>, <code>orange</code>, <code>green</code>,
+    <code>pink</code>.
+  </p>
+
+  <div class="sg-matrix sg-matrix--narrow">
+    <div class="sg-matrix__head">
+      <span></span>
+      <span class="sg-state-label">Size S</span>
+      <span class="sg-state-label">Size M</span>
+      <span></span>
+    </div>
+
+    <div class="sg-matrix__row">
+      <span class="sg-variant-label">TR Blue</span>
+      <div class="sg-cell"><x-circle-number size="sm" color="tr-blue" num="1" /></div>
+      <div class="sg-cell"><x-circle-number size="md" color="tr-blue" num="1" /></div>
+      <div class="sg-cell"></div>
+    </div>
+
+    <div class="sg-matrix__row">
+      <span class="sg-variant-label">TR Orange</span>
+      <div class="sg-cell"><x-circle-number size="sm" color="tr-orange" num="1" /></div>
+      <div class="sg-cell"><x-circle-number size="md" color="tr-orange" num="1" /></div>
+      <div class="sg-cell"></div>
+    </div>
+
+    <div class="sg-matrix__row">
+      <span class="sg-variant-label">TR Green</span>
+      <div class="sg-cell"><x-circle-number size="sm" color="tr-green" num="1" /></div>
+      <div class="sg-cell"><x-circle-number size="md" color="tr-green" num="1" /></div>
+      <div class="sg-cell"></div>
+    </div>
+
+    <div class="sg-matrix__row">
+      <span class="sg-variant-label">TR Pink</span>
+      <div class="sg-cell"><x-circle-number size="sm" color="tr-pink" num="1" /></div>
+      <div class="sg-cell"><x-circle-number size="md" color="tr-pink" num="1" /></div>
+      <div class="sg-cell"></div>
+    </div>
+  </div>
+
+  <sg-snippet title="x-circle-number">
+    <x-circle-number size="sm" color="blue" num="1" />
+  </sg-snippet>
+</section>

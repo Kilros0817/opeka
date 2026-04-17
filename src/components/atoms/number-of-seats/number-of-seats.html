@@ -1,0 +1,30 @@
+<script props>
+      /*
+   * x-number-of-seats
+   *
+   * Props:
+   *   size — sm | md (default: sm)
+   *   count : count >= 1 (default : 1)
+   *
+   */
+
+    const count = props.count || '1'
+    const size = props.size || 'sm'
+    module.exports = {
+        steps: Array.from({ length: count }, (_, i) => i + 1),
+        size,
+        cls: [
+            'icon--' + size,
+        ].filter(Boolean).join(' '),
+    }
+</script>
+
+<div class="seat-selector">
+    <div class="seat-selector__pill">
+        <each loop="i in steps">
+            <svg class="icon-color icon--{{ size }}" aria-hidden="true">
+                <use href="#icon-user" class="icon-color icon--{{ size }}" />
+            </svg>
+        </each>
+    </div>
+</div>

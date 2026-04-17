@@ -1,0 +1,41 @@
+@use '../../../styles/tokens' as *;
+
+/**
+ * .circle-icon
+ *
+ * Colors: --tr-blue | --tr-orange | --tr-green | --tr-red
+ * Sizes:  --sm (34px) | --md (46px)
+ */
+
+.circle-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: $radius-pill;
+}
+
+.circle-icon__icon {
+  display: block;
+  flex-shrink: 0;
+  fill: currentColor;
+
+  &--sm { width: 16px; height: 16px; }
+  &--md { width: 18px; height: 18px; }
+}
+
+/* Sizes */
+.circle-icon--sm {
+  height: 34px;
+  padding: 0 12px;
+}
+
+.circle-icon--md {  
+  height: 46px;
+  padding: 0 20px;
+}
+
+/* Colors */
+.circle-icon--tr-blue      { background-color: $color-tr-blue-06; color: $color-blue; }
+.circle-icon--tr-orange    { background-color: $color-tr-orange-10; color: $color-orange}
+.circle-icon--tr-green     { background-color: $color-tr-green-10; color: $color-green; }
+.circle-icon--tr-red       { background-color: $color-tr-red-10; color: $color-red; }
