@@ -1,0 +1,25 @@
+@use '../../../styles/tokens' as *;
+
+/**
+ * .btn-step — button step.
+ *
+ * Active status:  --active | --default
+ */
+
+.btn-step{
+  display: inline-flex;
+  padding-top: 16px;
+  border-top: 1px solid $white-30;
+  color: $white-50;
+  font-family: $font-primary;
+  font-weight: $fw-medium;
+  font-size: 16px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  letter-spacing: -0.02em;
+}
+
+.btn-step--active {
+  border-color: $white;
+  color: $white;
+}

@@ -1,0 +1,28 @@
+<!-- x-button-step showcase. Include in styleguide/components.html -->
+
+<section class="sg-section" id="comp-button-step" data-nav-target>
+  <h2 class="sg-section__title">Button · Step</h2>
+  <p class="sg-section__desc">
+    Props: <code>active</code>
+  </p>
+
+  <div class="sg-matrix">
+    <div class="sg-matrix__head">
+      <span></span>
+      <span class="sg-state-label">Default</span>
+      <span class="sg-state-label">Active</span>
+      <span></span>
+    </div>
+
+    <div class="sg-matrix__row">
+      <span class="sg-variant-label"></span>
+      <div class="sg-cell sg-cell--on-dark"><x-button-step>Медицинские  услуги</x-button-step></div>
+      <div class="sg-cell sg-cell--on-dark"><x-button-step active>Медицинские  услуги</x-button-step></div>
+    </div>
+  </div>
+
+  <sg-snippet title="x-button-step">
+    <x-button-step>Медицинские  услуги</x-button-step>
+    <x-button-step active>Медицинские  услуги</x-button-step>
+  </sg-snippet>
+</section>
