@@ -1,0 +1,38 @@
+@use '../../../styles/tokens' as *;
+
+/**
+ * Number of seats (Figma: Number of seats )
+ *
+ * Sizes:  --sm | --md (only for blue)
+ * Count: --count : count >= 1 (default : 1)
+ */
+
+.seat-selector {
+  // padding: 20px;
+  display: inline-block;
+  background-color: $color-bg-blue-20;
+  border-radius: 12px;
+}
+
+.seat-selector__pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: $color-bg-white-100;
+}
+
+.icon-color {
+  color: $blue-500;
+}
+
+.icon--sm {
+  width: 14px;
+  height: 14px;
+}
+
+.icon--md {
+  width: 18px;
+  height: 18px;
+}

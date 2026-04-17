@@ -1,0 +1,25 @@
+@use '../../../styles/tokens' as *;
+/**
+ * Rate (Figma: Rate )
+ *
+ * Count: --count : count >= 1 (default : 1)
+ */
+.rate{
+    display: flex;
+}
+
+.rating__color{
+    color:$rate-full;
+    width: 20px;
+    height: 20px;
+}
+
+.rating__color-empty{
+    color:$rate-empty;
+}
+
+.rating__group{
+    margin-bottom:8px;
+    display: flex;
+}
+

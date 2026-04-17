@@ -1,0 +1,50 @@
+@use '../../../styles/tokens' as *;
+
+/**
+ * .avatar-btn — Avatar Button Component
+ *
+ * Displays a responsive avatar image with optional border on active state.
+ * Uses picture element for webp support with PNG fallback.
+ */
+
+.avatar-btn {
+  position: relative;
+  display: inline-block;
+  border-radius: $radius-xl;
+  overflow: hidden;
+  cursor: pointer;
+  // transition: outline 0.2s ease;
+  // user-select: none;
+}
+
+/* Size */
+.avatar-btn--sm {
+  width: 74px;
+  height: 101px;
+}
+
+.avatar-btn--md {
+  width: 106px;
+  height: 144px;
+}
+
+/* Colors */
+.avatar-btn--tr-white { 
+  background-color: $color-tr-white-10; 
+  
+  &.is-active { 
+    outline: 2px solid $color-border-white; 
+    outline-offset: -2px;
+  }
+}
+
+.avatar-btn--tr-gray { 
+  background-color: $color-tr-black-05; 
+
+  &.is-active { 
+    outline: 2px solid $color-border-blue; 
+    outline-offset: -2px;
+  }
+}
+
+

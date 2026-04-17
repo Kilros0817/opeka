@@ -1,0 +1,66 @@
+@use '../../../styles/tokens' as *;
+
+/**
+ * .tag — small uppercase label.
+ *
+ * Colors: --blue | --white
+ * Sizes:  --sm (34px) | --md (46px) | --lg (64px)
+ */
+
+.tag-advantages {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: $radius-tag;
+  color: $blue-500;
+  font-family: $font-primary;
+  font-weight: $fw-medium;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.tag-advantages__label { display: inline-block; }
+
+.tag-advantages__icon {
+  display: block;
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}
+
+/* Sizes */
+.tag-advantages--sm {
+  height: 34px;
+  padding: 0 12px;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: -0.01em;
+}
+
+.tag-advantages--sm .tag-advantages__icon {
+  width: 14px;
+  height: 14px;
+}
+
+.tag-advantages--md {
+  height: 46px;
+  padding: 0 20px;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: -0.02em;
+}
+
+.tag-advantages--lg {
+  height: 64px;
+  padding: 0 20px;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: -0.02em;
+}
+
+
+/* Colors */
+.tag-advantages--blue    { background-color: $blue-06p; }
+.tag-advantages--white { background-color: $white-20; color: $white; }
