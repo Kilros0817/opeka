@@ -22,15 +22,41 @@
   const size = props.size || 'sm'
   const seat = props.seat || '1'
 
-  module.exports = { size,seat}
+  module.exports = { size, seat }
 
 </script>
 <section class="room-card">
-  <div class="room-card__{{size}}">
-    <div class="room-card_content">
-      <div class="room-card_top">
-        <x-number-of-seats size="sm" count="1"></x-number-of-seats>
+  <div class="card card-{{size}}">
+    <div class="card__content">
+      <!-- Seats -->
+      <x-number-of-seats count="{{seat}}" size="{{size}}"></x-number-of-seats>
+      <!-- Text -->
+      <div class="card__text">
+        <h3 class="card__title"><slot-title></slot-title></h3>
+        <p class="card__description truncate-2-lines">
+          <slot-desc></slot-desc>
+        </p>
       </div>
+    </div>
+    <!-- Image stack -->
+    <div class="card__images-{{size}}">
+      <img class="card__image card__image--back-{{size}}" alt="image-back" />
+      <img class="card__image card__image--middle-{{size}}" alt="image-middle" />
+      <img class="card__image card__image--front-{{size}}" alt="image-front" />
+    </div>
+    <!-- Footer -->
+    <div class="card__footer">
+      <div class="card__price">
+        <span class="card__price-value"><slot-price></slot-price></span>
+        <span class="card__price-unit"><slot-unit></slot-unit></span>
+      </div>
+      <button class="card__button">
+        <!-- <span class="card__button-icon"> -->
+        <svg class="icon-plus__size" aria-hidden="true">
+          <use href="#icon-plus" />
+        </svg>
+        <!-- </span> -->
+      </button>
     </div>
   </div>
 </section>

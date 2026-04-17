@@ -35,12 +35,20 @@
           "description": "Fills the \"link\" slot of the parent component."
         },
         {
+          "name": "fill-price",
+          "description": "Fills the \"price\" slot of the parent component."
+        },
+        {
           "name": "fill-tag",
           "description": "Fills the \"tag\" slot of the parent component."
         },
         {
           "name": "fill-title",
           "description": "Fills the \"title\" slot of the parent component."
+        },
+        {
+          "name": "fill-unit",
+          "description": "Fills the \"unit\" slot of the parent component."
         },
         {
           "name": "if",
@@ -72,12 +80,20 @@
           "description": "Named slot \"link\" — provides default content."
         },
         {
+          "name": "slot-price",
+          "description": "Named slot \"price\" — provides default content."
+        },
+        {
           "name": "slot-tag",
           "description": "Named slot \"tag\" — provides default content."
         },
         {
           "name": "slot-title",
           "description": "Named slot \"title\" — provides default content."
+        },
+        {
+          "name": "slot-unit",
+          "description": "Named slot \"unit\" — provides default content."
         },
         {
           "name": "x-avatar-button",
