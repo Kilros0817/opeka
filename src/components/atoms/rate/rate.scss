@@ -6,10 +6,10 @@
  */
 .rate{
     display: flex;
+    color:$rate-full;
 }
 
 .rate__color{
-    color:$rate-full;
     width: 20px;
     height: 20px;
     cursor: pointer;
