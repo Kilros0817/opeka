@@ -2,28 +2,36 @@
 <section class="sg-section" id="comp-avatar-button" data-nav-target>
   <h2 class="sg-section__title">Avatar Button</h2>
   <p class="sg-section__desc">
-    Avatar button component for displaying user avatars with responsive images.
+    Компонент Кнопка Аватара для отображения пользовательских аватаров с адаптивными изображениями.
+    Поведение как радиокнопка: только одна кнопка в паре может быть активной одновременно.
+  </p>
+  <p class="sg-section__desc">
+    Размеры: <code>sm</code> (74×101px), <code>md</code> (106×144px).
+    Цвет фона: <code>tr-white</code>, <code>tr-gray</code>.
+    Альт: <code>альтернативный текст для изображения</code>.
+    Активный: <code>active="active"</code>.
   </p>
 
   <div class="sg-matrix sg-matrix--narrow">
     <div class="sg-matrix__head">
       <span></span>
-      <span class="sg-state-label">Active</span>
-      <span class="sg-state-label">Default</span>
+      <span class="sg-state-label">Size S (Active, Default)</span>
+      <span class="sg-state-label">Size M (Active, Default)</span>
       <span class="sg-state-label"></span>
     </div>
 
+    
     <div class="sg-matrix__row">
-      <span class="sg-variant-label"></span>
-
-      <div class="sg-cell display-items">
-        <x-avatar-button class="avatar-btn--tr-white_is-active" size="md" bg_color="tr-white" src_mobile="/src/assets/images/avatar-01-mobile.webp" src_desktop="/src/assets/images/avatar-01-desktop.webp" src_main="/src/assets/images/avatar-01.png" alt="avatar-01"></x-avatar-button>
-        <x-avatar-button size="md" bg_color="tr-white" src_mobile="/src/assets/images/avatar-01-mobile.webp" src_desktop="/src/assets/images/avatar-01-desktop.webp" src_main="/src/assets/images/avatar-01.png" alt="avatar-01"></x-avatar-button>
+      <span class="sg-variant-label">Tr White</span>
+      
+      <div class="sg-cell">
+        <x-avatar-button class="avatar-btn--space" size="sm" bg_color="tr-white" active="active" src_main="../../assets/images/avatar-01.png" alt="avatar-01"></x-avatar-button>
+        <x-avatar-button  size="sm" bg_color="tr-white" src_main="../../assets/images/avatar-01.png" alt="avatar-01"></x-avatar-button>
       </div>
 
-      <div class="sg-cell display-items">
-        <x-avatar-button class="avatar-btn--tr-white_is-active" size="sm" bg_color="tr-white" src_mobile="/src/assets/images/avatar-01-mobile.webp" src_desktop="/src/assets/images/avatar-01-desktop.webp" src_main="/src/assets/images/avatar-01.png" alt="avatar-01"></x-avatar-button>
-        <x-avatar-button size="sm" bg_color="tr-white" src_mobile="/src/assets/images/avatar-01-mobile.webp" src_desktop="/src/assets/images/avatar-01-desktop.webp" src_main="/src/assets/images/avatar-01.png" alt="avatar-01"></x-avatar-button>
+      <div class="sg-cell">
+        <x-avatar-button class="avatar-btn--space" size="md" bg_color="tr-white" active="active" src_main="../../assets/images/avatar-01.png" alt="avatar-01"></x-avatar-button>
+        <x-avatar-button size="md" bg_color="tr-white" src_main="../../assets/images/avatar-01.png" alt="avatar-01"></x-avatar-button>
       </div>
 
       <div class="sg-cell"></div>
@@ -31,16 +39,16 @@
     </div>
 
     <div class="sg-matrix__row">
-      <span class="sg-variant-label"></span>
+      <span class="sg-variant-label">Tr Gray</span>
 
-      <div class="sg-cell display-items">
-        <x-avatar-button class="avatar-btn--tr-gray_is-active" size="md" bg_color="tr-gray" src_mobile="/src/assets/images/avatar-01-mobile.webp" src_desktop="/src/assets/images/avatar-01-desktop.webp" src_main="/src/assets/images/avatar-01.png" alt="avatar-01"></x-avatar-button>
-        <x-avatar-button size="md" bg_color="tr-gray" src_mobile="/src/assets/images/avatar-01-mobile.webp" src_desktop="/src/assets/images/avatar-01-desktop.webp" src_main="/src/assets/images/avatar-01.png" alt="avatar-01"></x-avatar-button>
+      <div class="sg-cell">
+        <x-avatar-button class="avatar-btn--space" size="sm" bg_color="tr-gray" active="active" src_main="../../assets/images/avatar-01.png" alt="avatar-01"></x-avatar-button>
+        <x-avatar-button size="sm" bg_color="tr-gray" src_main="../../assets/images/avatar-01.png" alt="avatar-01"></x-avatar-button>
       </div>
 
-      <div class="sg-cell display-items">
-        <x-avatar-button class="avatar-btn--tr-gray_is-active" size="sm" bg_color="tr-gray" src_mobile="/src/assets/images/avatar-01-mobile.webp" src_desktop="/src/assets/images/avatar-01-desktop.webp" src_main="/src/assets/images/avatar-01.png" alt="avatar-01"></x-avatar-button>
-        <x-avatar-button size="sm" bg_color="tr-gray" src_mobile="/src/assets/images/avatar-01-mobile.webp" src_desktop="/src/assets/images/avatar-01-desktop.webp" src_main="/src/assets/images/avatar-01.png" alt="avatar-01"></x-avatar-button>
+      <div class="sg-cell">
+        <x-avatar-button class="avatar-btn--space" size="md" bg_color="tr-gray" active="active" src_main="../../assets/images/avatar-01.png" alt="avatar-01"></x-avatar-button>
+        <x-avatar-button  size="md" bg_color="tr-gray" src_main="../../assets/images/avatar-01.png" alt="avatar-01"></x-avatar-button>
       </div>
 
       <div class="sg-cell"></div>
@@ -49,14 +57,9 @@
   </div>
 
   <sg-snippet title="x-avatar-button">
-    <x-avatar-button
-      size="sm"
-      bg_bg_color="tr-gray"
-      src_mobile="/src/assets/images/avatar-01-mobile.webp"
-      src_desktop="/src/assets/images/avatar-01-desktop.webp"
-      src_main="/src/assets/images/avatar-01.png"
-      alt="avatar-01"
-      >
-    </x-avatar-button>
+    <x-avatar-button size="sm" bg_color="tr-white" src_main="../../assets/images/avatar-01.png" alt="avatar-01"></x-avatar-button>
+    
+    <!-- active -->
+    <x-avatar-button size="sm" bg_color="tr-white" active="active" src_main="../../assets/images/avatar-01.png" alt="avatar-01"></x-avatar-button>
   </sg-snippet>
 </section>
