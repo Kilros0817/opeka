@@ -145,10 +145,6 @@
           "description": "Room card: tag + title + description + image\r Composes <x-number-of-seats>."
         },
         {
-          "name": "x-tabs",
-          "description": "x-tabs — see src\\components\\atoms\\tabs\\tabs.html"
-        },
-        {
           "name": "x-tag",
           "description": "Small uppercase label. Renders a <span> with optional 14px icon on the left."
         },
