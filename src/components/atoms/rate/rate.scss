@@ -8,19 +8,15 @@
     display: flex;
 }
 
-.rating__color{
+.rate__color{
     color:$rate-full;
     width: 20px;
     height: 20px;
     cursor: pointer;
 }
 
-.rating__color-empty{
+.rate__empty{
     color:$rate-empty;
 }
 
-.rating__group{
-    margin-bottom:8px;
-    display: flex;
-}
 

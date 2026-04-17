@@ -18,9 +18,9 @@ export function initRate(root = document) {
             const use = star.querySelector('use')
 
             if (i < count) {
-                use.setAttribute('class', 'rating__color')
+                use.setAttribute('class', 'rate__color')
             } else {
-                use.setAttribute('class', 'rating__color-empty')
+                use.setAttribute('class', 'rate__empty')
             }
         })
     }

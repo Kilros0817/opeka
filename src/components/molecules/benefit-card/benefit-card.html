@@ -5,7 +5,7 @@
    * Props (shell):
    *   link-href — href for the CTA link (default: #)
    *   link-icon — sprite id for the link icon (default: plus)
-   *   image-src — image source (default: ../../assets/images/benefit-card-blob-1.webp)
+   *   link-image — image source (default: ../../assets/images/benefit-card-blob-1.webp)
    *   image-pos — left | right (default: right)
    *   image-shape — square | landscape | portrait (default: square)
    *
@@ -14,14 +14,12 @@
    *   <fill-desc>  — card description (rendered in <p>)
    *   <fill-link>  — CTA link label
    *
-   * Blob color — override CSS var `--benefit-card-blob` from the outside.
    */
   const linkHref = props['link-href'] || '#'
   const linkIcon = props['link-icon'] || 'plus'
   const linkImage = props['link-image'] || '../../assets/images/benefit-card-1.webp'
   const imagePos = props['image-pos'] || 'right'
   const imageShape = props['image-shape'] || 'square'
-  module.exports = { linkHref, linkIcon, linkImage }
 
   module.exports = {
     linkHref,
@@ -38,7 +36,7 @@
 <article class="benefit-card">
   <div class="benefit-card__link">
     <img class="{{cls}}" src="{{linkImage}}" alt="blob" loading="lazy" decoding="async">
-    <x-button variant="tr-white" icon="plus" pill="" icon-only="" aria-label="puls"></x-button>
+    <x-button variant="tr-white" icon="plus" pill="" icon-only="" aria-label="plus"></x-button>
   </div>
   <div class="benefit-card__content">
     <div class="benefit-card__body">
