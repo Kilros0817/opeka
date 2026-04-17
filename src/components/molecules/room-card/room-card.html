@@ -19,10 +19,18 @@
    *
    * Blob color — override CSS var `--promo-mini-card-blob` from the outside.
    */
+  const size = props.size || 'sm'
+  const seat = props.seat || '1'
 
-  module.exports = {size}
+  module.exports = { size,seat}
+
 </script>
 <section class="room-card">
-  <div></div>
+  <div class="room-card__{{size}}">
+    <div class="room-card_content">
+      <div class="room-card_top">
+        <x-number-of-seats size="sm" count="1"></x-number-of-seats>
+      </div>
+    </div>
+  </div>
 </section>
-

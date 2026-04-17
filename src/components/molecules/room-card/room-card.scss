@@ -1,0 +1,28 @@
+@use '../../../styles/tokens' as *;
+
+/**
+ * .btn — Classic Button (Figma: Buttons / Classic Button)
+ *
+ * Sizes:  --mini | --medium | --big (big only for blue/white)
+ * Colors: --blue | --white | --tr-white | --tr-grey | --tr-grey-white | --black
+ */
+.room-card__sm{
+    background-color: $color-bg-blue-20;
+    border-radius: 26px;
+    width: 320px;
+    height: 454px;
+}
+
+.room-card__md{
+    background-color: $color-bg-blue-20;
+    border-radius: 32px;
+    width: 480px;
+    height: 594px;
+}
+
+.room-card_content{
+    padding: 16px;
+}
+// .room-card_top{
+    
+// }
