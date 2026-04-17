@@ -12,40 +12,38 @@
    */
   
   const size = props.size || 'sm'
-  const color = props.color || 'tr-white'
+  const bg_color = props.bg_color || 'tr-white'
   const src_mobile = props.src_mobile || ''
   const src_desktop = props.src_desktop || ''
   const src_main = props.src_main || ''
   const alt = props.alt || 'no image'
 
   module.exports = {
-    size, color, src_mobile, src_desktop, src_main, alt,
+    size, bg_color, src_mobile, src_desktop, src_main, alt,
     cls: [
       'avatar-btn',
       'avatar-btn--' + size,
-      'avatar-btn--' + color,
+      'avatar-btn--' + bg_color,
     ].join(' '), 
   }
 
 </script>
 
-<div class="{{ cls }}" aria-label="{{ alt }}">
-  <a>
-    <picture>
-      <if condition="src_mobile">
-        <source
-        media="(max-width: 767px)"
-        srcset="{{ src_mobile }}"
-        type="image/webp">
-      </if>
-      
-      <if condition="src_desktop">
-        <source
-        srcset="{{ src_desktop }}"
-        type="image/webp">
-      </if>
-      
-      <img src="{{ src_main }}" alt="{{ alt }}" loading="lazy">
-    </picture>
-  </a>
+<div class="{{ cls }}" aria-label="{{ alt }}" role="button" tabindex="0" aria-pressed="false" data-avatar-btn>
+  <picture>
+    <if condition="src_mobile">
+      <source
+      media="(max-width: 767px)"
+      srcset="{{ src_mobile }}"
+      type="image/webp">
+    </if>
+    
+    <if condition="src_desktop">
+      <source
+      srcset="{{ src_desktop }}"
+      type="image/webp">
+    </if>
+    
+    <img src="{{ src_main }}" alt="{{ alt }}" loading="lazy">
+  </picture>
 </div>

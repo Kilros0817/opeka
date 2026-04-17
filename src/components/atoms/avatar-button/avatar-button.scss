@@ -12,6 +12,9 @@
   display: inline-block;
   border-radius: $radius-xl;
   overflow: hidden;
+  cursor: pointer;
+  // transition: outline 0.2s ease;
+  // user-select: none;
 }
 
 /* Size */
@@ -29,16 +32,18 @@
 .avatar-btn--tr-white { 
   background-color: $color-tr-white-10; 
   
-  &:active { 
-    outline: 2px solid $color-border-white; outline-offset: -2px;
+  &.is-active { 
+    outline: 2px solid $color-border-white; 
+    outline-offset: -2px;
   }
 }
 
 .avatar-btn--tr-gray { 
   background-color: $color-tr-black-05; 
 
-  &:active { 
-    outline: 2px solid $color-border-blue; outline-offset: -2px;
+  &.is-active { 
+    outline: 2px solid $color-border-blue; 
+    outline-offset: -2px;
   }
 }
 
