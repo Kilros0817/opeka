@@ -14,12 +14,6 @@
   border-radius: 12px;
 }
 
-.seat-selector__grid {
-  display: grid;
-  grid-template-columns: repeat(3, auto);
-  gap: 20px 40px;
-}
-
 .seat-selector__pill {
   display: inline-flex;
   align-items: center;
@@ -27,10 +21,6 @@
   padding: 10px 16px;
   border-radius: 999px;
   background: $color-bg-white-100;
-}
-
-.seat-padding {
-  padding: 30px;
 }
 
 .icon-color {
@@ -45,8 +35,4 @@
 .icon--md {
   width: 18px;
   height: 18px;
-}
-
-.text-color {
-  color: $color-tc-block-50;
 }
