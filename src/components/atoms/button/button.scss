@@ -219,7 +219,12 @@
   }
 }
 
-
+.btn--light-black {
+  background-color: $color-tr-gray-50;
+  &:hover:not(:disabled) {
+    background-color: $color-tr-grey-100;
+  }
+}
 
 .btn--border-black-normal {
   border-color: $color-border;
