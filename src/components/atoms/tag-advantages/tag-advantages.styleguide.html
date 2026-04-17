@@ -1,0 +1,35 @@
+<!-- x-tag-advantages showcase. Include in styleguide/components.html -->
+<section class="sg-section" id="comp-tag-advantages" data-nav-target>
+  <h2 class="sg-section__title">Tag Advantages</h2>
+  <p class="sg-section__desc">
+    Небольшой UPPERCASE-лейбл с иконкой. Размеры: <code>sm</code> (34), <code>md</code> (46), <code>lg</code> (64).
+    Цвета: <code>blue</code>, <code>white</code>.
+  </p>
+
+  <div class="sg-matrix">
+    <div class="sg-matrix__head">
+      <span></span>
+      <span class="sg-state-label">Size S</span>
+      <span class="sg-state-label">Size M</span>
+      <span class="sg-state-label">Size L</span>
+    </div>
+
+    <div class="sg-matrix__row">
+      <span class="sg-variant-label">Blue</span>
+      <div class="sg-cell"><x-tag-advantages size="sm" color="blue" icon="done">Здоровье</x-tag-advantages></div>
+      <div class="sg-cell"><x-tag-advantages size="md" color="blue" icon="done">Здоровье</x-tag-advantages></div>
+      <div class="sg-cell"><x-tag-advantages size="lg" color="blue" icon="done">Здоровье</x-tag-advantages></div>
+    </div>
+
+    <div class="sg-matrix__row">
+      <span class="sg-variant-label">White</span>
+      <div class="sg-cell sg-cell--on-dark"><x-tag-advantages size="sm" color="white" icon="done">Здоровье</x-tag-advantages></div>
+      <div class="sg-cell sg-cell--on-dark"><x-tag-advantages size="md" color="white" icon="done">Здоровье</x-tag-advantages></div>
+      <div class="sg-cell sg-cell--on-dark"><x-tag-advantages size="lg" color="white" icon="done">Здоровье</x-tag-advantages></div>
+    </div>
+  </div>
+
+  <sg-snippet title="x-tag-advantages">
+    <x-tag-advantages size="sm" color="blue" icon="done">Здоровье</x-tag-advantages>
+  </sg-snippet>
+</section>

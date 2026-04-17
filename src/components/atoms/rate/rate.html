@@ -1,0 +1,26 @@
+<script props>
+    /*
+ * x-rate
+ *
+ * Props:
+ *   count — 1 - 5 (default : 1)s
+ */
+    const count = props.count || '1'
+    module.exports = {
+        steps: Array.from({ length: count }, (_, i) => i + 1),
+        steps_other: Array.from({ length: 5 - count }, (_, i) => i + 1),
+    }
+</script>
+
+<div class="rate">
+    <each loop="i in steps">
+        <svg class="rating__color" aria-hidden="true">
+            <use href="#icon-rate" class="rating__color" />
+        </svg>
+    </each>
+    <each loop="i in steps_other">
+        <svg class="rating__color" aria-hidden="true">
+            <use href="#icon-rate" class="rating__color-empty" />
+        </svg>
+    </each>
+</div>
