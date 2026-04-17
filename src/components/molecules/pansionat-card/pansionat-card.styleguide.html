@@ -9,16 +9,8 @@
   <p class="sg-state-label">
     Карточка — visual primitive. Ротация и pagination/prev/next живут в
     <code>x-promo-mini-slider</code>.
-  </p>
+  </p>  
 
-  <x-pansionat-card tag-color="green" tag-icon="fire">
-    <fill-tag>Скидка 20%</fill-tag>
-    <fill-title>Всеволожский</fill-title>
-    <fill-desc>Ленинградская область, Всеволожск, пр. <br/> Достоевского, д.56</fill-desc>
-    <fill-price>от 3 300 ₽</fill-price>
-    <fill-unit>/сутки</fill-unit>
-  </x-pansionat-card>
-  
   <div class="sg-matrix sg-matrix--narrow">
     <div class="sg-matrix__head">
       <span></span>
@@ -28,23 +20,13 @@
     </div>
 
     <div class="sg-matrix__row">
-      <span class="sg-variant-label">Default</span>
-
-      <!-- <div class="sg-cell">
-        <x-pansionat-card tag-color="green" tag-icon="fire">
-          <fill-tag>Скидка 20%</fill-tag>
-          <fill-title>Всеволожский</fill-title>
-          <fill-desc>Ленинградская область, Всеволожск, пр. <br/> Достоевского, д.56</fill-desc>
-          <fill-price>от 3 300 ₽</fill-price>
-          <fill-unit>/сутки</fill-unit>
-        </x-pansionat-card>
-      </div> -->
-
-      <div class="sg-cell">
-        
-      </div>
-
-      <div class="sg-cell"></div>
+      <x-pansionat-card tag-color="green" tag-icon="fire">
+        <fill-tag>Скидка 20%</fill-tag>
+        <fill-title>Всеволожский</fill-title>
+        <fill-desc>Ленинградская область, Всеволожск, пр. <br/> Достоевского, д.56</fill-desc>
+        <fill-price>от 3 300 ₽</fill-price>
+        <fill-unit>/сутки</fill-unit>
+      </x-pansionat-card>
     </div>
   </div>
 
@@ -59,12 +41,13 @@
     </ul>
   </div>
 
-  <sg-snippet title="x-promo-mini-card">
-    <x-promo-mini-card tag-color="red" tag-icon="fire" link-href="/promo/winter/">
+  <sg-snippet title="x-pansionat-card">
+    <x-pansionat-card tag-color="green" tag-icon="fire">
       <fill-tag>Скидка 20%</fill-tag>
-      <fill-title>Заголовок акции</fill-title>
-      <fill-desc>Описание акции.</fill-desc>
-      <fill-link>Узнать больше</fill-link>
-    </x-promo-mini-card>
+      <fill-title>Всеволожский</fill-title>
+      <fill-desc>Ленинградская область, Всеволожск, пр. <br/> Достоевского, д.56</fill-desc>
+      <fill-price>от 3 300 ₽</fill-price>
+      <fill-unit>/сутки</fill-unit>
+    </x-pansionat-card>
   </sg-snippet>
 </section>

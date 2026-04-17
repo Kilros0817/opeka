@@ -92,12 +92,12 @@
       <div class="pansionat-big-card__categories">
           
         <each loop="item in visibleCategories">
-          <x-tag size="sm" color="tr-grey" icon="fire">{{ item }}</x-tag>
+          <x-tag-advantages size="sm" color="blue" icon="done">{{ item }}</x-tag-advantages>
         </each>
         <if condition="remainingCount > 0">
-          <x-tag size="sm" color="tr-grey" icon="fire">
+          <x-tag-advantages size="sm" color="blue" icon="plus">
             {{ remainingCount }}
-          </x-tag>
+          </x-tag-advantages>
         </if>
       </div>
     </div>
