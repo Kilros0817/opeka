@@ -80,8 +80,29 @@
           "description": "Named slot \"title\" — provides default content."
         },
         {
+          "name": "x-avatar-button",
+          "description": "x-avatar-button — see src\\components\\atoms\\avatar-button\\avatar-button.html",
+          "attributes": [
+            {
+              "name": "description",
+              "description": "description for img (default: '')",
+              "default": "''"
+            }
+          ]
+        },
+        {
           "name": "x-button",
           "description": "Renders <a> when href is set, otherwise <button>."
+        },
+        {
+          "name": "x-circle-icon",
+          "description": "Renders a <span> with optional 16px icon.",
+          "attributes": [
+            {
+              "name": "icon",
+              "description": "sprite id without \"icon-\" prefix"
+            }
+          ]
         },
         {
           "name": "x-pagination",
