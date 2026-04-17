@@ -15,26 +15,32 @@
   cursor: pointer;
 }
 
-/* Size */
-.avatar-btn--sm {
-  width: 74px;
-  height: 101px;
-}
-
-.avatar-btn--md {
-  width: 106px;
-  height: 144px;
-}
-
 /* Colors */
 .avatar-btn--tr-white { 
   background-color: $color-tr-white-10; 
 }
 
-.avatar-btn--tr-gray { 
+.avatar-btn--tr-gray  { 
   background-color: $color-tr-black-05; 
 }
 
 .avatar-img {
   border-radius: $radius-xl;
+}
+
+.avatar-img--sm {
+
+  width: 74px;
+  height: 101px;
+}
+
+.avatar-img--md {
+
+  width: 106px;
+  height: 144px;
+
+  @include mobile {
+    width: 74px;
+    height: 101px;
+  }
 }
