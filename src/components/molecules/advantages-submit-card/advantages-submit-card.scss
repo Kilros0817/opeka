@@ -1,0 +1,73 @@
+@use '../../../styles/tokens' as *;
+
+/**
+ * .advantages-submit-card — Advantages submit card (Figma).
+ */
+
+.advantages-submit-card {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;  
+  padding: 24px;
+  border-radius: 20x;
+  overflow: hidden;
+  gap: 16px;
+  background-color: $color-bg-surface;
+}
+
+/* Content */
+.advantages-submit-card__content {
+  display: inline-flex;
+  width: 226px; 
+  padding-right: 40px;
+  font-family: $font-primary;
+  font-weight: $fw-medium;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: -0.02em;
+  color: $color-text-primary;
+  word-wrap: break-word;
+}
+
+.advantages-mini-card__title {
+  margin: 0;
+  color: $color-text-on-dark;
+  text-align: center;
+  font-size: 58px;
+  font-family: $font-primary;
+  font-weight: $fw-medium;
+  word-break: break-word;
+  letter-spacing: -0.1em;
+  line-height: 80%;
+
+  @include mobile {
+    font-size: 34px;
+    line-height: 86%;
+    letter-spacing: -0.09em;
+  }
+}
+
+.advantages-mini-card__tags {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+
+  // Force responsive tag size for this card:
+  // mobile -> sm, desktop -> md.
+  .tag-advantages {
+    @include desktop {
+      height: 46px;
+      padding: 0 20px;
+      font-size: 16px;
+      line-height: 20px;
+      letter-spacing: -0.02em;
+
+      .tag-advantages__icon {
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+}

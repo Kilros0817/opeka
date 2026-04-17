@@ -3,12 +3,8 @@
 /**
  * .advantages-mini-card — Advantages mini card (Figma).
  *
- * Shell: solid blue + large inset cyan glow (replaces legacy blur blob).
  * Composition: .title + optional .__tags stack
- * Modifier --in-slider: absolute positioning + data-pos stack layers.
  *
- * Desktop: 360×306, padding 24, radius 32
- * Mobile:  334×240, padding 24/16, radius 26
  */
 
 .advantages-mini-card {
@@ -27,17 +23,27 @@
     background-color: $color-blue;
     box-shadow: 0 0 250px 0 $color-card-blue-glow inset;
   }
+
   &--layer2 {
     background-color: $color-green;
     box-shadow: 0 0 250px 0 $color-card-green-glow inset;
   }
+
   &--layer3 {
     background-color: $color-orange;
     box-shadow: 0 0 250px 0 $color-card-orange-glow inset;
   }
+
   &--layer4 {
     background-color: $color-red;
     box-shadow: 0 0 250px 0 $color-card-red-glow inset;
+  }
+
+  @include mobile {
+    width: 361px;
+    height: 454px;
+    padding: 104px 16px 48px;
+    border-radius: 26px;
   }
 }
 
@@ -46,6 +52,10 @@
   display: flex;
   flex-direction: column;
   gap: 63px;
+
+  @include mobile {
+    gap: 32px;
+  }
 }
 
 .advantages-mini-card__title {
@@ -58,6 +68,12 @@
   word-break: break-word;
   letter-spacing: -0.1em;
   line-height: 80%;
+
+  @include mobile {
+    font-size: 34px;
+    line-height: 86%;
+    letter-spacing: -0.09em;
+  }
 }
 
 .advantages-mini-card__tags {
@@ -65,4 +81,21 @@
   flex-direction: column;
   align-items: center;
   gap: 8px;
+
+  // Force responsive tag size for this card:
+  // mobile -> sm, desktop -> md.
+  .tag-advantages {
+    @include desktop {
+      height: 46px;
+      padding: 0 20px;
+      font-size: 16px;
+      line-height: 20px;
+      letter-spacing: -0.02em;
+
+      .tag-advantages__icon {
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
 }
