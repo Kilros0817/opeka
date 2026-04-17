@@ -1,0 +1,37 @@
+@use '../../../styles/tokens' as *;
+
+.rate{
+    display: flex;
+}
+
+.rating__color{
+    color:$rate-full;
+    width: 20px;
+    height: 20px;
+}
+
+.rating__color-empty{
+    color:$rate-empty;
+}
+
+.rate_body{
+    padding:30px 0;
+}
+
+.rating__group{
+    margin-bottom:8px;
+    display: flex;
+}
+
+.rate_container{
+    background-color: $blue-20p;
+    border-radius: 12px;
+}
+
+.rate_content{
+    padding:20px
+}
+
+.rate_padding{
+    padding-right:30px;
+}

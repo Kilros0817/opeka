@@ -84,6 +84,16 @@
           "description": "Renders <a> when href is set, otherwise <button>."
         },
         {
+          "name": "x-number-of-seats",
+          "description": "x-number-of-seats — see src\\components\\atoms\\number-of-seats\\number-of-seats.html",
+          "attributes": [
+            {
+              "name": "count",
+              "description": "1 - 5 (default : 1)"
+            }
+          ]
+        },
+        {
           "name": "x-pagination",
           "description": "Slide control for carousels. Active step is a progress bar (0-100% fill),\r inactive steps are dots. Each step is a <button>."
         },
@@ -94,6 +104,16 @@
         {
           "name": "x-promo-mini-slider",
           "description": "Wrapper around <x-promo-mini-card>s with stack animation + auto-rotate.\r Controls (pagination dots + prev/next buttons) are built automatically.\r The runtime JS fills pagination to match the card count."
+        },
+        {
+          "name": "x-rate",
+          "description": "x-rate — see src\\components\\atoms\\rate\\rate.html",
+          "attributes": [
+            {
+              "name": "count",
+              "description": "1 - 5 (default : 1)s"
+            }
+          ]
         },
         {
           "name": "x-tag",
