@@ -4,7 +4,7 @@
    *
    * Props:
    *   size — sm | md (default: sm)
-   *   count — 1 - 5 (default : 1)
+   *   count : count >= 1 (default : 1)
    *
    */
 
@@ -19,7 +19,7 @@
     }
 </script>
 
-<div class="seat-selector__item">
+<div class="seat-selector">
     <div class="seat-selector__pill">
         <each loop="i in steps">
             <svg class="icon-color icon--{{ size }}" aria-hidden="true">
