@@ -13,14 +13,15 @@
   justify-content: center;
   gap: 8px;
   border-radius: $radius-tag;
-  color: $blue-500;
+  color: $color-blue;
   font-family: $font-primary;
   font-weight: $fw-medium;
-  text-transform: uppercase;
   white-space: nowrap;
 }
 
-.tag-advantages__label { display: inline-block; }
+.tag-advantages__label {
+  display: inline-block;
+}
 
 .tag-advantages__icon {
   display: block;
@@ -37,11 +38,11 @@
   font-size: 14px;
   line-height: 16px;
   letter-spacing: -0.01em;
-}
 
-.tag-advantages--sm .tag-advantages__icon {
-  width: 14px;
-  height: 14px;
+  .tag-advantages__icon {
+    width: 14px;
+    height: 14px;
+  }
 }
 
 .tag-advantages--md {
@@ -62,5 +63,11 @@
 
 
 /* Colors */
-.tag-advantages--blue    { background-color: $blue-06p; }
-.tag-advantages--white { background-color: $white-20; color: $white; }
+.tag-advantages--blue {
+  background-color: $color-tr-blue-06;
+}
+
+.tag-advantages--white {
+  background-color: $color-tr-white-20;
+  color: $color-white;
+}

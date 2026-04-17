@@ -1,55 +1,58 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Animations — Styleguide</title>
-  </head>
-  <body>
-    <component src="assets/icons/sprite.svg"></component>
 
-    <div class="sg-layout">
-      <component src="pages/styleguide/_nav.html"></component>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Animations — Styleguide</title>
+</head>
 
-      <main class="sg-main">
-        <header class="sg-header">
-          <h1 class="sg-header__title">Animations</h1>
-          <p class="sg-header__lead">
-            Каталог анимационных пресетов. Все анимации в проекте — через
-            <code>data-anim</code> атрибут. GSAP / SplitType / Lenis в коде секций
-            запрещены: только пресеты в <code>src/animations/presets/</code>.
-            Если нужна новая анимация — обсуждение, потом новый пресет, потом запись здесь.
-          </p>
-        </header>
+<body>
+  <component src="assets/icons/sprite.svg"></component>
 
-        <section class="sg-section">
-          <h2 class="sg-section__title">reveal-up</h2>
-          <p class="sg-section__desc">
-            Появление из прозрачности с лёгким сдвигом снизу-вверх при попадании
-            в зону видимости. Универсальный пресет для текстов, кнопок, карточек.
-            Реализован на нативном <code>IntersectionObserver</code> + CSS-transition,
-            без GSAP. Уважает <code>prefers-reduced-motion</code>.
-          </p>
-          <p class="sg-section__desc">
-            <strong>Параметры:</strong>
-            <code>data-anim-delay="0.1"</code> (сек),
-            <code>data-anim-duration="0.3"</code> (сек, по умолчанию 0.3).
-          </p>
+  <div class="sg-layout">
+    <component src="pages/styleguide/_nav.html"></component>
 
-          <div class="sg-snippet">
-            <div class="sg-snippet__bar">
-              <span class="sg-snippet__title">HTML</span>
-              <button type="button" class="sg-snippet__copy" data-copy>Copy</button>
-            </div>
-<pre class="sg-snippet__code"><code>&lt;h2 data-anim="reveal-up"&gt;Появится снизу-вверх&lt;/h2&gt;
-&lt;p data-anim="reveal-up" data-anim-delay="0.1"&gt;С задержкой 100мс&lt;/p&gt;</code></pre>
+    <main class="sg-main">
+      <header class="sg-header">
+        <h1 class="sg-header__title">Animations</h1>
+        <p class="sg-header__lead">
+          Каталог анимационных пресетов. Все анимации в проекте — через
+          <code>data-anim</code> атрибут. GSAP / SplitType / Lenis в коде секций
+          запрещены: только пресеты в <code>src/animations/presets/</code>.
+          Если нужна новая анимация — обсуждение, потом новый пресет, потом запись здесь.
+        </p>
+      </header>
+
+      <section class="sg-section">
+        <h2 class="sg-section__title">reveal-up</h2>
+        <p class="sg-section__desc">
+          Появление из прозрачности с лёгким сдвигом снизу-вверх при попадании
+          в зону видимости. Универсальный пресет для текстов, кнопок, карточек.
+          Реализован на нативном <code>IntersectionObserver</code> + CSS-transition,
+          без GSAP. Уважает <code>prefers-reduced-motion</code>.
+        </p>
+        <p class="sg-section__desc">
+          <strong>Параметры:</strong>
+          <code>data-anim-delay="0.1"</code> (сек),
+          <code>data-anim-duration="0.3"</code> (сек, по умолчанию 0.3).
+        </p>
+
+        <div class="sg-snippet">
+          <div class="sg-snippet__bar">
+            <span class="sg-snippet__title">HTML</span>
+            <button type="button" class="sg-snippet__copy" data-copy>Copy</button>
           </div>
-        </section>
+          <pre class="sg-snippet__code"><code>&lt;h2 data-anim="reveal-up"&gt;Появится снизу-вверх&lt;/h2&gt;
+&lt;p data-anim="reveal-up" data-anim-delay="0.1"&gt;С задержкой 100мс&lt;/p&gt;</code></pre>
+        </div>
+      </section>
 
-        <!-- new presets go here -->
-      </main>
-    </div>
+      <!-- new presets go here -->
+    </main>
+  </div>
 
-    <script type="module" src="../../scripts/styleguide.js"></script>
-  </body>
+  <script type="module" src="../../scripts/styleguide.js"></script>
+</body>
+
 </html>
