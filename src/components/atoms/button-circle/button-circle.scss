@@ -1,7 +1,7 @@
 @use '../../../styles/tokens' as *;
 
 /**
- * .btncircle — circle button
+ * .btn-circle — circle button
  *
  * Sizes:  --mini | --medium
  * Colors: --tr-blue | --tr-white | --tr-grey | --tr-grey-white | --grey
@@ -18,7 +18,7 @@
   background-color: $bg-default;
   color: $text-default;
 
-  .btncircle__icon-circle {
+  .btn-circle__icon-circle {
     background-color: $circle-bg-default;
     color: $text-default;
   }
@@ -30,12 +30,12 @@
     background-color: $bg-disabled;
     color: $text-disabled;
 
-    .btncircle__icon-circle { color: $text-disabled; }
+    .btn-circle__icon-circle { color: $text-disabled; }
   }
 }
 
-/** .btncircle — base block. Size modifier is required: --mini / --medium / --big. */
-.btncircle {
+/** .btn-circle — base block. Size modifier is required: --mini / --medium / --big. */
+.btn-circle {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -58,7 +58,7 @@
   &[aria-disabled='true'] { cursor: not-allowed; }
 }
 
-.btncircle-icon__icon {
+.btn-circle__icon {
   display: block;
   flex-shrink: 0;
   fill: currentColor;
@@ -68,7 +68,7 @@
 }
 
 /* Sizes */
-.btncircle--mini {
+.btn-circle--mini {
   @include type-m-14;
   width: 40px;
   height: 34px;
@@ -82,7 +82,7 @@
 
 }
 
-.btncircle--medium {
+.btn-circle--medium {
   @include type-m-16;
   width: 58px;
   height: 46px;
@@ -95,7 +95,7 @@
 }
 
 /* Colors */
-.btncircle--tr-blue {
+.btn-circle--tr-blue {
   @include btn-color(
     $bg-default:        $color-tr-blue-10,
     $bg-hover:          $color-tr-blue-10,
@@ -106,7 +106,7 @@
   );
 }
 
-.btncircle--tr-white {
+.btn-circle--tr-white {
   @include btn-color(
     $bg-default:        $color-tr-white-20,
     $bg-hover:          $color-tr-white-30,
@@ -118,7 +118,7 @@
   backdrop-filter: blur($blur-button);
 }
 
-.btncircle--white {
+.btn-circle--white {
   @include btn-color(
     $bg-default:        $color-white,
     $bg-hover:          $color-white-hover,
@@ -129,7 +129,7 @@
   );
 }
 
-.btncircle--tr-grey {
+.btn-circle--tr-grey {
   @include btn-color(
     $bg-default:        $color-tr-black-05,
     $bg-hover:          $color-tr-black-10,
@@ -141,7 +141,7 @@
   backdrop-filter: blur($blur-button);
 }
 
-.btncircle--tr-grey-white {
+.btn-circle--tr-grey-white {
   @include btn-color(
     $bg-default:        $color-tr-black-05,
     $bg-hover:          $color-tr-black-10,
@@ -153,7 +153,7 @@
   backdrop-filter: blur($blur-button);
 }
 
-.btncircle--tr-black {
+.btn-circle--tr-black {
   @include btn-color(
     $bg-default:        $color-tr-white-20,
     $bg-hover:          $color-tr-white-30,
