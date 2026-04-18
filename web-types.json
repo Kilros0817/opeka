@@ -193,7 +193,13 @@
         },
         {
           "name": "x-avatar",
-          "description": "x-avatar — see src\\components\\atoms\\avatar\\avatar.html"
+          "description": "x-avatar — see src\\components\\atoms\\avatar\\avatar.html",
+          "attributes": [
+            {
+              "name": "bg-color",
+              "description": "solid background color (optional, default: blue gradient from CSS)"
+            }
+          ]
         },
         {
           "name": "x-avatar-button",

@@ -29,6 +29,7 @@
 
   &:checked + .switch__slider::before {
     transform: translateX(18px);
+    
   }
 }
 
