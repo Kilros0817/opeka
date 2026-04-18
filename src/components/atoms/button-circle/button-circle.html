@@ -1,6 +1,6 @@
 <script props>
   /*
-   * x-circle-button
+   * x-button-circle
    *
    * Props:
    *   size — mini | medium 
@@ -18,16 +18,18 @@
   module.exports = {
     icon, size,
     cls: [
-      'btn',
-      'btn--' + size,
-      'btn--' + variant,
+      'btncircle',
+      'btncircle--' + size,
+      'btncircle--' + variant,
     ].filter(Boolean).join(' '),
+    cls__icon: 
+      'btncircle-icon__icon--' + size,
   }
 </script>
 
   <button class="{{ cls }}">
-    <if condition="icon && size === 'mini'"><svg class="circlebtn__icon" aria-hidden="true"><use href="#icon-{{ icon }}"/></svg></if>
-    <if condition="icon && size === 'medium'"><span class="circlebtn__icon-circle" aria-hidden="true"><svg class="btn__icon"><use href="#icon-{{ icon }}"/></svg></span></if>
+    <if condition="icon && size === 'mini'"><svg class="{{ cls__icon }}" aria-hidden="true"><use href="#icon-{{ icon }}"/></svg></if>
+    <if condition="icon && size === 'medium'"><span maria-hidden="true"><svg class="{{ cls__icon }}"><use href="#icon-{{ icon }}"/></svg></span></if>
   </button>
 
 

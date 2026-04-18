@@ -237,12 +237,12 @@
           "description": "Renders <a> when href is set, otherwise <button>."
         },
         {
-          "name": "x-button-step",
-          "description": "Button step."
+          "name": "x-button-circle",
+          "description": "x-button-circle — see src\\components\\atoms\\button-circle\\button-circle.html"
         },
         {
-          "name": "x-circle-button",
-          "description": "x-circle-button — see src\\components\\atoms\\circle-button\\circle-button.html"
+          "name": "x-button-step",
+          "description": "Button step."
         },
         {
           "name": "x-circle-icon",
