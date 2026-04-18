@@ -16,7 +16,7 @@
   display: flex;
   gap: $space-md;
 
-  width: 726px;
+  width: clamp(361px, 50vw, 726px);
   height: 480px;
   padding: $space-32;
   border-radius: $radius-2xl;
@@ -24,7 +24,6 @@
   flex-shrink: 0;
 
   @include mobile {
-    width: 361px;
     height: 388px;
     padding: $space-lg $space-md;
     border-radius: $radius-26;
@@ -53,10 +52,14 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: $space-md;
+  gap: $space-108;
   flex: 1 1 auto;
   min-height: 0;
   width: 100%;
+
+  @include mobile {
+    gap: $space-64;
+  }
 }
 
 .promo-main-card__image-tag {
@@ -84,7 +87,7 @@
   flex: 1 1 auto;
   min-height: 0;
   width: 100%;
-  justify-content: flex-end;
+  justify-content: space-between;
 
   @include mobile {
     gap: $space-20;
@@ -102,16 +105,23 @@
 }
 
 .promo-main-card__title {
-  @include type-m-48;
-  margin: 0;
+
+  font-family: $font-primary;
+  font-weight: $fw-medium;
+  font-size: clamp($fs-24, 4vw, $fs-48);
+  line-height: 0.9;
+  letter-spacing: -0.03em;
   color: $color-white;
+  margin: 0;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
 
   @include mobile {
-    @include type-m-24;
+    font-size: $fs-24;
+    line-height: 26px;
+    letter-spacing: -0.02em;
   }
 }
 
@@ -128,7 +138,7 @@
   @include mobile {
     @include type-m-14;
     display: -webkit-box;
-    -webkit-line-clamp: 4;
+    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
   }

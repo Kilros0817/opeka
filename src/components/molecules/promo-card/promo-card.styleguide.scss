@@ -6,7 +6,7 @@
 }
 
 .promo-sg-matrix {
-    overflow-x: scroll;
+    overflow-x: auto;
     display: grid;
     gap: $space-xs;
     align-items: stretch;
