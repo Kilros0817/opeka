@@ -9,7 +9,7 @@
  * Mobile:  767 ~ 393
  */
 
-.card-md {
+.room-card {
     padding: 32px;
     border-radius: 32px;
     background: $color-bg-card;
@@ -31,13 +31,13 @@
     }
 }
 
-.card__content {
+.room-card__content {
     display: flex;
     flex-direction: column;
     gap: 16px;
 }
 
-.card__seats {
+.room-card__seats {
     display: inline-flex;
     align-items: center;
     padding: 10px 16px;
@@ -46,20 +46,20 @@
     width: fit-content;
 }
 
-.card__text {
+.room-card__text {
     display: flex;
     flex-direction: column;
     gap: 8px;
 }
 
-.card__title {
+.room-card__title {
     font-size: 24px;
     font-weight: 500;
     color: $color-primary;
     line-height: 26px;
 }
 
-.card__description {
+.room-card__description {
     font-size: 16px;
     color: $color-secondary;
     line-height: 20px;
@@ -67,7 +67,7 @@
 
 /* IMAGE STACK */
 
-.card__images-md {
+.room-card__images {
     position: relative;
     height: 240px;
 
@@ -77,13 +77,13 @@
     }
 }
 
-.card__image {
+.room-card__image {
     position: absolute;
     border-radius: 20px;
     object-fit: cover;
 }
 
-.card__image--front--md {
+.room-card__image--front {
     width: 240px;
     height: 240px;
     z-index: 3;
@@ -95,7 +95,7 @@
     }
 }
 
-.card__image--middle--md {
+.room-card__image--middle {
     width: 220px;
     height: 220px;
     left: 47.508px;
@@ -115,7 +115,7 @@
     }
 }
 
-.card__image--back--md {
+.room-card__image--back {
     width: 200px;
     height: 200px;
     left: 90px;
@@ -135,19 +135,19 @@
     }
 }
 
-.card__footer {
+.room-card__footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.card__price {
+.room-card__price {
     display: flex;
     align-items: baseline;
     gap: 6px;
 }
 
-.card__price-value {
+.room-card__price-value {
     font-size: 32px;
     font-weight: 500;
     color: $color-primary;
@@ -157,13 +157,13 @@
     }
 }
 
-.card__price-unit {
+.room-card__price-unit {
     font-size: 14px;
     color: $color-secondary;
 }
 
 
-.card__button--md {
+.room-card__button {
     width: 53px;
     height: 46px;
     border-radius: 50%;
