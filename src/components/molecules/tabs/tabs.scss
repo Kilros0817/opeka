@@ -31,20 +31,16 @@
   .tab {
     .tab--default {
       padding: 20px;
-      border-color: $navy-10;
       color: $navy-60;
-      border-width: 1.2px;
-      border-style: solid;
       border-radius: $radius-lg;
+      outline: 1.2px solid $navy-10;
     }
 
     .tab--active {
       padding: 20px;
-      border-color: $blue-100p;
       color: $blue-100p;
-      border-width: 2px;
-      border-style: solid;
       border-radius: $radius-lg;
+      outline: 2px solid $blue-100p;
     }
   }
 
@@ -54,20 +50,16 @@
   .tab {
     .tab--default {
       padding: 20px;
-      border-color: $white-30;
       color: $white-100;
-      border-width: 1.2px;
-      border-style: solid;
       border-radius: $radius-lg;
+      outline: 1.2px solid $white-30;
     }
 
     .tab--active {
       padding: 20px;
-      border-color: $white-30;
       color: $white-100;
-      border-width: 2px;
-      border-style: solid;
       border-radius: $radius-lg;
+      outline: 2px solid $white-30;
     }
   }
 
