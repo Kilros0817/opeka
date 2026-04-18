@@ -16,44 +16,27 @@
    * <yield> becomes the label. Extra attrs (class, aria-*, data-*) pass through.
    */
   const size = props.size || 'mini'
-  const variant = props.variant || 'blue'
-  const type = props.type || 'button'
   const color = props.color || 'blue'
-  const href = props.href || ''
   const icon = props.icon || ''
   const iconOnly = props['icon-only'] !== undefined
-  const pill = props.pill !== undefined
 
   // icon-only buttons must have aria-label
   if (iconOnly && !props['aria-label'])
     throw new Error('x-button-social: icon-only requires aria-label')
 
   module.exports = {
-    href, type, icon, size, iconOnly,
+    icon, size, iconOnly,
     cls: [
       'btn-social',
       'btn-social--' + size,
       'btn-social--' + color,
-      iconOnly ? 'btn-social--icon-only' : '',
-      pill ? 'btn-social--pill' : '',
+      iconOnly ? 'btn-social--icon-only' : ''
     ].filter(Boolean).join(' '),
   }
 </script>
-
-<if condition="href">
-  <a href="{{ href }}" class="{{ cls }}">
-    <if condition="icon && size === 'mini'"><svg class="btn__icon" aria-hidden="true"><use href="#icon-{{ icon }}"/></svg></if>
-    <if condition="icon && size === 'medium'"><span class="btn__icon-circle" aria-hidden="true"><svg class="btn__icon"><use href="#icon-{{ icon }}"/></svg></span></if>
-    <if condition="!iconOnly"><span class="btn__label"><yield></yield></span></if>
-    <if condition="icon && size === 'big'"><span class="btn__icon-circle" aria-hidden="true"><svg class="btn__icon"><use href="#icon-{{ icon }}"/></svg></span></if>
-  </a>
-</if>
-
-<if condition="!href">
-  <button type="{{ type }}" class="{{ cls }}">
+  <button class="{{ cls }}">
     <if condition="icon && size === 'mini'"><svg class="btn__icon" aria-hidden="true"><use href="#icon-{{ icon }}"/></svg></if>
     <if condition="icon && size === 'medium'"><span class="btn__icon-circle" aria-hidden="true"><svg class="btn__icon"><use href="#icon-{{ icon }}"/></svg></span></if>
     <if condition="!iconOnly"><span class="btn__label"><yield></yield></span></if>
     <if condition="icon && size === 'big'"><span class="btn__icon-circle" aria-hidden="true"><svg class="btn__icon"><use href="#icon-{{ icon }}"/></svg></span></if>
   </button>
-</if>
