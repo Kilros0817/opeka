@@ -94,4 +94,4 @@ $warn-bg:         rgb(255, 236, 218, 1);
 $gr-grey:         linear-gradient(to top, rgb(10, 17, 17, 0.3) 1%, rgb(10, 17, 17, 0) 150%);
 $gr-grey-big:     linear-gradient(to top, rgb(10, 17, 17, 0.3) 1%, rgb(10, 17, 17, 0) 150%);
 
-$red-top-center:  radial-gradient(ellipse 190% 87% at 59% 36%, #FDB9A0 0%, #FA9C80 27%, #F36668 100%);
+$red-top-center:  linear-gradient(200deg, rgb(255, 140, 120, 0.35) 0%, rgb(255, 140, 120, 0.25) 20%, rgb(255, 140, 120, 0.12) 40%, rgb(255, 140, 120, 0.05) 55%, rgb(255, 140, 120, 0.0) 70%), radial-gradient(ellipse 110% 66% at 67% 33%, #FDB9A0 0%, #FA9C80 27%, #F36668 100%), radial-gradient(ellipse 140% 35% at 70% 8%, rgb(255, 150, 130, 0.35) 0%, rgb(255, 150, 130, 0.18) 30%, rgb(255, 150, 130, 0.08) 50%, rgb(255, 150, 130, 0.0) 70%), linear-gradient(160deg, #f3a78f 0%, #f19a84 20%, #ee8775 40%, #ea6e63 65%, #e45752 85%, #df4a4a 100%);
