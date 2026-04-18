@@ -274,6 +274,10 @@
           "description": "Promotion card: tag + title + description + text-link, with a decorative blob.\r Composes <x-tag> and <x-text-link> internally."
         },
         {
+          "name": "x-promo-card",
+          "description": "Promotion card: img + tag + title + description + text-link\r Composes <x-tag> and <x-text-link> internally."
+        },
+        {
           "name": "x-promo-mini-card",
           "description": "Promotion card: tag + title + description + text-link, with a decorative blob.\r Composes <x-tag> and <x-text-link> internally."
         },

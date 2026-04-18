@@ -3,9 +3,8 @@
 <section class="sg-section" id="comp-circle-button" data-nav-target>
     <h2 class="sg-section__title">Circle Button</h2>
     <p class="sg-section__desc">
-        No label, icon only. Requires <code>aria-label</code>.
-        Variants: <code>tr-blue</code> <code>tr-white</code>, <code>tr-grey</code>, <code>tr-grey-white</code>,
-        <code>tr-black</code>.
+        Размеры: <code>mini</code> (34), <code>medium</code> (46).
+        Цвета: <code>tr-grey</code>, <code>tr-white</code>, <code>tr-black</code>, <code>tr-grey-white</code>, <code>tr-blue</code>.
     </p>
 
     <div class="sg-matrix">
@@ -70,22 +69,22 @@
 
         <div class="sg-matrix__row">
             <span class="sg-variant-label">Tr Grey-white</span>
-            <div class="sg-cell"><x-circle-button variant="tr-grey-white" class="circlebtn circlebtn--mini circlebtn--white"
+            <div class="sg-cell"><x-circle-button variant="tr-grey-white" class="circlebtn circlebtn--mini circlebtn--grey-white"
                     icon="chevron-left" aria-label="Назад"></x-circle-button></div>
             <div class="sg-cell"><x-circle-button variant="tr-grey-white" class="circlebtn circlebtn--mini circlebtn--grey-white is-hover"
                     icon="chevron-left" aria-label="Назад"></x-circle-button></div>
-            <div class="sg-cell"><x-circle-button variant="tr-grey-white" class="circlebtn circlebtn--mini circlebtn--white"
+            <div class="sg-cell"><x-circle-button variant="tr-grey-white" class="circlebtn circlebtn--mini circlebtn--grey-white"
                     icon="chevron-left" class="is-hover" disabled aria-label="Назад"></x-circle-button></div>
         </div>
 
         <div class="sg-matrix__row">
             <span class="sg-variant-label"></span>
-            <div class="sg-cell"><x-circle-button variant="tr-grey-white" class="circlebtn circlebtn--medium circlebtn--white"
+            <div class="sg-cell"><x-circle-button variant="tr-grey-white" class="circlebtn circlebtn--medium circlebtn--grey-white"
                     icon="chevron-left" aria-label="Назад"></x-circle-button></div>
             <div class="sg-cell"><x-circle-button variant="tr-grey-white"
                     class="circlebtn circlebtn--medium circlebtn--grey-white is-hover" icon="chevron-left"
                     aria-label="Назад"></x-circle-button></div>
-            <div class="sg-cell"><x-circle-button variant="tr-grey-white" class="circlebtn circlebtn--medium circlebtn--white"
+            <div class="sg-cell"><x-circle-button variant="tr-grey-white" class="circlebtn circlebtn--medium circlebtn--grey-white"
                     icon="chevron-left" class="is-hover" disabled aria-label="Назад"></x-circle-button></div>
         </div>
 
@@ -111,7 +110,7 @@
     </div>
 
     <sg-snippet title="x-circle-button">
-        <x-circle-button size="sm" color="tr-blue" icon="chevron-left"></x-circle-button>
-        <x-circle-button size="sm" color="tr-blue" icon="chevron-right"></x-circle-button>
+        <x-circle-button size="mini" variant="tr-blue" icon="chevron-left"></x-circle-button>
+        <x-circle-button size="mini" variant="tr-blue" icon="chevron-right"></x-circle-button>
     </sg-snippet>
 </section>
