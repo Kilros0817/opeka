@@ -61,7 +61,7 @@
 .btn-circle__icon {
   display: block;
   flex-shrink: 0;
-  fill: currentColor; 
+  fill: currentColor;
 
   &--mini { width: 16px; height: 16px; }
   &--medium { width: 18px; height: 18px; }
@@ -151,17 +151,4 @@
     $circle-bg-default: $color-tr-white-20,
   );
   backdrop-filter: blur($blur-button);
-}
-
-.btn-circle--tr-black {
-  @include btn-color(
-    $bg-default:        $color-tr-white-20,
-    $bg-hover:          $color-tr-white-30,
-    $bg-disabled:       $color-tr-white-20,
-    $text-default:      $color-navy,
-    $text-disabled:     $color-navy-60,
-    $circle-bg-default: $color-tr-black-05,
-  );
-
-  &:hover:not(:disabled) { color: $color-tr-white-50; }
 }
