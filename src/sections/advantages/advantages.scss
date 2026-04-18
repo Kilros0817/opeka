@@ -193,6 +193,7 @@
 .advantages__submit {
   display: none;
   margin-top: 32px;
+  padding: 0 20px;
 
   @include mobile {
     display: block;
