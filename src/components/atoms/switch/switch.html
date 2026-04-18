@@ -3,9 +3,9 @@
      * x-switch
      *
      * Props:
-     *   checked   - true | false (default: false)
+     *   checked        - boolean (default: false)
      *   label          - text label next to the toggle (default: empty)
-     *   disabled       - true | false (default: false)
+     *   disabled       - boolean (default: false)
      * 
      */
 
@@ -42,6 +42,6 @@
         <span class="switch__slider"></span>
     </label>
     <if condition="label">
-        <span class="switch__label">{{ label }}</span>
+        <span class="switch--label">{{ label }}</span>
     </if>
 </div>

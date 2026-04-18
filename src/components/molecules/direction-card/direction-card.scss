@@ -16,10 +16,10 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
-  width: clamp(361px, 50vw,  726px);
+  width: clamp(361px, 50vw, 726px);
   height: 436px;
   border-radius: 32px;
-  overflow: hidden; 
+  overflow: hidden;
   flex-shrink: 0;
 
   @include mobile {
@@ -35,6 +35,15 @@
   width: 100%;
   height: 100%;
   position: absolute;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, $color-text-on-dark-0 0%, $hezy-100p 100%);
+    pointer-events: none;
+    /* Ensures the image remains clickable */
+  }
 }
 
 .direction-card__bg-img {
@@ -42,15 +51,6 @@
   height: 100%;
   object-fit: cover;
   object-position: center;
-}
-
-.direction-card__bg::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to bottom, $color-text-on-dark-0 0%, $hezy-100p 100%);
-  pointer-events: none;
-  /* Ensures the image remains clickable */
 }
 
 /* Content */
@@ -69,7 +69,7 @@
   position: absolute;
   bottom: 32px;
   display: flex;
-  flex-direction: column;
+  flex-direction: column; 
   align-items: center;
   gap: 24px;
   flex: 1 1 auto;
@@ -134,14 +134,4 @@
   letter-spacing: -2%;
   color: $color-text-on-dark-100;
   gap: 24px;
-}
-
-.sg-matrix__direction-card {
-  display: grid;
-  grid-template-columns: none;
-  gap: 4px;
-  align-items: stretch;
-  padding: 20px;
-  border-radius: 12px;
-  background-color: #f0f1f5;
 }

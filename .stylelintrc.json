@@ -54,7 +54,8 @@
       ],
       "rules": {
         "color-no-hex": null,
-        "selector-max-type": null
+        "selector-max-type": null,
+        "selector-max-id": null
       }
     }
   ],

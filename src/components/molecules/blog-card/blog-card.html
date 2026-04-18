@@ -1,0 +1,54 @@
+<script props>
+  /*
+   * x-blog-card
+   *
+   * Blog card: image + tag + meta + title + description + text-link.
+   *
+   * Props:
+   *   link-href  — href for the CTA link (default: #)
+   *   link-icon  — sprite id for the link icon (default: plus)
+   *   bg-image   — card image src
+   *   alt        — image alt text
+   *   tag-color  — color passed to x-tag
+   *   type       — optional modifier, renders as blog-card--{type}
+   *
+   * Slots:
+   *   <fill-tag>   — tag label
+   *   <fill-meta>  — card meta
+   *   <fill-title> — card title (rendered in <h3>)
+   *   <fill-desc>  — card description (rendered in <p>)
+   *   <fill-link>  — CTA link label
+   */
+  const linkHref = props['link-href'] || '#'
+  const linkIcon = props['link-icon'] || 'plus'
+  const src = props['bg-image'] || ''
+  const alt = props['alt'] || ''
+  const tagColor = props['tag-color'] || ''
+  const type = props['type'] || ''
+
+  module.exports = {
+    linkHref, linkIcon, src, alt, tagColor, type,
+    cls: [
+      'blog-card',
+      type ? 'blog-card--' + type : '',
+    ].join(' '),
+  }
+</script>
+
+<article class="{{cls}}">
+  <img class="blog-card__img" src="{{ src }}" alt="{{ alt }}" loading="lazy">
+  <div class="blog-card__tag">
+    <x-tag size="sm" color="{{ tagColor }}"><slot-tag></slot-tag></x-tag>
+  </div>
+  <div class="blog-card__content">
+    <div class="blog-card__body">
+      <p class="blog-card__meta"><slot-meta></slot-meta></p>
+      <div class="blog-card__text">
+        <h3 class="blog-card__title"><slot-title></slot-title></h3>
+        <p class="blog-card__desc"><slot-desc></slot-desc></p>
+      </div>
+    </div>
+    <x-text-link href="{{ linkHref }}" color="blue" icon="{{ linkIcon }}"><slot-link></slot-link></x-text-link>
+
+  </div>
+</article>

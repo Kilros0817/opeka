@@ -1,0 +1,15 @@
+@use '../../../styles/tokens' as *;
+
+/**
+ tabs styleguide.
+ */
+
+.sg-matrix__tabs {
+  display: grid;
+  grid-template-columns: none;
+  gap: 4px;
+  align-items: stretch;
+  padding: 20px;
+  border-radius: 12px;
+  background-color: $color-tr-grey-100;
+}

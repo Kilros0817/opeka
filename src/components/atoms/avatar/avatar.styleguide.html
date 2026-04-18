@@ -2,52 +2,28 @@
 <section class="sg-section" id="comp-avatar" data-nav-target>
   <h2 class="sg-section__title">Avatar</h2>
   <p class="sg-section__desc">
-    Проп <code>src_main</code> — путь к изображению переднего плана (опционально).
+    Проп <code>image-url</code> — путь к изображению переднего плана (опционально).
+    Проп <code>alt</code> — альтернативный текст изображения (опционально, по умолчанию: «аватар»).
     Проп <code>size</code>: <code>sm</code>, <code>md</code>, <code>lg</code>, <code>xl</code>.
-    Проп <code>bg_type</code>: <code>gradient</code>, <code>solid</code>, <code>image</code>.
-    Пропы <code>bg_from</code> и <code>bg_to</code> — цвета градиента.
-    Проп <code>bg_img</code> — путь к фоновому изображению.
   </p>
 
   <div class="sg-matrix sg-matrix--narrow">
     <div class="sg-matrix__head">
-      <span></span>
-      <span class="sg-state-label">Gradient</span>
-      <span class="sg-state-label">Solid</span>
-      <span class="sg-state-label">Image bg</span>
+      <div class="sg-cell">Size S</div>
+      <div class="sg-cell">Size M</div>
+      <div class="sg-cell">Size L</div>
+      <div class="sg-cell">Size XL</div>
     </div>
 
     <div class="sg-matrix__row">
-      <span class="sg-variant-label">SM</span>
-      <div class="sg-cell"><x-avatar src_main="../../assets/images/avatar-01-desktop.webp" alt="avatar" size="sm" bg_type="gradient" bg_from="rgba(227,232,255,1)" bg_to="rgba(158,182,214,1)"></x-avatar></div>
-      <div class="sg-cell"><x-avatar src_main="../../assets/images/avatar-01-desktop.webp" alt="avatar" size="sm" bg_type="solid" bg_from="rgba(158,182,214,1)"></x-avatar></div>
-      <div class="sg-cell"><x-avatar src_main="" alt="avatar" size="sm" bg_type="image" bg_img="../../assets/images/avatar-01-mobile.webp"></x-avatar></div>
-    </div>
-
-    <div class="sg-matrix__row">
-      <span class="sg-variant-label">MD</span>
-      <div class="sg-cell"><x-avatar src_main="../../assets/images/avatar-01-desktop.webp" alt="avatar" size="md" bg_type="gradient" bg_from="rgba(227,232,255,1)" bg_to="rgba(158,182,214,1)"></x-avatar></div>
-      <div class="sg-cell"><x-avatar src_main="../../assets/images/avatar-01-desktop.webp" alt="avatar" size="md" bg_type="solid" bg_from="rgba(158,182,214,1)"></x-avatar></div>
-      <div class="sg-cell"><x-avatar src_main="" alt="avatar" size="md" bg_type="image" bg_img="../../assets/images/avatar-01-mobile.webp"></x-avatar></div>
-    </div>
-
-    <div class="sg-matrix__row">
-      <span class="sg-variant-label">LG</span>
-      <div class="sg-cell"><x-avatar src_main="../../assets/images/avatar-01-desktop.webp" alt="avatar" size="lg" bg_type="gradient" bg_from="rgba(227,232,255,1)" bg_to="rgba(158,182,214,1)"></x-avatar></div>
-      <div class="sg-cell"><x-avatar src_main="../../assets/images/avatar-01-desktop.webp" alt="avatar" size="lg" bg_type="solid" bg_from="rgba(158,182,214,1)"></x-avatar></div>
-      <div class="sg-cell"><x-avatar src_main="" alt="avatar" size="lg" bg_type="image" bg_img="../../assets/images/avatar-01-mobile.webp"></x-avatar></div>
-    </div>
-
-    <div class="sg-matrix__row">
-      <span class="sg-variant-label">XL</span>
-      <div class="sg-cell"><x-avatar src_main="../../assets/images/avatar-01-desktop.webp" alt="avatar" size="xl" bg_type="gradient" bg_from="rgba(227,232,255,1)" bg_to="rgba(158,182,214,1)"></x-avatar></div>
-      <div class="sg-cell"><x-avatar src_main="../../assets/images/avatar-01-desktop.webp" alt="avatar" size="xl" bg_type="solid" bg_from="rgba(158,182,214,1)"></x-avatar></div>
-      <div class="sg-cell"><x-avatar src_main="" alt="avatar" size="xl" bg_type="image" bg_img="../../assets/images/avatar-01-mobile.webp"></x-avatar></div>
+      <div class="sg-cell"><x-avatar image-url="../../assets/images/avatar-01.png" alt="avatar" size="sm"></x-avatar></div>
+      <div class="sg-cell"><x-avatar image-url="../../assets/images/avatar-01.png" alt="avatar" size="md" bg-color="red"></x-avatar></div>
+      <div class="sg-cell"><x-avatar image-url="../../assets/images/avatar-01.png" alt="avatar" size="lg"></x-avatar></div>
+      <div class="sg-cell"><x-avatar image-url="../../assets/images/avatar-01.png" alt="avatar" size="xl"></x-avatar></div>
     </div>
   </div>
 
   <sg-snippet title="x-avatar">
-    <x-avatar src_main="../../assets/images/avatar-01-desktop.webp" alt="avatar" size="sm" bg_type="gradient" bg_from="rgba(227,232,255,1)" bg_to="rgba(158,182,214,1)"></x-avatar>
+    <x-avatar image-url="../../assets/images/avatar-01.png" alt="avatar" size="sm"></x-avatar>
   </sg-snippet>
-
 </section>
