@@ -196,8 +196,26 @@
           "description": "x-avatar — see src\\components\\atoms\\avatar\\avatar.html",
           "attributes": [
             {
-              "name": "bg-color",
-              "description": "solid background color (optional, default: blue gradient from CSS)"
+              "name": "size",
+              "description": "sm | md | lg | xl (default: sm)",
+              "default": "sm",
+              "value": {
+                "type": "enum"
+              },
+              "values": [
+                {
+                  "name": "sm"
+                },
+                {
+                  "name": "md"
+                },
+                {
+                  "name": "lg"
+                },
+                {
+                  "name": "xl"
+                }
+              ]
             }
           ]
         },
