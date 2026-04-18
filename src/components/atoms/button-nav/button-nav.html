@@ -1,0 +1,49 @@
+<script props>
+  /*
+   * x-button-nav
+   *
+   * Text link with optional 16px icon. Renders <a> when href is set, otherwise <button>.
+   *
+   * Props:
+   *   href — if set, renders as <a>, otherwise <button>
+   *   type — button type: button | submit | reset (default: button)
+   *   color — blue | white | grey (default: blue)
+   *   size — md | sm (default: md) — sm (14/16) is used in the top bar
+   *   icon — sprite id without "icon-" prefix
+   *   icon-pos — left | right (default: left) — right is used in dropdown triggers
+   *   disabled — passthrough boolean; disables the element (use only on <button>)
+   *
+   * <yield> becomes the label. Extra attrs (class, aria-*, data-*) pass through.
+   */
+  const href = props.href || ''
+  const type = props.type || 'button'
+  const color = props.color || 'blue'
+  const size = props.size || 'md'
+  const icon = props.icon || ''
+  const iconPos = props['icon-pos'] || 'left'
+
+  module.exports = {
+    href, type, icon, iconPos,
+    cls: [
+      'button-nav',
+      'button-nav--' + color,
+      size === 'sm' ? 'button-nav--sm' : '',
+    ].filter(Boolean).join(' '),
+  }
+</script>
+
+<if condition="href">
+  <a href="{{ href }}" class="{{ cls }}">
+    <if condition="icon && iconPos === 'left'"><svg class="button-nav__icon" aria-hidden="true"><use href="#icon-{{ icon }}"/></svg></if>
+    <span class="button-nav__label"><yield></yield></span>
+    <if condition="icon && iconPos === 'right'"><svg class="button-nav__icon" aria-hidden="true"><use href="#icon-{{ icon }}"/></svg></if>
+  </a>
+</if>
+
+<if condition="!href">
+  <button type="{{ type }}" class="{{ cls }}">
+    <if condition="icon && iconPos === 'left'"><svg class="button-nav__icon" aria-hidden="true"><use href="#icon-{{ icon }}"/></svg></if>
+    <span class="button-nav__label"><yield></yield></span>
+    <if condition="icon && iconPos === 'right'"><svg class="button-nav__icon" aria-hidden="true"><use href="#icon-{{ icon }}"/></svg></if>
+  </button>
+</if>
