@@ -1,0 +1,25 @@
+<script props>
+  /*
+   * x-tab
+   *
+   * Props:
+   *   type   — black | white | non-border (default: black)
+   *   status — active | default (default: default)
+   */
+  const type = props.type || 'black';
+  const status = props.status || '';
+
+  module.exports = {
+    type, status,
+    cls: [
+      'tab',
+      'tab--' + type,
+    ].join(' '),
+  }
+</script>
+
+<div class="{{ cls }}">
+  <span class="tab--{{ status }}">
+    <yield></yield>
+  </span>
+</div>
