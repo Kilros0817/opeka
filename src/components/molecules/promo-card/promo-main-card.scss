@@ -1,11 +1,7 @@
 @use '../../../styles/tokens' as *;
 
 /**
- * .promo-main-card — Promotion Main Card (Figma).
- *
- * Composition: .tag + title + description + .text-link.
- * Decorative blob color via --promo-mini-card-blob.
- * Modifier --in-slider: absolute positioning + data-pos stack layers.
+ * .promo-main-card
  *
  * Desktop: 726x480, padding 32, radius 32
  * Mobile:  361x388, padding 24/16, radius 26
@@ -24,14 +20,13 @@
   flex-shrink: 0;
 
   @include mobile {
+    width: 361px;
     height: 388px;
     padding: $space-lg $space-md;
     border-radius: $radius-26;
     gap: $space-14;
   }
 }
-
-/* Decorative background blob */
 
 .promo-main-card__bg {
   position: absolute;

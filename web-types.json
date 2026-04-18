@@ -269,7 +269,24 @@
         },
         {
           "name": "x-button-nav",
-          "description": "Text link with optional 16px icon. Renders <a> when href is set, otherwise <button>."
+          "description": "Navication Button with optional 16px icon.",
+          "attributes": [
+            {
+              "name": "variant",
+              "description": "grey | white",
+              "value": {
+                "type": "enum"
+              },
+              "values": [
+                {
+                  "name": "grey"
+                },
+                {
+                  "name": "white"
+                }
+              ]
+            }
+          ]
         },
         {
           "name": "x-button-social",
@@ -302,6 +319,10 @@
           ]
         },
         {
+          "name": "x-certificate-card",
+          "description": "Certificate card: img + tag + description\r Composes <x-tag> internally."
+        },
+        {
           "name": "x-circle-icon",
           "description": "Renders a <span> with optional 16px icon.",
           "attributes": [
@@ -330,6 +351,10 @@
           "description": "History card: title + disease + house + name + age + state + desc + result + current-state + more + image\r Composes <x-tag>."
         },
         {
+          "name": "x-illustrations",
+          "description": "x-illustrations — see src\\components\\atoms\\illustrations\\illustrations.html"
+        },
+        {
           "name": "x-number-of-seats",
           "description": "x-number-of-seats — see src\\components\\atoms\\number-of-seats\\number-of-seats.html"
         },
@@ -347,7 +372,7 @@
         },
         {
           "name": "x-promo-card",
-          "description": "Promotion card: img + tag + title + description + text-link\r Composes <x-tag> and <x-text-link> internally."
+          "description": "Promo card: img + tag + title + description + text-link\r Composes <x-tag> and <x-text-link> internally."
         },
         {
           "name": "x-promo-mini-card",

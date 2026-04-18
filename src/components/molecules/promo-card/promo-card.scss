@@ -1,9 +1,8 @@
 @use '../../../styles/tokens' as *;
 
 /**
- * .promo-card — Promotion Card (Figma).
+ * .promo-card.
  *
- * Composition: img + .tag + title + description + .text-link
  *
  * Desktop: 357x480, padding 32, radius 32
  * Mobile:  320x438, padding 24/16, radius 26
@@ -23,14 +22,13 @@
   background-color: $color-tr-black-03;
 
   @include mobile {
+    width: 320px;
     height: 438px;
     padding: $space-lg $space-md;
     border-radius: $radius-26;
     gap: $space-2xl;
   }
 }
-
-/* Decorative background blob */
 
 .promo-card__bg {
   position: absolute;

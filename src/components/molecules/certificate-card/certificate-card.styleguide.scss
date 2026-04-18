@@ -1,0 +1,6 @@
+@use '../../../styles/tokens' as *;
+
+.certificate-card-display {
+    display: grid;
+    gap: $space-20;
+}
