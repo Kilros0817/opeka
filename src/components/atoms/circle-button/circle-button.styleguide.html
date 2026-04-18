@@ -1,0 +1,94 @@
+<!-- x-circle-button showcase. Include in styleguide/components.html -->
+<section class="sg-section" id="comp-button-icon" data-nav-target>
+    <h2 class="sg-section__title">Circle Button</h2>
+    <p class="sg-section__desc">
+        No label, icon only. Requires <code>aria-label</code>.
+        Variants: <code>tr-grey</code>, <code>tr-grey-white</code>, <code>tr-white</code>.
+    </p>
+
+    <div class="sg-matrix">
+        <div class="sg-matrix__head">
+            <span></span>
+            <span class="sg-state-label">Default</span>
+            <span class="sg-state-label">Hover</span>
+            <span class="sg-state-label">Disabled</span>
+        </div>
+
+        <div class="sg-matrix__row">
+            <span class="sg-variant-label">Tr Grey</span>
+            <div class="sg-cell"><x-circle-button variant="tr-grey" class="btn btn--mini btn--tr-grey" icon="chevron-left" pill
+                    aria-label="Назад"></x-circle-button></div>
+            <div class="sg-cell"><x-circle-button variant="tr-grey" class="btn btn--mini btn--tr-grey is-hover"
+                    icon="chevron-left" pill aria-label="Назад"></x-circle-button></div>
+            <div class="sg-cell"><x-circle-button variant="tr-grey" class="btn btn--mini btn--tr-grey" icon="chevron-left" pill
+                    class="is-hover" disabled aria-label="Назад"></x-circle-button></div>
+        </div>
+
+        <div class="sg-matrix__row">
+            <span class="sg-variant-label"></span>
+            <div class="sg-cell"><x-circle-button variant="tr-grey" class="btn btn--medium btn--tr-grey" icon="chevron-left"
+                    pill aria-label="Назад"></x-circle-button></div>
+            <div class="sg-cell"><x-circle-button variant="tr-grey" class="btn btn--medium btn--tr-grey is-hover"
+                    icon="chevron-left" pill aria-label="Назад"></x-circle-button></div>
+            <div class="sg-cell"><x-circle-button variant="tr-grey" class="btn btn--medium btn--tr-grey" icon="chevron-left"
+                    pill class="is-hover" disabled aria-label="Назад"></x-circle-button></div>
+        </div>
+
+        <div class="sg-matrix__row">
+            <span class="sg-variant-label">Tr white</span>
+            <div class="sg-cell"><x-circle-button variant="tr-white" class="btn btn--mini btn--white" icon="chevron-left" pill
+                    aria-label="Назад"></x-circle-button></div>
+            <div class="sg-cell"><x-circle-button variant="tr-white" class="btn btn--mini btn--white is-hover"
+                    icon="chevron-left" pill aria-label="Назад"></x-circle-button></div>
+            <div class="sg-cell"><x-circle-button variant="tr-white" class="btn btn--mini btn--white" icon="chevron-left" pill
+                    class="is-hover" disabled aria-label="Назад"></x-circle-button></div>
+        </div>
+
+        <div class="sg-matrix__row">
+            <span class="sg-variant-label"></span>
+            <div class="sg-cell"><x-circle-button variant="tr-white" class="btn btn--medium btn--white" icon="chevron-left"
+                    pill aria-label="Назад"></x-circle-button></div>
+            <div class="sg-cell"><x-circle-button variant="tr-white" class="btn btn--medium btn--white is-hover"
+                    icon="chevron-left" pill aria-label="Назад"></x-circle-button></div>
+            <div class="sg-cell"><x-circle-button variant="tr-white" class="btn btn--medium btn--white" icon="chevron-left"
+                    pill class="is-hover" disabled aria-label="Назад"></x-circle-button></div>
+        </div>
+
+        <div class="sg-matrix__row">
+            <span class="sg-variant-label">Tr Grey-white</span>
+            <div class="sg-cell"><x-circle-button variant="tr-grey-white" class="btn btn--mini btn--white" icon="chevron-left" pill
+                    aria-label="Назад"></x-circle-button></div>
+            <div class="sg-cell"><x-circle-button variant="tr-grey-white" class="btn btn--mini btn--grey-white is-hover"
+                    icon="chevron-left" pill aria-label="Назад"></x-circle-button></div>
+            <div class="sg-cell"><x-circle-button variant="tr-grey-white" class="btn btn--mini btn--white" icon="chevron-left" pill
+                    class="is-hover" disabled aria-label="Назад"></x-circle-button></div>
+        </div>
+
+        <div class="sg-matrix__row">
+            <span class="sg-variant-label">Tr blue</span>
+            <div class="sg-cell"><x-circle-button variant="tr-blue" class="btn btn--mini btn--blue" icon="chevron-left" pill
+                    aria-label="Назад"></x-circle-button></div>
+            <div class="sg-cell"><x-circle-button variant="tr-blue" class="btn btn--mini btn--blue is-hover"
+                    icon="chevron-left" pill aria-label="Назад"></x-circle-button></div>
+            <div class="sg-cell"><x-circle-button variant="tr-blue" class="btn btn--mini btn--blue" icon="chevron-left" pill
+                    class="is-hover" disabled aria-label="Назад"></x-circle-button></div>
+        </div>
+
+        <div class="sg-matrix__row">
+            <span class="sg-variant-label"></span>
+            <div class="sg-cell"><x-circle-button variant="tr-blue" class="btn btn--medium btn--blue" icon="chevron-left"
+                    pill aria-label="Назад"></x-circle-button></div>
+            <div class="sg-cell"><x-circle-button variant="tr-blue" class="btn btn--medium btn--blue is-hover"
+                    icon="chevron-left" pill aria-label="Назад"></x-circle-button></div>
+            <div class="sg-cell"><x-circle-button variant="tr-blue" class="btn btn--medium btn--blue" icon="chevron-left"
+                    pill class="is-hover" disabled aria-label="Назад"></x-circle-button></div>
+        </div>
+    </div>
+
+    <sg-snippet title="x-circle-button">
+        <x-circle-button variant="tr-grey" icon="search" icon-only aria-label="Поиск"></x-circle-button>
+
+        <!-- pill (slider prev/next) -->
+        <x-circle-button variant="tr-grey" icon="chevron-left" icon-only pill aria-label="Назад"></x-circle-button>
+    </sg-snippet>
+</section>

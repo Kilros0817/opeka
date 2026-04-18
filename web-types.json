@@ -154,6 +154,10 @@
           "description": "Button step."
         },
         {
+          "name": "x-circle-button",
+          "description": "Renders <a> when href is set, otherwise <button>."
+        },
+        {
           "name": "x-circle-icon",
           "description": "Renders a <span> with optional 16px icon.",
           "attributes": [
