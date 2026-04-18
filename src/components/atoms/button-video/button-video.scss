@@ -1,0 +1,54 @@
+@use '../../../styles/tokens' as *;
+
+/**
+ * .btn-video — Video play button (circular).
+ *
+ * Sizes:     --xl | --lg | --md | --sm | --xs
+ * BG colors: --tr-gray | --tr-white | --tr-blue
+ * Icon:      --icon-black | --icon-white
+ */
+
+.btn-video {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 0;
+  border-radius: $radius-pill;
+  cursor: pointer;
+  transition: background-color $transition-fast;
+
+  &:focus-visible {
+    outline: 2px solid $color-focus-ring;
+    outline-offset: 2px;
+  }
+
+  /* Sizes */
+  &--xl { width: 80px; height: 80px; }
+  &--lg { width: 72px; height: 72px; }
+  &--md { width: 46px; height: 46px; }
+  &--sm { width: 28px; height: 28px; }
+  &--xs { width: 20px; height: 20px; }
+
+  /* BG colors */
+  &--tr-gray  { background-color: $color-tr-black-05; }
+  &--tr-white { background-color: $color-tr-white-20; }
+  &--tr-blue  { background-color: $color-tr-blue-100; }
+
+  /* Icon colors */
+  &--icon-black { color: $color-navy; }
+  &--icon-white { color: $color-white; }
+}
+
+.btn-video__icon {
+  display: block;
+  flex-shrink: 0;
+  fill: currentColor;
+  max-width: unset;
+
+  &--xl { width: 12px;   height: 12px;   }
+  &--lg { width: 10px;   height: 10px;   }
+  &--md { width: 10px;   height: 10px;   }
+  &--sm { width: 6px;    height: 6px;    }
+  &--xs { width: 7.14px; height: 7.14px; }
+}

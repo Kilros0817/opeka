@@ -152,16 +152,3 @@
   );
   backdrop-filter: blur($blur-button);
 }
-
-.btn-circle--tr-black {
-  @include btn-color(
-    $bg-default:        $color-tr-white-20,
-    $bg-hover:          $color-tr-white-30,
-    $bg-disabled:       $color-tr-white-20,
-    $text-default:      $color-navy,
-    $text-disabled:     $color-navy-60,
-    $circle-bg-default: $color-tr-black-05,
-  );
-
-  &:hover:not(:disabled) { color: $color-tr-white-50; }
-}
