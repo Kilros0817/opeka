@@ -22,43 +22,16 @@
    *
    * Blob color — override CSS var `--pansionat-big-card-blob` from the outside.
    */
-  const tagInfo = props['tag-info'] || [{
-    'tag-color': 'green',
-    'tag-icon': 'fire',
-    'tag-content': 'Скидка 20%'
-  }, {
-    'tag-color': 'red',
-    'tag-icon': 'fire',
-    'tag-content': 'Новое'
-  }]
-  const tagCategory = props['tag-category'] || [
-    'Мест в номере 2-4',
-    'Контроль за приемом лекарств',
-    '5-разовое питание',
-    'Функциональные кровати для лежачих',
-    'Прогулки по территории',
-    'Мест в номере 2-4',
-    'Контроль за приемом лекарств',
-    '5-разовое питание',
-    'Функциональные кровати для лежачих',
-    'Прогулки по территории'
-  ]
-  const visibleCategories = tagCategory.slice(0, 4)
-  const remainingCount = tagCategory.length - 4
-  const tagColor = props['tag-color'] || 'green'
-  const tagIcon = props['tag-icon'] || 'star' 
-  const linkHref = props['link-href'] || '#'
-  const linkIcon = props['link-icon'] || 'plus'
+  
+  const tagInfo = props['tag-info'] || []
+  const category = props['category'] || []
+  const visibleCategories = category.slice(0, 4)
+  const remainingCount = category.length - 4  
   const linkImage = props['link-image'] || '../../assets/images/pansion-placeholder.webp'
 
   module.exports = { 
-    tagColor, 
-    tagIcon, 
-    linkHref, 
-    linkIcon, 
     linkImage,
-    tagInfo,
-    tagCategory,
+    tagInfo,    
     visibleCategories,
     remainingCount
   }
@@ -87,9 +60,14 @@
         </div>
         <div class="pansionat-big-card__text">
           <h3 class="pansionat-big-card__title"><slot-title></slot-title></h3>
-          <p class="pansionat-big-card__desc"><slot-desc></slot-desc></p>
         </div>
       </div>
+      <p class="pansionat-big-card__desc">
+        <svg class="svg-location" aria-hidden="true">
+          <use href="#icon-location"/>
+        </svg>
+        <slot-desc></slot-desc>
+      </p>
       <div class="pansionat-big-card__categories">
           
         <each loop="item in visibleCategories">

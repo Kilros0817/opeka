@@ -110,7 +110,7 @@
   padding: $space-32;
   border-radius: $radius-2xl;
   
-  background-color: $grey-50;
+  background-color: $content-bg;
 
   @include mobile {
     gap: $space-20;
@@ -152,7 +152,10 @@
 
 .pansionat-big-card__desc {
   @include type-m-16;
-  
+  display: flex;
+  margin-top: $space-10;
+  gap: $space-xs;
+  color: $text-secondary;
 
   @include mobile {
     @include type-m-14;
@@ -205,7 +208,7 @@
 }
 
 .pansionat-big-card__unit {
-  @include type-r-16;
+  @include type-m-14;
   margin: 0;
   
 
@@ -226,5 +229,17 @@
   @include mobile {
     flex-direction: column;
     width: 100%;
+  }
+}
+
+.svg-location {
+  max-width: $fs-base;
+  height: $fs-base;
+  margin-top: $space-2;
+  fill: $text-secondary;
+
+  @include mobile {
+    width: $fs-14;
+    height: $fs-14;
   }
 }
