@@ -31,6 +31,10 @@
           "description": "Fills the \"desc\" slot of the parent component."
         },
         {
+          "name": "fill-header",
+          "description": "Fills the \"header\" slot of the parent component."
+        },
+        {
           "name": "fill-link",
           "description": "Fills the \"link\" slot of the parent component."
         },
@@ -84,6 +88,10 @@
           "description": "Named slot \"desc\" — provides default content."
         },
         {
+          "name": "slot-header",
+          "description": "Named slot \"header\" — provides default content."
+        },
+        {
           "name": "slot-link",
           "description": "Named slot \"link\" — provides default content."
         },
@@ -113,7 +121,7 @@
         },
         {
           "name": "x-advantages-mini-card",
-          "description": "Advantages mini card: title + optional stack of tag pills.\r Slots:\r   <fill-title> — card title (rendered in <h3>)\r   <fill-tags>  — optional: any number of <x-tag-advantages> (or other markup)"
+          "description": "Advantages mini card: title + optional stack of tag pills.\r Slots:\r   <fill-header> — optional: header bar (e.g. label + counter)\r   <fill-title>  — card title (rendered in <h3>)\r   <fill-tags>   — optional: any number of <x-tag-advantages> (or other markup)"
         },
         {
           "name": "x-advantages-submit-card",

@@ -29,7 +29,7 @@ function applyFinalState(gsap, section) {
 }
 
 function buildDesktopTimeline(gsap, ScrollTrigger, section) {
-  const steps = gsap.utils.toArray('.advantages__progress-step', section)
+  const steps = gsap.utils.toArray('.advantages__progress-step .btn-step', section)
   const slidesLeft = gsap.utils.toArray('.advantages__panel--left .advantages__slide', section)
   const slidesRight = gsap.utils.toArray('.advantages__panel--right .advantages__slide', section)
   const counterCurrent = section.querySelector('.advantages__counter-current')
@@ -53,7 +53,7 @@ function buildDesktopTimeline(gsap, ScrollTrigger, section) {
   function setStep(i) {
     if (i === activeStep) return
     activeStep = i
-    steps.forEach((el, idx) => el.classList.toggle('is-active', idx === i))
+    steps.forEach((el, idx) => el.classList.toggle('btn-step--active', idx === i))
     if (counterCurrent) counterCurrent.textContent = pad2(i + 1)
   }
 
@@ -97,8 +97,8 @@ function buildDesktopTimeline(gsap, ScrollTrigger, section) {
 // ── Mobile helpers ───────────────────────────────────────────────────────────
 
 function buildMobileStack(gsap, ScrollTrigger, section) {
-  const stack = section.querySelector('.advantages__mobile-stack')
-  const cards = gsap.utils.toArray('.advantages__mobile-card', section)
+  const stack = section.querySelector('.advantages__stack')
+  const cards = gsap.utils.toArray('.advantages__card', section)
   if (!cards.length || !stack) return
 
   const spacer = 20       // px offset between pinned card tops

@@ -9,7 +9,6 @@
 .btn-step{
   display: inline-flex;
   padding-top: 16px;
-  border-top: 1px solid $color-border-white-30;
   color: $color-text-on-dark-50;
   font-family: $font-primary;
   font-weight: $fw-medium;
@@ -19,6 +18,6 @@
 }
 
 .btn-step--active {
-  border-color: $color-white;
+  border-top: 1px solid $color-white;
   color: $color-white;
 }
