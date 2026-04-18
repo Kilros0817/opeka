@@ -347,11 +347,23 @@
   overflow-x: auto;
 }
 
+.sg-icons__icon {
+  width: 24px;
+  height: 24px;
+}
+
 /* Tokens preview */
 .sg-tokens {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
   gap: $space-md;
+}
+
+.sg-icons {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(19px, 1fr));
+  gap: $space-md;
+  
 }
 
 .sg-token {
@@ -379,14 +391,26 @@
 .sg-token__name  { font-weight: $fw-medium; }
 .sg-token__value { color: $color-text-secondary; font-size: 12px; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
 
+.sg-icons__item {
+  position: relative;
+  display: inline-block;
+}
 
-/* Tabs matrix — styleguide only */
-.sg-matrix--tabs {
-  display: grid;
-  grid-template-columns: none;
-  gap: 4px;
-  align-items: stretch;
-  padding: 20px;
-  border-radius: $radius-md;
-  background-color: $color-tr-black-05;
+.sg-icons__tooltip {
+  visibility: hidden;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 5px 8px;
+  border-radius: 4px;
+  position: absolute;
+  bottom: 125%; /* position above */
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  font-size: 12px;
+}
+
+.sg-icons__item:hover .sg-icons__tooltip {
+  visibility: visible;
 }

@@ -2,27 +2,18 @@
   /*
    * x-tab
    *
-   * Small uppercase label. Renders a <span> with optional 14px icon on the left.
-   *
    * Props:
-   *   type — black | white | non-border (default: black)
-   *   status - active | default (default : default)
-   *
+   *   isactive  — true | false (default: false)
    */
-  const type = props.type || 'black';
-  const status = props.status || '';
+  const isactive = props['isactive'] ? 'active' : 'default';
 
   module.exports = {
-    type, status,
-    cls: [
-      'tab',
-      'tab--' + type,
-    ].join(' '),
+    isactive,
   }
 </script>
 
-<div class="{{ cls }}">
-  <span class="tab--{{ status }}">
+<div class="tab">
+  <span class="tab--{{ isactive }}">
     <yield></yield>
   </span>
 </div>
