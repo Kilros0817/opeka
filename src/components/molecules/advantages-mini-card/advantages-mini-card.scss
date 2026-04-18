@@ -12,9 +12,9 @@
   box-sizing: border-box;
 
   // 361px → 726px
-  width: clamp(361px, 6vw, 726px);
+  width: clamp(361px, 50.4vw, 726px);
   // 454px → 792px
-  height: clamp(454px, 6vh, 792px);
+  height: clamp(454px, 55vw, 792px);
 
   // 26px → 32px
   border-radius: clamp(26px, 2.2vw, 32px);
@@ -46,6 +46,7 @@
 
 .advantages-mini-card__header {
   display: flex;
+
   @include type-m-14;
   color: $color-border-white-60;
   align-items: flex-start;

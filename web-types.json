@@ -196,10 +196,13 @@
           "description": "Advantages mini card: title + optional stack of tag pills.\r Slots:\r   <fill-header> — optional: header bar (e.g. label + counter)\r   <fill-title>  — card title (rendered in <h3>)\r   <fill-tags>   — optional: any number of <x-tag-advantages> (or other markup)"
         },
         {
+<<<<<<< HEAD
           "name": "x-advantages-submit-card",
           "description": "Advantages mini card: title + optional stack of tag pills.\r Slots:\r   <fill-title> — card title (rendered in <h3>)\r   <fill-tags>  — optional: any number of <x-tag-advantages> (or other markup)"
         },
         {
+=======
+>>>>>>> ed918ae92cd8f52a4b298f99834168132fbc8286
           "name": "x-avatar",
           "description": "x-avatar — see src\\components\\atoms\\avatar\\avatar.html",
           "attributes": [
