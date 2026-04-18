@@ -218,8 +218,7 @@
           "attributes": [
             {
               "name": "desc",
-              "description": "person description (default: '')",
-              "default": "''"
+              "description": "person description (optional)"
             }
           ]
         },
