@@ -325,6 +325,10 @@
           "description": "History card: title + disease + house + name + age + state + desc + result + current-state + more + image\r Composes <x-tag>."
         },
         {
+          "name": "x-lllustrations",
+          "description": "x-lllustrations — see src\\components\\atoms\\lllustrations\\lllustrations.html"
+        },
+        {
           "name": "x-number-of-seats",
           "description": "x-number-of-seats — see src\\components\\atoms\\number-of-seats\\number-of-seats.html"
         },

@@ -1,0 +1,16 @@
+<script props>
+  /*
+   * x-lllustrations
+   *
+   */
+  const src = props['bg-image'] || ''
+  const alt = props['alt'] || ''
+
+  module.exports = { src, alt }
+</script>
+
+<article class="lllustrations">
+  <div class="lllustrations__bg" aria-hidden="true">
+    <img class="lllustrations__bg-img" src="{{ src }}" alt="{{ alt }}" loading="lazy">
+  </div>
+</article>
