@@ -241,6 +241,10 @@
           "description": "Button step."
         },
         {
+          "name": "x-button-video",
+          "description": "Video Button."
+        },
+        {
           "name": "x-circle-button",
           "description": "x-circle-button — see src\\components\\atoms\\circle-button\\circle-button.html"
         },
@@ -314,19 +318,8 @@
           "attributes": [
             {
               "name": "disabled",
-              "description": "true | false (default: false)",
-              "default": "false",
-              "value": {
-                "type": "enum"
-              },
-              "values": [
-                {
-                  "name": "true"
-                },
-                {
-                  "name": "false"
-                }
-              ]
+              "description": "boolean (default: false)",
+              "default": "false"
             }
           ]
         },

@@ -3,7 +3,7 @@
 /**
  * .switch — Toggle Switch (Figma: Switch)
  *
- * States: --disabled
+ * Modifiers: --checked | --disabled
  */
 
 .switch {
@@ -22,6 +22,14 @@
   opacity: 0;
   width: 0;
   height: 0;
+
+  &:checked + .switch__slider {
+    background-color: $color-bg-switch-blue;
+  }
+
+  &:checked + .switch__slider::before {
+    transform: translateX(18px);
+  }
 }
 
 .switch__slider {
@@ -31,53 +39,51 @@
   background-color: $color-bg-switch-grey;
   transition: 0.4s;
   border-radius: $radius-9;
-}
 
-.switch__slider::before {
-  position: absolute;
-  content: "";
-  height: 18px;
-  width: 18px;
-  left: 2px;
-  bottom: 2px;
-  background-color: $color-bg-surface;
-  transition: 0.4s;
-  border-radius: $radius-7;
-}
-
-/* Checked State */
-.switch__input:checked + .switch__slider {
-  background-color: $color-bg-switch-blue;
-}
-
-.switch__input:checked + .switch__slider::before {
-  transform: translateX(18px);
+  &::before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 2px;
+    bottom: 2px;
+    background-color: $color-bg-surface;
+    transition: 0.4s;
+    border-radius: $radius-7;
+  };
 }
 
 /* Disabled state */
 .switch--disabled {
   cursor: not-allowed;
-}
 
-.switch--disabled .switch__toggle {
-  cursor: not-allowed;
-}
+  .switch__toggle {
+    cursor: not-allowed;
+  }
 
-.switch--disabled .switch__slider {
-  opacity: 0.4;
-  cursor: not-allowed;
-}
+  .switch__slider {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
 
-.switch--disabled .switch__input:checked + .switch__slider {
-  background-color: $color-action-disabled;
-  opacity: 1;
-}
+  .switch__input {
+    &:checked {
+      background-color: $color-action-disabled;
+      opacity: 1;
+    }
+  }
 
-.switch--disabled .switch__label {
-  color: $color-text-disabled;
+  .switch--label {
+    color: $color-text-disabled;
+  }
+
+  &:checked + .switch__slider {
+    background-color: $color-action-disabled;
+    opacity: 1;
+  }
 }
 
 /* Enabled label */
-.switch__label {
+.switch--label {
     @include type-m-16;
 }

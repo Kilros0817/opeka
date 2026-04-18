@@ -3,7 +3,7 @@
      * x-avatar
      *
      * Props:
-     *   src_main  - foreground image URL (default: '')
+     *   image-url  - foreground image URL (default: '')
      *   alt       - image alt text (default: 'avatar')
      *   size      - sm | md | lg | xl (default: sm)
      *   bg_type   - gradient | solid | image (default: gradient)
@@ -12,7 +12,7 @@
      *   bg_img    - background image URL, image type only (default: '')
      */
 
-    const src_main = props.src_main || '';
+    const imageUrl = props['image-url'] || '';
     const alt = props.alt || 'avatar';
     const size = props.size || 'sm';
     const bg_type = props.bg_type || 'gradient';
@@ -21,7 +21,7 @@
     const bg_img = props.bg_img || '';
 
     module.exports = {
-        src_main,
+        imageUrl,
         alt,
         bg_type,
         bg_from,
@@ -43,9 +43,9 @@
     data-bg-to="{{ bg_to }}"
     data-bg-img="{{ bg_img }}"
 >
-    <if condition="src_main">
+    <if condition="imageUrl">
         <img
-            src="{{ src_main }}"
+            src="{{ imageUrl }}"
             alt="{{ alt }}"
             loading="lazy"
             class="avatar__img"
