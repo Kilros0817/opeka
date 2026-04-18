@@ -1,0 +1,42 @@
+<script props>
+  /*
+   * x-button-social
+   *
+   * Renders <a> when href is set, otherwise <button>.
+   *
+   * Props:
+   *   href — if set, renders as <a>, otherwise <button>
+   *   type — button type: button | submit | reset (default: button)
+   *   size — mini | medium | big (default: mini)
+   *   variant — blue | white | tr-white | tr-grey | tr-grey-white | black (default: blue)
+   *   icon — sprite id without "icon-" prefix
+   *   icon-only — hides the text label (aria-label is REQUIRED)
+   *   pill — adds btn--pill modifier
+   *
+   * <yield> becomes the label. Extra attrs (class, aria-*, data-*) pass through.
+   */
+  const size = props.size || 'mini'
+  const color = props.color || 'blue'
+  const icon = props.icon || ''
+  const iconOnly = props['icon-only'] !== undefined
+
+  // icon-only buttons must have aria-label
+  if (iconOnly && !props['aria-label'])
+    throw new Error('x-button-social: icon-only requires aria-label')
+
+  module.exports = {
+    icon, size, iconOnly,
+    cls: [
+      'btn-social',
+      'btn-social--' + size,
+      'btn-social--' + color,
+      iconOnly ? 'btn-social--icon-only' : ''
+    ].filter(Boolean).join(' '),
+  }
+</script>
+  <button class="{{ cls }}">
+    <if condition="icon && size === 'mini'"><svg class="btn__icon" aria-hidden="true"><use href="#icon-{{ icon }}"/></svg></if>
+    <if condition="icon && size === 'medium'"><span class="btn__icon-circle" aria-hidden="true"><svg class="btn__icon"><use href="#icon-{{ icon }}"/></svg></span></if>
+    <if condition="!iconOnly"><span class="btn__label"><yield></yield></span></if>
+    <if condition="icon && size === 'big'"><span class="btn__icon-circle" aria-hidden="true"><svg class="btn__icon"><use href="#icon-{{ icon }}"/></svg></span></if>
+  </button>

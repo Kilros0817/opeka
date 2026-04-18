@@ -1,0 +1,55 @@
+@use '../../../styles/tokens' as *;
+
+/**
+ * .btn — styleguide-only state previews (not included in production).
+ * .is-hover forces the visual hover state on a static button.
+ */
+
+.btn--blue.is-hover         { background-color: $color-blue-hover; }
+.btn--white.is-hover        { background-color: $color-white-hover; }
+.btn--tr-white.is-hover     { background-color: $color-tr-white-30; }
+
+.btn--tr-grey.is-hover,
+.btn--tr-grey-white.is-hover { background-color: $color-tr-black-10; }
+
+.btn--black.is-hover {
+  background-color: $color-navy-60;
+  color: $color-tr-white-50;
+}
+
+/* Matrix */
+.sg-matrix-social {
+  display: grid;
+  grid-template-columns: 0 repeat(3, minmax(64px, 1fr));
+  gap: 4px;
+  align-items: stretch;
+  padding: 20px;
+  border-radius: $radius-md;
+  background-color: #E5E5E5;
+
+  @include mobile { grid-template-columns: 1fr; }
+}
+
+/* Section */
+.sg-section-social {
+  width:273px;
+ }
+
+.sg-matrix-social__row { display: contents; }
+
+
+.sg-cell-social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: $space-xs;
+  background: transparent;
+}
+
+
+/**
+ * .btn — styleguide-only state previews (not included in production).
+ * .is-hover forces the visual hover state on a static button.
+ */
+.btn-social--white.is-hover        { background-color: #F8F9FA; }
+.btn-social--grey.is-hover {background-color: #22294F1A;}
