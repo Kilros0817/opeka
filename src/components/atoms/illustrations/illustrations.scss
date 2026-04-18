@@ -1,12 +1,12 @@
 @use '../../../styles/tokens' as *;
 
 /**
- * .lllustrations
+ * .illustrations
  *
  */
 
 /* Image */
-.lllustrations {
+.illustrations {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -17,14 +17,14 @@
     flex-shrink: 0;
 }
 
-.lllustrations__bg {
+.illustrations__bg {
     width: 100%;
     height: 100%;
     position: absolute;
 }
 
 /* Content */
-.lllustrations__title {
+.illustrations__title {
     width: 1600px;
     height: 43px;
     opacity: 1;
@@ -37,14 +37,14 @@
     top:0%;
 }
 
-.lllustrations__layout {
+.illustrations__layout {
     height: 100px;
     gap: 40px;
     opacity: 1;
    
 }
 
-.lllustrations_body {
+.illustrations_body {
     height: 328.7357px;
     gap: 40px;
 }
