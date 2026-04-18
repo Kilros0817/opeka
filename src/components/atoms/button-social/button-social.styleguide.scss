@@ -30,23 +30,6 @@
   @include mobile { grid-template-columns: 1fr; }
 }
 
-/* Section */
-.sg-section-social {
-  // width:273px;
- }
-
-.sg-matrix-social__row { display: contents; }
-
-
-.sg-cell-social {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: $space-xs;
-  background: transparent;
-}
-
-
 /**
  * .btn — styleguide-only state previews (not included in production).
  * .is-hover forces the visual hover state on a static button.
