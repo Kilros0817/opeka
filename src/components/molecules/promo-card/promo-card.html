@@ -33,13 +33,13 @@
 <article class="promo-card">
   <div class="promo-card__bg" aria-hidden="true"></div>
   <div class="promo-card__content">
-    <div class="promo-card__image">
+    <div class="promo-card__image-area" aria-label="{{ alt }}">
         <if condition="imgUrl">
-          <img src="{{ imgUrl }}" alt="{{ alt }}" loading="lazy" class="promo-main-card-image-size">
+          <img src="{{ imgUrl }}" alt="{{ alt }}" loading="lazy" class="promo-card__image">
         </if>
     </div>
     <div class="promo-card__body">
-      <div class="promo-card-tag-text">
+      <div class="promo-card__tag-text">
         <x-tag size="sm" color="{{ tagColor }}" icon="{{ tagIcon }}"><slot-tag></slot-tag></x-tag>
         <div class="promo-card__text">
           <h3 class="promo-card__title"><slot-title></slot-title></h3>

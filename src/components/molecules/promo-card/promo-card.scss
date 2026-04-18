@@ -21,7 +21,6 @@
   border-radius: $radius-2xl;
 
   background-color: $color-tr-black-03;
-  
 
   @include mobile {
     width: 320px;
@@ -74,13 +73,18 @@
   }
 }
 
-.promo-card__image {
+.promo-card__image-area {
   width: 152px;
   height: 102px;
+}
+
+.promo-card__image {
+  width: 100%;
+  height: 100%;
   border-radius: $radius-xl;
 }
 
-.promo-card-tag-text {
+.promo-card__tag-text {
   display: grid;
   justify-items: start;
   gap:$space-md;
