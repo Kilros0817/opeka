@@ -1,0 +1,51 @@
+<!-- x-switch showcase. Include in styleguide/components.html -->
+<section class="sg-section" id="comp-switch" data-nav-target>
+  <h2 class="sg-section__title">Switch</h2>
+  <p class="sg-section__desc">
+    Состояния: <code>false</code> (выключен), <code>true</code> (включён).
+    Опциональный текст: проп <code>label</code>.
+    Недоступен: проп <code>disabled</code>.
+  </p>
+
+  <div class="sg-matrix sg-matrix--narrow">
+    <div class="sg-matrix__row">
+      <span class="sg-variant-label">False</span>
+      <div class="sg-cell"><x-switch checked="false"></x-switch></div>
+      <div class="sg-cell"></div>
+      <div class="sg-cell"></div>
+    </div>
+
+    <div class="sg-matrix__row">
+      <span class="sg-variant-label">True</span>
+      <div class="sg-cell"><x-switch checked="true"></x-switch></div>
+      <div class="sg-cell"></div>
+      <div class="sg-cell"></div>
+    </div>
+
+    <div class="sg-matrix__row">
+      <span class="sg-variant-label">Label</span>
+      <div class="sg-cell"><x-switch checked="true" label="Показать на карте"></x-switch></div>
+      <div class="sg-cell"></div>
+      <div class="sg-cell"></div>
+    </div>
+
+    <div class="sg-matrix__row">
+      <span class="sg-variant-label">Disabled Off</span>
+      <div class="sg-cell"><x-switch checked="false" disabled="true"></x-switch></div>
+      <div class="sg-cell"></div>
+      <div class="sg-cell"></div>
+    </div>
+
+    <div class="sg-matrix__row">
+      <span class="sg-variant-label">Disabled On</span>
+      <div class="sg-cell"><x-switch checked="true" disabled="true" label="Показать на карте"></x-switch></div>
+      <div class="sg-cell"></div>
+      <div class="sg-cell"></div>
+    </div>
+  </div>
+
+  <sg-snippet title="x-switch">
+    <x-switch checked="false" label="Показать на карте" disabled="false"></x-switch>
+  </sg-snippet>
+  
+</section>

@@ -1,0 +1,35 @@
+@use '../../../styles/tokens' as *;
+
+/**
+ * .avatar-card — Avatar with name and description (Figma: Avatar Card)
+ */
+
+.avatar-card {
+    display: flex;
+    align-items: center;
+    gap: $space-md;
+}
+
+.avatar-card__body {
+    display: flex;
+    flex-direction: column;
+    gap: $space-xs;
+}
+
+.avatar-card__name {
+    @include type-m-16;
+    color: $color-text-primary;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.avatar-card__desc {
+    @include type-r-14;
+    color: $color-text-secondary;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
