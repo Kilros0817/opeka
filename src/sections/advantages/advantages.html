@@ -1,6 +1,8 @@
 <!-- .advantages — pinned scroll section with left/right twin panels -->
 <section class="advantages" data-section="advantages" data-advantages>
-  <div class="advantages__content">
+
+  <!-- ── Desktop: twin panels ── -->
+  <div class="advantages__content advantages__content--desktop">
     <div class="advantages__cols">
 
       <!-- Left panel: label, counter, text slides, progress nav -->
@@ -112,4 +114,49 @@
       </div>
     </div>
   </div>
+
+  <!-- ── Mobile: stacking cards ── -->
+  <div class="advantages__mobile-stack">
+    <div class="advantages__mobile-card">
+      <x-advantages-mini-card layer="1">
+        <fill-title>Квалифицированный персонал</fill-title>
+        <fill-tags>
+          <x-tag-advantages color="white" icon="done">Внимательные сиделки</x-tag-advantages>
+          <x-tag-advantages color="white" icon="done">Профессиональные медсестры</x-tag-advantages>
+          <x-tag-advantages color="white" icon="done">Специалисты по организации досуга</x-tag-advantages>
+        </fill-tags>
+      </x-advantages-mini-card>
+    </div>
+    <div class="advantages__mobile-card">
+      <x-advantages-mini-card layer="2">
+        <fill-title>Медицинские услуги</fill-title>
+        <fill-tags>
+          <x-tag-advantages color="white" icon="done">Врач на постоянной основе</x-tag-advantages>
+          <x-tag-advantages color="white" icon="done">Процедурный кабинет</x-tag-advantages>
+          <x-tag-advantages color="white" icon="done">Контроль приёма лекарств</x-tag-advantages>
+        </fill-tags>
+      </x-advantages-mini-card>
+    </div>
+    <div class="advantages__mobile-card">
+      <x-advantages-mini-card layer="3">
+        <fill-title>Комфорт и досуг</fill-title>
+        <fill-tags>
+          <x-tag-advantages color="white" icon="done">Уютные комнаты</x-tag-advantages>
+          <x-tag-advantages color="white" icon="done">Культурная программа</x-tag-advantages>
+          <x-tag-advantages color="white" icon="done">Прогулки и активности</x-tag-advantages>
+        </fill-tags>
+      </x-advantages-mini-card>
+    </div>
+    <div class="advantages__mobile-card">
+      <x-advantages-mini-card layer="4">
+        <fill-title>Безопасность</fill-title>
+        <fill-tags>
+          <x-tag-advantages color="white" icon="done">Видеонаблюдение 24/7</x-tag-advantages>
+          <x-tag-advantages color="white" icon="done">Тревожная кнопка в каждой комнате</x-tag-advantages>
+          <x-tag-advantages color="white" icon="done">Охраняемая территория</x-tag-advantages>
+        </fill-tags>
+      </x-advantages-mini-card>
+    </div>
+  </div>
+
 </section>

@@ -10,7 +10,7 @@
   background-color: $color-bg-surface;
 }
 
-.advantages__content {
+.advantages__content--desktop {
   width: 100%;
   min-height: 100vh;
   display: flex;
@@ -18,7 +18,7 @@
   padding: $content-padding-x;
 
   @include mobile {
-    padding: $page-padding-x;
+    display: none;
   }
 }
 
@@ -237,4 +237,30 @@
 
 .advantages__progress-step.is-active .advantages__progress-label {
   font-weight: $fw-bold;
+}
+
+// ── Mobile: stacking cards ──
+
+.advantages__mobile-stack {
+  display: none;
+  padding: $page-padding-x;
+
+  @include mobile {
+    display: block;
+  }
+}
+
+.advantages__mobile-card {
+  margin-bottom: 16px;
+  transform-origin: top center;
+
+  // Override the component's fixed width so the card fills the stack column
+  .advantages-mini-card {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }

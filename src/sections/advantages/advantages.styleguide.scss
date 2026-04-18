@@ -1,0 +1,16 @@
+@use '../../styles/tokens' as *;
+
+/** Styleguide-only overrides for the advantages section preview. */
+
+// Remove inner padding — advantages is full-bleed
+#sec-advantages .sg-frame__viewport {
+  padding: 0;
+}
+
+// On mobile, let the section render at natural viewport width
+// (overrides the global min-width: $content-max-width from styleguide.scss)
+#sec-advantages .sg-frame__viewport {
+  @include mobile {
+    min-width: 0;
+  }
+}

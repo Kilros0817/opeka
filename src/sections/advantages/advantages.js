@@ -1,13 +1,17 @@
 /**
- * advantages.js — pinned scroll-driven twin-panel animation.
- * Left panel: text slides crossfade. Right panel: slides reveal upward.
- * Progress nav bar scrolls to track the active step.
- * Uses GSAP ScrollTrigger (scrub).
+ * advantages.js — scroll-driven animation, two modes:
+ *
+ * Desktop (≥768px): pinned twin-panel — left crossfades, right reveals upward.
+ * Mobile  (≤767px): stacking cards — each card pins at top with pinSpacing:false.
+ *
+ * Uses GSAP ScrollTrigger (scrub / pin).
  */
 
 const REDUCED_MOTION = window.matchMedia('(prefers-reduced-motion: reduce)').matches
 
 const pad2 = (n) => String(n).padStart(2, '0')
+
+// ── Desktop helpers ──────────────────────────────────────────────────────────
 
 function applyFinalState(gsap, section) {
   const slidesLeft = gsap.utils.toArray('.advantages__panel--left .advantages__slide', section)
@@ -16,7 +20,6 @@ function applyFinalState(gsap, section) {
   const counterCurrent = section.querySelector('.advantages__counter-current')
   const n = steps.length
 
-  // Show last slide in both panels
   gsap.set(slidesLeft, { autoAlpha: 0 })
   gsap.set(slidesLeft[n - 1], { autoAlpha: 1 })
   gsap.set(slidesRight, { autoAlpha: 1, yPercent: 0 })
@@ -25,7 +28,7 @@ function applyFinalState(gsap, section) {
   if (counterCurrent) counterCurrent.textContent = pad2(n)
 }
 
-function buildTimeline(gsap, ScrollTrigger, section) {
+function buildDesktopTimeline(gsap, ScrollTrigger, section) {
   const steps = gsap.utils.toArray('.advantages__progress-step', section)
   const slidesLeft = gsap.utils.toArray('.advantages__panel--left .advantages__slide', section)
   const slidesRight = gsap.utils.toArray('.advantages__panel--right .advantages__slide', section)
@@ -39,7 +42,6 @@ function buildTimeline(gsap, ScrollTrigger, section) {
 
   if (counterTotal) counterTotal.textContent = pad2(n)
 
-  // ── Initial state ──
   gsap.set(slidesLeft, { autoAlpha: 0 })
   gsap.set(slidesLeft[0], { autoAlpha: 1 })
   gsap.set(slidesRight[0], { autoAlpha: 1, yPercent: 0 })
@@ -62,7 +64,6 @@ function buildTimeline(gsap, ScrollTrigger, section) {
     gsap.set(stepBar, { x: -p * maxShift })
   }
 
-  // ── Timeline ──
   const tl = gsap.timeline({
     scrollTrigger: {
       trigger: section,
@@ -81,20 +82,72 @@ function buildTimeline(gsap, ScrollTrigger, section) {
   steps.forEach((_, j) => {
     if (j === 0) return
     const t = 0.5 * j
-    // Right panel: slide-up reveal
     tl.fromTo(slidesRight[j], { yPercent: 100 }, { yPercent: 0, duration: 0.5, ease: 'none' }, t)
-    // Left panel: crossfade
     tl.to(slidesLeft[j], { autoAlpha: 1, duration: 0.25, ease: 'none' }, t)
     tl.to(slidesLeft[j - 1], { autoAlpha: 0, duration: 0.25, ease: 'none' }, t)
   })
 
-  // Sync bar position and active step after layout is ready
   gsap.delayedCall(0, () => {
     ScrollTrigger.refresh()
     slipBar()
     setStep(Math.min(n - 1, Math.max(0, Math.floor(tl.time() / 0.5 + 1e-6))))
   })
 }
+
+// ── Mobile helpers ───────────────────────────────────────────────────────────
+
+function buildMobileStack(gsap, ScrollTrigger, section) {
+  const stack = section.querySelector('.advantages__mobile-stack')
+  const cards = gsap.utils.toArray('.advantages__mobile-card', section)
+  if (!cards.length || !stack) return
+
+  const spacer = 20       // px offset between pinned card tops
+  const scaleStep = 0.05  // scale reduction per stacking level
+  const n = cards.length
+
+  // Give the stack enough explicit scroll height so all pins have room.
+  // Total needed: sum of all card heights + spacers between them + one extra
+  // card height so the last card can fully travel over the second-to-last.
+  const setStackHeight = () => {
+    const totalH = cards.reduce((sum, c) => sum + c.offsetHeight, 0)
+    const totalSpacers = (n - 1) * spacer
+    // Extra travel = last card height (so it fully covers card n-1)
+    const extra = cards[n - 1]?.offsetHeight ?? 0
+    stack.style.paddingBottom = `${extra + totalSpacers}px`
+  }
+  setStackHeight()
+  ScrollTrigger.addEventListener('refreshInit', setStackHeight)
+
+  // Pin ALL cards (including last) using the stack as endTrigger
+  cards.forEach((card, index) => {
+    ScrollTrigger.create({
+      trigger: card,
+      start: `top-=${index * spacer} top`,
+      endTrigger: stack,
+      end: `bottom top+=${n * spacer}`,
+      pin: true,
+      pinSpacing: false,
+      invalidateOnRefresh: true,
+    })
+
+    // Shrink this card as each subsequent card pins over it
+    cards.slice(index + 1).forEach((laterCard, offset) => {
+      gsap.to(card, {
+        scale: 1 - scaleStep * (offset + 1),
+        ease: 'none',
+        scrollTrigger: {
+          trigger: laterCard,
+          start: 'top bottom',
+          end: `top-=${index * spacer} top`,
+          scrub: true,
+          invalidateOnRefresh: true,
+        },
+      })
+    })
+  })
+}
+
+// ── Init ─────────────────────────────────────────────────────────────────────
 
 export async function initAdvantages(root = document) {
   const sections = root.querySelectorAll('[data-advantages]')
@@ -115,6 +168,36 @@ export async function initAdvantages(root = document) {
       return
     }
 
-    buildTimeline(gsap, ScrollTrigger, section)
+    // gsap.context with conditions replaces the deprecated ScrollTrigger.matchMedia
+    gsap.context(() => {
+      ScrollTrigger.create({
+        // dummy trigger just to evaluate conditions on resize
+        onRefresh() {},
+      })
+    })
+
+    const mm = gsap.matchMedia()
+
+    mm.add('(max-width: 767px)', () => {
+      buildMobileStack(gsap, ScrollTrigger, section)
+      return () => ScrollTrigger.getAll()
+        .filter(st => st.vars?.trigger && section.contains(
+          typeof st.vars.trigger === 'string'
+            ? document.querySelector(st.vars.trigger)
+            : st.vars.trigger
+        ))
+        .forEach(st => st.kill())
+    })
+
+    mm.add('(min-width: 768px)', () => {
+      buildDesktopTimeline(gsap, ScrollTrigger, section)
+      return () => ScrollTrigger.getAll()
+        .filter(st => st.vars?.trigger && section.contains(
+          typeof st.vars.trigger === 'string'
+            ? document.querySelector(st.vars.trigger)
+            : st.vars.trigger
+        ))
+        .forEach(st => st.kill())
+    })
   })
 }
