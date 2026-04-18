@@ -1,9 +1,9 @@
 @use '../../../styles/tokens' as *;
 
 /**
- * .direction-card — Promotion Mini Card (Figma).
+ * .direction-card — Direction Mini Card (Figma).
  *
- * Composition: .tag + title + description + .text-link.
+ * Composition: title + description + .text-link.
  * Decorative blob color via --direction-card-blob.
  * Modifier --in-slider: absolute positioning + data-pos stack layers.
  *
@@ -19,7 +19,7 @@
   width: 726px;
   height: 436px;
   border-radius: 32px;
-  overflow: hidden;
+  overflow: hidden; 
   flex-shrink: 0;
 
   @include mobile {
