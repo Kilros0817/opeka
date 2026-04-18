@@ -11,30 +11,15 @@ const REDUCED_MOTION = window.matchMedia('(prefers-reduced-motion: reduce)').mat
 
 const pad2 = (n) => String(n).padStart(2, '0')
 
-// ── Desktop helpers ──────────────────────────────────────────────────────────
-
-function applyFinalState(gsap, section) {
-  const slidesLeft = gsap.utils.toArray('.advantages__panel--left .advantages__slide', section)
-  const slidesRight = gsap.utils.toArray('.advantages__panel--right .advantages__slide', section)
-  const steps = gsap.utils.toArray('.advantages__progress-step', section)
-  const counterCurrent = section.querySelector('.advantages__counter-current')
-  const n = steps.length
-
-  gsap.set(slidesLeft, { autoAlpha: 0 })
-  gsap.set(slidesLeft[n - 1], { autoAlpha: 1 })
-  gsap.set(slidesRight, { autoAlpha: 1, yPercent: 0 })
-
-  steps.forEach((el, i) => el.classList.toggle('is-active', i === n - 1))
-  if (counterCurrent) counterCurrent.textContent = pad2(n)
-}
+// ── Desktop ──────────────────────────────────────────────────────────────────
 
 function buildDesktopTimeline(gsap, ScrollTrigger, section) {
-  const steps = gsap.utils.toArray('.advantages__progress-step .btn-step', section)
-  const slidesLeft = gsap.utils.toArray('.advantages__panel--left .advantages__slide', section)
+  const steps       = gsap.utils.toArray('.advantages__progress-step .btn-step', section)
+  const slidesLeft  = gsap.utils.toArray('.advantages__panel--left .advantages__slide', section)
   const slidesRight = gsap.utils.toArray('.advantages__panel--right .advantages__slide', section)
   const counterCurrent = section.querySelector('.advantages__counter-current')
-  const counterTotal = section.querySelector('.advantages__counter-total')
-  const stepBar = section.querySelector('.advantages__progress-steps')
+  const counterTotal   = section.querySelector('.advantages__counter-total')
+  const stepBar  = section.querySelector('.advantages__progress-steps')
   const stepClip = section.querySelector('.advantages__progress-clip')
   const n = steps.length
 
@@ -83,7 +68,7 @@ function buildDesktopTimeline(gsap, ScrollTrigger, section) {
     if (j === 0) return
     const t = 0.5 * j
     tl.fromTo(slidesRight[j], { yPercent: 100 }, { yPercent: 0, duration: 0.5, ease: 'none' }, t)
-    tl.to(slidesLeft[j], { autoAlpha: 1, duration: 0.25, ease: 'none' }, t)
+    tl.to(slidesLeft[j],     { autoAlpha: 1, duration: 0.25, ease: 'none' }, t)
     tl.to(slidesLeft[j - 1], { autoAlpha: 0, duration: 0.25, ease: 'none' }, t)
   })
 
@@ -94,29 +79,17 @@ function buildDesktopTimeline(gsap, ScrollTrigger, section) {
   })
 }
 
-// ── Mobile helpers ───────────────────────────────────────────────────────────
+// ── Mobile ───────────────────────────────────────────────────────────────────
 
 function buildMobileStack(gsap, ScrollTrigger, section) {
   const stack = section.querySelector('.advantages__stack')
   const cards = gsap.utils.toArray('.advantages__card', section)
   if (!cards.length || !stack) return
 
-  const spacer = 20       // px offset between pinned card tops
+  const spacer    = 20    // px offset between pinned card tops
   const scaleStep = 0.05  // scale reduction per stacking level
   const n = cards.length
 
-  // Add extra scroll height to the last card so it has room to fully
-  // travel over the second-to-last. The CTA sits after the stack naturally.
-  const setLastCardPadding = () => {
-    const lastCard = cards[n - 1]
-    if (!lastCard) return
-    const extra = lastCard.offsetHeight + (n - 1) * spacer
-    lastCard.style.paddingBottom = `${extra}px`
-  }
-  setLastCardPadding()
-  ScrollTrigger.addEventListener('refreshInit', setLastCardPadding)
-
-  // Pin ALL cards (including last) using the stack as endTrigger
   cards.forEach((card, index) => {
     ScrollTrigger.create({
       trigger: card,
@@ -128,7 +101,6 @@ function buildMobileStack(gsap, ScrollTrigger, section) {
       invalidateOnRefresh: true,
     })
 
-    // Shrink this card as each subsequent card pins over it
     cards.slice(index + 1).forEach((laterCard, offset) => {
       gsap.to(card, {
         scale: 1 - scaleStep * (offset + 1),
@@ -161,41 +133,16 @@ export async function initAdvantages(root = document) {
     if (section.dataset.advantagesReady === 'true') return
     section.dataset.advantagesReady = 'true'
 
-    if (REDUCED_MOTION) {
-      applyFinalState(gsap, section)
-      return
-    }
-
-    // gsap.context with conditions replaces the deprecated ScrollTrigger.matchMedia
-    gsap.context(() => {
-      ScrollTrigger.create({
-        // dummy trigger just to evaluate conditions on resize
-        onRefresh() {},
-      })
-    })
+    if (REDUCED_MOTION) return
 
     const mm = gsap.matchMedia()
 
     mm.add('(max-width: 767px)', () => {
       buildMobileStack(gsap, ScrollTrigger, section)
-      return () => ScrollTrigger.getAll()
-        .filter(st => st.vars?.trigger && section.contains(
-          typeof st.vars.trigger === 'string'
-            ? document.querySelector(st.vars.trigger)
-            : st.vars.trigger
-        ))
-        .forEach(st => st.kill())
     })
 
     mm.add('(min-width: 768px)', () => {
       buildDesktopTimeline(gsap, ScrollTrigger, section)
-      return () => ScrollTrigger.getAll()
-        .filter(st => st.vars?.trigger && section.contains(
-          typeof st.vars.trigger === 'string'
-            ? document.querySelector(st.vars.trigger)
-            : st.vars.trigger
-        ))
-        .forEach(st => st.kill())
     })
   })
 }
