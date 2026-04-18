@@ -34,9 +34,9 @@
   <div class="promo-main-card__bg" aria-hidden="true"></div>
   <div class="promo-main-card__content">
     <div class="promo-main-card__image-tag">
-      <div class="promo-main-card__image">
+      <div class="promo-main-card__image-area" aria-label="{{ alt }}">
         <if condition="imgUrl">
-          <img src="{{ imgUrl }}" alt="{{ alt }}" loading="lazy" class="promo-main-card-image-size">
+          <img src="{{ imgUrl }}" alt="{{ alt }}" loading="lazy" class="promo-main-card__image">
         </if>
       </div>
       <div class="promo-main-card__tag">
