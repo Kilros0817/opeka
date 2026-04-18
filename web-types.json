@@ -297,10 +297,6 @@
           "description": "Button step."
         },
         {
-          "name": "x-button-video",
-          "description": "Video Button."
-        },
-        {
           "name": "x-circle-icon",
           "description": "Renders a <span> with optional 16px icon.",
           "attributes": [
