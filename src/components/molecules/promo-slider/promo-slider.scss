@@ -1,0 +1,58 @@
+@use '../../../styles/tokens' as *;
+
+/**
+ * .promo-mini-slider — stack-animated promo-mini-card slider.
+ *
+ * Fixed-size container. Cards must use `.promo-mini-card--in-slider`
+ * for absolute positioning, data-pos reactions, and frost layers.
+ * JS (promo-mini-slider.js) manages data-pos, inert, pagination, and auto-rotate.
+ */
+
+.promo-mini-slider {
+  position: relative;
+  width: 360px;
+  height: 306px;
+
+  @include mobile {
+    width: auto;
+    height: auto;
+    display: flex;
+    gap: 8px;
+    overflow: auto hidden;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: $page-padding-x;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar { display: none; }
+
+    &::before,
+    &::after {
+      content: '';
+      flex-shrink: 0;
+      width: $page-padding-x - 8px;
+    }
+  }
+}
+
+/* Controls (pagination + prev/next) */
+.promo-mini-slider__controls {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  right: 24px;
+  z-index: 20;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+
+  @include mobile { display: none; }
+}
+
+.promo-mini-slider__nav {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
