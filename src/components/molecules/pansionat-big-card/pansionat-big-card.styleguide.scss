@@ -2,8 +2,20 @@
 
 .sg-bigbox {
   display: flex;
-  padding: 20px;
+  padding: $space-20;
   min-height: max-content;
   border-radius: $radius-md;
   background-color: $navy-05;
+}
+
+.svg-lightning {
+  color: $orange-500;
+  width: $fs-14;
+  height: $fs-14;
+  margin-right: $space-xs;
+
+  @include mobile {
+    width: $fs-12;
+    height: $fs-12;
+  }
 }
