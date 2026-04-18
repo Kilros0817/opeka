@@ -319,6 +319,10 @@
           ]
         },
         {
+          "name": "x-certificate-card",
+          "description": "Certificate card: img + tag + description\r Composes <x-tag> internally."
+        },
+        {
           "name": "x-circle-icon",
           "description": "Renders a <span> with optional 16px icon.",
           "attributes": [
@@ -368,7 +372,7 @@
         },
         {
           "name": "x-promo-card",
-          "description": "Promotion card: img + tag + title + description + text-link\r Composes <x-tag> and <x-text-link> internally."
+          "description": "Promo card: img + tag + title + description + text-link\r Composes <x-tag> and <x-text-link> internally."
         },
         {
           "name": "x-promo-mini-card",

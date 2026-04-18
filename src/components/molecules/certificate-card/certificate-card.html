@@ -1,0 +1,48 @@
+<script props>
+  /*
+   * x-certificate-card
+   *
+   * Certificate card: img + tag + description
+   * Composes <x-tag> internally.
+   *
+   * Props (shell):
+   *   image-url - image url for the card (default: '')
+   *   alt  — image description
+   *   bg-color — background color for card (default: white)
+   *   tag-color — color for the <x-tag> (default: grey)
+   *   description - certification description
+   *
+   * Slots:
+   *   <fill-tag>   — tag label
+   *   <fill-desc>  — certification description (rendered in <p>)
+   *
+   */
+  const imageUrl = props['image-url'] || ''
+  const alt = props['alt'] || 'no image'
+  const bgColor = props['bg-color'] || 'white'
+  const tagColor = props['tag-color'] || 'gray'
+  const description = props['description'] || ''
+
+  module.exports = {
+    imageUrl, alt, bgColor, tagColor, description,
+    cls: [
+      'certificate-card',
+      'certificate-card--' + bgColor,
+    ].join(' '),
+  }
+
+</script>
+
+<article class="{{ cls }}">
+  <div class="certificate-card__content">
+    <div class="certificate-card__image-area" aria-label="{{ description }}">
+        <if condition="imageUrl">
+          <img src="{{ imageUrl }}" alt="{{ description }}" loading="lazy" class="certificate-card__image">
+        </if>
+    </div>
+    <div class="certificate-card__tag-text">
+      <x-tag size="sm" color="{{ tagColor }}"><slot-tag></slot-tag></x-tag>
+      <p class="certificate-card__desc"><slot-desc></slot-desc></p>
+    </div>
+  </div>
+</article>

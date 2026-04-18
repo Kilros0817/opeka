@@ -2,11 +2,11 @@
   /*
    * x-promo-card
    *
-   * Promotion card: img + tag + title + description + text-link
+   * Promo card: img + tag + title + description + text-link
    * Composes <x-tag> and <x-text-link> internally.
    *
    * Props (shell):
-   *   img-url - img url for the card (default: '')
+   *   image-url - image url for the card (default: '')
    *   alt - img description
    *   tag-color — color for the <x-tag> (default: red)
    *   tag-icon — sprite id for the <x-tag> (default: fire)
@@ -20,22 +20,22 @@
    *   <fill-link>  — CTA link label
    *
    */
-  const imgUrl = props['img-url'] || ''
+  const imageUrl = props['image-url'] || ''
   const alt = props['alt'] || 'no image'
   const tagColor = props['tag-color'] || 'red'
   const tagIcon = props['tag-icon'] || 'fire'
   const linkHref = props['link-href'] || '#'
   const linkIcon = props['link-icon'] || 'plus'
 
-  module.exports = { imgUrl, alt, tagColor, tagIcon, linkHref, linkIcon }
+  module.exports = { imageUrl, alt, tagColor, tagIcon, linkHref, linkIcon }
 </script>
 
 <article class="promo-card">
   <div class="promo-card__bg" aria-hidden="true"></div>
   <div class="promo-card__content">
     <div class="promo-card__image-area" aria-label="{{ alt }}">
-        <if condition="imgUrl">
-          <img src="{{ imgUrl }}" alt="{{ alt }}" loading="lazy" class="promo-card__image">
+        <if condition="imageUrl">
+          <img src="{{ imageUrl }}" alt="{{ alt }}" loading="lazy" class="promo-card__image">
         </if>
     </div>
     <div class="promo-card__body">
