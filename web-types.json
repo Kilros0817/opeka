@@ -226,6 +226,10 @@
           "description": "Button step."
         },
         {
+          "name": "x-circle-button",
+          "description": "x-circle-button — see src\\components\\atoms\\circle-button\\circle-button.html"
+        },
+        {
           "name": "x-circle-icon",
           "description": "Renders a <span> with optional 16px icon.",
           "attributes": [
