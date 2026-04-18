@@ -1,0 +1,78 @@
+@use '../../../styles/tokens' as *;
+
+/**
+ * .tab — small uppercase label.
+ *
+ * type: black | white | non-border
+ * status:  default | active
+ */
+
+.tab {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: $fs-base;
+  line-height: 0px;
+  letter-spacing: -0.02em;
+  font-weight: $fw-medium;
+  white-space: nowrap;
+  cursor: pointer;
+  user-select: none;
+  border-radius: $radius-lg;
+}
+
+/* Status */
+.tab--black {
+  .tab--default {
+    padding: 20px;
+    border-color: $navy-10;
+    color: $navy-60;
+    border-width: 1.2px;
+    border-style: solid;
+    border-radius: $radius-lg;
+  }
+
+  .tab--active {
+    padding: 20px;
+    border-color: $blue-100p;
+    color: $blue-100p;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: $radius-lg;
+  }
+}
+
+.tab--white {
+  .tab--default {
+    padding: 20px;
+    border-color: $white-30;
+    color: $white-100;
+    border-width: 1.2px;
+    border-style: solid;
+    border-radius: $radius-lg;
+  }
+
+  .tab--active {
+    padding: 20px;
+    border-color: $white-30;
+    color: $white-100;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: $radius-lg;
+  }
+}
+
+.tab--non-border {
+  .tab--default {
+    padding: 20px;
+    background-color: $navy-05;
+    border-radius: $radius-lg;
+  }
+
+  .tab--active {
+    padding: 20px;
+    background-color: $navy-10;
+    border-radius: $radius-lg;
+  }
+}

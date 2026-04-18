@@ -11,6 +11,7 @@ $fs-base:      16px;
 $lh-base:      1.5;
 
 // Standalone sizes for non-design-system contexts (logo, styleguide headings).
+$fs-12: 12px;
 $fs-14: 14px;
 $fs-24: 24px;
 $fs-32: 32px;
@@ -146,6 +147,14 @@ $ls-tight: -0.02em;
   text-transform: uppercase;
 }
 
+@mixin type-m-10 {
+  font-family: $font-primary;
+  font-weight: $fw-medium;
+  font-size: 10px;
+  line-height: 14px;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+}
 /* Regular family — body, descriptions, sub-text */
 
 @mixin type-r-18 { // 18/22px -0.02em

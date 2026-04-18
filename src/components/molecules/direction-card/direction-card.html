@@ -1,0 +1,43 @@
+<script props>
+  /*
+   * x-direction-card
+   *
+   * Promotion card: tag + title + description + text-link, with a decorative blob.
+   * Composes <x-tag> and <x-text-link> internally.
+   *
+   * Props (shell):
+   *   link-href — href for the CTA link (default: #)
+   *   link-icon — sprite id for the link icon (default: plus)
+   *
+   * Slots:
+   *   <fill-title> — card title (rendered in <h3>)
+   *   <fill-desc>  — card description (rendered in <p>)
+   *   <fill-link>  — CTA link label
+   *
+   * Blob color — override CSS var `--direction-card-blob` from the outside.
+   */
+  const linkHref = props['link-href'] || '#'
+  const linkIcon = props['link-icon'] || 'plus'
+  const src = props['image-src'] || ''
+  const alt = props['alt'] || ''
+
+  module.exports = { linkHref, linkIcon, src, alt }
+</script>
+
+<article class="direction-card">
+  <div class="direction-card__bg" aria-hidden="true">
+    <img class="direction-card__bg-img" src="{{ src }}" alt="{{ alt }}" loading="lazy">
+  </div>
+  <div class="direction-card__content">
+    <div class="direction-card__body">
+      <div class="direction-card__text">
+        <h3 class="direction-card__title"><slot-title></slot-title></h3>
+        <p class="direction-card__desc"><slot-desc></slot-desc></p>
+      </div>
+       <div class="direction-card__footer">
+        <h5><slot-link></slot-link></h5>
+        <x-button variant="tr-white" icon="{{ linkIcon }}" icon-only pill aria-label="Предыдущий слайд" data-slider-prev></x-button>
+       </div>
+    </div>
+  </div>
+</article>

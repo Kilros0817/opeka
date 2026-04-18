@@ -378,3 +378,15 @@
 
 .sg-token__name  { font-weight: $fw-medium; }
 .sg-token__value { color: $color-text-secondary; font-size: 12px; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+
+
+/* Tabs matrix — styleguide only */
+.sg-matrix--tabs {
+  display: grid;
+  grid-template-columns: none;
+  gap: 4px;
+  align-items: stretch;
+  padding: 20px;
+  border-radius: $radius-md;
+  background-color: $color-tr-black-05;
+}
