@@ -7,8 +7,8 @@
    * Props:
    *   href — if set, renders as <a>, otherwise <button>
    *   type — button type: button | submit | reset (default: button)
-   *   size — mini | medium | big (default: mini)
-   *   variant — blue | white | tr-white | tr-grey | tr-grey-white | black (default: blue)
+   *   size — mini | medium 
+   *   variant — blue | white | tr-white | tr-grey | tr-grey-white 
    *   icon — sprite id without "icon-" prefix
    *   icon-only — hides the text label (aria-label is REQUIRED)
    *   pill — adds btn--pill modifier
@@ -39,22 +39,12 @@
   }
 </script>
 
-<if condition="href">
-  <a href="{{ href }}" class="{{ cls }}">
-    <if condition="icon && size === 'mini'"><svg class="btn__icon" aria-hidden="true"><use href="#icon-{{ icon }}"/></svg></if>
-    <if condition="icon && size === 'medium'"><span class="btn__icon-circle" aria-hidden="true"><svg class="btn__icon"><use href="#icon-{{ icon }}"/></svg></span></if>
-    <if condition="!iconOnly"><span class="btn__label"><yield></yield></span></if>
-    <if condition="icon && size === 'big'"><span class="btn__icon-circle" aria-hidden="true"><svg class="btn__icon"><use href="#icon-{{ icon }}"/></svg></span></if>
-  </a>
-</if>
-
-<if condition="!href">
   <button type="{{ type }}" class="{{ cls }}">
     <if condition="icon && size === 'mini'"><svg class="btn__icon" aria-hidden="true"><use href="#icon-{{ icon }}"/></svg></if>
     <if condition="icon && size === 'medium'"><span class="btn__icon-circle" aria-hidden="true"><svg class="btn__icon"><use href="#icon-{{ icon }}"/></svg></span></if>
     <if condition="!iconOnly"><span class="btn__label"><yield></yield></span></if>
     <if condition="icon && size === 'big'"><span class="btn__icon-circle" aria-hidden="true"><svg class="btn__icon"><use href="#icon-{{ icon }}"/></svg></span></if>
   </button>
-</if>
+
 
 
