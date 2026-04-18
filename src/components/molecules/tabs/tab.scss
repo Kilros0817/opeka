@@ -2,8 +2,6 @@
 
 /**
  *
- * type:   black | white | non-border
- * status: default | active
  */
 
 .tab {
@@ -20,59 +18,4 @@
   user-select: none;
   border-radius: $radius-lg;
   margin: 1px 0;
-}
-
-/* Status */
-.tab--black {
-  .tab--default {
-    padding: 20px;
-    border-color: $navy-10;
-    color: $navy-60;
-    border-width: 1.2px;
-    border-style: solid;
-    border-radius: $radius-lg;
-  }
-
-  .tab--active {
-    padding: 20px;
-    border-color: $blue-100p;
-    color: $blue-100p;
-    border-width: 2px;
-    border-style: solid;
-    border-radius: $radius-lg;
-  }
-}
-
-.tab--white {
-  .tab--default {
-    padding: 20px;
-    border-color: $white-30;
-    color: $white-100;
-    border-width: 1.2px;
-    border-style: solid;
-    border-radius: $radius-lg;
-  }
-
-  .tab--active {
-    padding: 20px;
-    border-color: $white-30;
-    color: $white-100;
-    border-width: 2px;
-    border-style: solid;
-    border-radius: $radius-lg;
-  }
-}
-
-.tab--non-border {
-  .tab--default {
-    padding: 20px;
-    background-color: $navy-05;
-    border-radius: $radius-lg;
-  }
-
-  .tab--active {
-    padding: 20px;
-    background-color: $navy-10;
-    border-radius: $radius-lg;
-  }
 }
