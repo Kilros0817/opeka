@@ -1,0 +1,19 @@
+<script props>
+  /*
+   * x-tab
+   *
+   * Props:
+   *   isactive  — true | false (default: false)
+   */
+  const isactive = props['isactive'] ? 'active' : 'default';
+
+  module.exports = {
+    isactive,
+  }
+</script>
+
+<div class="tab">
+  <span class="tab--{{ isactive }}">
+    <yield></yield>
+  </span>
+</div>

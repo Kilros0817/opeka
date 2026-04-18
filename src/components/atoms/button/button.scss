@@ -7,7 +7,8 @@
  * Colors: --blue | --white | --tr-white | --tr-grey | --tr-grey-white | --black
  */
 
-@mixin btn-color($bg-default,
+@mixin btn-color(
+  $bg-default,
   $bg-hover,
   $bg-disabled,
   $text-default,
@@ -22,18 +23,14 @@
     color: $text-default;
   }
 
-  &:hover:not(:disabled) {
-    background-color: $bg-hover;
-  }
+  &:hover:not(:disabled) { background-color: $bg-hover; }
 
   &:disabled,
   &[aria-disabled='true'] {
     background-color: $bg-disabled;
     color: $text-disabled;
 
-    .btn__icon-circle {
-      color: $text-disabled;
-    }
+    .btn__icon-circle { color: $text-disabled; }
   }
 }
 
@@ -46,12 +43,11 @@
   border: 0;
   text-decoration: none;
   white-space: nowrap;
+  cursor: pointer;
   overflow: hidden;
   transition:
     background-color $transition-fast,
     color $transition-fast;
-  cursor: pointer;
-  user-select: none;
 
   &:focus-visible {
     outline: 2px solid $color-focus-ring;
@@ -59,14 +55,10 @@
   }
 
   &:disabled,
-  &[aria-disabled='true'] {
-    cursor: not-allowed;
-  }
+  &[aria-disabled='true'] { cursor: not-allowed; }
 }
 
-.btn__label {
-  display: inline-block;
-}
+.btn__label { display: inline-block; }
 
 .btn__icon {
   display: block;
@@ -75,10 +67,7 @@
   height: 16px;
   fill: currentColor;
 
-  &--sm {
-    width: 14px;
-    height: 14px;
-  }
+  &--sm { width: 14px; height: 14px; }
 }
 
 .btn__icon-circle {
@@ -102,17 +91,13 @@
 }
 
 /* Shape modifiers */
-.btn--pill {
-  border-radius: $radius-pill;
-}
+.btn--pill { border-radius: $radius-pill; }
 
 .btn--icon-only {
   width: 34px;
   padding: 0;
 
-  &.btn--pill {
-    width: 40px;
-  }
+  &.btn--pill { width: 40px; }
 }
 
 .btn--medium {
@@ -151,42 +136,46 @@
 /* Colors */
 
 .btn--blue {
-  @include btn-color($bg-default: $color-blue,
-    $bg-hover: $color-blue-hover,
-    $bg-disabled: $color-blue-disabled,
-    $text-default: $color-white,
-    $text-disabled: $color-tr-white-50,
+  @include btn-color(
+    $bg-default:        $color-blue,
+    $bg-hover:          $color-blue-hover,
+    $bg-disabled:       $color-blue-disabled,
+    $text-default:      $color-white,
+    $text-disabled:     $color-tr-white-50,
     $circle-bg-default: $color-tr-white-20,
   );
 }
 
 .btn--white {
-  @include btn-color($bg-default: $color-white,
-    $bg-hover: $color-white-hover,
-    $bg-disabled: $color-white-disabled,
-    $text-default: $color-navy,
-    $text-disabled: $color-navy-60,
+  @include btn-color(
+    $bg-default:        $color-white,
+    $bg-hover:          $color-white-hover,
+    $bg-disabled:       $color-white-disabled,
+    $text-default:      $color-navy,
+    $text-disabled:     $color-navy-60,
     $circle-bg-default: $color-tr-black-05,
   );
 }
 
 .btn--tr-white {
-  @include btn-color($bg-default: $color-tr-white-20,
-    $bg-hover: $color-tr-white-30,
-    $bg-disabled: $color-tr-white-20,
-    $text-default: $color-white,
-    $text-disabled: $color-tr-white-50,
+  @include btn-color(
+    $bg-default:        $color-tr-white-20,
+    $bg-hover:          $color-tr-white-30,
+    $bg-disabled:       $color-tr-white-20,
+    $text-default:      $color-white,
+    $text-disabled:     $color-tr-white-50,
     $circle-bg-default: $color-tr-white-20,
   );
   backdrop-filter: blur($blur-button);
 }
 
 .btn--tr-grey {
-  @include btn-color($bg-default: $color-tr-black-05,
-    $bg-hover: $color-tr-black-10,
-    $bg-disabled: $color-tr-black-05,
-    $text-default: $color-navy,
-    $text-disabled: $color-navy-60,
+  @include btn-color(
+    $bg-default:        $color-tr-black-05,
+    $bg-hover:          $color-tr-black-10,
+    $bg-disabled:       $color-tr-black-05,
+    $text-default:      $color-navy,
+    $text-disabled:     $color-navy-60,
     $circle-bg-default: $color-tr-black-05,
   );
   backdrop-filter: blur($blur-button);
@@ -194,11 +183,12 @@
 
 // Tr Grey-White: same bg as Tr Grey, but white text and icon circle.
 .btn--tr-grey-white {
-  @include btn-color($bg-default: $color-tr-black-05,
-    $bg-hover: $color-tr-black-10,
-    $bg-disabled: $color-tr-black-05,
-    $text-default: $color-white,
-    $text-disabled: $color-tr-white-50,
+  @include btn-color(
+    $bg-default:        $color-tr-black-05,
+    $bg-hover:          $color-tr-black-10,
+    $bg-disabled:       $color-tr-black-05,
+    $text-default:      $color-white,
+    $text-disabled:     $color-tr-white-50,
     $circle-bg-default: $color-tr-white-20,
   );
   backdrop-filter: blur($blur-button);
@@ -206,113 +196,14 @@
 
 // Black — Mini only. Hover and Disabled look the same.
 .btn--black {
-  @include btn-color($bg-default: $color-navy,
-    $bg-hover: $color-navy-60,
-    $bg-disabled: $color-navy-60,
-    $text-default: $color-white,
-    $text-disabled: $color-tr-white-50,
+  @include btn-color(
+    $bg-default:        $color-navy,
+    $bg-hover:          $color-navy-60,
+    $bg-disabled:       $color-navy-60,
+    $text-default:      $color-white,
+    $text-disabled:     $color-tr-white-50,
     $circle-bg-default: $color-tr-white-20,
   );
 
-  &:hover:not(:disabled) {
-    color: $color-tr-white-50;
-  }
-}
-
-
-
-.btn--border-black-normal {
-  border-color: $color-border;
-  border-width: 1.2px;
-  border-style: solid;
-}
-
-.btn--color-black {
-  color: $color-navy-60;
-}
-
-.btn--border-blue-bold {
-  border-color: $color-tr-blue-100;
-  border-width: 2px;
-  border-style: solid;
-}
-
-.btn--color-blue {
-  color: $color-tr-blue-100;
-}
-
-.btn--border-white-normal {
-  border-color: $color-border-white-30;
-  border-width: 1.2px;
-  border-style: solid;
-}
-
-.btn--color-white {
-  color: $color-text-on-dark-100;
-}
-
-.btn--border-white-bold {
-  border-color: $color-border-white-30;
-  border-width: 2px;
-  border-style: solid;
-}
-
-.btn--grey {
-  background-color: $color-tr-black-10;
-}
-
-.btn--color-black {
-  color: $color-navy-100;
-}
-
-.btn--pad-20 {
-  padding: 20px;
-}
-
-/* Tab active state — toggled by tabs.js via data-tab-status */
-.tabs [data-tab-status='active'] {
-  &.btn--border-black-normal,
-  &.btn--border-blue-bold {
-    border-style: solid !important;
-    border-color: $color-tr-blue-100 !important;
-    border-width: 2px !important;
-    color: $color-tr-blue-100 !important;
-  }
-
-  &.btn--border-white-normal,
-  &.btn--border-white-bold {
-    border-style: solid !important;
-    border-width: 2px !important;
-    color: $color-text-on-dark-100 !important;
-  }
-
-  &.btn--tr-grey,
-  &.btn--grey {
-    background-color: $color-tr-black-10 !important;
-    color: $color-navy-100 !important;
-  }
-}
-
-/* Tab default state — reset active-looking classes when deactivated */
-.tabs [data-tab-status='default'] {
-  &.btn--border-blue-bold {
-    border-style: solid !important;
-    border-color: $color-border !important;
-    border-width: 1.2px !important;
-    color: $color-navy-60 !important;
-  }
-
-  &.btn--color-blue {
-    color: $color-navy-60 !important;
-  }
-
-  &.btn--border-white-bold {
-    border-style: solid !important;
-    border-width: 1.2px !important;
-  }
-
-  &.btn--grey {
-    background-color: $color-tr-black-05 !important;
-    color: $color-navy !important;
-  }
+  &:hover:not(:disabled) { color: $color-tr-white-50; }
 }
