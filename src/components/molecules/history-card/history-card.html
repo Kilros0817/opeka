@@ -1,0 +1,66 @@
+<script props>
+  /*
+   * x-history-card
+   *
+   * History card: title + disease + house + name + age + state + desc + result + current-state + more + image
+   * Composes <x-tag>.
+   *
+   * Props (shell):
+   *   alt - name of image
+   *   src_main - imgae src
+   *   color - gray and white
+   * 
+   * Slots:
+   *   <fill-time>   — tag time
+   *   <fill-disease> — card disease
+   *   <fill-house>  — card house
+   *   <fill-name> - card name 
+   *   <fill-age>  - card age
+   *   <fill-state> - card state
+   *   <fill-desc> - card desc
+   *   <fill-result> - card result
+   *   <fill-curent-state> - card curent-state
+   *   <fill-more> - card more  
+   * 
+   */
+  const src_main = props.src_main || ''
+  const alt = props.alt || ''
+  const color = props.color || 'white'
+
+  module.exports = { src_main, alt, color }
+
+</script>
+<div class="card card__bg--{{color}}">
+  <div class="card__header">
+    <div class="card__profile">
+      <img class="card__image--avatar" src="{{src_main}}" alt="Анна Сергеевна" />
+      <div class="card__info">
+        <div class="card__name"><slot-name></slot-name></div>
+        <div class="card__age"><slot-age></slot-age></div>
+      </div>
+    </div>
+    <div class="card__tags">
+      <div class="card__tag"><x-tag size="sm" color="tr-grey" ><slot-time></slot-time></x-tag></div>
+      <div class="card__tag"><x-tag size="sm" color="tr-grey" ><slot-disease></slot-disease></x-tag></div>
+      <div class="card__tag"><x-tag size="sm" color="tr-grey" ><slot-house></slot-house></x-tag></div>
+    </div>
+  </div>
+  <div class="card__content">
+    <div class="card__section">
+      <div class="card__label"><slot-state></slot-state></div>
+      <div class="card__text card__text--clamped-3">
+        <slot-desc></slot-desc>
+      </div>
+    </div>
+    <div class="card__section">
+      <div class="card__label"><slot-result></slot-result></div>
+      <div class="card__result">
+        <slot-current-state></slot-current-state>
+      </div>
+    </div>
+    <div class="card__more">
+      <span class="card__plus">+</span>
+      <span><slot-more></slot-more></span>
+    </div>
+  </div>
+</div>

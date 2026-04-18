@@ -1,0 +1,47 @@
+<!-- x-history-card showcase. Include in styleguide/components.html -->
+<section class="sg-section" data-nav-target>
+  <h2 class="sg-section__title">History Card</h2>
+  <p class="sg-section__desc">
+   
+    fill: time ,  disease ,  house , name , age , state , ,desc , avatar ,price ,result , current-state , more
+    prop: color(white,gray) , src_main, alt
+  </p>
+
+  <div class="sg-matrix sg-matrix--narrow">
+    <div class="sg-matrix__head">
+    </div>
+    <div class="sg-matrix__row">
+      <x-history-card color="white" src_main="../../assets/images/avatar.webp" alt="image">
+        <fill-time>8 месяцев</fill-time>
+        <fill-disease>Деменция</fill-disease>
+        <fill-house>Всеволожский пансионат</fill-house>
+        <fill-name>Анна Сергеевна </fill-name>
+        <fill-age>72 года</fill-age>
+        <fill-state>Состояние при заселении</fill-state>
+        <fill-desc>Анна Сергеевна испытывала трудности с ориентацией во времени и пространстве, часто тревожилась, плохо
+          спала, отказывалась от общения и нуждалась в постоянном присмотре.</fill-desc>
+        <fill-result>Результат</fill-result>
+        <fill-current-state>Со временем состояние стабилизировалось: тревожность снизилась, появился привычный
+          распорядок дня, улучшился сон.</fill-current-state>
+        <fill-more>Читать полностью</fill-more>
+      </x-history-card>
+    </div>
+  </div>
+
+  <sg-snippet title="x-history-card">
+    <x-history-card color="" src_main_back="../../assets/images/room_card_3_3.webp" alt="image">
+      <fill-time>8 месяцев</fill-time>
+      <fill-disease>Деменция</fill-disease>
+      <fill-house>Всеволожский пансионат</fill-house>
+      <fill-name>Анна Сергеевна </fill-name>
+      <fill-age>72 года</fill-age>
+      <fill-stage>Состояние при заселении</fill-stage>
+      <fill-desc>Анна Сергеевна испытывала трудности с ориентацией во времени и пространстве, часто тревожилась, плохо
+        спала, отказывалась от общения и нуждалась в постоянном присмотре.</fill-desc>
+      <fill-result>Результат</fill-result>
+      <fill-current-state>Со временем состояние стабилизировалось: тревожность снизилась, появился привычный распорядок
+        дня, улучшился сон.</fill-current-state>
+      <fill-more>Читать полностью</fill-more>
+    </x-history-card>
+  </sg-snippet>
+</section>

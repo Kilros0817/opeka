@@ -1,4 +1,34 @@
 <!-- x-promo-mini-card showcase. Include in styleguide/components.html -->
+<script props>
+  const tagInfo = [{
+    'tag-color': 'green',
+    'tag-icon': 'fire',
+    'tag-content': 'Скидка 20%'
+  }, {
+    'tag-color': 'red',
+    'tag-icon': 'fire',
+    'tag-content': 'Новое'
+  }, {
+    'tag-color': 'red',
+    'tag-icon': 'fire',
+    'tag-content': 'Новое'
+  }]
+
+  const categories = props['tag-category'] || [
+    'Мест в номере 2-4',
+    'Контроль за приемом лекарств',
+    '5-разовое питание',
+    'Функциональные для лежачих',
+    'Прогулки по территории',
+    'Мест в номере 2-5',
+    'Контроль за приемом лекарств22',
+    '5-разовое питание33',
+    'Функциональные лежачих44',
+    'Прогулки по территории55'
+  ]
+
+  module.exports = {tagInfo, categories};
+</script>
 
 <section class="sg-section" id="comp-promo-mini-card" data-nav-target>
   <h2 class="sg-section__title">Pansionat Big Card</h2>
@@ -13,10 +43,14 @@
   </p>
   
   <div class="sg-bigbox">
-    <x-pansionat-big-card>    
-      <fill-stat>повышенный спрос! осталось 5 свободных мест</fill-stat>
+    <x-pansionat-big-card tag-info="{{JSON.stringify(tagInfo)}}" category="{{JSON.stringify(categories)}}">    
+      <fill-stat>
+        <svg class="svg-lightning" aria-hidden="true">
+          <use href="#icon-lightning"/>
+        </svg>
+        повышенный спрос! осталось 5 свободных мест</fill-stat>
       <fill-title>Пансионат «Всеволожский»</fill-title>
-      <fill-desc>Ленинградская область, Всеволожск, пр. Достоевского, д.56</fill-desc>
+      <fill-desc>Ленинградская область, Всеволожск, пр. Достоевского, д.56 - 100 км от МКАД</fill-desc>
       <fill-price>от 3 300 ₽</fill-price>
       <fill-unit>/сутки</fill-unit>
     </x-pansionat-big-card>

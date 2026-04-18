@@ -21,6 +21,7 @@ $surface-page:    #f5f6f8;
 $rate-full:       #FFC927;
 $rate-empty:      #22294F0D;
 $text-common:     #a59898;
+
 /* Tags BG */
 $red-50:          #ffe3e4;
 $green-50:        #baf9ce;
@@ -46,6 +47,7 @@ $white-30:        rgb(255, 255, 255, 0.3);
 $white-20:        rgb(255, 255, 255, 0.2);
 $white-10:        rgb(255, 255, 255, 0.1);
 $white-100:       rgb(255, 255, 255, 1);
+$white-0:         rgb(255, 255, 255, 0);
 
 /* Blue transparent */
 $blue-20p:        rgb(240, 241, 245, 1);
@@ -79,12 +81,15 @@ $pink-100p:       rgb(255, 94, 97, 1);
 /* grey transparent */
 $grey-100p:       rgb(199, 201, 206, 1);
 
-/* Orange transparent */
-$orange-10p:      rgb(253, 163, 70, 0.1);
-
 /* Red transparent */
 $red-10p:         rgb(255, 94, 97, 0.1);
 
-/* Green transparent */
-$green-10p:       rgb(117, 199, 92, 0.1);
+$hezy-100p:       rgb(82, 82, 78,1);
 
+
+/* warning transparent */
+$warn-bg:         rgb(255, 236, 218, 1);
+
+/* pansionat-card gradient */
+$gr-grey:         linear-gradient(to top, rgb(10, 17, 17, 0.3) 1%, rgb(10, 17, 17, 0) 150%);
+$gr-grey-big:     linear-gradient(to top, rgb(10, 17, 17, 0.3) 1%, rgb(10, 17, 17, 0) 150%);

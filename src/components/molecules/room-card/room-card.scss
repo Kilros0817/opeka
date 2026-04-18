@@ -4,14 +4,12 @@
  * .room-card — Room Card (Figma).
  *
  * Composition: .title + description + price + unit.
- * Decorative blob color via --promo-mini-card-blob.
- * Modifier --in-slider: absolute positioning + data-pos stack layers.
  *
- * Desktop: 360x306, padding 24, radius 32
- * Mobile:  334x222, padding 24/16, radius 26
+ * Desktop: 1536 ~ 768
+ * Mobile:  767 ~ 393
  */
 
-.card-md {
+.room-card {
     padding: 32px;
     border-radius: 32px;
     background: $color-bg-card;
@@ -33,13 +31,13 @@
     }
 }
 
-.card__content {
+.room-card__content {
     display: flex;
     flex-direction: column;
     gap: 16px;
 }
 
-.card__seats {
+.room-card__seats {
     display: inline-flex;
     align-items: center;
     padding: 10px 16px;
@@ -48,20 +46,20 @@
     width: fit-content;
 }
 
-.card__text {
+.room-card__text {
     display: flex;
     flex-direction: column;
     gap: 8px;
 }
 
-.card__title {
+.room-card__title {
     font-size: 24px;
     font-weight: 500;
     color: $color-primary;
     line-height: 26px;
 }
 
-.card__description {
+.room-card__description {
     font-size: 16px;
     color: $color-secondary;
     line-height: 20px;
@@ -69,7 +67,7 @@
 
 /* IMAGE STACK */
 
-.card__images-md {
+.room-card__images {
     position: relative;
     height: 240px;
 
@@ -79,13 +77,13 @@
     }
 }
 
-.card__image {
+.room-card__image {
     position: absolute;
     border-radius: 20px;
     object-fit: cover;
 }
 
-.card__image--front-md {
+.room-card__image--front {
     width: 240px;
     height: 240px;
     z-index: 3;
@@ -97,12 +95,12 @@
     }
 }
 
-.card__image--middle-md {
+.room-card__image--middle {
     width: 220px;
     height: 220px;
     left: 47.508px;
     top: 10px;
-    // opacity: 0.7;
+    opacity: 0.7;
     z-index: 2;
     filter: blur(1px);
 
@@ -111,18 +109,18 @@
         height: 162px;
         left: 37.508px;
         top: 10px;
-        // opacity: 0.7;
+        opacity: 0.7;
         z-index: 2;
         filter: blur(1px);
     }
 }
 
-.card__image--back-md {
+.room-card__image--back {
     width: 200px;
     height: 200px;
     left: 90px;
     top: 20px;
-    // opacity: 0.4;
+    opacity: 0.4;
     z-index: 1;
     filter: blur(2px);
 
@@ -131,37 +129,42 @@
         height: 142px;
         left: 73px;
         top: 20px;
-        // opacity: 0.4;
+        opacity: 0.4;
         z-index: 1;
         filter: blur(2px);
     }
 }
 
-.card__footer {
+.room-card__footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.card__price {
+.room-card__price {
     display: flex;
     align-items: baseline;
     gap: 6px;
 }
 
-.card__price-value {
-    font-size: 28px;
+.room-card__price-value {
+    font-size: 32px;
     font-weight: 500;
     color: $color-primary;
+
+    @include mobile {
+        font-size: 20px;
+    }
 }
 
-.card__price-unit {
+.room-card__price-unit {
     font-size: 14px;
     color: $color-secondary;
 }
 
-.card__button {
-    width: 46px;
+
+.room-card__button {
+    width: 53px;
     height: 46px;
     border-radius: 50%;
     background: $color-button-bg;
@@ -170,15 +173,18 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
-}
 
-.card__button-icon {
-    width: 12px;
-    height: 12px;
-    border: 2px solid $color-border-icon;
-    border-left: none;
-    border-bottom: none;
-    transform: rotate(45deg);
+    @include mobile {
+        width: 40px;
+        height: 34px;
+        border-radius: 50%;
+        background: $color-button-bg;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
 }
 
 .truncate-2-lines {
@@ -189,7 +195,12 @@
     overflow: hidden;
 }
 
-.icon-plus__size {
-    width: 16px;
-    height: 16px;
+.icon-plus {
+    width: 18px;
+    height: 18px;
+
+    @include mobile {
+        width: 16px;
+        height: 16px;
+    }
 }

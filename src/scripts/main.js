@@ -17,7 +17,7 @@ import { initPromoMiniSliders } from '../components/molecules/promo-mini-slider/
 import { initAvatarButtons } from '../components/atoms/avatar-button/avatar-button.js'
 import { initAvatars } from '../components/atoms/avatar/avatar.js'
 import { initItsOpeka } from '../sections/its-opeka/its-opeka.js'
-import { initTabs } from '../components/atoms/tabs/tabs.js'
+import { initTabs } from '../components/molecules/tabs/tabs.js'
 import { initRate } from '../components/atoms/rate/rate.js'
 
 
