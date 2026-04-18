@@ -5,8 +5,9 @@
    * Advantages mini card: title + optional stack of tag pills.
    *
    * Slots:
-   *   <fill-title> — card title (rendered in <h3>)
-   *   <fill-tags>  — optional: any number of <x-tag-advantages> (or other markup)
+   *   <fill-header> — optional: header bar (e.g. label + counter)
+   *   <fill-title>  — card title (rendered in <h3>)
+   *   <fill-tags>   — optional: any number of <x-tag-advantages> (or other markup)
    *
    */
   const rawLayer = String(props.layer || '1')
@@ -21,9 +22,12 @@
 </script>
 
 <article class="{{ cls }}">
+  <div class="advantages-mini-card__header">
+    <slot-header></slot-header>
+  </div>
   <div class="advantages-mini-card__content">
     <h3 class="advantages-mini-card__title"><slot-title></slot-title></h3>
-    <div class="advantages-mini-card__tags">
+    <div class="advantages-mini-card__tags" role="list">
       <slot-tags></slot-tags>
     </div>
   </div>

@@ -3,19 +3,21 @@
 /**
  * .advantages-mini-card — Advantages mini card (Figma).
  *
- * Composition: .title + optional .__tags stack
- *
+ * Composition: optional .__header (flush top) + .__content (absolute, top from Figma).
+ * All sizing uses clamp() for fluid scaling: mobile (361×454) → desktop (726×792).
  */
 
 .advantages-mini-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  position: relative;
   box-sizing: border-box;
-  width: 726px;
-  height: 792px;
-  padding: 204px 48px 0;
-  border-radius: 32px;
+
+  // 361px → 726px
+  width: clamp(361px, 6vw, 726px);
+  // 454px → 792px
+  height: clamp(454px, 6vh, 792px);
+
+  // 26px → 32px
+  border-radius: clamp(26px, 2.2vw, 32px);
   overflow: hidden;
   flex-shrink: 0;
 
@@ -38,41 +40,45 @@
     background-color: $color-red;
     box-shadow: 0 0 250px 0 $color-card-red-glow inset;
   }
-
-  @include mobile {
-    width: 361px;
-    height: 454px;
-    padding: 104px 16px 48px;
-    border-radius: 26px;
-  }
 }
 
-/* Content */
+// ── Header bar — sits flush at the top ──
+
+.advantages-mini-card__header {
+  display: flex;
+  @include type-m-14;
+  color: $color-border-white-60;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  padding: 24px 16px;
+}
+
+// ── Content: absolutely positioned from top per Figma ──
+// mobile: 104px, desktop: 204px
+
 .advantages-mini-card__content {
+  position: absolute;
+  top: clamp(104px, 14.2vw, 204px);
+  left: clamp(16px, 3.3vw, 48px);
+  right: clamp(16px, 3.3vw, 48px);
+
   display: flex;
   flex-direction: column;
-  gap: 63px;
-
-  @include mobile {
-    gap: 32px;
-  }
+  align-items: center;
+  // 32px → 63px
+  gap: clamp(32px, 4.4vw, 63px);
 }
 
 .advantages-mini-card__title {
   margin: 0;
   color: $color-text-on-dark;
   text-align: center;
-  font-size: 58px;
   font-family: $font-primary;
   font-weight: $fw-medium;
-  letter-spacing: -0.1em;
-  line-height: 80%;
-
-  @include mobile {
-    font-size: 34px;
-    line-height: 86%;
-    letter-spacing: -0.09em;
-  }
+  // 34px → 58px
+  font-size: clamp(34px, 4vw, 58px);
+  line-height: 83%;
 }
 
 .advantages-mini-card__tags {
@@ -81,20 +87,16 @@
   align-items: center;
   gap: 8px;
 
-  // Force responsive tag size for this card:
-  // mobile -> sm, desktop -> md.
   .tag-advantages {
-    @include desktop {
-      height: 46px;
-      padding: 0 20px;
-      font-size: 16px;
-      line-height: 20px;
-      letter-spacing: -0.02em;
+    height: clamp(34px, 3.2vw, 46px);
+    padding: 0 clamp(12px, 1.4vw, 20px);
+    font-size: clamp(14px, 1.1vw, 16px);
+    line-height: 20px;
+    letter-spacing: -0.02em;
 
-      .tag-advantages__icon {
-        width: 16px;
-        height: 16px;
-      }
+    .tag-advantages__icon {
+      width: clamp(14px, 1.1vw, 16px);
+      height: clamp(14px, 1.1vw, 16px);
     }
   }
 }

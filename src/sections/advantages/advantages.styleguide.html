@@ -1,0 +1,30 @@
+<!-- .advantages showcase. Include in styleguide/sections.html -->
+<section class="sg-section" id="sec-advantages" data-nav-target>
+  <h2 class="sg-section__title">Advantages</h2>
+  <p class="sg-section__desc">
+    Пинованная секция с двумя панелями. Левая — карточки с кроссфейдом, счётчиком и прогресс-навигацией.
+    Правая — фото-слайды с reveal снизу вверх и статичной submit-карточкой по центру.
+    На мобильном — стек карточек с pin-анимацией (GSAP ScrollTrigger).
+    При <code>prefers-reduced-motion</code> анимация отключается.
+  </p>
+
+  <p class="sg-section__desc">
+    <strong>Desktop-превью:</strong> секция рендерится в полной ширине с горизонтальным скроллом во frame.
+    Для просмотра мобильной версии уменьши окно до &lt;768px или открой DevTools Device toolbar.
+  </p>
+
+  <div class="sg-frame sg-frame--padded">
+    <div class="sg-frame__viewport">
+      <component src="sections/advantages/advantages.html"></component>
+    </div>
+  </div>
+
+  <div class="sg-snippet">
+    <div class="sg-snippet__bar">
+      <span class="sg-snippet__title">HTML</span>
+      <button type="button" class="sg-snippet__copy" data-copy>Copy</button>
+    </div>
+    <pre
+      class="sg-snippet__code"><code>&lt;component src="sections/advantages/advantages.html"&gt;&lt;/component&gt;</code></pre>
+  </div>
+</section>
