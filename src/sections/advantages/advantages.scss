@@ -1,0 +1,240 @@
+@use '../../styles/tokens' as *;
+
+/** .advantages — pinned scroll twin-panel section. */
+
+// ── Section shell ──
+
+.advantages {
+  position: relative;
+  overflow: hidden;
+  background-color: $color-bg-surface;
+}
+
+.advantages__content {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: $content-padding-x;
+
+  @include mobile {
+    padding: $page-padding-x;
+  }
+}
+
+.advantages__cols {
+  flex: 1 1 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  min-height: 0;
+  align-items: start;
+
+  @include mobile {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+}
+
+// ── Panels ──
+
+.advantages__panel {
+  position: relative;
+  aspect-ratio: 726 / 792;
+  width: 100%;
+  border-radius: $radius-lg;
+  overflow: hidden;
+}
+
+.advantages__slides {
+  position: absolute;
+  inset: 0;
+}
+
+// ── Slides (shared) ──
+
+.advantages__panel .advantages__slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+
+// ── Left panel: text slides ──
+
+.advantages__panel--left .advantages__slide {
+  display: flex;
+  align-items: stretch;
+  justify-content: stretch;
+}
+
+// The card fills the entire slide area
+.advantages__panel--left .advantages-mini-card {
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+}
+
+// ── Right panel: photo slides ──
+
+.advantages__panel--right .advantages__slide {
+  border-radius: $radius-lg $radius-lg 0 0;
+}
+
+.advantages__slide-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+// Static card centered over the right panel background
+.advantages__card-wrap {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none; // let clicks pass through to bg if needed
+
+  .advantages-mini-card {
+    pointer-events: auto;
+  }
+}
+
+// ── Label ──
+
+.advantages__label {
+  position: absolute;
+  top: $content-padding-x;
+  left: $content-padding-x;
+  z-index: 2;
+  margin: 0;
+
+  @include type-r-14;
+  color: rgba(255, 255, 255, 0.75);
+  pointer-events: none;
+
+  @include mobile {
+    top: $page-padding-x;
+    left: $page-padding-x;
+  }
+}
+
+// ── Counter ──
+
+.advantages__counter {
+  position: absolute;
+  top: $content-padding-x;
+  right: $content-padding-x;
+  z-index: 2;
+
+  @include type-m-14;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.06em;
+  color: rgba(255, 255, 255, 0.92);
+  pointer-events: none;
+
+  @include mobile {
+    top: $page-padding-x;
+    right: $page-padding-x;
+  }
+}
+
+.advantages__counter-sep {
+  opacity: 0.65;
+}
+
+// ── Scroll progress nav ──
+
+.advantages__progress {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 3;
+  padding: 0 $content-padding-x $content-padding-x;
+
+  @include mobile {
+    padding: 0 $page-padding-x $page-padding-x;
+  }
+}
+
+.advantages__progress-clip {
+  overflow: hidden;
+  width: 100%;
+}
+
+.advantages__progress-steps {
+  display: flex;
+  align-items: flex-end;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: max-content;
+  gap: 32px;
+  position: relative;
+  will-change: transform;
+
+  // Dim baseline behind all steps
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.22);
+  }
+
+  @include mobile {
+    gap: 20px;
+  }
+}
+
+.advantages__progress-step {
+  flex: 0 0 auto;
+}
+
+.advantages__progress-btn {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.45);
+  position: relative;
+}
+
+.advantages__progress-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: transparent;
+  z-index: 1;
+  transition: background 0.2s;
+}
+
+.advantages__progress-label {
+  @include type-m-12;
+  white-space: nowrap;
+  padding-top: calc(2px + 8px); // line + gap
+}
+
+.advantages__progress-step.is-active .advantages__progress-btn {
+  color: $color-white;
+}
+
+.advantages__progress-step.is-active .advantages__progress-line {
+  background: $color-white;
+}
+
+.advantages__progress-step.is-active .advantages__progress-label {
+  font-weight: $fw-bold;
+}

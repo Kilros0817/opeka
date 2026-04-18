@@ -1,0 +1,28 @@
+<!-- .advantages showcase. Include in styleguide/sections.html -->
+<section class="sg-section" id="sec-advantages" data-nav-target>
+  <h2 class="sg-section__title">Advantages</h2>
+  <p class="sg-section__desc">
+    Пинованная секция с двумя панелями. Левая — текстовые слайды с кроссфейдом и счётчиком.
+    Правая — фото-слайды с reveal снизу вверх. Прогресс-навигация внизу левой панели
+    скользит горизонтально вслед за скроллом. Анимация управляется GSAP ScrollTrigger (scrub).
+    При <code>prefers-reduced-motion</code> сразу показывается последний слайд без анимации.
+  </p>
+
+  <p class="sg-section__desc">
+    <strong>Превью:</strong> секция занимает полный экран и пинуется на время прокрутки
+    (4 × 50vh). Прокрути внутри фрейма, чтобы увидеть анимацию.
+  </p>
+
+  <div class="sg-frame sg-frame--full sg-frame--scroll">
+    <component src="sections/advantages/advantages.html"></component>
+  </div>
+
+  <div class="sg-snippet">
+    <div class="sg-snippet__bar">
+      <span class="sg-snippet__title">HTML</span>
+      <button type="button" class="sg-snippet__copy" data-copy>Copy</button>
+    </div>
+    <pre
+      class="sg-snippet__code"><code>&lt;component src="sections/advantages/advantages.html"&gt;&lt;/component&gt;</code></pre>
+  </div>
+</section>

@@ -1,0 +1,115 @@
+<!-- .advantages — pinned scroll section with left/right twin panels -->
+<section class="advantages" data-section="advantages" data-advantages>
+  <div class="advantages__content">
+    <div class="advantages__cols">
+
+      <!-- Left panel: label, counter, text slides, progress nav -->
+      <div class="advantages__panel advantages__panel--left">
+        <p class="advantages__label">В каждом пансионате<br>вас ожидают</p>
+
+        <div class="advantages__counter" aria-live="polite">
+          <span class="advantages__counter-current">01</span>
+          <span class="advantages__counter-sep"> — </span>
+          <span class="advantages__counter-total">04</span>
+        </div>
+
+        <div class="advantages__slides">
+          <div class="advantages__slide advantages__slide--1">
+            <x-advantages-mini-card layer="1">
+              <fill-title>Квалифицированный персонал</fill-title>
+              <fill-tags>
+                <x-tag-advantages color="white" icon="done">Внимательные сиделки</x-tag-advantages>
+                <x-tag-advantages color="white" icon="done">Профессиональные медсестры</x-tag-advantages>
+                <x-tag-advantages color="white" icon="done">Специалисты по организации досуга</x-tag-advantages>
+              </fill-tags>
+            </x-advantages-mini-card>
+          </div>
+          <div class="advantages__slide advantages__slide--2">
+            <x-advantages-mini-card layer="2">
+              <fill-title>Медицинские услуги</fill-title>
+              <fill-tags>
+                <x-tag-advantages color="white" icon="done">Врач на постоянной основе</x-tag-advantages>
+                <x-tag-advantages color="white" icon="done">Процедурный кабинет</x-tag-advantages>
+                <x-tag-advantages color="white" icon="done">Контроль приёма лекарств</x-tag-advantages>
+              </fill-tags>
+            </x-advantages-mini-card>
+          </div>
+          <div class="advantages__slide advantages__slide--3">
+            <x-advantages-mini-card layer="3">
+              <fill-title>Комфорт и досуг</fill-title>
+              <fill-tags>
+                <x-tag-advantages color="white" icon="done">Уютные комнаты</x-tag-advantages>
+                <x-tag-advantages color="white" icon="done">Культурная программа</x-tag-advantages>
+                <x-tag-advantages color="white" icon="done">Прогулки и активности</x-tag-advantages>
+              </fill-tags>
+            </x-advantages-mini-card>
+          </div>
+          <div class="advantages__slide advantages__slide--4">
+            <x-advantages-mini-card layer="4">
+              <fill-title>Безопасность</fill-title>
+              <fill-tags>
+                <x-tag-advantages color="white" icon="done">Видеонаблюдение 24/7</x-tag-advantages>
+                <x-tag-advantages color="white" icon="done">Тревожная кнопка в каждой комнате</x-tag-advantages>
+                <x-tag-advantages color="white" icon="done">Охраняемая территория</x-tag-advantages>
+              </fill-tags>
+            </x-advantages-mini-card>
+          </div>
+        </div>
+
+        <nav class="advantages__progress" aria-label="Slide progress">
+          <div class="advantages__progress-clip">
+            <ul class="advantages__progress-steps" role="list">
+              <li class="advantages__progress-step is-active">
+                <button class="advantages__progress-btn" type="button">
+                  <span class="advantages__progress-line" aria-hidden="true"></span>
+                  <span class="advantages__progress-label">Квалифицированный персонал</span>
+                </button>
+              </li>
+              <li class="advantages__progress-step">
+                <button class="advantages__progress-btn" type="button">
+                  <span class="advantages__progress-line" aria-hidden="true"></span>
+                  <span class="advantages__progress-label">Медицинские услуги</span>
+                </button>
+              </li>
+              <li class="advantages__progress-step">
+                <button class="advantages__progress-btn" type="button">
+                  <span class="advantages__progress-line" aria-hidden="true"></span>
+                  <span class="advantages__progress-label">Комфорт и досуг</span>
+                </button>
+              </li>
+              <li class="advantages__progress-step">
+                <button class="advantages__progress-btn" type="button">
+                  <span class="advantages__progress-line" aria-hidden="true"></span>
+                  <span class="advantages__progress-label">Безопасность</span>
+                </button>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+
+      <!-- Right panel: photo slides as bg + static card centered on top -->
+      <div class="advantages__panel advantages__panel--right">
+        <div class="advantages__slides">
+          <div class="advantages__slide advantages__slide--photo">
+            <img class="advantages__slide-img" src="../../assets/images/advantages-card-1.webp" alt="Квалифицированный персонал" loading="lazy" decoding="async" />
+          </div>
+          <div class="advantages__slide advantages__slide--photo">
+            <img class="advantages__slide-img" src="../../assets/images/advantages-card-2.webp" alt="Медицинские услуги" loading="lazy" decoding="async" />
+          </div>
+          <div class="advantages__slide advantages__slide--photo">
+            <img class="advantages__slide-img" src="../../assets/images/advantages-card-3.webp" alt="Комфорт и досуг" loading="lazy" decoding="async" />
+          </div>
+          <div class="advantages__slide advantages__slide--photo">
+            <img class="advantages__slide-img" src="../../assets/images/advantages-card-4.webp" alt="Безопасность" loading="lazy" decoding="async" />
+          </div>
+        </div>
+
+        <!-- Static card, always visible, centered over the background -->
+        <div class="advantages__card-wrap">
+          <x-advantages-submit-card></x-advantages-submit-card>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
