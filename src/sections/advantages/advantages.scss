@@ -187,3 +187,18 @@
   }
 }
 
+
+// ── Mobile CTA button ──
+
+.advantages__cta {
+  display: none;
+  margin-top: 32px;
+
+  @include mobile {
+    display: block;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}

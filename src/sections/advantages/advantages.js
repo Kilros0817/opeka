@@ -105,18 +105,16 @@ function buildMobileStack(gsap, ScrollTrigger, section) {
   const scaleStep = 0.05  // scale reduction per stacking level
   const n = cards.length
 
-  // Give the stack enough explicit scroll height so all pins have room.
-  // Total needed: sum of all card heights + spacers between them + one extra
-  // card height so the last card can fully travel over the second-to-last.
-  const setStackHeight = () => {
-    const totalH = cards.reduce((sum, c) => sum + c.offsetHeight, 0)
-    const totalSpacers = (n - 1) * spacer
-    // Extra travel = last card height (so it fully covers card n-1)
-    const extra = cards[n - 1]?.offsetHeight ?? 0
-    stack.style.paddingBottom = `${extra + totalSpacers}px`
+  // Add extra scroll height to the last card so it has room to fully
+  // travel over the second-to-last. The CTA sits after the stack naturally.
+  const setLastCardPadding = () => {
+    const lastCard = cards[n - 1]
+    if (!lastCard) return
+    const extra = lastCard.offsetHeight + (n - 1) * spacer
+    lastCard.style.paddingBottom = `${extra}px`
   }
-  setStackHeight()
-  ScrollTrigger.addEventListener('refreshInit', setStackHeight)
+  setLastCardPadding()
+  ScrollTrigger.addEventListener('refreshInit', setLastCardPadding)
 
   // Pin ALL cards (including last) using the stack as endTrigger
   cards.forEach((card, index) => {
