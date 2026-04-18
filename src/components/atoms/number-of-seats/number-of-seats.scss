@@ -13,12 +13,21 @@
   border-radius: 12px;
 }
 
-.seat-selector__pill {
+.seat-selector__pill--sm {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 14px 16px;
+  border-radius: 1000px;
+  background: $color-bg-white-100;
+}
+
+.seat-selector__pill--md {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  padding: 10px 16px;
-  border-radius: 999px;
+  padding: 11px 16px;
+  border-radius: 1000px;
   background: $color-bg-white-100;
 }
 
@@ -29,9 +38,11 @@
 .icon--sm {
   width: 14px;
   height: 14px;
+  gap: 4px;
 }
 
 .icon--md {
   width: 18px;
   height: 18px;
+  gap: 4px;
 }
