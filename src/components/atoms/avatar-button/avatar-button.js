@@ -65,7 +65,7 @@ function applyActiveStyles(img) {
   
   const btn = img.closest('[data-avatar-btn]')
   const isWhite = btn.classList.contains('avatar-btn--tr-white')
-  const outlineColor = isWhite ? '#ffffff' : '#0066ff'
+  const outlineColor = isWhite ? '#ffffff' : '#2674D9';
   
   img.style.outline = `2px solid ${outlineColor}`
   img.style.outlineOffset = '-2px'
