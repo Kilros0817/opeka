@@ -65,11 +65,13 @@
   font-size: 58px;
   font-family: $font-primary;
   font-weight: $fw-medium;
+  letter-spacing: -0.1em;
   line-height: 80%;
 
   @include mobile {
     font-size: 34px;
     line-height: 86%;
+    letter-spacing: -0.09em;
   }
 }
 

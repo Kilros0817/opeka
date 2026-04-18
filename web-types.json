@@ -117,7 +117,7 @@
         },
         {
           "name": "x-advantages-submit-card",
-          "description": "Advantages submit card."
+          "description": "Advantages mini card: title + optional stack of tag pills.\r Slots:\r   <fill-title> — card title (rendered in <h3>)\r   <fill-tags>  — optional: any number of <x-tag-advantages> (or other markup)"
         },
         {
           "name": "x-avatar-button",
