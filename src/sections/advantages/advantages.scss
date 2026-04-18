@@ -174,7 +174,7 @@
 }
 
 .advantages__card {
-  margin-bottom: 16px;
+  margin-bottom: 8px;
   transform-origin: top center;
 
   .advantages-mini-card {
@@ -190,7 +190,7 @@
 
 // ── Mobile CTA button ──
 
-.advantages__cta {
+.advantages__submit {
   display: none;
   margin-top: 32px;
 
@@ -202,3 +202,4 @@
     width: 100%;
   }
 }
+
