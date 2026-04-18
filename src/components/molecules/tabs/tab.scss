@@ -36,7 +36,7 @@
     padding: 20px;
     border-color: $blue-100p;
     color: $blue-100p;
-    border-width: 2px;
+    border-width: 1.2px;
     border-style: solid;
     border-radius: $radius-lg;
   }
@@ -54,9 +54,9 @@
 
   .tab--active {
     padding: 20px;
-    border-color: $white-30;
+    border-color: $white-100;
     color: $white-100;
-    border-width: 2px;
+    border-width: 1.2px;
     border-style: solid;
     border-radius: $radius-lg;
   }
