@@ -13,7 +13,7 @@
     <if condition="count === 0">
         <each loop="i in steps0">
             <svg class="rate__color" data-index="{{i}}" aria-hidden="true">
-                <use href="#icon-rate" class="rate__empty" />
+                <use href="#icon-star" class="rate__empty" />
             </svg>
         </each>
     </if>
@@ -21,13 +21,13 @@
         <!-- Filled -->
         <each loop="i in steps">
             <svg class="rate__color" data-index="{{i}}" aria-hidden="true">
-                <use href="#icon-rate"/>
+                <use href="#icon-star"/>
             </svg>
         </each>
         <!-- Empty -->
         <each loop="i in steps_other">
             <svg class="rate__color" data-index="{{count + i}}" aria-hidden="true">
-                <use href="#icon-rate" class="rate__empty" />
+                <use href="#icon-star" class="rate__empty" />
             </svg>
         </each>
     </if>
