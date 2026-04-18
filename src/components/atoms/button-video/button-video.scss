@@ -22,33 +22,33 @@
     outline: 2px solid $color-focus-ring;
     outline-offset: 2px;
   }
-
-  /* Sizes */
-  &--xl { width: 80px; height: 80px; }
-  &--lg { width: 72px; height: 72px; }
-  &--md { width: 46px; height: 46px; }
-  &--sm { width: 28px; height: 28px; }
-  &--xs { width: 20px; height: 20px; }
-
-  /* BG colors */
-  &--tr-gray  { background-color: $color-tr-black-05; }
-  &--tr-white { background-color: $color-tr-white-20; }
-  &--tr-blue  { background-color: $color-tr-blue-100; }
-
-  /* Icon colors */
-  &--icon-black { color: $color-navy; }
-  &--icon-white { color: $color-white; }
 }
+
+/* Sizes */
+.btn-video--xl { width: 80px; height: 80px; }
+.btn-video--lg { width: 72px; height: 72px; }
+.btn-video--md { width: 46px; height: 46px; }
+.btn-video--sm { width: 28px; height: 28px; }
+.btn-video--xs { width: 20px; height: 20px; }
+
+/* BG colors */
+.btn-video--tr-gray  { background-color: $color-tr-black-05; }
+.btn-video--tr-white { background-color: $color-tr-white-20; }
+.btn-video--tr-blue  { background-color: $color-tr-blue-100; }
+
+/* Icon colors */
+.btn-video--icon-black { color: $color-navy; }
+.btn-video--icon-white { color: $color-white; }
 
 .btn-video__icon {
   display: block;
   flex-shrink: 0;
   fill: currentColor;
   max-width: unset;
-
-  &--xl { width: 12px;   height: 12px;   }
-  &--lg { width: 10px;   height: 10px;   }
-  &--md { width: 10px;   height: 10px;   }
-  &--sm { width: 6px;    height: 6px;    }
-  &--xs { width: 7.14px; height: 7.14px; }
 }
+
+.btn-video__icon--xl { width: 12px;   height: 12px;   }
+.btn-video__icon--lg { width: 10px;   height: 10px;   }
+.btn-video__icon--md { width: 10px;   height: 10px;   }
+.btn-video__icon--sm { width: 6px;    height: 6px;    }
+.btn-video__icon--xs { width: 7.14px; height: 7.14px; }

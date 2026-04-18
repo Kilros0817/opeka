@@ -3,29 +3,28 @@
 /**
  * .benefit-card — Benefit Card (Figma).
  *
- *
+ * Image positions: --left | --right
+ * Image shapes:    --square | --landscape | --portrait
  */
 
 .benefit-card {
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: $space-lg;
   width: 480px;
   height: 340px;
-  padding: 48px 48px 96px;
-  border-radius: 32px;
-
+  padding: $content-padding-x-48 $content-padding-x-48 $space-3xl;
+  border-radius: $radius-2xl;
   background-color: $color-bg-surface;
-  // overflow: hidden;
   flex-shrink: 0;
 
   @include mobile {
     width: 269px;
     height: 220px;
-    padding: 24px 16px 48px;
-    border-radius: 26px;
-    gap: 14px;
+    padding: $space-lg $space-md $space-2xl;
+    border-radius: $radius-26;
+    gap: $space-14;
   }
 }
 
