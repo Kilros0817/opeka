@@ -43,10 +43,12 @@
           "description": "Fills the \"disease\" slot of the parent component."
         },
         {
-          "name": "fill-house",
-          "description": "Fills the \"house\" slot of the parent component."
           "name": "fill-header",
           "description": "Fills the \"header\" slot of the parent component."
+        },
+        {
+          "name": "fill-house",
+          "description": "Fills the \"house\" slot of the parent component."
         },
         {
           "name": "fill-link",
@@ -134,10 +136,12 @@
           "description": "Named slot \"disease\" — provides default content."
         },
         {
-          "name": "slot-house",
-          "description": "Named slot \"house\" — provides default content."
           "name": "slot-header",
           "description": "Named slot \"header\" — provides default content."
+        },
+        {
+          "name": "slot-house",
+          "description": "Named slot \"house\" — provides default content."
         },
         {
           "name": "slot-link",
@@ -193,15 +197,33 @@
         },
         {
           "name": "x-advantages-submit-card",
-          "description": "Advantages submit card."
+          "description": "Advantages mini card: title + optional stack of tag pills.\r Slots:\r   <fill-title> — card title (rendered in <h3>)\r   <fill-tags>  — optional: any number of <x-tag-advantages> (or other markup)"
         },
         {
           "name": "x-avatar",
           "description": "x-avatar — see src\\components\\atoms\\avatar\\avatar.html",
           "attributes": [
             {
-              "name": "bg-color",
-              "description": "solid background color (optional, default: blue gradient from CSS)"
+              "name": "size",
+              "description": "sm | md | lg | xl (default: sm)",
+              "default": "sm",
+              "value": {
+                "type": "enum"
+              },
+              "values": [
+                {
+                  "name": "sm"
+                },
+                {
+                  "name": "md"
+                },
+                {
+                  "name": "lg"
+                },
+                {
+                  "name": "xl"
+                }
+              ]
             }
           ]
         },
