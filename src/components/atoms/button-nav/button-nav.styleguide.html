@@ -1,11 +1,10 @@
 <!-- x-button-nav showcase. Include in styleguide/components.html -->
 <section class="sg-section" id="comp-button-nav" data-nav-target>
-  <h2 class="sg-section__title">Navication Button</h2>
+  <h2 class="sg-section__title">Navigation Button</h2>
   <p class="sg-section__desc">
-    Текстовая ссылка с иконкой 16px слева. Рендерится как <code>&lt;a&gt;</code>
-    если задан <code>href</code>, иначе <code>&lt;button&gt;</code>.
-    Цвета: <code>blue</code> (светлые подложки), <code>white</code> (тёмные), <code>grey</code>.
-    Размер <code>sm</code> — для топ-бара.
+    color: <code>black</code>, <code>white</code>.
+    size: <code>md</code>.
+    variant:  <code>grey</code>, <code>tr-white</code>.
   </p>
 
   <div class="sg-matrix">
@@ -19,56 +18,52 @@
   
     <div class="sg-matrix__row">
       <span class="sg-variant-label">Black</span>
-      <div class="sg-cell"><x-button-nav color="black" icon="none">Смотреть</x-button-nav></div>
-      <div class="sg-cell"><x-button-nav color="black" icon="none" class="is-hover">Смотреть</x-button-nav></div>
-      <div class="sg-cell"><x-button-nav color="black" icon="none" disabled>Смотреть</x-button-nav></div>
+      <div class="sg-cell"><x-button-nav color="black">Смотреть</x-button-nav></div>
+      <div class="sg-cell"><x-button-nav color="black" class="is-hover">Смотреть</x-button-nav></div>
+      <div class="sg-cell"><x-button-nav color="black" disabled>Смотреть</x-button-nav></div>
     </div>
 
     <div class="sg-matrix__row">
       <span class="sg-variant-label"></span>
-      <div class="sg-cell"><x-button-nav color="black" icon="none">наши пансионаты</x-button-nav></div>
-      <div class="sg-cell"><x-button-nav color="black" icon="none" class="is-hover">наши пансионаты</x-button-nav></div>
-      <div class="sg-cell"><x-button-nav color="black" icon="none" disabled>наши пансионаты</x-button-nav></div>
+      <div class="sg-cell"><x-button-nav color="black">наши пансионаты</x-button-nav></div>
+      <div class="sg-cell"><x-button-nav color="black" class="is-hover">наши пансионаты</x-button-nav></div>
+      <div class="sg-cell"><x-button-nav color="black" disabled>наши пансионаты</x-button-nav></div>
     </div>
     
     <div class="sg-matrix__row">
       <span class="sg-variant-label"></span>
-      <div class="sg-cell sg-cell--on-grey"><x-button-nav color="black" icon="chevron-down"></x-button-nav></div>
-      <div class="sg-cell sg-cell--on-grey"><x-button-nav color="black" icon="chevron-down" class="is-hover"></x-button-nav></div>
-      <div class="sg-cell sg-cell--on-grey"><x-button-nav color="black" icon="chevron-down" disabled></x-button-nav></div>
+      <div class="sg-cell"><x-button-nav color="black" variant="grey" icon="chevron-down"></x-button-nav></div>
+      <div class="sg-cell"><x-button-nav color="black" variant="grey" icon="chevron-down" class="is-hover"></x-button-nav></div>
+      <div class="sg-cell"><x-button-nav color="black" variant="grey" icon="chevron-down" disabled></x-button-nav></div>
     </div>
 
     <div class="sg-matrix__row">
       <span class="sg-variant-label">White</span>
-      <div class="sg-cell"><x-button-nav color="white" icon="none">Смотреть</x-button-nav></div>
-      <div class="sg-cell"><x-button-nav color="white" icon="none" class="is-hover">Смотреть</x-button-nav></div>
-      <div class="sg-cell"><x-button-nav color="white" icon="none" disabled>Смотреть</x-button-nav></div>
+      <div class="sg-cell sg-cell--on-dark"><x-button-nav color="white">Смотреть</x-button-nav></div>
+      <div class="sg-cell sg-cell--on-dark"><x-button-nav color="white" class="is-hover">Смотреть</x-button-nav></div>
+      <div class="sg-cell sg-cell--on-dark"><x-button-nav color="white" disabled>Смотреть</x-button-nav></div>
     </div>
 
     <div class="sg-matrix__row">
       <span class="sg-variant-label"></span>
-      <div class="sg-cell"><x-button-nav color="white" icon="none">наши пансионаты</x-button-nav></div>
-      <div class="sg-cell"><x-button-nav color="white" icon="none" class="is-hover">наши пансионаты</x-button-nav></div>
-      <div class="sg-cell"><x-button-nav color="white" icon="none" disabled>наши пансионаты</x-button-nav></div>
+      <div class="sg-cell sg-cell--on-dark"><x-button-nav color="white">наши пансионаты</x-button-nav></div>
+      <div class="sg-cell sg-cell--on-dark"><x-button-nav color="white" class="is-hover">наши пансионаты</x-button-nav></div>
+      <div class="sg-cell sg-cell--on-dark"><x-button-nav color="white" disabled>наши пансионаты</x-button-nav></div>
     </div>
     
     <div class="sg-matrix__row">
       <span class="sg-variant-label"></span>
-      <div class="sg-cell sg-cell--on-white"><x-button-nav color="white" icon="chevron-down"></x-button-nav></div>
-      <div class="sg-cell sg-cell--on-white"><x-button-nav color="white" icon="chevron-down" class="is-hover"></x-button-nav></div>
-      <div class="sg-cell sg-cell--on-white"><x-button-nav color="white" icon="chevron-down" disabled></x-button-nav></div>
+      <div class="sg-cell sg-cell--on-dark"><x-button-nav color="white" variant="tr-white" icon="chevron-down"></x-button-nav></div>
+      <div class="sg-cell sg-cell--on-dark"><x-button-nav color="white" variant="tr-white" icon="chevron-down" class="is-hover"></x-button-nav></div>
+      <div class="sg-cell sg-cell--on-dark"><x-button-nav color="white" variant="tr-white" icon="chevron-down" disabled></x-button-nav></div>
     </div>
-
-    
   </div>
 
   <sg-snippet title="x-button-nav">
-    <x-button-nav href="/catalog/" color="blue" icon="none">Смотреть пансионаты</x-button-nav>
+    <!-- word -->
+    <x-button-nav color="black">Смотреть</x-button-nav>
 
-    <!-- without icon -->
-    <x-button-nav color="grey">Подробнее</x-button-nav>
-
-    <!-- small variant (top bar) -->
-    <x-button-nav color="blue" size="sm">Каталог</x-button-nav>
+    <!-- icon -->
+    <x-button-nav color="white" variant="tr-white"></x-button-nav>
   </sg-snippet>
 </section>
