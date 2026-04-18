@@ -16,7 +16,7 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
-  width: 726px;
+  width: clamp(361px, 50vw,  726px);
   height: 436px;
   border-radius: 32px;
   overflow: hidden; 
@@ -134,4 +134,14 @@
   letter-spacing: -2%;
   color: $color-text-on-dark-100;
   gap: 24px;
+}
+
+.sg-matrix__direction-card {
+  display: grid;
+  grid-template-columns: none;
+  gap: 4px;
+  align-items: stretch;
+  padding: 20px;
+  border-radius: 12px;
+  background-color: #f0f1f5;
 }
