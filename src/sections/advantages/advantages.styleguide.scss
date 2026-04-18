@@ -1,0 +1,18 @@
+@use '../../styles/tokens' as *;
+
+/** Styleguide-only overrides for the advantages section preview. */
+
+// Remove inner padding — advantages is full-bleed
+// On mobile, let the section render at natural viewport width
+#sec-advantages .sg-frame__viewport {
+  padding: 0;
+
+  @include mobile {
+    min-width: 0;
+  }
+}
+
+// Extra bottom spacing so the submit button isn't clipped in the preview
+#sec-advantages .advantages__submit {
+  padding-bottom: $space-xl;
+}

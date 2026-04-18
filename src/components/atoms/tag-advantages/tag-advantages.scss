@@ -37,7 +37,6 @@
   padding: 0 12px;
   font-size: 14px;
   line-height: 16px;
-  letter-spacing: -0.01em;
 
   .tag-advantages__icon {
     width: 14px;
@@ -50,7 +49,6 @@
   padding: 0 20px;
   font-size: 16px;
   line-height: 20px;
-  letter-spacing: -0.02em;
 }
 
 .tag-advantages--lg {
@@ -68,6 +66,6 @@
 }
 
 .tag-advantages--white {
-  background-color: $color-tr-white-20;
+  background-color: $color-tr-white-10;
   color: $color-white;
 }
