@@ -242,7 +242,24 @@
         },
         {
           "name": "x-button-nav",
-          "description": "Text link with optional 16px icon. Renders <a> when href is set, otherwise <button>."
+          "description": "Navication Button with optional 16px icon.",
+          "attributes": [
+            {
+              "name": "variant",
+              "description": "grey | white",
+              "value": {
+                "type": "enum"
+              },
+              "values": [
+                {
+                  "name": "grey"
+                },
+                {
+                  "name": "white"
+                }
+              ]
+            }
+          ]
         },
         {
           "name": "x-button-social",
