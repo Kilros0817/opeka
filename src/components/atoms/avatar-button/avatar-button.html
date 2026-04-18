@@ -5,23 +5,23 @@
    *
    * Props (shell):
    *   size — avatar button size (default: sm)
-   *   bg_color — avatar button background (default: tr-white)
-   *   src_main — main img url(default: '')
+   *   bg-color — avatar button background (default: tr-white)
+   *   image-url — image url(default: '')
    *   alt — alt for img (default: '')
    *   active - active button(default: '')
    */
   
   const size = props.size || 'sm'
-  const bg_color = props.bg_color || 'tr-white'
-  const src_main = props.src_main || ''
+  const bgColor = props['bg-color'] || 'tr-white'
+  const imageUrl = props['image-url'] || ''
   const alt = props.alt || 'no image'
   const active = props.active || ''
 
   module.exports = {
-    size, bg_color, src_main, alt,
+    size, bgColor, imageUrl, alt,
     cls: [
       'avatar-btn',
-      'avatar-btn--' + bg_color,
+      'avatar-btn--' + bgColor,
     ].join(' '), 
     cls_avatar: [
       'avatar-img',
@@ -33,7 +33,7 @@
 </script>
 
 <div class="{{ cls }}" aria-label="{{ alt }}" role="button" data-avatar-btn>
-    <if condition="src_main">
-      <img src="{{ src_main }}" alt="{{ alt }}" loading="lazy" class="{{ cls_avatar }}" aria-pressed="false"  data-avatar-img>
+    <if condition="imageUrl">
+      <img src="{{ imageUrl }}" alt="{{ alt }}" loading="lazy" class="{{ cls_avatar }}" aria-pressed="false"  data-avatar-img>
     </if>
 </div>

@@ -1,0 +1,36 @@
+<script props>
+  /*
+   * x-button-circle
+   *
+   * Props:
+   *   size — mini | medium 
+   *   variant — tr-blue | tr-white | tr-grey | tr-grey-white | white
+   *   icon — sprite id without "icon-" prefix
+   *
+   * <yield> becomes the label. Extra attrs (class, aria-*, data-*) pass through.
+   */
+  const size = props.size || 'mini'
+  const variant = props.variant || 'blue'
+  const icon = props.icon || ''
+
+  // icon-only buttons must have aria-label
+ 
+  module.exports = {
+    icon, size,
+    cls: [
+      'btn-circle',
+      'btn-circle--' + size,
+      'btn-circle--' + variant,
+    ].filter(Boolean).join(' '),
+    cls__icon: 
+      'btn-circle__icon--' + size,
+  }
+</script>
+
+  <button class="{{ cls }}">
+    <if condition="icon && size === 'mini'"><svg class="{{ cls__icon }}" aria-hidden="true"><use href="#icon-{{ icon }}"/></svg></if>
+    <if condition="icon && size === 'medium'"><span maria-hidden="true"><svg class="{{ cls__icon }}"><use href="#icon-{{ icon }}"/></svg></span></if>
+  </button>
+
+
+
