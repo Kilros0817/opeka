@@ -1,0 +1,47 @@
+<script props>
+    /*
+     * x-switch
+     *
+     * Props:
+     *   checked        - boolean (default: false)
+     *   label          - text label next to the toggle (default: empty)
+     *   disabled       - boolean (default: false)
+     * 
+     */
+
+    const checked = props.checked || false;
+    const label = props.label || '';
+    const disabled = props.disabled || false;
+
+    module.exports = {
+        checked,
+        label,
+        disabled,
+        cls: [
+            'switch',
+            disabled ? 'switch--disabled' : '',
+        ].filter(Boolean).join(' '),
+    }
+</script>
+
+<div class="{{ cls }}">
+    <label class="switch__toggle">
+        <if condition="checked == true && disabled == false">
+            <input type="checkbox" role="switch" checked class="switch__input">
+        </if>
+        <if condition="checked == true && disabled == true">
+            <input type="checkbox" role="switch" checked disabled class="switch__input">
+        </if>
+        <if condition="checked == false && disabled == false" >
+            <input type="checkbox" role="switch" class="switch__input">
+        </if>
+        <if condition="checked == false && disabled == true">
+            <input type="checkbox" role="switch" disabled class="switch__input">
+        </if>
+        
+        <span class="switch__slider"></span>
+    </label>
+    <if condition="label">
+        <span class="switch--label">{{ label }}</span>
+    </if>
+</div>

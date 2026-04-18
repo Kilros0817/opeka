@@ -1,0 +1,63 @@
+@use '../../../styles/tokens' as *;
+
+/**
+ * .avatar — Avatar image (Figma: Avatar)
+ *
+ * Sizes: --sm | --md | --lg | --xl
+ * 
+ */
+
+.avatar {
+    display: inline-block;
+    overflow: hidden;
+    flex-shrink: 0;
+    background: radial-gradient(
+        circle at 50% 50%,
+        rgb(227,232,255,1) 0%,
+        rgb(158,182,214,1) 100%
+    );
+
+    &__img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top center;
+    }
+
+    &--sm {
+        width: 48px;
+        height: 65px;
+        border-radius: $radius-md;
+    }
+
+    &--md {
+        width: 74px;
+        height: 101px;
+        border-radius: $radius-xl;
+    }
+
+    &--lg {
+        width: 106px;
+        height: 144px;
+        border-radius: $radius-xl;
+
+        @include mobile {
+            width: 74px;
+            height: 101px;
+            border-radius: $radius-lg;
+        }
+    }
+
+    &--xl {
+        width: 357px;
+        height: 485px;
+        border-radius: $radius-2xl;
+
+        @include mobile {
+            width: 106px;
+            height: 144px;
+            border-radius: $radius-xl;
+        }
+    }
+}

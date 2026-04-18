@@ -1,0 +1,90 @@
+@use '../../../styles/tokens' as *;
+
+/**
+ * .switch — Toggle Switch (Figma: Switch)
+ *
+ * Modifiers: --disabled
+ */
+
+.switch {
+    display: flex;
+    gap: $space-sm;
+}
+
+.switch__toggle {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 22px;
+}
+
+.switch__input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+
+  &:checked + .switch__slider {
+    background-color: $color-bg-switch-blue;
+  }
+
+  &:checked + .switch__slider::before {
+    transform: translateX(18px);
+    
+  }
+}
+
+.switch__slider {
+  position: absolute;
+  cursor: pointer;
+  inset: 0;
+  background-color: $color-bg-switch-grey;
+  transition: 0.4s;
+  border-radius: $radius-9;
+
+  &::before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 2px;
+    bottom: 2px;
+    background-color: $color-bg-surface;
+    transition: 0.4s;
+    border-radius: $radius-7;
+  };
+}
+
+/* Disabled state */
+.switch--disabled {
+  cursor: not-allowed;
+
+  .switch__toggle {
+    cursor: not-allowed;
+  }
+
+  .switch__slider {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+
+  .switch__input {
+    &:checked {
+      background-color: $color-action-disabled;
+      opacity: 1;
+    }
+  }
+
+  .switch--label {
+    color: $color-text-disabled;
+  }
+
+  &:checked + .switch__slider {
+    background-color: $color-action-disabled;
+    opacity: 1;
+  }
+}
+
+/* Enabled label */
+.switch--label {
+    @include type-m-16;
+}

@@ -6,6 +6,8 @@
 $color-bg-page:          $surface-page;
 $color-bg-surface:       $white;
 $color-bg-card-blue:     $card-blue;
+$color-bg-switch-blue:   $blue-500;
+$color-bg-switch-grey:   $navy-10;
 
 // Text
 $color-text-primary:     $navy-900;
@@ -14,7 +16,8 @@ $color-text-disabled:    $navy-30;
 $color-text-on-dark:     $white;
 $color-text-on-dark-60:  $white-70;    // Figma: Text/Text White 60 = 70% opacity
 $color-text-on-dark-50:  $white-50;
-$color-text-on-dark-100:  $white-100;
+$color-text-on-dark-100: $white-100;
+$color-text-on-dark-0:   $white-0;
 
 // Borders
 $color-border:           $navy-10;
@@ -57,6 +60,7 @@ $color-tr-white-20:      $white-20;
 $color-tr-white-30:      $white-30;
 $color-tr-white-44:      $white-44;
 $color-tr-white-50:      $white-50;
+$color-tr-white-70:      $white-70;
 
 // Transparent black (buttons, overlays)
 $color-tr-black-03:      $navy-03;
@@ -81,7 +85,6 @@ $color-card-blue-glow:   $blue-5;
 $color-card-green-glow:  $green-5;
 $color-card-orange-glow: $red-500;
 $color-card-red-glow:    $red-5;
-$color-tr-gray-50:       $rate-empty;
 
 $color-tr-blue-100:      $blue-100p;
 
@@ -102,17 +105,8 @@ $color-tr-green-100:      $green-100p;
 $color-tr-pink-10:       $pink-10p;
 $color-tr-pink-100:      $pink-100p;
 
-
-// Transparent orange(buttons)
-$color-tr-orange-10:     $orange-10p;
-
 // Transparent red(buttons)
 $color-tr-red-10:        $red-10p;
-
-// Transparent green(buttons)
-$color-tr-green-10:      $green-10p;
-
-
 
 
 // Number of seats 
@@ -120,6 +114,12 @@ $color-bg-blue-20:       $blue-20p;
 $color-bg-white-100:     $white;
 $color-tc-block-50:      $text-common;
 
+// for pansionat
+$content-bg:             rgba($navy-900, 0.03);
+$text-secondary:         rgba($navy-900, 0.6);
+$text-desc:              rgba($white, 0.6);
+$text-price-unit:        rgba($white, 0.7);
+$hezy-100p:              $hezy-100p;
 $color-bg-card:          $navy-03;
 $color-bg-white:         $white;
 $color-primary:         $navy-900;
@@ -127,3 +127,5 @@ $color-secondary:        $navy-60;
 $color-accent:           $blue-500;
 $color-button-bg:        $navy-05;
 $color-border-icon:      $navy-900;
+
+$color-promo-card-bg:    $red-top-center;

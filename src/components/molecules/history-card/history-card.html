@@ -1,0 +1,66 @@
+<script props>
+  /*
+   * x-history-card
+   *
+   * History card: title + disease + house + name + age + state + desc + result + current-state + more + image
+   * Composes <x-tag>.
+   *
+   * Props (shell):
+   *   alt - name of image
+   *   src_main - imgae src
+   *   color - gray and white
+   * 
+   * Slots:
+   *   <fill-time>   — tag time
+   *   <fill-disease> — card disease
+   *   <fill-house>  — card house
+   *   <fill-name> - card name 
+   *   <fill-age>  - card age
+   *   <fill-state> - card state
+   *   <fill-desc> - card desc
+   *   <fill-result> - card result
+   *   <fill-curent-state> - card curent-state
+   *   <fill-more> - card more  
+   * 
+   */
+  const src_main = props.src_main || ''
+  const alt = props.alt || ''
+  const color = props.color || 'white'
+
+  module.exports = { src_main, alt, color }
+
+</script>
+<div class="history-card history-card__bg--{{color}}">
+  <div class="history-card__header">
+    <div class="history-card__profile">
+      <img class="history-card__image--avatar" src="{{src_main}}" alt="Анна Сергеевна" />
+      <div class="history-card__info">
+        <div class="history-card__name"><slot-name></slot-name></div>
+        <div class="history-card__age"><slot-age></slot-age></div>
+      </div>
+    </div>
+    <div class="history-card__tags">
+      <div class="history-card__tag"><x-tag size="sm" color="tr-grey" ><slot-time></slot-time></x-tag></div>
+      <div class="history-card__tag"><x-tag size="sm" color="tr-grey" ><slot-disease></slot-disease></x-tag></div>
+      <div class="history-card__tag"><x-tag size="sm" color="tr-grey" ><slot-house></slot-house></x-tag></div>
+    </div>
+  </div>
+  <div class="history-card__content">
+    <div class="history-card__section">
+      <div class="history-card__label"><slot-state></slot-state></div>
+      <div class="history-card__text history-card__text--clamped-3">
+        <slot-desc></slot-desc>
+      </div>
+    </div>
+    <div class="history-card__section">
+      <div class="history-card__label"><slot-result></slot-result></div>
+      <div class="history-card__result">
+        <slot-current-state></slot-current-state>
+      </div>
+    </div>
+    <div class="history-card__more">
+      <span class="history-card__plus">+</span>
+      <span><slot-more></slot-more></span>
+    </div>
+  </div>
+</div>

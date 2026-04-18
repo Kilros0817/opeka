@@ -1,0 +1,146 @@
+@use '../../../styles/tokens' as *;
+
+/**
+ * .promo-main-card — Promotion Main Card (Figma).
+ *
+ * Composition: .tag + title + description + .text-link.
+ * Decorative blob color via --promo-mini-card-blob.
+ * Modifier --in-slider: absolute positioning + data-pos stack layers.
+ *
+ * Desktop: 726x480, padding 32, radius 32
+ * Mobile:  361x388, padding 24/16, radius 26
+ */
+
+.promo-main-card {
+  position: relative;
+  display: flex;
+  gap: $space-md;
+
+  width: clamp(361px, 50vw, 726px);
+  height: 480px;
+  padding: $space-32;
+  border-radius: $radius-2xl;
+  overflow: hidden;
+  flex-shrink: 0;
+
+  @include mobile {
+    height: 388px;
+    padding: $space-lg $space-md;
+    border-radius: $radius-26;
+    gap: $space-14;
+  }
+}
+
+/* Decorative background blob */
+
+.promo-main-card__bg {
+  position: absolute;
+  width: calc(100% + 64px);
+  height: calc(100% + 64px);
+  top: -$space-32;
+  left: -$space-32;
+  background: $color-promo-card-bg;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Content */
+.promo-main-card__content {
+  position: relative;
+  z-index: 1;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: $space-108;
+  flex: 1 1 auto;
+  min-height: 0;
+  width: 100%;
+
+  @include mobile {
+    gap: $space-64;
+  }
+}
+
+.promo-main-card__image-tag {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.promo-main-card__image-area {
+  width: 152px;
+  height: 102px;
+}
+
+.promo-main-card__image {
+  width: 100%;
+  height: 100%;
+  border-radius: $radius-xl;
+}
+
+.promo-main-card__body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: $space-lg;
+  flex: 1 1 auto;
+  min-height: 0;
+  width: 100%;
+  justify-content: space-between;
+
+  @include mobile {
+    gap: $space-20;
+  }
+}
+
+.promo-main-card__text {
+  display: flex;
+  flex-direction: column;
+  gap: $space-md;
+  min-width: 0;
+  width: 100%;
+
+  @include mobile { gap: $space-10; }
+}
+
+.promo-main-card__title {
+
+  font-family: $font-primary;
+  font-weight: $fw-medium;
+  font-size: clamp($fs-24, 4vw, $fs-48);
+  line-height: 0.9;
+  letter-spacing: -0.03em;
+  color: $color-white;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+
+  @include mobile {
+    font-size: $fs-24;
+    line-height: 26px;
+    letter-spacing: -0.02em;
+  }
+}
+
+.promo-main-card__desc {
+  @include type-r-16;
+  margin: 0;
+  color: $color-tr-white-70;
+  width: 325px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+
+  @include mobile {
+    @include type-m-14;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+

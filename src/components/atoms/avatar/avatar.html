@@ -1,0 +1,31 @@
+<script props>
+    /*
+     * x-avatar
+     *
+     * Props:
+     *   image-url - foreground image URL (optional)
+     *   alt       - image alt text (default: 'avatar')
+     *   size      - sm | md | lg | xl (default: sm)
+     */
+
+    const imageUrl = props['image-url'] || ''
+    const alt      = props.alt || 'avatar'
+    const size     = props.size || 'sm'
+
+    module.exports = {
+        imageUrl,
+        alt,
+        cls: ['avatar', 'avatar--' + size].join(' '),
+    }
+</script>
+
+<div class="{{ cls }}">
+    <if condition="imageUrl">
+        <img
+            src="{{ imageUrl }}"
+            alt="{{ alt }}"
+            loading="lazy"
+            class="avatar__img"
+        >
+    </if>
+</div>

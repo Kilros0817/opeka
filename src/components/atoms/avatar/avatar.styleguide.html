@@ -1,0 +1,23 @@
+<!-- x-avatar showcase. Include in styleguide/components.html -->
+<section class="sg-section" id="comp-avatar" data-nav-target>
+  <h2 class="sg-section__title">Avatar</h2>
+  <p class="sg-section__desc">
+    Проп <code>image-url</code> — путь к изображению переднего плана (опционально).
+    Проп <code>alt</code> — альтернативный текст изображения (опционально, по умолчанию: «аватар»).
+    Проп <code>size</code>: <code>sm</code>, <code>md</code>, <code>lg</code>, <code>xl</code>.
+  </p>
+
+  <div class="sg-matrix sg-matrix--narrow">
+    <div class="sg-matrix__head">
+      <div class="sg-cell"><x-avatar image-url="../../assets/images/avatar-01.webp" alt="avatar" size="sm"></x-avatar></div>
+      <div class="sg-cell"><x-avatar image-url="../../assets/images/avatar-01.webp" alt="avatar" size="md" bg-color="red"></x-avatar></div>
+      <div class="sg-cell"><x-avatar image-url="../../assets/images/avatar-01.webp" alt="avatar" size="lg"></x-avatar></div>
+      <div class="sg-cell"><x-avatar image-url="../../assets/images/avatar-01.webp" alt="avatar" size="xl"></x-avatar></div>
+    </div>
+  </div>
+
+  <sg-snippet title="x-avatar">
+    <x-avatar image-url="../../assets/images/avatar-01.webp" alt="avatar" size="sm"></x-avatar>
+  </sg-snippet>
+
+</section>

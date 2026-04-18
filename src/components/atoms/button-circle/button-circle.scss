@@ -1,0 +1,167 @@
+@use '../../../styles/tokens' as *;
+
+/**
+ * .btn-circle — circle button
+ *
+ * Sizes:  --mini | --medium
+ * Colors: --tr-blue | --tr-white | --tr-grey | --tr-grey-white | --grey
+ */
+
+@mixin btn-color(
+  $bg-default,
+  $bg-hover,
+  $bg-disabled,
+  $text-default,
+  $text-disabled,
+  $circle-bg-default,
+) {
+  background-color: $bg-default;
+  color: $text-default;
+
+  .btn-circle__icon-circle {
+    background-color: $circle-bg-default;
+    color: $text-default;
+  }
+
+  &:hover:not(:disabled) { background-color: $bg-hover; }
+
+  &:disabled,
+  &[aria-disabled='true'] {
+    background-color: $bg-disabled;
+    color: $text-disabled;
+
+    .btn-circle__icon-circle { color: $text-disabled; }
+  }
+}
+
+/** .btn-circle — base block. Size modifier is required: --mini / --medium / --big. */
+.btn-circle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: $space-sm;
+  border: 0;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  overflow: hidden;
+  transition:
+    background-color $transition-fast,
+    color $transition-fast;
+
+  &:focus-visible {
+    outline: 2px solid $color-focus-ring;
+    outline-offset: 2px;
+  }
+
+  &:disabled,
+  &[aria-disabled='true'] { cursor: not-allowed; }
+}
+
+.btn-circle__icon {
+  display: block;
+  flex-shrink: 0;
+  fill: currentColor;
+
+  &--mini { width: 16px; height: 16px; }
+  &--medium { width: 18px; height: 18px; }
+}
+
+/* Sizes */
+.btn-circle--mini {
+  @include type-m-14;
+  width: 40px;
+  height: 34px;
+  gap: 16px;
+  opacity: 1;
+  padding-right: 12px;
+  padding-left: 12px;
+  border-radius: 100px;
+  top: 20px;
+  left: 98px;
+
+}
+
+.btn-circle--medium {
+  @include type-m-16;
+  width: 58px;
+  height: 46px;
+  gap: 16px;
+  opacity: 1;
+  padding: 21px 20px;
+  border-radius: 100px;
+  top: 75px;
+  left: 98px;
+}
+
+/* Colors */
+.btn-circle--tr-blue {
+  @include btn-color(
+    $bg-default:        $color-tr-blue-10,
+    $bg-hover:          $color-tr-blue-10,
+    $bg-disabled:       $color-tr-blue-10,
+    $text-default:      $color-blue,
+    $text-disabled:     $color-tr-blue-30,
+    $circle-bg-default: $color-tr-blue-30,
+  );
+}
+
+.btn-circle--tr-white {
+  @include btn-color(
+    $bg-default:        $color-tr-white-20,
+    $bg-hover:          $color-tr-white-30,
+    $bg-disabled:       $color-tr-white-20,
+    $text-default:      $color-white,
+    $text-disabled:     $color-tr-white-50,
+    $circle-bg-default: $color-tr-white-20,
+  );
+  backdrop-filter: blur($blur-button);
+}
+
+.btn-circle--white {
+  @include btn-color(
+    $bg-default:        $color-white,
+    $bg-hover:          $color-white-hover,
+    $bg-disabled:       $color-white-disabled,
+    $text-default:      $color-navy,
+    $text-disabled:     $color-navy-60,
+    $circle-bg-default: $color-tr-black-05,
+  );
+}
+
+.btn-circle--tr-grey {
+  @include btn-color(
+    $bg-default:        $color-tr-black-05,
+    $bg-hover:          $color-tr-black-10,
+    $bg-disabled:       $color-tr-black-05,
+    $text-default:      $color-navy,
+    $text-disabled:     $color-navy-60,
+    $circle-bg-default: $color-tr-black-05,
+  );
+  backdrop-filter: blur($blur-button);
+}
+
+.btn-circle--tr-grey-white {
+  @include btn-color(
+    $bg-default:        $color-tr-black-05,
+    $bg-hover:          $color-tr-black-10,
+    $bg-disabled:       $color-tr-black-05,
+    $text-default:      $color-white,
+    $text-disabled:     $color-tr-white-50,
+    $circle-bg-default: $color-tr-white-20,
+  );
+  backdrop-filter: blur($blur-button);
+}
+
+.btn-circle--tr-black {
+  @include btn-color(
+    $bg-default:        $color-tr-white-20,
+    $bg-hover:          $color-tr-white-30,
+    $bg-disabled:       $color-tr-white-20,
+    $text-default:      $color-navy,
+    $text-disabled:     $color-navy-60,
+    $circle-bg-default: $color-tr-black-05,
+  );
+
+  &:hover:not(:disabled) { color: $color-tr-white-50; }
+}

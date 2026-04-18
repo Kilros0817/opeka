@@ -1,0 +1,120 @@
+@use '../../../styles/tokens' as *;
+
+/**
+ * .promo-card — Promotion Card (Figma).
+ *
+ * Composition: img + .tag + title + description + .text-link
+ *
+ * Desktop: 357x480, padding 32, radius 32
+ * Mobile:  320x438, padding 24/16, radius 26
+ */
+
+.promo-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: $space-72;
+
+  width: clamp(320px, 6vw, 357px);
+  height: 480px;
+  padding: $space-32;
+  border-radius: $radius-2xl;
+
+  background-color: $color-tr-black-03;
+
+  @include mobile {
+    height: 438px;
+    padding: $space-lg $space-md;
+    border-radius: $radius-26;
+    gap: $space-2xl;
+  }
+}
+
+/* Decorative background blob */
+
+.promo-card__bg {
+  position: absolute;
+  filter: blur(100px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Content */
+.promo-card__content {
+  position: relative;
+  z-index: 1;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: $space-72;
+  flex: 1 1 auto;
+  min-height: 0;
+  width: 100%;
+
+  @include mobile {
+    gap: $space-2xl;
+  }
+}
+
+.promo-card__body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: $space-lg;
+  flex: 1 1 auto;
+  min-height: 0;
+  width: 100%;
+
+  @include mobile {
+    gap: $space-20;
+  }
+}
+
+.promo-card__image-area {
+  width: 152px;
+  height: 102px;
+}
+
+.promo-card__image {
+  width: 100%;
+  height: 100%;
+  border-radius: $radius-xl;
+}
+
+.promo-card__tag-text {
+  display: grid;
+  justify-items: start;
+  gap:$space-md;
+
+  @include mobile {
+    gap: $space-14;
+  }
+}
+
+.promo-card__text {
+  display: flex;
+  flex-direction: column;
+  gap: $space-12;
+  min-width: 0;
+  width: 100%;
+
+  @include mobile { gap: $space-10; }
+}
+
+.promo-card__title {
+  @include type-m-24;
+  margin: 0;
+  color: $color-navy;
+}
+
+.promo-card__desc {
+  @include type-r-16;
+  margin: 0;
+  color: $color-navy-60;
+
+  @include mobile {
+    @include type-r-14;
+  }
+}

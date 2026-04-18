@@ -1,0 +1,42 @@
+<script props>
+    /*
+     * x-avatar-card
+     *
+     * Props:
+     *   image-url - foreground image URL (optional)
+     *   alt       - image alt text (default: 'avatar')
+     *   size      - sm | md | lg | xl (default: sm)
+     *   name      - person name (optional)
+     *   desc      - person description (optional)
+     */
+
+    const imageUrl = props['image-url'] || ''
+    const alt      = props.alt || 'avatar'
+    const size     = props.size || 'sm'
+    const name     = props.name || ''
+    const desc     = props.desc || ''
+
+    module.exports = {
+        imageUrl,
+        alt,
+        size,
+        name,
+        desc,
+    }
+</script>
+
+<div class="avatar-card">
+    <x-avatar
+        image-url="{{ imageUrl }}"
+        alt="{{ alt }}"
+        size="{{ size }}"
+    ></x-avatar>
+    <div class="avatar-card__body">
+        <if condition="name">
+            <p class="avatar-card__name">{{ name }}</p>
+        </if>
+        <if condition="desc">
+            <p class="avatar-card__desc">{{ desc }}</p>
+        </if>
+    </div>
+</div>

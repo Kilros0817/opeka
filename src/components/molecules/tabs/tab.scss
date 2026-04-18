@@ -1,0 +1,21 @@
+@use '../../../styles/tokens' as *;
+
+/**
+ *
+ */
+
+.tab {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: $fs-base;
+  line-height: 0px;
+  letter-spacing: -0.02em;
+  font-weight: $fw-medium;
+  white-space: nowrap;
+  cursor: pointer;
+  user-select: none;
+  border-radius: $radius-lg;
+  margin: 1px;
+}

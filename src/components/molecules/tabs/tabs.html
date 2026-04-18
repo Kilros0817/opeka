@@ -1,0 +1,25 @@
+<script props>
+  /*
+   * x-tabs
+   *
+   * Props:
+   *   type — black | white | non-border (default: black)
+   *
+   * Children (yield):
+   *   One <x-tab isactive='true'> per tab.
+   */
+  const type = props['type'] || 'black'
+
+  module.exports = {
+    type,
+    cls: [
+      'tabs',
+      'tabs--' + type,
+    ].join(' '),
+  }
+
+</script>
+
+<div class="{{cls}}">
+  <yield></yield>
+</div>

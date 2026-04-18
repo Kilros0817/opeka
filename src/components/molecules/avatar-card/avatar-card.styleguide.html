@@ -1,0 +1,37 @@
+<!-- x-avatar-card showcase. Include in styleguide/components.html -->
+<section class="sg-section" id="comp-avatar-card" data-nav-target>
+  <h2 class="sg-section__title">Avatar Card</h2>
+  <p class="sg-section__desc">
+    Аватар с именем и описанием.
+    Проп <code>image-url</code> — путь к изображению.
+    Проп <code>alt</code> — альтернативный текст изображения (опционально, по умолчанию: «аватар»).
+    Проп <code>name</code> — имя персоны.
+    Проп <code>desc</code> — описание.
+  </p>
+
+  <div class="sg-matrix sg-matrix--narrow">
+    <div class="sg-matrix__row">
+      <span></span>
+      <div class="sg-cell">
+        <x-avatar-card
+          image-url="../../assets/images/avatar-01.webp"
+          alt="avatar"
+          size="sm"
+          name="Елена Викторовна Соколова"
+          desc="Врач-гериатр, специалист по уходу за пожилыми людьми"
+        ></x-avatar-card>
+      </div>
+    </div>
+  </div>
+
+  <sg-snippet title="x-avatar-card">
+    <x-avatar-card
+      image-url="../../assets/images/avatar-01.webp"
+      alt="avatar"
+      size="sm"
+      name="Елена Викторовна Соколова"
+      desc="Врач-гериатр, специалист по уходу за пожилыми людьми"
+    ></x-avatar-card>
+  </sg-snippet>
+
+</section>

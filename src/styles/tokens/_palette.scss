@@ -21,6 +21,7 @@ $surface-page:    #f5f6f8;
 $rate-full:       #FFC927;
 $rate-empty:      #22294F0D;
 $text-common:     #a59898;
+
 /* Tags BG */
 $red-50:          #ffe3e4;
 $green-50:        #baf9ce;
@@ -34,7 +35,7 @@ $navy-20:         rgb(34, 41, 79, 0.2);
 $navy-10:         rgb(34, 41, 79, 0.1);
 $navy-05:         rgb(34, 41, 79, 0.05);
 $navy-03:         rgb(34, 41, 79, 0.03);
-$navy-100:         rgb(34, 41, 79, 1);
+$navy-100:        rgb(34, 41, 79, 1);
 
 
 /* White transparent */
@@ -46,8 +47,9 @@ $white-30:        rgb(255, 255, 255, 0.3);
 $white-20:        rgb(255, 255, 255, 0.2);
 $white-10:        rgb(255, 255, 255, 0.1);
 $white-100:       rgb(255, 255, 255, 1);
+$white-0:         rgb(255, 255, 255, 0);
 
-/* Blue transparent */
+/* Blue transparent */        
 $blue-20p:        rgb(240, 241, 245, 1);
 $blue-50p:        rgb(38, 116, 217, 0.5);
 $blue-30p:        rgb(38, 116, 217, 0.3);
@@ -79,12 +81,20 @@ $pink-100p:       rgb(255, 94, 97, 1);
 /* grey transparent */
 $grey-100p:       rgb(199, 201, 206, 1);
 
-/* Orange transparent */
-$orange-10p:      rgb(253, 163, 70, 0.1);
-
 /* Red transparent */
 $red-10p:         rgb(255, 94, 97, 0.1);
 
-/* Green transparent */
-$green-10p:       rgb(117, 199, 92, 0.1);
+$hezy-100p:       rgb(82, 82, 78,1);
 
+
+/* warning transparent */
+$warn-bg:         rgb(255, 236, 218, 1);
+
+/* pansionat-card gradient */
+$gr-grey:         linear-gradient(to top, rgb(10, 17, 17, 0.3) 1%, rgb(10, 17, 17, 0) 150%);
+$gr-grey-big:     linear-gradient(to top, rgb(10, 17, 17, 0.3) 1%, rgb(10, 17, 17, 0) 150%);
+
+$red-top-center:  linear-gradient(200deg, rgb(255, 140, 120, 0.35) 0%, rgb(255, 140, 120, 0.25) 20%, rgb(255, 140, 120, 0.12) 40%, rgb(255, 140, 120, 0.05) 55%, rgb(255, 140, 120, 0.0) 70%), 
+                  radial-gradient(ellipse 110% 66% at 67% 33%, #FDB9A0 0%, #FA9C80 27%, #F36668 100%), 
+                  radial-gradient(ellipse 140% 35% at 70% 8%, rgb(255, 150, 130, 0.35) 0%, rgb(255, 150, 130, 0.18) 30%, rgb(255, 150, 130, 0.08) 50%, rgb(255, 150, 130, 0.0) 70%), 
+                  linear-gradient(160deg, #f3a78f 0%, #f19a84 20%, #ee8775 40%, #ea6e63 65%, #e45752 85%, #df4a4a 100%);
