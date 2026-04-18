@@ -1,10 +1,10 @@
 @use '../../../styles/tokens' as *;
 
 /**
- * .btn — circle button
+ * .circlebtn — circle button
  *
  * Sizes:  --mini | --medium
- * Colors: --blue | --tr-white | --tr-grey | --tr-grey-white | --white
+ * Colors: --tr-blue | --tr-white | --tr-grey | --tr-grey-white | --tr-black
  */
 
 @mixin btn-color(
@@ -18,7 +18,7 @@
   background-color: $bg-default;
   color: $text-default;
 
-  .btn__icon-circle {
+  .circlebtn__icon-circle {
     background-color: $circle-bg-default;
     color: $text-default;
   }
@@ -30,12 +30,12 @@
     background-color: $bg-disabled;
     color: $text-disabled;
 
-    .btn__icon-circle { color: $text-disabled; }
+    .circlebtn__icon-circle { color: $text-disabled; }
   }
 }
 
-/** .btn — base block. Size modifier is required: --mini / --medium */
-.btn {
+/** .btn — base block. Size modifier is required: --mini / --medium / --big. */
+.circlebtn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -58,31 +58,38 @@
   &[aria-disabled='true'] { cursor: not-allowed; }
 }
 
-.btn__label { display: inline-block; }
+.circlebtn__label { display: inline-block; }
 
-.btn__icon-circle {
+.circlebtn__icon {
+  display: block;
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+
+  &--sm { width: 14px; height: 14px; }
+}
+
+.circlebtn__icon-circle {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
   height: 34px;
   padding: 0 12px;
-  border-radius: 100px;
+  border-radius: $radius-pill;
   backdrop-filter: blur($blur-button);
 }
 
 /* Sizes */
-.btn--mini {
+.circlebtn--mini {
   @include type-m-14;
   height: 34px;
   padding: 0 12px;
   border-radius: 100px;
 }
 
-/* Shape modifiers */
-.btn--pill { border-radius: 100px; }
-
-.btn--medium {
+.circlebtn--medium {
   @include type-m-16;
   height: 46px;
   padding: 0 24px;
@@ -91,7 +98,7 @@
 }
 
 /* Colors */
-.btn--tr-blue {
+.circlebtn--tr-blue {
   @include btn-color(
     $bg-default:        $color-tr-blue-10,
     $bg-hover:          $color-tr-blue-10,
@@ -102,18 +109,7 @@
   );
 }
 
-.btn--white {
-  @include btn-color(
-    $bg-default:        $color-white,
-    $bg-hover:          $color-white-hover,
-    $bg-disabled:       $color-white-disabled,
-    $text-default:      $color-navy,
-    $text-disabled:     $color-navy-60,
-    $circle-bg-default: $color-tr-black-05,
-  );
-}
-
-.btn--tr-white {
+.circlebtn--tr-white {
   @include btn-color(
     $bg-default:        $color-tr-white-20,
     $bg-hover:          $color-tr-white-30,
@@ -125,7 +121,7 @@
   backdrop-filter: blur($blur-button);
 }
 
-.btn--tr-grey {
+.circlebtn--tr-grey {
   @include btn-color(
     $bg-default:        $color-tr-black-05,
     $bg-hover:          $color-tr-black-10,
@@ -137,7 +133,7 @@
   backdrop-filter: blur($blur-button);
 }
 
-.btn--tr-grey-white {
+.circlebtn--tr-grey-white {
   @include btn-color(
     $bg-default:        $color-tr-black-05,
     $bg-hover:          $color-tr-black-10,
@@ -147,4 +143,17 @@
     $circle-bg-default: $color-tr-white-20,
   );
   backdrop-filter: blur($blur-button);
+}
+
+.circlebtn--tr-black {
+  @include btn-color(
+    $bg-default:        $color-tr-white-20,
+    $bg-hover:          $color-tr-white-30,
+    $bg-disabled:       $color-tr-white-20,
+    $text-default:      $color-navy,
+    $text-disabled:     $color-navy-60,
+    $circle-bg-default: $color-tr-black-05,
+  );
+
+  &:hover:not(:disabled) { color: $color-tr-white-50; }
 }
