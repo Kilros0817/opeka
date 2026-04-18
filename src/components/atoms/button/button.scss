@@ -205,5 +205,111 @@
     $circle-bg-default: $color-tr-white-20,
   );
 
-  &:hover:not(:disabled) { color: $color-tr-white-50; }
+  &:hover:not(:disabled) {
+    color: $color-tr-white-50;
+  }
+}
+
+.btn--light-black {
+  background-color: $color-tr-gray-50;
+
+  &:hover:not(:disabled) {
+    background-color: $color-tr-grey-100;
+  }
+}
+
+.btn--border-black-normal {
+  border-color: $color-border;
+  border-width: 1.2px;
+  border-style: solid;
+}
+
+.btn--color-black {
+  color: $color-navy-60;
+}
+
+.btn--border-blue-bold {
+  border-color: $color-tr-blue-100;
+  border-width: 2px;
+  border-style: solid;
+}
+
+.btn--color-blue {
+  color: $color-tr-blue-100;
+}
+
+.btn--border-white-normal {
+  border-color: $color-border-white-30;
+  border-width: 1.2px;
+  border-style: solid;
+}
+
+.btn--color-white {
+  color: $color-text-on-dark-100;
+}
+
+.btn--border-white-bold {
+  border-color: $color-border-white-30;
+  border-width: 2px;
+  border-style: solid;
+}
+
+.btn--grey {
+  background-color: $color-tr-black-10;
+}
+
+.btn--color-black {
+  color: $color-navy-100;
+}
+
+.btn--pad-20 {
+  padding: 20px;
+}
+
+/* Tab active state — toggled by tabs.js via data-tab-status */
+.tabs [data-tab-status='active'] {
+  &.btn--border-black-normal,
+  &.btn--border-blue-bold {
+    border-style: solid !important;
+    border-color: $color-tr-blue-100 !important;
+    border-width: 2px !important;
+    color: $color-tr-blue-100 !important;
+  }
+
+  &.btn--border-white-normal,
+  &.btn--border-white-bold {
+    border-style: solid !important;
+    border-width: 2px !important;
+    color: $color-text-on-dark-100 !important;
+  }
+
+  &.btn--tr-grey,
+  &.btn--grey {
+    background-color: $color-tr-black-10 !important;
+    color: $color-navy-100 !important;
+  }
+}
+
+/* Tab default state — reset active-looking classes when deactivated */
+.tabs [data-tab-status='default'] {
+  &.btn--border-blue-bold {
+    border-style: solid !important;
+    border-color: $color-border !important;
+    border-width: 1.2px !important;
+    color: $color-navy-60 !important;
+  }
+
+  &.btn--color-blue {
+    color: $color-navy-60 !important;
+  }
+
+  &.btn--border-white-bold {
+    border-style: solid !important;
+    border-width: 1.2px !important;
+  }
+
+  &.btn--grey {
+    background-color: $color-tr-black-05 !important;
+    color: $color-navy !important;
+  }
 }
