@@ -29,12 +29,9 @@
   }
 }
 
-/* Decorative background blob */
 
 .benefit-card__link {
   position: absolute;
-  top: 225px;
-  left: 330px;
   width: 285px;
   height: 214px;
   display: flex;
@@ -44,29 +41,65 @@
   pointer-events: none;
 
   @include mobile {
-    top: 183px;
-    left: 165px;
     width: 176px;
     height: 132px;
   }
 }
 
-.image-pos {
+.benefit-card__link-image {
+  position: absolute;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  position: absolute;
 }
 
-.image-pos--left {
+.benefit-card__link--left {
   top: 225px;
   left: 330px;
-  // position: absolute;
+
+  @include mobile {
+    top: 183px;
+    left: 165px;
+  }
 }
 
-.image-pos--right {
+.benefit-card__link--right {
   top: 225px;
   right: 330px;
+
+  @include mobile {
+    top: 183px;
+    left: 165px;
+  }
+}
+
+.benefit-card__link--square {
+  width: 200px;
+  height: 200px;
+
+  @include mobile {
+    width: 176px;
+    height: 176px;
+  }
+}
+
+.benefit-card__link--landscape {
+  width: 285px;
+  height: 214px;
+
+  @include mobile {
+    width: 176px;
+    height: 132px;
+  }
+}
+
+.benefit-card__link--portrait {
+  width: 214px;
+  height: 285px;
+
+  @include mobile {
+    width: 176px;
+    height: 234px;
+  }
 }
 
 /* Content */
@@ -137,5 +170,14 @@
 
   @include mobile {
     @include type-r-14;
+  }
+}
+
+/* Styleguide-only spacing to account for decorative overflow image */
+.benefit-card-sg-cell {
+  margin-bottom: 100px;
+
+  @include mobile {
+    margin-bottom: 95px;
   }
 }
