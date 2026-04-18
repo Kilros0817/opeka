@@ -1,0 +1,31 @@
+<script props>
+    /*
+     * x-button-video
+     *
+     * Video Button.
+     * 
+     * Props:
+     *   size: 'large' | 'medium' | 'small' | 'xs' | 'xxs' (default: 'large')
+     *   disabled: boolean
+     *   theme: 'dark' | 'light' (default: 'dark')
+     * 
+     */
+
+    const size     = props.size || 'large'
+    const theme    = props.theme || 'dark'
+    const disabled = isEnabled(props.disabled)
+
+    module.exports = {
+        disabled,
+        cls: [
+        'btn-video',
+        'btn-video--' + size,
+        'btn-video--' + theme,
+        disabled ? 'btn-video--disabled' : '',
+        ].filter(Boolean).join(' '),
+    }
+</script>
+
+<button class="{{ cls }}" aria-label="Play">
+  <span class="play-btn__icon" aria-hidden="true">▶</span>
+</button>

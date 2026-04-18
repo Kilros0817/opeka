@@ -193,7 +193,13 @@
         },
         {
           "name": "x-avatar",
-          "description": "x-avatar — see src\\components\\atoms\\avatar\\avatar.html"
+          "description": "x-avatar — see src\\components\\atoms\\avatar\\avatar.html",
+          "attributes": [
+            {
+              "name": "bg-color",
+              "description": "solid background color (optional, default: blue gradient from CSS)"
+            }
+          ]
         },
         {
           "name": "x-avatar-button",
@@ -212,8 +218,7 @@
           "attributes": [
             {
               "name": "desc",
-              "description": "person description (default: '')",
-              "default": "''"
+              "description": "person description (optional)"
             }
           ]
         },
@@ -251,6 +256,10 @@
         {
           "name": "x-button-step",
           "description": "Button step."
+        },
+        {
+          "name": "x-button-video",
+          "description": "Video Button."
         },
         {
           "name": "x-circle-icon",
@@ -322,19 +331,8 @@
           "attributes": [
             {
               "name": "disabled",
-              "description": "true | false (default: false)",
-              "default": "false",
-              "value": {
-                "type": "enum"
-              },
-              "values": [
-                {
-                  "name": "true"
-                },
-                {
-                  "name": "false"
-                }
-              ]
+              "description": "boolean (default: false)",
+              "default": "false"
             }
           ]
         },
