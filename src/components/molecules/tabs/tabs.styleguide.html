@@ -4,7 +4,7 @@
   <p class="sg-section__desc">
     Горизонтальная панель вкладок. Состоит из набора <code>x-tab</code>.
     Типы: <code>black</code>, <code>white</code>, <code>non-border</code>.
-    Активная вкладка управляется через <code>status="active"</code>; переключение — JS (<code>tabs.js</code>).
+    Активная вкладка управляется через <code>isactive="true"</code>; переключение — JS (<code>tabs.js</code>).
   </p>
 
   <div class="sg-matrix--narrow sg-matrix__tabs">
@@ -13,12 +13,12 @@
       <span class="sg-variant-label">Black</span>
       <div class="sg-cell">
         <x-tabs type="black">
-          <x-tab status="default" type="black">Здоровье</x-tab>
-          <x-tab status="default" type="black">Досуг</x-tab>
-          <x-tab status="active" type="black">Питание</x-tab>
-          <x-tab status="default" type="black">Комфорт</x-tab>
-          <x-tab status="default" type="black">Психологическая помощь</x-tab>
-          <x-tab status="default" type="black">Уход 24/7</x-tab>
+          <x-tab>Здоровье</x-tab>
+          <x-tab>Досуг</x-tab>
+          <x-tab isactive="true">Питание</x-tab>
+          <x-tab>Комфорт</x-tab>
+          <x-tab>Психологическая помощь</x-tab>
+          <x-tab>Уход 24/7</x-tab>
         </x-tabs>
       </div>
     </div>
@@ -26,13 +26,13 @@
     <div class="sg-matrix__row">
       <span class="sg-variant-label">White</span>
       <div class="sg-cell">
-        <x-tabs type="black">
-          <x-tab status="default" type="white">Здоровье</x-tab>
-          <x-tab status="default" type="white">Досуг</x-tab>
-          <x-tab status="default" type="white">Питание</x-tab>
-          <x-tab status="default" type="white">Комфорт</x-tab>
-          <x-tab status="active" type="white">Психологическая помощь</x-tab>
-          <x-tab status="default" type="white">Уход 24/7</x-tab>
+        <x-tabs type="white">
+          <x-tab>Здоровье</x-tab>
+          <x-tab>Досуг</x-tab>
+          <x-tab isactive="true">Питание</x-tab>
+          <x-tab>Комфорт</x-tab>
+          <x-tab>Психологическая помощь</x-tab>
+          <x-tab>Уход 24/7</x-tab>
         </x-tabs>
       </div>
     </div>
@@ -40,26 +40,26 @@
     <div class="sg-matrix__row">
       <span class="sg-variant-label">Non border</span>
       <div class="sg-cell">
-        <x-tabs type="black">
-          <x-tab status="default" type="non-border">Здоровье</x-tab>
-          <x-tab status="default" type="non-border">Досуг</x-tab>
-          <x-tab status="active" type="non-border">Питание</x-tab>
-          <x-tab status="default" type="non-border">Комфорт</x-tab>
-          <x-tab status="default" type="non-border">Психологическая помощь</x-tab>
-          <x-tab status="default" type="non-border">Уход 24/7</x-tab>
+        <x-tabs type="non-border">
+          <x-tab>Здоровье</x-tab>
+          <x-tab>Досуг</x-tab>
+          <x-tab isactive="true">Питание</x-tab>
+          <x-tab>Комфорт</x-tab>
+          <x-tab>Психологическая помощь</x-tab>
+          <x-tab>Уход 24/7</x-tab>
         </x-tabs>
       </div>
     </div>
   </div>
 
   <sg-snippet title="x-promo-mini-slider">
-    <x-tabs type="black">
-      <x-tab status="default" type="black">Здоровье</x-tab>
-      <x-tab status="default" type="black">Досуг</x-tab>
-      <x-tab status="active" type="black">Питание</x-tab>
-      <x-tab status="default" type="black">Комфорт</x-tab>
-      <x-tab status="default" type="black">Психологическая помощь</x-tab>
-      <x-tab status="default" type="black">Уход 24/7</x-tab>
+    <x-tabs type="non-border">
+      <x-tab>Здоровье</x-tab>
+      <x-tab>Досуг</x-tab>
+      <x-tab isactive="true">Питание</x-tab>
+      <x-tab>Комфорт</x-tab>
+      <x-tab>Психологическая помощь</x-tab>
+      <x-tab>Уход 24/7</x-tab>
     </x-tabs>
   </sg-snippet>
 </section>

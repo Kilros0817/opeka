@@ -3,23 +3,19 @@
    * x-tab
    *
    * Props:
-   *   type   — black | white | non-border (default: black)
-   *   status — active | default (default: default)
+   *   type      — black | white | non-border (default: black)
+   *   isactive  — true | false (default: false)
    */
-  const type = props.type || 'black';
-  const status = props.status || '';
+  const type = props['type'] || 'black';
+  const isactive = props['isactive'] ? 'active' : 'default';
 
   module.exports = {
-    type, status,
-    cls: [
-      'tab',
-      'tab--' + type,
-    ].join(' '),
+    type, isactive,
   }
 </script>
 
-<div class="{{ cls }}">
-  <span class="tab--{{ status }}">
+<div class="tab">
+  <span class="tab--{{ isactive }}">
     <yield></yield>
   </span>
 </div>

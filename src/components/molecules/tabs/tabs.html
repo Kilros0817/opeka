@@ -3,16 +3,16 @@
    * x-tabs
    *
    * Props:
-   *   aria-label — accessible name for the tabs (default: Акции)
+   *   type — black | white | non-border (default: black)
    *
    * Children (yield):
-   *   One <x-tab type="black" status="default"> per tab.
+   *   One <x-tab isActive='true'> per tab.
    */
-  const ariaLabel = props['aria-label'] || 'Акции'
+  const type = props['type'] || 'black'
 
-  module.exports = { ariaLabel }
+  module.exports = { type }
 </script>
 
-<div class="tabs" aria-label="{{ ariaLabel }}">
+<div class="tabs" data-tabs="{{type}}">
   <yield></yield>
 </div>
