@@ -103,7 +103,7 @@
 .promo-card__title {
   @include type-m-20;
   margin: 0;
-  color: $color-text-primary;
+  color: $color-navy;
 
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -114,7 +114,7 @@
 .promo-card__desc {
   @include type-r-16;
   margin: 0;
-  color: $color-text-secondary;
+  color: $color-navy-60;
 
   display: -webkit-box;
   -webkit-line-clamp: 3;
