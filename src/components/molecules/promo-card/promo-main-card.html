@@ -1,0 +1,54 @@
+<script props>
+/*
+* x-promo-main-card
+  *
+  * Promotion Main card: img + tag + title + description + text-link
+  * Composes <x-tag> and <x-text-link> internally.
+  *
+  * Props (shell):
+  *   img-url - img url for the card (default: '')
+  *   alt - img description
+  *   tag-color — color for the <x-tag> (default: red)
+  *   tag-icon — sprite id for the <x-tag> (default: fire)
+  *   link-href — href for the CTA link (default: #)
+  *   link-icon — sprite id for the link icon (default: plus)
+  *
+  * Slots:
+  *   <fill-tag>   — tag label
+  *   <fill-title> — card title (rendered in <h3>)
+  *   <fill-desc>  — card description (rendered in <p>)
+  *   <fill-link>  — CTA link label
+  */
+ 
+  const imgUrl = props['img-url'] || ''
+  const alt = props['alt'] || 'no image'
+  const tagColor = props['tag-color'] || 'red'
+  const tagIcon = props['tag-icon'] || 'fire'
+  const linkHref = props['link-href'] || '#'
+  const linkIcon = props['link-icon'] || 'plus'
+
+  module.exports = { imgUrl, alt, tagColor, tagIcon, linkHref, linkIcon }
+</script>
+
+<article class="promo-main-card">
+  <div class="promo-main-card__bg" aria-hidden="true"></div>
+  <div class="promo-main-card__content">
+    <div class="promo-main-card__image-tag">
+      <div class="promo-main-card__image-area" aria-label="{{ alt }}">
+        <if condition="imgUrl">
+          <img src="{{ imgUrl }}" alt="{{ alt }}" loading="lazy" class="promo-main-card__image">
+        </if>
+      </div>
+      <div class="promo-main-card__tag">
+        <x-tag size="sm" color="{{ tagColor }}" icon="{{ tagIcon }}"><slot-tag></slot-tag></x-tag>    
+      </div>
+    </div>
+    <div class="promo-main-card__body">
+      <div class="promo-main-card__text">
+        <h3 class="promo-main-card__title"><slot-title></slot-title></h3>
+        <p class="promo-main-card__desc"><slot-desc></slot-desc></p>
+      </div>
+      <x-text-link href="{{ linkHref }}" color="white" icon="{{ linkIcon }}"><slot-link></slot-link></x-text-link>
+    </div>
+  </div>
+</article>
