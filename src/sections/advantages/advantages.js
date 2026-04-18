@@ -39,6 +39,7 @@ function buildDesktopTimeline(gsap, ScrollTrigger, section) {
     if (i === activeStep) return
     activeStep = i
     steps.forEach((el, idx) => el.classList.toggle('btn-step--active', idx === i))
+    slidesLeft.forEach((el, idx) => el.setAttribute('aria-hidden', idx !== i ? 'true' : 'false'))
     if (counterCurrent) counterCurrent.textContent = pad2(i + 1)
   }
 
