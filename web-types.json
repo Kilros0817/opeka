@@ -297,6 +297,28 @@
           "description": "Button step."
         },
         {
+          "name": "x-button-video",
+          "description": "x-button-video — see src\\components\\atoms\\button-video\\button-video.html",
+          "attributes": [
+            {
+              "name": "icon-color",
+              "description": "black | white (default: black)",
+              "default": "black",
+              "value": {
+                "type": "enum"
+              },
+              "values": [
+                {
+                  "name": "black"
+                },
+                {
+                  "name": "white"
+                }
+              ]
+            }
+          ]
+        },
+        {
           "name": "x-circle-icon",
           "description": "Renders a <span> with optional 16px icon.",
           "attributes": [

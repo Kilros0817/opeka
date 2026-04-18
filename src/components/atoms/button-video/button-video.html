@@ -1,0 +1,29 @@
+<script props>
+  /*
+   * x-button-video
+   *
+   * Props:
+   *   size       — xl | lg | md | sm | xs (default: xl)
+   *   bg-color   — tr-gray | tr-white | tr-blue (default: tr-gray)
+   *   icon-color — black | white (default: black)
+   */
+
+  const size      = props['size'] || 'xl'
+  const bgColor   = props['bg-color'] || 'tr-gray'
+  const iconColor = props['icon-color'] || 'black'
+
+  module.exports = {
+    icon: 'play',
+    cls: [
+      'btn-video',
+      'btn-video--' + size,
+      'btn-video--' + bgColor,
+      'btn-video--icon-' + iconColor,
+    ].join(' '),
+    cls__icon: 'btn-video__icon btn-video__icon--' + size,
+  }
+</script>
+
+<button class="{{ cls }}" aria-label="Play">
+  <svg class="{{ cls__icon }}" aria-hidden="true"><use href="#icon-{{ icon }}"/></svg>
+</button>
