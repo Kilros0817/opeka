@@ -3,8 +3,7 @@
 /**
  * .avatar-btn — Avatar Button Component
  *
- * Displays a responsive avatar image with optional border on active state.
- * Uses picture element for webp support with PNG fallback.
+ * Displays a responsive avatar image with border on active state.
  */
 
 .avatar-btn {
@@ -15,7 +14,6 @@
   cursor: pointer;
 }
 
-/* Colors */
 .avatar-btn--tr-white { 
   background-color: $color-tr-white-10; 
 }
