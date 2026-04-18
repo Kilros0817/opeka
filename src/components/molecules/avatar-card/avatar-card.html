@@ -3,35 +3,23 @@
      * x-avatar-card
      *
      * Props:
-     *   src_main  - foreground image URL (default: '')
+     *   image-url - foreground image URL (optional)
      *   alt       - image alt text (default: 'avatar')
      *   size      - sm | md | lg | xl (default: sm)
-     *   bg_type   - gradient | solid | image (default: gradient)
-     *   bg_from   - gradient start color or solid color (default: '')
-     *   bg_to     - gradient end color, gradient only (default: '')
-     *   bg_img    - background image URL, image type only (default: '')
-     *   name      - person name (default: '')
-     *   desc      - person description (default: '')
+     *   name      - person name (optional)
+     *   desc      - person description (optional)
      */
 
-    const src_main = props.src_main || '';
-    const alt = props.alt || 'avatar';
-    const size = props.size || 'sm';
-    const bg_type = props.bg_type || 'gradient';
-    const bg_from = props.bg_from || '';
-    const bg_to = props.bg_to || '';
-    const bg_img = props.bg_img || '';
-    const name = props.name || '';
-    const desc = props.desc || '';
+    const imageUrl = props['image-url'] || ''
+    const alt      = props.alt || 'avatar'
+    const size     = props.size || 'sm'
+    const name     = props.name || ''
+    const desc     = props.desc || ''
 
     module.exports = {
-        src_main,
+        imageUrl,
         alt,
         size,
-        bg_type,
-        bg_from,
-        bg_to,
-        bg_img,
         name,
         desc,
     }
@@ -39,13 +27,9 @@
 
 <div class="avatar-card">
     <x-avatar
-        src_main="{{ src_main }}"
+        image-url="{{ imageUrl }}"
         alt="{{ alt }}"
         size="{{ size }}"
-        bg_type="{{ bg_type }}"
-        bg_from="{{ bg_from }}"
-        bg_to="{{ bg_to }}"
-        bg_img="{{ bg_img }}"
     ></x-avatar>
     <div class="avatar-card__body">
         <if condition="name">
