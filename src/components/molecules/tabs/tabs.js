@@ -12,16 +12,7 @@
  */
 export function initTabs(root = document) {
 
-  document.querySelectorAll('.tabs').forEach(el => {
-    const type = el.dataset.tabs
-    if (!type) return
-
-    el.querySelectorAll('.tab').forEach(tab => {
-      tab.classList.add(`tab--${type}`)
-    })
-  })
-
-  root.querySelectorAll('.tabs').forEach(tabs => {
+  root.querySelectorAll('[class^="tabs--"]').forEach(tabs => {
     tabs.addEventListener('click', e => {
       const clicked = e.target.closest('.tab--default, .tab--active')
       if (!clicked || !tabs.contains(clicked)) return
