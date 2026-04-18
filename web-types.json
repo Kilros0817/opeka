@@ -120,12 +120,27 @@
           "description": "Advantages mini card: title + optional stack of tag pills.\r Slots:\r   <fill-title> — card title (rendered in <h3>)\r   <fill-tags>  — optional: any number of <x-tag-advantages> (or other markup)"
         },
         {
+          "name": "x-avatar",
+          "description": "x-avatar — see src\\components\\atoms\\avatar\\avatar.html"
+        },
+        {
           "name": "x-avatar-button",
           "description": "x-avatar-button — see src\\components\\atoms\\avatar-button\\avatar-button.html",
           "attributes": [
             {
               "name": "active",
               "description": "active button(default: '')",
+              "default": "''"
+            }
+          ]
+        },
+        {
+          "name": "x-avatar-card",
+          "description": "x-avatar-card — see src\\components\\molecules\\avatar-card\\avatar-card.html",
+          "attributes": [
+            {
+              "name": "desc",
+              "description": "person description (default: '')",
               "default": "''"
             }
           ]
@@ -204,6 +219,28 @@
         {
           "name": "x-room-card",
           "description": "Room card: tag + title + description + image\r Composes <x-number-of-seats>."
+        },
+        {
+          "name": "x-switch",
+          "description": "x-switch — see src\\components\\atoms\\switch\\switch.html",
+          "attributes": [
+            {
+              "name": "disabled",
+              "description": "true | false (default: false)",
+              "default": "false",
+              "value": {
+                "type": "enum"
+              },
+              "values": [
+                {
+                  "name": "true"
+                },
+                {
+                  "name": "false"
+                }
+              ]
+            }
+          ]
         },
         {
           "name": "x-tabs",
