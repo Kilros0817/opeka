@@ -237,6 +237,10 @@
           "description": "Renders <a> when href is set, otherwise <button>."
         },
         {
+          "name": "x-button-social",
+          "description": "Renders <a> when href is set, otherwise <button>."
+        },
+        {
           "name": "x-button-step",
           "description": "Button step."
         },
