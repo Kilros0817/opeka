@@ -1,6 +1,6 @@
 <script props>
     const count = props.count > 5 ? 5 : props.count || 0
-    
+
     module.exports = {
         count,
         steps: Array.from({ length: count }, (_, i) => i + 1),
@@ -12,28 +12,22 @@
 <div class="rate">
     <if condition="count === 0">
         <each loop="i in steps0">
-            <svg class="rating__color" data-index="{{i}}" aria-hidden="true">
-                <use href="#icon-rate" class="rating__color-empty" />
+            <svg class="rate__color" data-index="{{i}}" aria-hidden="true">
+                <use href="#icon-rate" class="rate__empty" />
             </svg>
         </each>
     </if>
-
     <if condition="count !== 0">
         <!-- Filled -->
         <each loop="i in steps">
-            <svg class="rating__color" data-index="{{i}}" aria-hidden="true">
-                <use href="#icon-rate" class="rating__color" />
+            <svg class="rate__color" data-index="{{i}}" aria-hidden="true">
+                <use href="#icon-rate"/>
             </svg>
         </each>
-
         <!-- Empty -->
         <each loop="i in steps_other">
-            <svg 
-                class="rating__color" 
-                data-index="{{count + i}}" 
-                aria-hidden="true"
-            >
-                <use href="#icon-rate" class="rating__color-empty" />
+            <svg class="rate__color" data-index="{{count + i}}" aria-hidden="true">
+                <use href="#icon-rate" class="rate__empty" />
             </svg>
         </each>
     </if>
