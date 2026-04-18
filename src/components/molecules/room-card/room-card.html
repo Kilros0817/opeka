@@ -2,12 +2,12 @@
   /*
    * x-room-card
    *
-   * Room card: tag + title + description + image
+   * Room card: tag + title + description + image + price + unit
    * Composes <x-number-of-seats>.
    *
    * Props (shell):
    *   seat-icon - use <x-number-of-seats>
-   *   size - uaw sm(480,594),md(320,524)
+   *   size - use sm(480,594),md(320,524)
    *   src_main_back - imgae src
    *   src_main_middle - imgae src
        src_main_front - imgae src
@@ -52,9 +52,9 @@
     </div>
     <!-- Image stack -->
     <div class="card__images-{{size}}">
-      <img class="card__image card__image--back-{{size}}" alt="alt_back" src="{{src_main_back}}"/>
-      <img class="card__image card__image--middle-{{size}}" alt="alt_middle" src="{{src_main_middle}}"/>
-      <img class="card__image card__image--front-{{size}}" alt="alt_front" src="{{src_main_front}}"/>
+      <img class="card__image card__image--back--{{size}}" alt="alt_back" src="{{src_main_back}}"/>
+      <img class="card__image card__image--middle--{{size}}" alt="alt_middle" src="{{src_main_middle}}"/>
+      <img class="card__image card__image--front--{{size}}" alt="alt_front" src="{{src_main_front}}"/>
     </div>
     <!-- Footer -->
     <div class="card__footer">
@@ -63,11 +63,9 @@
         <span class="card__price-unit"><slot-unit></slot-unit></span>
       </div>
       <button class="card__button--{{size}}">
-        <!-- <span class="card__button-icon"> -->
-        <svg class="icon-plus__size" aria-hidden="true">
+        <svg class="icon-plus" aria-hidden="true">
           <use href="#icon-plus" />
         </svg>
-        <!-- </span> -->
       </button>
     </div>
   </div>
