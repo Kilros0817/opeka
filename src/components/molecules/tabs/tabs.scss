@@ -27,56 +27,65 @@
 
 
 /* Status */
-.tabs--black .tab {
-  .tab--default {
-    padding: 20px;
-    border-color: $navy-10;
-    color: $navy-60;
-    border-width: 1.2px;
-    border-style: solid;
-    border-radius: $radius-lg;
+.tabs--black {
+  .tab {
+    .tab--default {
+      padding: 20px;
+      border-color: $navy-10;
+      color: $navy-60;
+      border-width: 1.2px;
+      border-style: solid;
+      border-radius: $radius-lg;
+    }
+
+    .tab--active {
+      padding: 20px;
+      border-color: $blue-100p;
+      color: $blue-100p;
+      border-width: 2px;
+      border-style: solid;
+      border-radius: $radius-lg;
+    }
   }
 
-  .tab--active {
-    padding: 20px;
-    border-color: $blue-100p;
-    color: $blue-100p;
-    border-width: 2px;
-    border-style: solid;
-    border-radius: $radius-lg;
-  }
 }
 
-.tabs--white .tab {
-  .tab--default {
-    padding: 20px;
-    border-color: $white-30;
-    color: $white-100;
-    border-width: 1.2px;
-    border-style: solid;
-    border-radius: $radius-lg;
+.tabs--white {
+  .tab {
+    .tab--default {
+      padding: 20px;
+      border-color: $white-30;
+      color: $white-100;
+      border-width: 1.2px;
+      border-style: solid;
+      border-radius: $radius-lg;
+    }
+
+    .tab--active {
+      padding: 20px;
+      border-color: $white-30;
+      color: $white-100;
+      border-width: 2px;
+      border-style: solid;
+      border-radius: $radius-lg;
+    }
   }
 
-  .tab--active {
-    padding: 20px;
-    border-color: $white-30;
-    color: $white-100;
-    border-width: 2px;
-    border-style: solid;
-    border-radius: $radius-lg;
-  }
 }
 
-.tabs--non-border .tab {
-  .tab--default {
-    padding: 20px;
-    background-color: $navy-05;
-    border-radius: $radius-lg;
+.tabs--non-border {
+  .tab {
+    .tab--default {
+      padding: 20px;
+      background-color: $navy-05;
+      border-radius: $radius-lg;
+    }
+
+    .tab--active {
+      padding: 20px;
+      background-color: $navy-10;
+      border-radius: $radius-lg;
+    }
   }
 
-  .tab--active {
-    padding: 20px;
-    background-color: $navy-10;
-    border-radius: $radius-lg;
-  }
 }

@@ -10,9 +10,15 @@
    */
   const type = props['type'] || 'black'
 
-  module.exports = { type }
+  module.exports = { type,
+    cls: [
+      'tabs',
+      'tabs--' + type,
+    ].join(' '),
+  }
+ 
 </script>
 
-<div class="tabs--{{type}}" >
+<div class="{{cls}}" >
   <yield></yield>
 </div>
