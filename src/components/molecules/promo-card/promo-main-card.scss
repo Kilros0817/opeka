@@ -24,6 +24,7 @@
   flex-shrink: 0;
 
   @include mobile {
+    width: 361px;
     height: 388px;
     padding: $space-lg $space-md;
     border-radius: $radius-26;

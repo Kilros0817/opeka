@@ -23,6 +23,7 @@
   background-color: $color-tr-black-03;
 
   @include mobile {
+    width: 320px;
     height: 438px;
     padding: $space-lg $space-md;
     border-radius: $radius-26;
