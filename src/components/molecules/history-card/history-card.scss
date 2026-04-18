@@ -3,7 +3,7 @@
 // =====================
 // CARD
 // ======================
-.card {
+.history-card {
   background: $color-bg-white-100;
   border-radius: 32px;
   padding: 32px;
@@ -22,15 +22,15 @@
   }
 }
 
-.card__bg--white {
+.history-card__bg--white {
   background-color: $color-bg-white-100;
 }
 
-.card__bg--gray {
+.history-card__bg--gray {
   background-color: $color-bg-card;
 }
 
-.card__header {
+.history-card__header {
   display: flex;
   gap: 12px;
 
@@ -40,7 +40,7 @@
   }
 }
 
-.card__profile {
+.history-card__profile {
   width: 202px;
   display: flex;
   flex-direction: column;
@@ -55,7 +55,7 @@
   }
 }
 
-.card__image--avatar {
+.history-card__image--avatar {
   width: 106px;
   height: 144px;
   // position: relative;
@@ -69,7 +69,7 @@
 
 }
 
-.card__info {
+.history-card__info {
   display: flex;
   flex-direction: column;
   gap: 4px;
@@ -79,20 +79,20 @@
   }
 }
 
-.card__name {
+.history-card__name {
   color: $color-primary;
   font-size: 20px;
   font-weight: 500;
   line-height: 20px;
 }
 
-.card__age {
+.history-card__age {
   color: $color-secondary;
   font-size: 14px;
   line-height: 18px;
 }
 
-.card__tags {
+.history-card__tags {
   display: flex;
   flex-wrap: wrap;
   gap: 4px;
@@ -105,7 +105,7 @@
   }
 }
 
-.card__tag {
+.history-card__tag {
   padding: 2px 1px;
   border-radius: 999px;
   font-size: 12px;
@@ -115,13 +115,13 @@
   font-weight: 500;
 }
 
-.card__content {
+.history-card__content {
   display: flex;
   flex-direction: column;
   gap: 24px;
 }
 
-.card__section {
+.history-card__section {
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -131,7 +131,7 @@
   }
 }
 
-.card__label {
+.history-card__label {
   color: $color-secondary;
   font-size: 16px;
   font-weight: 500;
@@ -142,7 +142,7 @@
   }
 }
 
-.card__text {
+.history-card__text {
   color: $color-primary;
   font-size: 16px;
   line-height: 20px;
@@ -152,7 +152,7 @@
   }
 }
 
-.card__result {
+.history-card__result {
   color: $color-primary;
   font-size: 24px;
   font-weight: 500;
@@ -167,7 +167,7 @@
   }
 }
 
-.card__more {
+.history-card__more {
   display: inline-flex;
   align-items: center;
   gap: 4px;
@@ -177,12 +177,12 @@
   cursor: pointer;
 }
 
-.card__plus {
+.history-card__plus {
   font-size: 18px;
   line-height: 1;
 }
 
-.card__text--clamped-3 {
+.history-card__text--clamped-3 {
   display: -webkit-box;
   -webkit-line-clamp: 3; // number of lines
   -webkit-box-orient: vertical;
