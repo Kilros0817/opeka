@@ -10,7 +10,7 @@
  * Mobile:  361x361, radius 26
  */
 
-.blog-card {
+.blog-card--big {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -33,7 +33,7 @@
   }
 }
 
-.blog-card--mini {
+.blog-card--small {
   position: relative;
   display: flex;
   flex-direction: column;

@@ -7,7 +7,7 @@
    * Props:
    *   link-href  — href for the CTA link (default: #)
    *   link-icon  — sprite id for the link icon (default: plus)
-   *   bg-image   — card image src
+   *   image-url   — card image src
    *   alt        — image alt text
    *   tag-color  — color passed to x-tag
    *   type       — optional modifier, renders as blog-card--{type}
@@ -21,10 +21,10 @@
    */
   const linkHref = props['link-href'] || '#'
   const linkIcon = props['link-icon'] || 'plus'
-  const src = props['bg-image'] || ''
+  const src = props['image-url'] || ''
   const alt = props['alt'] || ''
   const tagColor = props['tag-color'] || ''
-  const type = props['type'] || ''
+  const type = props['type'] || 'small'
 
   module.exports = {
     linkHref, linkIcon, src, alt, tagColor, type,
