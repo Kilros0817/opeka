@@ -1,0 +1,47 @@
+@use '../../styles/tokens' as *;
+
+/** .boardinghouse — horizontal loop slider section. */
+
+.boardinghouse {
+  padding: 0 $content-padding-x;
+  overflow: hidden;
+}
+
+// ── Header: title + nav buttons ──
+.boardinghouse__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.boardinghouse__title {
+  @include type-h2-desktop;
+}
+
+.boardinghouse__nav {
+  display: flex;
+  gap: $space-xs;
+}
+
+// ── Track ──
+
+.boardinghouse__track {
+  padding-top: $content-padding-y-48;
+  display: flex;
+}
+
+// ── Slides ──
+
+.boardinghouse__slide {
+  padding-left: 6px;
+  padding-right: 6px;
+
+}
+
+// ── Footer: centered CTA ──
+
+.boardinghouse__footer {
+  display: flex;
+  justify-content: center;
+  padding-top: $space-xl;
+}

@@ -38,11 +38,11 @@
   position: absolute;
   left: 0;
   top: 0;
-  
-  object-fit: cover;       // = background-size: cover
-  object-position: center; // = background-position: center
-  display: block;  
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
 }
 
 .pansionat-card::after {

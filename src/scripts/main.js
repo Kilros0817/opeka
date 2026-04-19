@@ -18,6 +18,7 @@ import { initAvatarButtons } from '../components/atoms/avatar-button/avatar-butt
 import { initItsOpeka } from '../sections/its-opeka/its-opeka.js'
 import { initTabs } from '../components/molecules/tabs/tabs.js'
 import { initAdvantages } from '../sections/advantages/advantages.js'
+import { initBoardinghouse } from '../sections/boardinghourse/boardinghourse.js'
 import { initRate } from '../components/atoms/rate/rate.js'
 
 
@@ -27,6 +28,7 @@ function init(root = document) {
   initAvatarButtons(root)
   initItsOpeka(root)
   initAdvantages(root)
+  initBoardinghouse(root)
   initTabs(root)
   initRate(root)
 

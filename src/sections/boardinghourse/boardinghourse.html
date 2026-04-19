@@ -1,0 +1,64 @@
+<!-- .boardinghouse — horizontal loop slider with pansionat cards -->
+<section class="boardinghouse" data-section="boardinghouse" data-boardinghouse aria-label="Пансионаты">
+
+  <div class="boardinghouse__header">
+    <h2 class="boardinghouse__title">Пансионаты</h2>
+    <div class="boardinghouse__nav" aria-label="Навигация по слайдеру">
+      <x-button-circle variant="tr-grey" size="medium" icon="chevron-left" data-slider-prev></x-button-circle>
+      <x-button-circle variant="tr-grey" size="medium" icon="chevron-right" data-slider-next></x-button-circle>
+    </div>
+  </div>
+
+  <div class="boardinghouse__track" aria-label="Список пансионатов" role="region">
+    <div class="boardinghouse__slide">
+      <x-pansionat-card tag-color="green" tag-icon="star" link-image="../../assets/images/pansion-placeholder.webp">
+        <fill-tag>Новое</fill-tag>
+        <fill-title>Всеволожский</fill-title>
+        <fill-desc>Ленинградская область, Всеволожск, пр. Достоевского, д.56</fill-desc>
+        <fill-price>от 3 300 ₽</fill-price>
+        <fill-unit>/сутки</fill-unit>
+      </x-pansionat-card>
+    </div>
+    <div class="boardinghouse__slide">
+      <x-pansionat-card link-image="../../assets/images/pansion-placeholder-1.webp">
+        <fill-tag>Новое</fill-tag>
+        <fill-title>Отрадное</fill-title>
+        <fill-desc>Санкт-Петербург, Ленинградская область, г. Отрадное, Ленинградское шоссе, 1/1</fill-desc>
+        <fill-price>от 3 300 ₽</fill-price>
+        <fill-unit>/сутки</fill-unit>
+      </x-pansionat-card>
+    </div>
+    <div class="boardinghouse__slide">
+      <x-pansionat-card tag-color="green" tag-icon="star" link-image="../../assets/images/pansion-placeholder-2.webp">
+        <fill-tag>Новое</fill-tag>
+        <fill-title>Выборгский</fill-title>
+        <fill-desc>Санкт-Петербург, муниципальный округ Шувалово-Озерки, 194356, Выборгское ш. д.158, стр.1</fill-desc>
+        <fill-price>от 3 300 ₽</fill-price>
+        <fill-unit>/сутки</fill-unit>
+      </x-pansionat-card>
+    </div>
+    <div class="boardinghouse__slide">
+      <x-pansionat-card link-image="../../assets/images/pansion-placeholder-1.webp">
+        <fill-tag>Новое</fill-tag>
+        <fill-title>Московский</fill-title>
+        <fill-desc>Санкт-Петербург, Московский район, Московское шоссе, д.13</fill-desc>
+        <fill-price>от 3 300 ₽</fill-price>
+        <fill-unit>/сутки</fill-unit>
+      </x-pansionat-card>
+    </div>
+    <div class="boardinghouse__slide">
+      <x-pansionat-card link-image="../../assets/images/pansion-placeholder.webp">
+        <fill-tag>Новое</fill-tag>
+        <fill-title>Приморский</fill-title>
+        <fill-desc>Санкт-Петербург, Приморский район, Приморское шоссе, д.394</fill-desc>
+        <fill-price>от 3 300 ₽</fill-price>
+        <fill-unit>/сутки</fill-unit>
+      </x-pansionat-card>
+    </div>
+  </div>
+
+  <div class="boardinghouse__footer">
+    <x-button size="medium" variant="blue" href="#">Все пансионаты</x-button>
+  </div>
+
+</section>
