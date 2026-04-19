@@ -48,8 +48,12 @@
 }
 
 /* Colors */
-.tag--red      { background-color: $color-tag-bg-red; }
+.tag--red      { background-color: $color-tag-bg-red;}
+.tag__icon--red {color: $color-red;}
 .tag--green    { background-color: $color-tag-bg-green; }
+.tag__icon--green {color: $color-green;}
 .tag--tr-grey  { background-color: $color-tr-black-03; }
 .tag--tr-white { background-color: $color-tr-white-20; color: $color-white; }
 .tag--white    { background-color: $color-white; }
+
+

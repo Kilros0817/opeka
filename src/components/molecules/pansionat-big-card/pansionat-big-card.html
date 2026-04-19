@@ -2,31 +2,21 @@
   /*
    * x-pansionat-big-card
    *
-   * Promotion card: tag + title + description + text-link, with a decorative blob.
-   * Composes <x-tag> and <x-text-link> internally.
+   * Promotion card: tag + title, with a decorative blob.
+   * Composes <x-tag> internally.
    *
    * Props (shell):
    *   tag-color — color for the <x-tag> (default: red)
    *   tag-icon — sprite id for the <x-tag> (default: fire)
-   *   link-href — href for the CTA link (default: #)
-   *   link-icon — sprite id for the link icon (default: plus)
    *
-   * Slots:
-   *   <fill-tag>   — tag label
-   *   <fill-title> — card title (rendered in <h3>)
-   *   <fill-desc>  — card description (rendered in <p>)
-   *   <fill-link>  — CTA link label
-   *   <fill-stat>  — Warning statement upon slider
-   *   <fill-price> — Price label
-   *   <fill-unit>  — Currency
    *
    * Blob color — override CSS var `--pansionat-big-card-blob` from the outside.
    */
   
   const tagInfo = props['tag-info'] || []
   const category = props['category'] || []
-  const visibleCategories = category.slice(0, 4)
-  const remainingCount = category.length - 4  
+  const visibleCategories = category.slice(0, 5)
+  const remainingCount = category.length - 5  
   const linkImage = props['link-image'] || '../../assets/images/pansion-placeholder.webp'
 
   module.exports = { 

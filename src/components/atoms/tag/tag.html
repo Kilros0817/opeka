@@ -27,7 +27,7 @@
 
 <span class="{{ cls }}">
   <if condition="icon">
-      <svg class="tag__icon" aria-hidden="true"><use href="#icon-{{ icon }}"/></svg>
+      <svg class="tag__icon tag__icon--{{color}}" aria-hidden="true"><use href="#icon-{{ icon }}"/></svg>
   </if>
   <span class="tag__label"><yield></yield></span>
 </span>
