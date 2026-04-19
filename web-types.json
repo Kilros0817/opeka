@@ -55,6 +55,10 @@
           "description": "Fills the \"link\" slot of the parent component."
         },
         {
+          "name": "fill-meta",
+          "description": "Fills the \"meta\" slot of the parent component."
+        },
+        {
           "name": "fill-more",
           "description": "Fills the \"more\" slot of the parent component."
         },
@@ -146,6 +150,10 @@
         {
           "name": "slot-link",
           "description": "Named slot \"link\" — provides default content."
+        },
+        {
+          "name": "slot-meta",
+          "description": "Named slot \"meta\" — provides default content."
         },
         {
           "name": "slot-more",
@@ -258,6 +266,10 @@
               "default": "done"
             }
           ]
+        },
+        {
+          "name": "x-blog-card",
+          "description": "Blog card: image + tag + meta + title + description + text-link."
         },
         {
           "name": "x-button",

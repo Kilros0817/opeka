@@ -1,0 +1,16 @@
+@use '../../../styles/tokens' as *;
+
+/**
+ * .direction-card styleguide.
+ *
+ */
+
+.sg-matrix__direction-card {
+  display: grid;
+  grid-template-columns: none;
+  gap: 4px;
+  align-items: stretch;
+  padding: 20px;
+  border-radius: 12px;
+  background-color: #f0f1f5;
+}

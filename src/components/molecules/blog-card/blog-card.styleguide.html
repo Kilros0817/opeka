@@ -1,0 +1,42 @@
+<!-- x-blog-card showcase. Include in styleguide/components.html -->
+<section class="sg-section" id="comp-blog-card" data-nav-target>
+  <h2 class="sg-section__title">Blog Card</h2>
+  <p class="sg-section__desc">
+    Карточка статьи блога. Включает изображение, тег, мета-информацию, заголовок, описание и ссылку. Доступен компактный
+    вариант через модификатор <code>type="mini"</code>.
+  </p>
+
+  <div class="sg-matrix__blog-card sg-matrix--narrow">
+    <div class="sg-matrix__row">
+      <x-blog-card image-url="../../assets/images/hero-poster.webp" type="big" alt="blog-card" tag-color="white">
+        <fill-tag>Здоровье</fill-tag>
+        <fill-meta> Ирина Петрова . 3 мин . 28.01.2026 </fill-meta>
+        <fill-title>Хирургическое лечение вальгусной деформации большого пальца в пожилом возрасте</fill-title>
+        <fill-desc>С 1 января 2015 года вступил в силу Федеральный закон Российской Федерации от 28 декабря 2013 г. N
+          442-ФЗ«Об основах социального обслуживания граждан в Россий</fill-desc>
+        <fill-link>Читать полностью</fill-link>
+      </x-blog-card>
+    </div>
+    <div class="sg-matrix__row">
+      <x-blog-card image-url="../../assets/images/hero-poster.webp" type="small" alt="blog-card" tag-color="white">
+        <fill-tag>Здоровье</fill-tag>
+        <fill-meta> Ирина Петрова . 3 мин . 28.01.2026 </fill-meta>
+        <fill-title>Хирургическое лечение вальгусной деформации большого пальца в пожилом возрасте</fill-title>
+        <fill-desc>С 1 января 2015 года вступил в силу Федеральный закон Российской Федерации от 28 декабря 2013 г. N
+          442-ФЗ«Об основах социального обслуживания граждан в Россий</fill-desc>
+        <fill-link>Читать полностью</fill-link>
+      </x-blog-card>
+    </div>
+  </div>
+  
+  <sg-snippet title="x-blog-card">
+    <x-blog-card image-url="../../assets/images/hero-poster.webp" type="small" alt="blog-card" tag-color="white">
+      <fill-tag>Здоровье</fill-tag>
+      <fill-meta> Ирина Петрова . 3 мин . 28.01.2026 </fill-meta>
+      <fill-title>Хирургическое лечение вальгусной деформации большого пальца в пожилом возрасте</fill-title>
+      <fill-desc>С 1 января 2015 года вступил в силу Федеральный закон Российской Федерации от 28 декабря 2013 г. N
+        442-ФЗ«Об основах социального обслуживания граждан в Россий</fill-desc>
+      <fill-link>Читать полностью</fill-link>
+    </x-blog-card>
+  </sg-snippet>
+</section>

@@ -1,0 +1,118 @@
+@use '../../../styles/tokens' as *;
+
+/**
+ * .blog-card — Blog card (Figma).
+ *
+ * Composition: image + tag + meta + title + description + .text-link.
+ * Modifier --mini: compact variant, 357px wide, image height 238px.
+ *
+ * Desktop: 726px wide, image height 484px, radius 20
+ * Mobile:  361x361, radius 26
+ */
+
+.blog-card--big {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: clamp(357px, 40vw, 726px);
+  margin-bottom: 20px;
+
+  .blog-card__img {
+    width: 100%;
+    height: clamp(238px, 30vw, 484px);
+    border-radius: 20px;
+  }
+
+  .blog-card__text {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+    padding-right: 96px;
+  }
+}
+
+.blog-card--small {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 357px;
+
+  .blog-card__img {
+    width: 100%;
+    height: 238px;
+    border-radius: 20px;
+  }
+
+  .blog-card__text {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+    padding-right: 24px;
+  }
+}
+
+/* Content */
+
+.blog-card__content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 24px;
+}
+
+.blog-card__body {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 14px;
+
+}
+
+.blog-card__meta {
+  font-size: 14px;
+  font-weight: $fw-regular;
+  letter-spacing: -1%;
+  color: $color-secondary;
+}
+
+.blog-card__title {
+  font-weight: $fw-medium;
+  font-size: 24px;
+  letter-spacing: -2%;
+  color: $color-navy-100;
+  line-height: 26px;
+
+  @include mobile {
+    font-size: 24px;
+    letter-spacing: -2%;
+  }
+
+}
+
+.blog-card__desc {
+  @include type-r-16;
+  margin: 0;
+  font-size: 16px;
+  font-weight: $fw-regular;
+  letter-spacing: 0%;
+  color: $color-secondary;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+
+  @include mobile {
+    font-size: 14px;
+    -webkit-line-clamp: none;
+  }
+}
+
+.blog-card__tag {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+}
