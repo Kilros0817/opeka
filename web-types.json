@@ -242,7 +242,7 @@
         },
         {
           "name": "x-button-nav",
-          "description": "x-button-nav — see src\\components\\atoms\\button-nav\\button-nav.html"
+          "description": "Text link with optional 16px icon. Renders <a> when href is set, otherwise <button>."
         },
         {
           "name": "x-button-social",

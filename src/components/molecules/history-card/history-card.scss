@@ -9,10 +9,10 @@
   padding: 32px;
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: clamp(15px, 5vw, 50px);
   max-width: 720px;
-  width: 480px;
-  height: 608px;
+  width: clamp(353px, 45vw, 480px);
+  height: clamp(525px, 80vw, 608px);
 
   @include mobile {
     width: 353px;
@@ -56,8 +56,8 @@
 }
 
 .history-card__image--avatar {
-  width: 106px;
-  height: 144px;
+  width: clamp(74px, 30vw, 106px);
+  height: clamp(101px, 30vw, 144px);
   // position: relative;
   border-radius: 20px;
   object-fit: cover;
@@ -124,7 +124,7 @@
 .history-card__section {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: clamp(12px, 3vw, 3px);
 
   @include mobile{
     gap: 3px;
@@ -133,7 +133,7 @@
 
 .history-card__label {
   color: $color-secondary;
-  font-size: 16px;
+  font-size: clamp(14px, 5vw, 16px);
   font-weight: 500;
   line-height: 20px;
 
@@ -144,7 +144,7 @@
 
 .history-card__text {
   color: $color-primary;
-  font-size: 16px;
+  font-size: clamp(14px, 5vw, 16px);
   line-height: 20px;
 
   @include mobile {
@@ -154,7 +154,7 @@
 
 .history-card__result {
   color: $color-primary;
-  font-size: 24px;
+  font-size: clamp(20px, 5vw, 24px);
   font-weight: 500;
   line-height: 26px;
   display: -webkit-box;
