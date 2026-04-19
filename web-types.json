@@ -241,6 +241,10 @@
           "description": "x-button-circle — see src\\components\\atoms\\button-circle\\button-circle.html"
         },
         {
+          "name": "x-button-nav",
+          "description": "x-button-nav — see src\\components\\atoms\\button-nav\\button-nav.html"
+        },
+        {
           "name": "x-button-social",
           "description": "Renders <a> when href is set, otherwise <button>."
         },
