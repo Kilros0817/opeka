@@ -1,0 +1,33 @@
+<!-- x-certificate-card showcase. Include in styleguide/components.html -->
+<section class="sg-section" id="comp-certificate-card" data-nav-target>
+  <h2 class="sg-section__title">Certificate Card</h2>
+  <p class="sg-section__desc">
+    URL изображения: required <code>../../assets/images/certificate-card-01.webp</code>
+    Альт: <code>альтернативный текст для изображения</code>.
+    Цвет фона: <code>white</code>, <code>tr-grey</code>.
+    Цвет тега: <code>tr-grey</code>, <code>white</code>.
+    Описание: required
+  </p>
+
+  <div class="certificate-card-sg-matrix sg-matrix--narrow">
+    <div class="sg-matrix__row">
+      <div class="certificate-card-display">
+        <x-certificate-card image-url="../../assets/images/certificate-card-01.webp"  alt="certificate-card-01.webp" bg-color="white" tag-color="tr-grey">
+          <fill-tag>Лицензия</fill-tag>
+          <fill-desc>Лицензия на осуществление медицинской деятельности</fill-desc>
+        </x-certificate-card>
+        <x-certificate-card image-url="../../assets/images/certificate-card-01.webp"  alt="certificate-card-01.webp" bg-color="tr-grey" tag-color="white">
+          <fill-tag>Лицензия</fill-tag>
+          <fill-desc>Лицензия на осуществление медицинской деятельности</fill-desc>
+        </x-certificate-card>
+      </div>
+    </div>
+  </div>
+
+  <sg-snippet title="x-certificate-card">
+    <x-certificate-card image-url="../../assets/images/certificate-card-01.webp"  alt="certificate-card-01.webp" bg-color="white" tag-color="tr-grey">
+      <fill-tag>Лицензия</fill-tag>
+      <fill-desc>Лицензия на осуществление медицинской деятельности</fill-desc>
+    </x-certificate-card>
+  </sg-snippet>
+</section>

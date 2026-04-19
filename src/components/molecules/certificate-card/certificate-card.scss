@@ -1,0 +1,86 @@
+@use '../../../styles/tokens' as *;
+
+/**
+ * .certificate-card
+ *
+ * Background Colors: white | --tr-grey
+ */
+
+.certificate-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  width: clamp(269px, 50vw, 357px);
+  height: 427px;
+  border-radius: $radius-2xl;
+
+  @include mobile {
+    width: 269px;
+    height: 335px;
+    border-radius: $radius-26;
+  }
+}
+
+.certificate-card--white {
+  background-color: $color-bg-surface;
+}
+
+.certificate-card--tr-grey {
+  background-color: $color-tr-black-03;
+}
+
+/* Content */
+.certificate-card__content {
+
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: $space-32;
+  gap: $space-48;
+
+  @include mobile {
+    padding: $space-lg $space-md;
+    gap: $space-32;
+  }
+}
+
+.certificate-card__image-area {
+  width: 231px;
+  height: 231px;
+
+  @include mobile {
+    width: 173px;
+    height: 173px;
+  }
+}
+
+.certificate-card__image {
+  width: 161px;
+  height: 231px;
+
+  @include mobile {
+    width: 120px;
+    height: 173px;
+  }
+}
+
+.certificate-card__tag-text {
+  display: grid;
+  justify-items: start;
+  gap: $space-md;
+
+  @include mobile {
+    gap: $space-14;
+  }
+}
+
+.certificate-card__desc {
+  @include type-m-20;
+  margin: 0;
+  color: $color-navy-100;
+
+  @include mobile {
+    @include type-m-16;
+  }
+}
