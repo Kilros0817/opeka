@@ -265,7 +265,13 @@
         },
         {
           "name": "x-button-circle",
-          "description": "x-button-circle — see src\\components\\atoms\\button-circle\\button-circle.html"
+          "description": "x-button-circle — see src\\components\\atoms\\button-circle\\button-circle.html",
+          "attributes": [
+            {
+              "name": "icon",
+              "description": "sprite id without \"icon-\" prefix"
+            }
+          ]
         },
         {
           "name": "x-button-delete",
@@ -276,7 +282,7 @@
           "description": "Navication Button with optional 16px icon.",
           "attributes": [
             {
-              "name": "variant",
+              "name": "bgColor",
               "description": "grey | white",
               "value": {
                 "type": "enum"
@@ -360,7 +366,13 @@
         },
         {
           "name": "x-illustrations",
-          "description": "x-illustrations — see src\\components\\atoms\\illustrations\\illustrations.html"
+          "description": "x-illustrations — see src\\components\\atoms\\illustrations\\illustrations.html",
+          "attributes": [
+            {
+              "name": "src",
+              "description": "file path"
+            }
+          ]
         },
         {
           "name": "x-number-of-seats",
