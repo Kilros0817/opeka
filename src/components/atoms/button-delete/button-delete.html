@@ -1,0 +1,26 @@
+<script props>
+  /*
+   * x-button-delete
+   *
+   * Delete / reset button. Renders "× Сбросить все" style inline button.
+   *
+   * Props:
+   *   size — default | sm (default: default)
+   *
+   * <yield> becomes the label.
+   */
+
+  const size = props.size || 'default'
+
+  module.exports = {
+    cls: [
+      'btn-delete',
+      size !== 'default' ? 'btn-delete--' + size : '',
+    ].filter(Boolean).join(' '),
+  }
+</script>
+
+<button class="{{ cls }}" type="button">
+  <svg class="btn-delete__icon" aria-hidden="true"><use href="#icon-x"/></svg>
+  <span class="btn-delete__label"><yield></yield></span>
+</button>

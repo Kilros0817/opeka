@@ -1,0 +1,50 @@
+@use '../../../styles/tokens' as *;
+
+/**
+ * .btn-delete — Delete / reset inline button.
+ *
+ * Sizes: default (64px) | --sm (46px)
+ */
+
+.btn-delete {
+  display: inline-flex;
+  align-items: center;
+  gap: $space-xs;
+  height: 64px;
+  padding: $space-sm $space-lg;
+  border: 0;
+  background: none;
+  color: $color-blue;
+  cursor: pointer;
+  transition: opacity $transition-fast;
+
+  &:hover {
+    opacity: 0.75;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $color-focus-ring;
+    outline-offset: 2px;
+  }
+}
+
+.btn-delete--sm {
+    height: 46px;
+    padding: $space-sm $space-12;
+  }
+
+.btn-delete__icon {
+    display: block;
+    flex-shrink: 0;
+    width: 16px;
+    height: 16px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.5px;
+    max-width: unset;
+}
+
+.btn-delete__label {
+    @include type-m-16;
+    letter-spacing: -0.02em;
+}

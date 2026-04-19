@@ -1,0 +1,40 @@
+@use '../../../styles/tokens' as *;
+
+/**
+ * .btn-top — Scroll to top button.
+ */
+
+.btn-top {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  padding: $space-20;
+  border: 0;
+  border-radius: $radius-md;
+  background-color: $color-bg-surface;
+  color: $color-navy;
+  cursor: pointer;
+  transition: background-color $transition-fast;
+
+  &:hover {
+    background-color: $color-white-hover;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $color-focus-ring;
+    outline-offset: 2px;
+  }
+}
+
+
+.btn-top__icon {
+    display: block;
+    flex-shrink: 0;
+    width: 13px;
+    height: 19px;
+    fill: none;
+    stroke: currentColor;
+    max-width: unset;
+}
