@@ -17,6 +17,7 @@ import { initPromoMiniSliders } from '../components/molecules/promo-mini-slider/
 import { initAvatarButtons } from '../components/atoms/avatar-button/avatar-button.js'
 import { initItsOpeka } from '../sections/its-opeka/its-opeka.js'
 import { initTabs } from '../components/molecules/tabs/tabs.js'
+import { initAdvantages } from '../sections/advantages/advantages.js'
 import { initRate } from '../components/atoms/rate/rate.js'
 
 
@@ -25,6 +26,7 @@ function init(root = document) {
   initPromoMiniSliders(root)
   initAvatarButtons(root)
   initItsOpeka(root)
+  initAdvantages(root)
   initTabs(root)
   initRate(root)
 
