@@ -46,6 +46,7 @@
 
 .advantages-mini-card__header {
   display: flex;
+
   @include type-m-14;
   color: $color-border-white-60;
   align-items: flex-start;

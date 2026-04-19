@@ -1,76 +1,83 @@
 @use '../../../styles/tokens' as *;
 
 /**
- * .button-nav — text link with optional 16px icon.
+ * .button-nav — navigation button with optional 16px icon.
  *
- * Colors: --blue | --white | --grey
- * Sizes:  default (16/20) | --sm (14/16, top bar)
+ * Colors: --white | --grey
  */
 
 .button-nav {
-  @include type-m-16;
+    @include type-m-16;
 
-  display: inline-flex;
-  align-items: center;
-  gap: $space-xs;
-  text-decoration: none;
-  cursor: pointer;
-  transition: color $transition-fast;
+    display: inline-flex;
+    align-items: center;
+    gap: $space-xs;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color $transition-fast;
 
-  &:focus-visible {
-    outline: 2px solid $color-focus-ring;
-    outline-offset: 2px;
-    border-radius: $radius-xs;
-  }
+    &:focus-visible {
+        outline: 2px solid $color-focus-ring;
+        outline-offset: 2px;
+        border-radius: $radius-xs;
+    }
 
-  &:disabled,
-  &[aria-disabled='true'] {
-    cursor: not-allowed;
-  }
+    &:disabled,
+    &[aria-disabled='true'] {
+        cursor: not-allowed;
+    }
 }
 
 .button-nav__icon {
-  display: block;
-  flex-shrink: 0;
-  width: 16px;
-  height: 16px;
-  fill: currentColor;
-
-//   &--xs { width: 12px; height: 12px; }
-}
-
-.button-nav__label {
-  white-space: nowrap;
+    display: block;
+    flex-shrink: 0;
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
 }
 
 /* Color: White */
 .button-nav--white {
-  color: $color-white;
+    color: $color-white;
 
-  &:hover:not(:disabled, [aria-disabled='true']) {
-    color: $color-tr-white-50;
-  }
-
-  &:disabled,
-  &[aria-disabled='true'] {
-    color: $color-tr-white-30;
-  }
+    &:disabled,
+    &[aria-disabled='true'] {
+        color: $color-tr-white-30;
+    }
 }
+
+.button-nav--tr-white {
+    background-color: $color-tr-white-30;
+     width: 40px;
+    height: 34px;
+    gap: 16px;
+    opacity: 1;
+    padding-right: 12px;
+    padding-left: 12px;
+    border-radius: 100px;
+}
+
 
 /* Color: Grey */
 .button-nav--grey {
-  color: $color-text-secondary;
-
-  &:hover:not(:disabled, [aria-disabled='true']) {
-    color: $color-text-primary;
-  }
-
-  &:disabled,
-  &[aria-disabled='true'] {
     color: $color-text-secondary;
-    opacity: 0.5;
-  }
+
+
+    &:disabled,
+    &[aria-disabled='true'] {
+        color: $color-text-secondary;
+        opacity: 0.5;
+    }
 }
 
-/* Size: Small — top bar */
-.button-nav--sm { @include type-m-14; }
+.button-nav--grey {
+    background-color: $color-tr-black-10;
+    width: 40px;
+    height: 34px;
+    gap: 16px;
+    opacity: 1;
+    padding-right: 12px;
+    padding-left: 12px;
+    border-radius: 100px;
+}
+
