@@ -372,7 +372,7 @@
         },
         {
           "name": "x-pansionat-big-card",
-          "description": "Promotion card: tag + title + description + text-link, with a decorative blob.\r Composes <x-tag> and <x-text-link> internally."
+          "description": "Promotion card: tag + title, with a decorative blob.\r Composes <x-tag> internally."
         },
         {
           "name": "x-pansionat-card",
