@@ -1,0 +1,28 @@
+<!-- x-button-delete showcase. Include in styleguide/components.html -->
+<section class="sg-section" id="comp-button-delete" data-nav-target>
+  <h2 class="sg-section__title">Button · Delete</h2>
+  <p class="sg-section__desc">
+    Кнопка сброса / удаления. Проп <code>size</code>: <code>default</code> (64px), <code>sm</code> (46px).
+  </p>
+
+  <div class="sg-matrix sg-matrix--narrow">
+    <div class="sg-matrix__head">
+      <span></span>
+      <div class="sg-cell">Default</div>
+      <div class="sg-cell">Default (SM)</div>
+      <span></span>
+    </div>
+
+    <div class="sg-matrix__row">
+      <span class="sg-cell"></span>
+      <div class="sg-cell"><x-button-delete>Сбросить все</x-button-delete></div>
+      <div class="sg-cell"><x-button-delete size="sm">Сбросить все</x-button-delete></div>
+      <span class="sg-cell"></span>
+    </div>
+  </div>
+
+  <sg-snippet title="x-button-delete">
+    <x-button-delete>Сбросить все</x-button-delete>
+    <x-button-delete size="sm">Сбросить все</x-button-delete>
+  </sg-snippet>
+</section>
