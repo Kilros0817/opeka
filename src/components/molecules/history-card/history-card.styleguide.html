@@ -4,14 +4,14 @@
   <p class="sg-section__desc">
    Эта карточка позволяет создавать различные резюме, разделяя их на компоненты.
     fill: time ,  disease ,  house , name , age , state , ,desc , avatar ,price ,result , current-state , more
-    prop: color(white,gray) , src_main, alt
+    prop: color(white,gray) , avatar-image, alt
   </p>
 
   <div class="sg-matrix sg-matrix--narrow">
     <div class="sg-matrix__head">
     </div>
     <div class="sg-matrix__row">
-      <x-history-card color="white" src_main="../../assets/images/avatar.webp" alt="image">
+      <x-history-card color="white" avatar-image="../../assets/images/avatar.webp" alt="image">
         <fill-time>8 месяцев</fill-time>
         <fill-disease>Деменция</fill-disease>
         <fill-house>Всеволожский пансионат</fill-house>
@@ -29,7 +29,7 @@
   </div>
 
   <sg-snippet title="x-history-card">
-    <x-history-card color="" src_main_back="../../assets/images/room_card_3_3.webp" alt="image">
+    <x-history-card color="" avatar-image="../../assets/images/room_card_3_3.webp" alt="image">
       <fill-time>8 месяцев</fill-time>
       <fill-disease>Деменция</fill-disease>
       <fill-house>Всеволожский пансионат</fill-house>

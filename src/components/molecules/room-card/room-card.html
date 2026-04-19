@@ -7,9 +7,9 @@
    *
    * Props (shell):
    *   seat-icon - use <x-number-of-seats>
-   *   src_main_back - imgae src
-   *   src_main_middle - imgae src
-       src_main_front - imgae src
+   *   imgageBack - imgae src
+   *   imgageMiddle - imgae src
+       imgageFront - imgae src
        alt_back - imgae alt
        alt_middle - imgae alt
        alt_front - imgae alt
@@ -24,15 +24,15 @@
    * Blob color — override CSS var `--promo-mini-card-blob` from the outside.
    */
   const seat = props.seat || '1'
-  const src_main_back = props.src_main_back || ""
-  const src_main_middle = props.src_main_middle || ""
-  const src_main_front = props.src_main_front || ""
+  const imageBack = props['image-back'] || ""
+  const imageMiddle = props['image-middle'] || ""
+  const imageFront = props['image-front'] || ""
   const alt_back = props.alt_back || ""
   const alt_middle = props.alt_middle || ""
   const alt_front = props.alt_front || ""
 
 
-  module.exports = { seat, src_main_back, alt_back, src_main_middle, alt_middle, src_main_front, alt_front }
+  module.exports = { seat, imageBack, alt_back, imageMiddle, alt_middle, imageFront, alt_front }
 
 </script>
 <section class="room-card">
@@ -49,9 +49,9 @@
   </div>
   <!-- Image stack -->
   <div class="room-card__images">
-    <img class="room-card__image room-card__image--back" alt="alt_back" src="{{src_main_back}}" />
-    <img class="room-card__image room-card__image--middle" alt="alt_middle" src="{{src_main_middle}}" />
-    <img class="room-card__image room-card__image--front" alt="alt_front" src="{{src_main_front}}" />
+    <img class="room-card__image room-card__image--back" alt="alt_back" src="{{imageBack}}" />
+    <img class="room-card__image room-card__image--middle" alt="alt_middle" src="{{imageMiddle}}" />
+    <img class="room-card__image room-card__image--front" alt="alt_front" src="{{imageFront}}" />
   </div>
   <!-- Footer -->
   <div class="room-card__footer">

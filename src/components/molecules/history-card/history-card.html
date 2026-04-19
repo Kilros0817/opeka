@@ -7,7 +7,7 @@
    *
    * Props (shell):
    *   alt - name of image
-   *   src_main - imgae src
+   *   avatar-image - imgae src
    *   color - gray and white
    * 
    * Slots:
@@ -23,17 +23,17 @@
    *   <fill-more> - card more  
    * 
    */
-  const src_main = props.src_main || ''
+  const avatarImage = props['avatar-image'] || ''
   const alt = props.alt || ''
   const color = props.color || 'white'
 
-  module.exports = { src_main, alt, color }
+  module.exports = { avatarImage, alt, color }
 
 </script>
 <div class="history-card history-card__bg--{{color}}">
   <div class="history-card__header">
     <div class="history-card__profile">
-      <img class="history-card__image--avatar" src="{{src_main}}" alt="Анна Сергеевна" />
+      <img class="history-card__image--avatar" src="{{avatarImage}}" alt="Анна Сергеевна" />
       <div class="history-card__info">
         <div class="history-card__name"><slot-name></slot-name></div>
         <div class="history-card__age"><slot-age></slot-age></div>
