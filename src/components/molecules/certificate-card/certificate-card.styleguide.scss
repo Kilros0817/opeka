@@ -1,6 +1,16 @@
 @use '../../../styles/tokens' as *;
 
 .certificate-card-display {
-    display: grid;
+    display: flex;
     gap: $space-20;
+}
+
+.certificate-card-sg-matrix {
+    overflow-x: auto;
+    display: grid;
+    gap: 4px;
+    align-items: stretch;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: #f0f1f5;
 }
