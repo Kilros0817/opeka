@@ -12,7 +12,7 @@
   gap: clamp(15px, 5vw, 50px);
   max-width: 720px;
   width: clamp(353px, 45vw, 480px);
-  height: clamp(525px, 80vw, 608px);
+  height: 608px;
 
   @include mobile {
     width: 353px;

@@ -3,92 +3,32 @@
   <h2 class="sg-section__title">Avatar Card</h2>
   <p class="sg-section__desc">
     Аватар с именем и описанием.
-    Проп <code>src_main</code> — путь к изображению.
+    Проп <code>image-url</code> — путь к изображению.
+    Проп <code>alt</code> — альтернативный текст изображения (опционально, по умолчанию: «аватар»).
     Проп <code>name</code> — имя персоны.
     Проп <code>desc</code> — описание.
-    Проп <code>bg_type</code>: <code>gradient</code>, <code>solid</code>, <code>image</code>.
   </p>
 
   <div class="sg-matrix sg-matrix--narrow">
     <div class="sg-matrix__row">
-      <span class="sg-variant-label">Gradient</span>
+      <span></span>
       <div class="sg-cell">
         <x-avatar-card
-          src_main="../../assets/images/avatar-01-desktop.webp"
+          image-url="../../assets/images/avatar-01.webp"
           alt="avatar"
           size="sm"
-          bg_type="gradient"
-          bg_from="rgba(227,232,255,1)"
-          bg_to="rgba(158,182,214,1)"
           name="Елена Викторовна Соколова"
           desc="Врач-гериатр, специалист по уходу за пожилыми людьми"
         ></x-avatar-card>
       </div>
-      <div class="sg-cell"></div>
-      <div class="sg-cell"></div>
-    </div>
-
-    <div class="sg-matrix__row">
-      <span class="sg-variant-label">Solid</span>
-      <div class="sg-cell">
-        <x-avatar-card
-          src_main="../../assets/images/avatar-01-desktop.webp"
-          alt="avatar"
-          size="sm"
-          bg_type="solid"
-          bg_from="rgba(34,41,79,0.05)"
-          name="Елена Викторовна Соколова"
-          desc="Врач-гериатр, специалист по уходу за пожилыми людьми"
-        ></x-avatar-card>
-      </div>
-      <div class="sg-cell"></div>
-      <div class="sg-cell"></div>
-    </div>
-
-    <div class="sg-matrix__row">
-      <span class="sg-variant-label">Image bg</span>
-      <div class="sg-cell">
-        <x-avatar-card
-          src_main=""
-          alt="avatar"
-          size="sm"
-          bg_type="image"
-          bg_img="../../assets/images/avatar-01-mobile.webp"
-          name="Елена Викторовна Соколова"
-          desc="Врач-гериатр, специалист по уходу за пожилыми людьми"
-        ></x-avatar-card>
-      </div>
-      <div class="sg-cell"></div>
-      <div class="sg-cell"></div>
-    </div>
-
-    <div class="sg-matrix__row">
-      <span class="sg-variant-label">No image</span>
-      <div class="sg-cell">
-        <x-avatar-card
-          src_main=""
-          alt="avatar"
-          size="sm"
-          bg_type="gradient"
-          bg_from="rgba(227,232,255,1)"
-          bg_to="rgba(158,182,214,1)"
-          name="Елена Викторовна Соколова"
-          desc="Врач-гериатр, специалист по уходу за пожилыми людьми"
-        ></x-avatar-card>
-      </div>
-      <div class="sg-cell"></div>
-      <div class="sg-cell"></div>
     </div>
   </div>
 
   <sg-snippet title="x-avatar-card">
     <x-avatar-card
-      src_main="../../assets/images/avatar-01-desktop.webp"
+      image-url="../../assets/images/avatar-01.webp"
       alt="avatar"
       size="sm"
-      bg_type="gradient"
-      bg_from="rgba(227,232,255,1)"
-      bg_to="rgba(158,182,214,1)"
       name="Елена Викторовна Соколова"
       desc="Врач-гериатр, специалист по уходу за пожилыми людьми"
     ></x-avatar-card>
