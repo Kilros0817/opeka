@@ -297,6 +297,10 @@
           "description": "Button step."
         },
         {
+          "name": "x-button-top",
+          "description": "Scroll-to-top button.\r Props: none"
+        },
+        {
           "name": "x-button-video",
           "description": "x-button-video — see src\\components\\atoms\\button-video\\button-video.html",
           "attributes": [
