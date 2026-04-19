@@ -6,27 +6,25 @@
    *
    * Props:
    *   color — white | black
-   *   size — md  
    *   icon — sprite id without "icon-" prefix
-   *   variant — grey | white
+   *   bgColor — grey | white
    *
    */
   const color = props.color || ''
-  const size = props.size || 'md'
   const icon = props.icon || ''
-  const variant = props.variant || ''
+  const bgColor = props['bg-color'] || 'tr-white'
 
   module.exports = {
-    icon,
+    icon, color, bgColor,
     cls: [
       'button-nav',
       'button-nav--' + color,
-      'button-nav--' + variant,
+      'button-nav__bgColor--' + bgColor,
     ].filter(Boolean).join(' '),
   }
 </script>
 
   <button class="{{ cls }}">
     <if condition="icon"><svg class="button-nav__icon" aria-hidden="true"><use href="#icon-{{ icon }}"/></svg></if>
-    <span class="button-nav__label"><yield></yield></span>
+    <span><yield></yield></span>
   </button>

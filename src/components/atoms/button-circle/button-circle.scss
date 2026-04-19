@@ -4,7 +4,7 @@
  * .btn-circle — circle button
  *
  * Sizes:  --mini | --medium
- * Colors: --tr-blue | --tr-white | --tr-grey | --tr-grey-white | --grey
+ * bgColors: --tr-grey | --tr-white | --tr-white | --tr-grey-white | --tr-blue
  */
 
 @mixin btn-color(
@@ -34,7 +34,7 @@
   }
 }
 
-/** .btn-circle — base block. Size modifier is required: --mini / --medium / --big. */
+/** .btn-circle — base block. Size modifier is required: --mini / --medium */
 .btn-circle {
   display: inline-flex;
   align-items: center;
@@ -95,7 +95,7 @@
 }
 
 /* Colors */
-.btn-circle--tr-blue {
+.btn-circle__bgColor--tr-blue {
   @include btn-color(
     $bg-default:        $color-tr-blue-10,
     $bg-hover:          $color-tr-blue-10,
@@ -106,7 +106,7 @@
   );
 }
 
-.btn-circle--tr-white {
+.btn-circle__bgColor--tr-white {
   @include btn-color(
     $bg-default:        $color-tr-white-20,
     $bg-hover:          $color-tr-white-30,
@@ -118,7 +118,7 @@
   backdrop-filter: blur($blur-button);
 }
 
-.btn-circle--white {
+.btn-circle__bgColor--white {
   @include btn-color(
     $bg-default:        $color-white,
     $bg-hover:          $color-white-hover,
@@ -129,7 +129,7 @@
   );
 }
 
-.btn-circle--tr-grey {
+.btn-circle__bgColor--tr-grey {
   @include btn-color(
     $bg-default:        $color-tr-black-05,
     $bg-hover:          $color-tr-black-10,
@@ -141,7 +141,7 @@
   backdrop-filter: blur($blur-button);
 }
 
-.btn-circle--tr-grey-white {
+.btn-circle__bgColor--tr-grey-white {
   @include btn-color(
     $bg-default:        $color-tr-black-05,
     $bg-hover:          $color-tr-black-10,

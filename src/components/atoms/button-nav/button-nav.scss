@@ -46,9 +46,9 @@
     }
 }
 
-.button-nav--tr-white {
-    background-color: $color-tr-white-30;
-     width: 40px;
+.button-nav__bgColor--white {
+    background-color: $color-tr-white-50;
+    width: 40px;
     height: 34px;
     gap: 16px;
     opacity: 1;
@@ -62,7 +62,6 @@
 .button-nav--grey {
     color: $color-text-secondary;
 
-
     &:disabled,
     &[aria-disabled='true'] {
         color: $color-text-secondary;
@@ -70,7 +69,7 @@
     }
 }
 
-.button-nav--grey {
+.button-nav__bgColor--grey {
     background-color: $color-tr-black-10;
     width: 40px;
     height: 34px;
@@ -80,4 +79,3 @@
     padding-left: 12px;
     border-radius: 100px;
 }
-
